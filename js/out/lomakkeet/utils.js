@@ -5,9 +5,9 @@ goog.require('cljs.core');
 * Find index of vector where item has matching value on given key.
 */
 lomakkeet.utils.find_index = (function find_index(coll,k,v){
-return cljs.core.first(cljs.core.keep_indexed.cljs$core$IFn$_invoke$arity$2((function (p1__21570_SHARP_,p2__21569_SHARP_){
-if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(v,cljs.core.get.cljs$core$IFn$_invoke$arity$2(p2__21569_SHARP_,k))){
-return p1__21570_SHARP_;
+return cljs.core.first(cljs.core.keep_indexed.cljs$core$IFn$_invoke$arity$2((function (p1__21578_SHARP_,p2__21577_SHARP_){
+if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(v,cljs.core.get.cljs$core$IFn$_invoke$arity$2(p2__21577_SHARP_,k))){
+return p1__21578_SHARP_;
 } else {
 return null;
 }
