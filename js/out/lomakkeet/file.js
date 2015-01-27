@@ -11,152 +11,152 @@ goog.require('om.core');
 * @param {...*} var_args
 */
 lomakkeet.file.humanize_filesize = (function() { 
-var humanize_filesize__delegate = function (bytes,p__22612){
-var vec__22622 = p__22612;
-var fmt = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__22622,(0),null);
+var humanize_filesize__delegate = function (bytes,p__22183){
+var vec__22193 = p__22183;
+var fmt = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__22193,(0),null);
 var units = new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, ["bytes","kB","MB","GB","TB","PB"], null);
-var unit = (function (){var G__22623 = ((function (){var G__22624 = bytes;
-return Math.log(G__22624);
-})() / (function (){var G__22625 = (1000);
-return Math.log(G__22625);
+var unit = (function (){var G__22194 = ((function (){var G__22195 = bytes;
+return Math.log(G__22195);
+})() / (function (){var G__22196 = (1000);
+return Math.log(G__22196);
 })());
-return Math.floor(G__22623);
+return Math.floor(G__22194);
 })();
-var size = (bytes / (function (){var G__22626 = (1000);
-var G__22627 = unit;
-return Math.pow(G__22626,G__22627);
+var size = (bytes / (function (){var G__22197 = (1000);
+var G__22198 = unit;
+return Math.pow(G__22197,G__22198);
 })());
-var G__22628 = (function (){var or__4251__auto__ = fmt;
-if(cljs.core.truth_(or__4251__auto__)){
-return or__4251__auto__;
+var G__22199 = (function (){var or__3758__auto__ = fmt;
+if(cljs.core.truth_(or__3758__auto__)){
+return or__3758__auto__;
 } else {
 return "%0.1f %s";
 }
 })();
-var G__22629 = size;
-var G__22630 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(units,unit);
-return goog.string.format(G__22628,G__22629,G__22630);
+var G__22200 = size;
+var G__22201 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(units,unit);
+return goog.string.format(G__22199,G__22200,G__22201);
 };
 var humanize_filesize = function (bytes,var_args){
-var p__22612 = null;
+var p__22183 = null;
 if (arguments.length > 1) {
-var G__22631__i = 0, G__22631__a = new Array(arguments.length -  1);
-while (G__22631__i < G__22631__a.length) {G__22631__a[G__22631__i] = arguments[G__22631__i + 1]; ++G__22631__i;}
-  p__22612 = new cljs.core.IndexedSeq(G__22631__a,0);
+var G__22202__i = 0, G__22202__a = new Array(arguments.length -  1);
+while (G__22202__i < G__22202__a.length) {G__22202__a[G__22202__i] = arguments[G__22202__i + 1]; ++G__22202__i;}
+  p__22183 = new cljs.core.IndexedSeq(G__22202__a,0);
 } 
-return humanize_filesize__delegate.call(this,bytes,p__22612);};
+return humanize_filesize__delegate.call(this,bytes,p__22183);};
 humanize_filesize.cljs$lang$maxFixedArity = 1;
-humanize_filesize.cljs$lang$applyTo = (function (arglist__22632){
-var bytes = cljs.core.first(arglist__22632);
-var p__22612 = cljs.core.rest(arglist__22632);
-return humanize_filesize__delegate(bytes,p__22612);
+humanize_filesize.cljs$lang$applyTo = (function (arglist__22203){
+var bytes = cljs.core.first(arglist__22203);
+var p__22183 = cljs.core.rest(arglist__22203);
+return humanize_filesize__delegate(bytes,p__22183);
 });
 humanize_filesize.cljs$core$IFn$_invoke$arity$variadic = humanize_filesize__delegate;
 return humanize_filesize;
 })()
 ;
 
-var ufv___22697 = schema.utils.use_fn_validation;
-var output_schema22634_22698 = schema.core.Any;
-var input_schema22635_22699 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg0","arg0",-1024593414,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"owner","owner",1247919588,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg2","arg2",-924884852,null))], null);
-var input_checker22636_22700 = schema.core.checker(input_schema22635_22699);
-var output_checker22637_22701 = schema.core.checker(output_schema22634_22698);
+var ufv___22268 = schema.utils.use_fn_validation;
+var output_schema22205_22269 = schema.core.Any;
+var input_schema22206_22270 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg0","arg0",-1024593414,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"owner","owner",1247919588,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg2","arg2",-924884852,null))], null);
+var input_checker22207_22271 = schema.core.checker(input_schema22206_22270);
+var output_checker22208_22272 = schema.core.checker(output_schema22205_22269);
 /**
 * Inputs: [{:keys [value]} owner {:keys [ch ks file-select-label], :or {file-select-label "Select file"}, :as opts}]
 */
-lomakkeet.file.file_STAR_ = ((function (ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701){
-return (function file_STAR_(G__22638,G__22639,G__22640){
-var validate__12581__auto__ = ufv___22697.get_cell();
-if(cljs.core.truth_(validate__12581__auto__)){
-var args__12582__auto___22702 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__22638,G__22639,G__22640], null);
-var temp__4126__auto___22703 = (function (){var G__22669 = args__12582__auto___22702;
-return (input_checker22636_22700.cljs$core$IFn$_invoke$arity$1 ? input_checker22636_22700.cljs$core$IFn$_invoke$arity$1(G__22669) : input_checker22636_22700.call(null,G__22669));
+lomakkeet.file.file_STAR_ = ((function (ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272){
+return (function file_STAR_(G__22209,G__22210,G__22211){
+var validate__12088__auto__ = ufv___22268.get_cell();
+if(cljs.core.truth_(validate__12088__auto__)){
+var args__12089__auto___22273 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__22209,G__22210,G__22211], null);
+var temp__4126__auto___22274 = (function (){var G__22240 = args__12089__auto___22273;
+return (input_checker22207_22271.cljs$core$IFn$_invoke$arity$1 ? input_checker22207_22271.cljs$core$IFn$_invoke$arity$1(G__22240) : input_checker22207_22271.call(null,G__22240));
 })();
-if(cljs.core.truth_(temp__4126__auto___22703)){
-var error__12583__auto___22704 = temp__4126__auto___22703;
-throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Input to %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"file*","file*",-950149057,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__12583__auto___22704], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$65,error__12583__auto___22704,cljs.core.constant$keyword$66,args__12582__auto___22702,cljs.core.constant$keyword$67,input_schema22635_22699,cljs.core.constant$keyword$68,cljs.core.constant$keyword$69], null));
+if(cljs.core.truth_(temp__4126__auto___22274)){
+var error__12090__auto___22275 = temp__4126__auto___22274;
+throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Input to %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"file*","file*",-950149057,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__12090__auto___22275], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$65,error__12090__auto___22275,cljs.core.constant$keyword$66,args__12089__auto___22273,cljs.core.constant$keyword$67,input_schema22206_22270,cljs.core.constant$keyword$68,cljs.core.constant$keyword$69], null));
 } else {
 }
 } else {
 }
 
-var o__12584__auto__ = (function (){var G__22672 = G__22638;
-var map__22674 = G__22672;
-var map__22674__$1 = ((cljs.core.seq_QMARK_(map__22674))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22674):map__22674);
-var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22674__$1,cljs.core.constant$keyword$66);
-var owner = G__22639;
-var G__22673 = G__22640;
-var map__22675 = G__22673;
-var map__22675__$1 = ((cljs.core.seq_QMARK_(map__22675))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22675):map__22675);
-var opts = map__22675__$1;
-var file_select_label = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__22675__$1,cljs.core.constant$keyword$227,"Select file");
-var ks = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22675__$1,cljs.core.constant$keyword$146);
-var ch = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22675__$1,cljs.core.constant$keyword$147);
-var G__22672__$1 = G__22672;
+var o__12091__auto__ = (function (){var G__22243 = G__22209;
+var map__22245 = G__22243;
+var map__22245__$1 = ((cljs.core.seq_QMARK_(map__22245))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22245):map__22245);
+var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22245__$1,cljs.core.constant$keyword$66);
+var owner = G__22210;
+var G__22244 = G__22211;
+var map__22246 = G__22244;
+var map__22246__$1 = ((cljs.core.seq_QMARK_(map__22246))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22246):map__22246);
+var opts = map__22246__$1;
+var file_select_label = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__22246__$1,cljs.core.constant$keyword$229,"Select file");
+var ks = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22246__$1,cljs.core.constant$keyword$146);
+var ch = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22246__$1,cljs.core.constant$keyword$147);
+var G__22243__$1 = G__22243;
 var owner__$1 = owner;
-var G__22673__$1 = G__22673;
+var G__22244__$1 = G__22244;
 while(true){
-var map__22676 = G__22672__$1;
-var map__22676__$1 = ((cljs.core.seq_QMARK_(map__22676))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22676):map__22676);
-var value__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22676__$1,cljs.core.constant$keyword$66);
+var map__22247 = G__22243__$1;
+var map__22247__$1 = ((cljs.core.seq_QMARK_(map__22247))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22247):map__22247);
+var value__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22247__$1,cljs.core.constant$keyword$66);
 var owner__$2 = owner__$1;
-var map__22677 = G__22673__$1;
-var map__22677__$1 = ((cljs.core.seq_QMARK_(map__22677))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22677):map__22677);
-var opts__$1 = map__22677__$1;
-var file_select_label__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__22677__$1,cljs.core.constant$keyword$227,"Select file");
-var ks__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22677__$1,cljs.core.constant$keyword$146);
-var ch__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22677__$1,cljs.core.constant$keyword$147);
-if(typeof lomakkeet.file.t22678 !== 'undefined'){
+var map__22248 = G__22244__$1;
+var map__22248__$1 = ((cljs.core.seq_QMARK_(map__22248))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22248):map__22248);
+var opts__$1 = map__22248__$1;
+var file_select_label__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__22248__$1,cljs.core.constant$keyword$229,"Select file");
+var ks__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22248__$1,cljs.core.constant$keyword$146);
+var ch__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22248__$1,cljs.core.constant$keyword$147);
+if(typeof lomakkeet.file.t22249 !== 'undefined'){
 } else {
 
 /**
 * @constructor
 */
-lomakkeet.file.t22678 = (function (output_schema22634,file_select_label,map__22675,G__22638,owner,input_schema22635,validate__12581__auto__,G__22640,map__22674,map__22677,ks,output_checker22637,value,G__22673,G__22672,map__22676,ch,G__22639,opts,ufv__,input_checker22636,file_STAR_,meta22679){
-this.output_schema22634 = output_schema22634;
+lomakkeet.file.t22249 = (function (file_select_label,G__22243,owner,validate__12088__auto__,G__22211,map__22246,input_checker22207,map__22247,input_schema22206,ks,G__22244,G__22210,map__22245,value,G__22209,output_schema22205,map__22248,output_checker22208,ch,opts,ufv__,file_STAR_,meta22250){
 this.file_select_label = file_select_label;
-this.map__22675 = map__22675;
-this.G__22638 = G__22638;
+this.G__22243 = G__22243;
 this.owner = owner;
-this.input_schema22635 = input_schema22635;
-this.validate__12581__auto__ = validate__12581__auto__;
-this.G__22640 = G__22640;
-this.map__22674 = map__22674;
-this.map__22677 = map__22677;
+this.validate__12088__auto__ = validate__12088__auto__;
+this.G__22211 = G__22211;
+this.map__22246 = map__22246;
+this.input_checker22207 = input_checker22207;
+this.map__22247 = map__22247;
+this.input_schema22206 = input_schema22206;
 this.ks = ks;
-this.output_checker22637 = output_checker22637;
+this.G__22244 = G__22244;
+this.G__22210 = G__22210;
+this.map__22245 = map__22245;
 this.value = value;
-this.G__22673 = G__22673;
-this.G__22672 = G__22672;
-this.map__22676 = map__22676;
+this.G__22209 = G__22209;
+this.output_schema22205 = output_schema22205;
+this.map__22248 = map__22248;
+this.output_checker22208 = output_checker22208;
 this.ch = ch;
-this.G__22639 = G__22639;
 this.opts = opts;
 this.ufv__ = ufv__;
-this.input_checker22636 = input_checker22636;
 this.file_STAR_ = file_STAR_;
-this.meta22679 = meta22679;
+this.meta22250 = meta22250;
 this.cljs$lang$protocol_mask$partition1$ = 0;
 this.cljs$lang$protocol_mask$partition0$ = 393216;
 })
-lomakkeet.file.t22678.prototype.om$core$IDisplayName$ = true;
+lomakkeet.file.t22249.prototype.om$core$IDisplayName$ = true;
 
-lomakkeet.file.t22678.prototype.om$core$IDisplayName$display_name$arity$1 = ((function (map__22676,map__22676__$1,value__$1,owner__$2,map__22677,map__22677__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22672,map__22674,map__22674__$1,value,owner,G__22673,map__22675,map__22675__$1,opts,file_select_label,ks,ch,validate__12581__auto__,ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701){
+lomakkeet.file.t22249.prototype.om$core$IDisplayName$display_name$arity$1 = ((function (map__22247,map__22247__$1,value__$1,owner__$2,map__22248,map__22248__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22243,map__22245,map__22245__$1,value,owner,G__22244,map__22246,map__22246__$1,opts,file_select_label,ks,ch,validate__12088__auto__,ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272){
 return (function (_){
 var self__ = this;
 var ___$1 = this;
 return "file*";
-});})(map__22676,map__22676__$1,value__$1,owner__$2,map__22677,map__22677__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22672,map__22674,map__22674__$1,value,owner,G__22673,map__22675,map__22675__$1,opts,file_select_label,ks,ch,validate__12581__auto__,ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701))
+});})(map__22247,map__22247__$1,value__$1,owner__$2,map__22248,map__22248__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22243,map__22245,map__22245__$1,value,owner,G__22244,map__22246,map__22246__$1,opts,file_select_label,ks,ch,validate__12088__auto__,ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272))
 ;
 
-lomakkeet.file.t22678.prototype.om$core$IRender$ = true;
+lomakkeet.file.t22249.prototype.om$core$IRender$ = true;
 
-lomakkeet.file.t22678.prototype.om$core$IRender$render$arity$1 = ((function (map__22676,map__22676__$1,value__$1,owner__$2,map__22677,map__22677__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22672,map__22674,map__22674__$1,value,owner,G__22673,map__22675,map__22675__$1,opts,file_select_label,ks,ch,validate__12581__auto__,ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701){
+lomakkeet.file.t22249.prototype.om$core$IRender$render$arity$1 = ((function (map__22247,map__22247__$1,value__$1,owner__$2,map__22248,map__22248__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22243,map__22245,map__22245__$1,value,owner,G__22244,map__22246,map__22246__$1,opts,file_select_label,ks,ch,validate__12088__auto__,ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272){
 return (function (_){
 var self__ = this;
 var ___$1 = this;
-var G__22681 = null;
-var G__22682 = (function (){var G__22686 = {"style": {"display": "none"}, "type": "file", "ref": "file-input", "onChange": ((function (G__22681,___$1,map__22676,map__22676__$1,value__$1,owner__$2,map__22677,map__22677__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22672,map__22674,map__22674__$1,value,owner,G__22673,map__22675,map__22675__$1,opts,file_select_label,ks,ch,validate__12581__auto__,ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701){
+var G__22252 = null;
+var G__22253 = (function (){var G__22257 = {"style": {"display": "none"}, "type": "file", "ref": "file-input", "onChange": ((function (G__22252,___$1,map__22247,map__22247__$1,value__$1,owner__$2,map__22248,map__22248__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22243,map__22245,map__22245__$1,value,owner,G__22244,map__22246,map__22246__$1,opts,file_select_label,ks,ch,validate__12088__auto__,ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272){
 return (function (e){
 var temp__4124__auto__ = e.target.files.item((0));
 if(cljs.core.truth_(temp__4124__auto__)){
@@ -165,107 +165,107 @@ return cljs.core.async.put_BANG_.cljs$core$IFn$_invoke$arity$2(self__.ch,new clj
 } else {
 return null;
 }
-});})(G__22681,___$1,map__22676,map__22676__$1,value__$1,owner__$2,map__22677,map__22677__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22672,map__22674,map__22674__$1,value,owner,G__22673,map__22675,map__22675__$1,opts,file_select_label,ks,ch,validate__12581__auto__,ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701))
+});})(G__22252,___$1,map__22247,map__22247__$1,value__$1,owner__$2,map__22248,map__22248__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22243,map__22245,map__22245__$1,value,owner,G__22244,map__22246,map__22246__$1,opts,file_select_label,ks,ch,validate__12088__auto__,ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272))
 };
-return (sablono.interpreter.input.cljs$core$IFn$_invoke$arity$1 ? sablono.interpreter.input.cljs$core$IFn$_invoke$arity$1(G__22686) : sablono.interpreter.input.call(null,G__22686));
+return (sablono.interpreter.input.cljs$core$IFn$_invoke$arity$1 ? sablono.interpreter.input.cljs$core$IFn$_invoke$arity$1(G__22257) : sablono.interpreter.input.call(null,G__22257));
 })();
-var G__22683 = (function (){var G__22687 = {"className": "btn btn-primary", "type": "button", "onClick": ((function (G__22681,G__22682,___$1,map__22676,map__22676__$1,value__$1,owner__$2,map__22677,map__22677__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22672,map__22674,map__22674__$1,value,owner,G__22673,map__22675,map__22675__$1,opts,file_select_label,ks,ch,validate__12581__auto__,ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701){
+var G__22254 = (function (){var G__22258 = {"className": "btn btn-primary", "type": "button", "onClick": ((function (G__22252,G__22253,___$1,map__22247,map__22247__$1,value__$1,owner__$2,map__22248,map__22248__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22243,map__22245,map__22245__$1,value,owner,G__22244,map__22246,map__22246__$1,opts,file_select_label,ks,ch,validate__12088__auto__,ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272){
 return (function (){
 return om.core.get_node.cljs$core$IFn$_invoke$arity$2(self__.owner,"file-input").click();
-});})(G__22681,G__22682,___$1,map__22676,map__22676__$1,value__$1,owner__$2,map__22677,map__22677__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22672,map__22674,map__22674__$1,value,owner,G__22673,map__22675,map__22675__$1,opts,file_select_label,ks,ch,validate__12581__auto__,ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701))
+});})(G__22252,G__22253,___$1,map__22247,map__22247__$1,value__$1,owner__$2,map__22248,map__22248__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22243,map__22245,map__22245__$1,value,owner,G__22244,map__22246,map__22246__$1,opts,file_select_label,ks,ch,validate__12088__auto__,ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272))
 };
-var G__22688 = sablono.interpreter.interpret(self__.file_select_label);
-return React.DOM.button(G__22687,G__22688);
+var G__22259 = sablono.interpreter.interpret(self__.file_select_label);
+return React.DOM.button(G__22258,G__22259);
 })();
-var G__22684 = (function (){var G__22689 = {"className": "btn btn-default", "type": "button", "onClick": ((function (G__22681,G__22682,G__22683,___$1,map__22676,map__22676__$1,value__$1,owner__$2,map__22677,map__22677__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22672,map__22674,map__22674__$1,value,owner,G__22673,map__22675,map__22675__$1,opts,file_select_label,ks,ch,validate__12581__auto__,ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701){
+var G__22255 = (function (){var G__22260 = {"className": "btn btn-default", "type": "button", "onClick": ((function (G__22252,G__22253,G__22254,___$1,map__22247,map__22247__$1,value__$1,owner__$2,map__22248,map__22248__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22243,map__22245,map__22245__$1,value,owner,G__22244,map__22246,map__22246__$1,opts,file_select_label,ks,ch,validate__12088__auto__,ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272){
 return (function (){
 return cljs.core.async.put_BANG_.cljs$core$IFn$_invoke$arity$2(self__.ch,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$68,cljs.core.constant$keyword$148,cljs.core.constant$keyword$146,self__.ks,cljs.core.constant$keyword$66,null], null));
-});})(G__22681,G__22682,G__22683,___$1,map__22676,map__22676__$1,value__$1,owner__$2,map__22677,map__22677__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22672,map__22674,map__22674__$1,value,owner,G__22673,map__22675,map__22675__$1,opts,file_select_label,ks,ch,validate__12581__auto__,ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701))
+});})(G__22252,G__22253,G__22254,___$1,map__22247,map__22247__$1,value__$1,owner__$2,map__22248,map__22248__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22243,map__22245,map__22245__$1,value,owner,G__22244,map__22246,map__22246__$1,opts,file_select_label,ks,ch,validate__12088__auto__,ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272))
 };
-var G__22690 = "\u00D7";
-return React.DOM.button(G__22689,G__22690);
+var G__22261 = "\u00D7";
+return React.DOM.button(G__22260,G__22261);
 })();
-var G__22685 = (cljs.core.truth_(self__.value)?(function (){var G__22691 = {"className": "selected-file"};
-var G__22692 = " ";
-var G__22693 = sablono.interpreter.interpret(self__.value.name);
-var G__22694 = ", ";
-var G__22695 = sablono.interpreter.interpret(lomakkeet.file.humanize_filesize(self__.value.size));
-return React.DOM.span(G__22691,G__22692,G__22693,G__22694,G__22695);
+var G__22256 = (cljs.core.truth_(self__.value)?(function (){var G__22262 = {"className": "selected-file"};
+var G__22263 = " ";
+var G__22264 = sablono.interpreter.interpret(self__.value.name);
+var G__22265 = ", ";
+var G__22266 = sablono.interpreter.interpret(lomakkeet.file.humanize_filesize(self__.value.size));
+return React.DOM.span(G__22262,G__22263,G__22264,G__22265,G__22266);
 })():null);
-return React.DOM.div(G__22681,G__22682,G__22683,G__22684,G__22685);
-});})(map__22676,map__22676__$1,value__$1,owner__$2,map__22677,map__22677__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22672,map__22674,map__22674__$1,value,owner,G__22673,map__22675,map__22675__$1,opts,file_select_label,ks,ch,validate__12581__auto__,ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701))
+return React.DOM.div(G__22252,G__22253,G__22254,G__22255,G__22256);
+});})(map__22247,map__22247__$1,value__$1,owner__$2,map__22248,map__22248__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22243,map__22245,map__22245__$1,value,owner,G__22244,map__22246,map__22246__$1,opts,file_select_label,ks,ch,validate__12088__auto__,ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272))
 ;
 
-lomakkeet.file.t22678.prototype.cljs$core$IMeta$_meta$arity$1 = ((function (map__22676,map__22676__$1,value__$1,owner__$2,map__22677,map__22677__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22672,map__22674,map__22674__$1,value,owner,G__22673,map__22675,map__22675__$1,opts,file_select_label,ks,ch,validate__12581__auto__,ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701){
-return (function (_22680){
+lomakkeet.file.t22249.prototype.cljs$core$IMeta$_meta$arity$1 = ((function (map__22247,map__22247__$1,value__$1,owner__$2,map__22248,map__22248__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22243,map__22245,map__22245__$1,value,owner,G__22244,map__22246,map__22246__$1,opts,file_select_label,ks,ch,validate__12088__auto__,ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272){
+return (function (_22251){
 var self__ = this;
-var _22680__$1 = this;
-return self__.meta22679;
-});})(map__22676,map__22676__$1,value__$1,owner__$2,map__22677,map__22677__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22672,map__22674,map__22674__$1,value,owner,G__22673,map__22675,map__22675__$1,opts,file_select_label,ks,ch,validate__12581__auto__,ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701))
+var _22251__$1 = this;
+return self__.meta22250;
+});})(map__22247,map__22247__$1,value__$1,owner__$2,map__22248,map__22248__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22243,map__22245,map__22245__$1,value,owner,G__22244,map__22246,map__22246__$1,opts,file_select_label,ks,ch,validate__12088__auto__,ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272))
 ;
 
-lomakkeet.file.t22678.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = ((function (map__22676,map__22676__$1,value__$1,owner__$2,map__22677,map__22677__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22672,map__22674,map__22674__$1,value,owner,G__22673,map__22675,map__22675__$1,opts,file_select_label,ks,ch,validate__12581__auto__,ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701){
-return (function (_22680,meta22679__$1){
+lomakkeet.file.t22249.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = ((function (map__22247,map__22247__$1,value__$1,owner__$2,map__22248,map__22248__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22243,map__22245,map__22245__$1,value,owner,G__22244,map__22246,map__22246__$1,opts,file_select_label,ks,ch,validate__12088__auto__,ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272){
+return (function (_22251,meta22250__$1){
 var self__ = this;
-var _22680__$1 = this;
-return (new lomakkeet.file.t22678(self__.output_schema22634,self__.file_select_label,self__.map__22675,self__.G__22638,self__.owner,self__.input_schema22635,self__.validate__12581__auto__,self__.G__22640,self__.map__22674,self__.map__22677,self__.ks,self__.output_checker22637,self__.value,self__.G__22673,self__.G__22672,self__.map__22676,self__.ch,self__.G__22639,self__.opts,self__.ufv__,self__.input_checker22636,self__.file_STAR_,meta22679__$1));
-});})(map__22676,map__22676__$1,value__$1,owner__$2,map__22677,map__22677__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22672,map__22674,map__22674__$1,value,owner,G__22673,map__22675,map__22675__$1,opts,file_select_label,ks,ch,validate__12581__auto__,ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701))
+var _22251__$1 = this;
+return (new lomakkeet.file.t22249(self__.file_select_label,self__.G__22243,self__.owner,self__.validate__12088__auto__,self__.G__22211,self__.map__22246,self__.input_checker22207,self__.map__22247,self__.input_schema22206,self__.ks,self__.G__22244,self__.G__22210,self__.map__22245,self__.value,self__.G__22209,self__.output_schema22205,self__.map__22248,self__.output_checker22208,self__.ch,self__.opts,self__.ufv__,self__.file_STAR_,meta22250__$1));
+});})(map__22247,map__22247__$1,value__$1,owner__$2,map__22248,map__22248__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22243,map__22245,map__22245__$1,value,owner,G__22244,map__22246,map__22246__$1,opts,file_select_label,ks,ch,validate__12088__auto__,ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272))
 ;
 
-lomakkeet.file.t22678.cljs$lang$type = true;
+lomakkeet.file.t22249.cljs$lang$type = true;
 
-lomakkeet.file.t22678.cljs$lang$ctorStr = "lomakkeet.file/t22678";
+lomakkeet.file.t22249.cljs$lang$ctorStr = "lomakkeet.file/t22249";
 
-lomakkeet.file.t22678.cljs$lang$ctorPrWriter = ((function (map__22676,map__22676__$1,value__$1,owner__$2,map__22677,map__22677__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22672,map__22674,map__22674__$1,value,owner,G__22673,map__22675,map__22675__$1,opts,file_select_label,ks,ch,validate__12581__auto__,ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701){
-return (function (this__4838__auto__,writer__4839__auto__,opt__4840__auto__){
-return cljs.core._write(writer__4839__auto__,"lomakkeet.file/t22678");
-});})(map__22676,map__22676__$1,value__$1,owner__$2,map__22677,map__22677__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22672,map__22674,map__22674__$1,value,owner,G__22673,map__22675,map__22675__$1,opts,file_select_label,ks,ch,validate__12581__auto__,ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701))
+lomakkeet.file.t22249.cljs$lang$ctorPrWriter = ((function (map__22247,map__22247__$1,value__$1,owner__$2,map__22248,map__22248__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22243,map__22245,map__22245__$1,value,owner,G__22244,map__22246,map__22246__$1,opts,file_select_label,ks,ch,validate__12088__auto__,ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272){
+return (function (this__4345__auto__,writer__4346__auto__,opt__4347__auto__){
+return cljs.core._write(writer__4346__auto__,"lomakkeet.file/t22249");
+});})(map__22247,map__22247__$1,value__$1,owner__$2,map__22248,map__22248__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22243,map__22245,map__22245__$1,value,owner,G__22244,map__22246,map__22246__$1,opts,file_select_label,ks,ch,validate__12088__auto__,ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272))
 ;
 
-lomakkeet.file.__GT_t22678 = ((function (map__22676,map__22676__$1,value__$1,owner__$2,map__22677,map__22677__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22672,map__22674,map__22674__$1,value,owner,G__22673,map__22675,map__22675__$1,opts,file_select_label,ks,ch,validate__12581__auto__,ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701){
-return (function __GT_t22678(output_schema22634__$1,file_select_label__$2,map__22675__$2,G__22638__$1,owner__$3,input_schema22635__$1,validate__12581__auto____$1,G__22640__$1,map__22674__$2,map__22677__$2,ks__$2,output_checker22637__$1,value__$2,G__22673__$2,G__22672__$2,map__22676__$2,ch__$2,G__22639__$1,opts__$2,ufv____$1,input_checker22636__$1,file_STAR___$1,meta22679){
-return (new lomakkeet.file.t22678(output_schema22634__$1,file_select_label__$2,map__22675__$2,G__22638__$1,owner__$3,input_schema22635__$1,validate__12581__auto____$1,G__22640__$1,map__22674__$2,map__22677__$2,ks__$2,output_checker22637__$1,value__$2,G__22673__$2,G__22672__$2,map__22676__$2,ch__$2,G__22639__$1,opts__$2,ufv____$1,input_checker22636__$1,file_STAR___$1,meta22679));
-});})(map__22676,map__22676__$1,value__$1,owner__$2,map__22677,map__22677__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22672,map__22674,map__22674__$1,value,owner,G__22673,map__22675,map__22675__$1,opts,file_select_label,ks,ch,validate__12581__auto__,ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701))
+lomakkeet.file.__GT_t22249 = ((function (map__22247,map__22247__$1,value__$1,owner__$2,map__22248,map__22248__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22243,map__22245,map__22245__$1,value,owner,G__22244,map__22246,map__22246__$1,opts,file_select_label,ks,ch,validate__12088__auto__,ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272){
+return (function __GT_t22249(file_select_label__$2,G__22243__$2,owner__$3,validate__12088__auto____$1,G__22211__$1,map__22246__$2,input_checker22207__$1,map__22247__$2,input_schema22206__$1,ks__$2,G__22244__$2,G__22210__$1,map__22245__$2,value__$2,G__22209__$1,output_schema22205__$1,map__22248__$2,output_checker22208__$1,ch__$2,opts__$2,ufv____$1,file_STAR___$1,meta22250){
+return (new lomakkeet.file.t22249(file_select_label__$2,G__22243__$2,owner__$3,validate__12088__auto____$1,G__22211__$1,map__22246__$2,input_checker22207__$1,map__22247__$2,input_schema22206__$1,ks__$2,G__22244__$2,G__22210__$1,map__22245__$2,value__$2,G__22209__$1,output_schema22205__$1,map__22248__$2,output_checker22208__$1,ch__$2,opts__$2,ufv____$1,file_STAR___$1,meta22250));
+});})(map__22247,map__22247__$1,value__$1,owner__$2,map__22248,map__22248__$1,opts__$1,file_select_label__$1,ks__$1,ch__$1,G__22243,map__22245,map__22245__$1,value,owner,G__22244,map__22246,map__22246__$1,opts,file_select_label,ks,ch,validate__12088__auto__,ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272))
 ;
 
 }
 
-return (new lomakkeet.file.t22678(output_schema22634_22698,file_select_label__$1,map__22675__$1,G__22638,owner__$2,input_schema22635_22699,validate__12581__auto__,G__22640,map__22674__$1,map__22677__$1,ks__$1,output_checker22637_22701,value__$1,G__22673__$1,G__22672__$1,map__22676__$1,ch__$1,G__22639,opts__$1,ufv___22697,input_checker22636_22700,file_STAR_,null));
+return (new lomakkeet.file.t22249(file_select_label__$1,G__22243__$1,owner__$2,validate__12088__auto__,G__22211,map__22246__$1,input_checker22207_22271,map__22247__$1,input_schema22206_22270,ks__$1,G__22244__$1,G__22210,map__22245__$1,value__$1,G__22209,output_schema22205_22269,map__22248__$1,output_checker22208_22272,ch__$1,opts__$1,ufv___22268,file_STAR_,null));
 break;
 }
 })();
-if(cljs.core.truth_(validate__12581__auto__)){
-var temp__4126__auto___22705 = (function (){var G__22696 = o__12584__auto__;
-return (output_checker22637_22701.cljs$core$IFn$_invoke$arity$1 ? output_checker22637_22701.cljs$core$IFn$_invoke$arity$1(G__22696) : output_checker22637_22701.call(null,G__22696));
+if(cljs.core.truth_(validate__12088__auto__)){
+var temp__4126__auto___22276 = (function (){var G__22267 = o__12091__auto__;
+return (output_checker22208_22272.cljs$core$IFn$_invoke$arity$1 ? output_checker22208_22272.cljs$core$IFn$_invoke$arity$1(G__22267) : output_checker22208_22272.call(null,G__22267));
 })();
-if(cljs.core.truth_(temp__4126__auto___22705)){
-var error__12583__auto___22706 = temp__4126__auto___22705;
-throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Output of %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"file*","file*",-950149057,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__12583__auto___22706], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$65,error__12583__auto___22706,cljs.core.constant$keyword$66,o__12584__auto__,cljs.core.constant$keyword$67,output_schema22634_22698,cljs.core.constant$keyword$68,cljs.core.constant$keyword$69], null));
+if(cljs.core.truth_(temp__4126__auto___22276)){
+var error__12090__auto___22277 = temp__4126__auto___22276;
+throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Output of %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"file*","file*",-950149057,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__12090__auto___22277], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$65,error__12090__auto___22277,cljs.core.constant$keyword$66,o__12091__auto__,cljs.core.constant$keyword$67,output_schema22205_22269,cljs.core.constant$keyword$68,cljs.core.constant$keyword$69], null));
 } else {
 }
 } else {
 }
 
-return o__12584__auto__;
-});})(ufv___22697,output_schema22634_22698,input_schema22635_22699,input_checker22636_22700,output_checker22637_22701))
+return o__12091__auto__;
+});})(ufv___22268,output_schema22205_22269,input_schema22206_22270,input_checker22207_22271,output_checker22208_22272))
 ;
 
-schema.utils.declare_class_schema_BANG_(schema.utils.fn_schema_bearer(lomakkeet.file.file_STAR_),schema.core.make_fn_schema(output_schema22634_22698,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema22635_22699], null)));
+schema.utils.declare_class_schema_BANG_(schema.utils.fn_schema_bearer(lomakkeet.file.file_STAR_),schema.core.make_fn_schema(output_schema22205_22269,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema22206_22270], null)));
 
 lomakkeet.file.__GT_file_STAR_ = (function() {
 var __GT_file_STAR_ = null;
-var __GT_file_STAR___1 = (function (cursor__20832__auto__){
-return om.core.build.cljs$core$IFn$_invoke$arity$2(lomakkeet.file.file_STAR_,cursor__20832__auto__);
+var __GT_file_STAR___1 = (function (cursor__20339__auto__){
+return om.core.build.cljs$core$IFn$_invoke$arity$2(lomakkeet.file.file_STAR_,cursor__20339__auto__);
 });
-var __GT_file_STAR___2 = (function (cursor__20832__auto__,m22633){
-return om.core.build.cljs$core$IFn$_invoke$arity$3(lomakkeet.file.file_STAR_,cursor__20832__auto__,m22633);
+var __GT_file_STAR___2 = (function (cursor__20339__auto__,m22204){
+return om.core.build.cljs$core$IFn$_invoke$arity$3(lomakkeet.file.file_STAR_,cursor__20339__auto__,m22204);
 });
-__GT_file_STAR_ = function(cursor__20832__auto__,m22633){
+__GT_file_STAR_ = function(cursor__20339__auto__,m22204){
 switch(arguments.length){
 case 1:
-return __GT_file_STAR___1.call(this,cursor__20832__auto__);
+return __GT_file_STAR___1.call(this,cursor__20339__auto__);
 case 2:
-return __GT_file_STAR___2.call(this,cursor__20832__auto__,m22633);
+return __GT_file_STAR___2.call(this,cursor__20339__auto__,m22204);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
@@ -278,28 +278,28 @@ return __GT_file_STAR_;
 * @param {...*} var_args
 */
 lomakkeet.file.file = (function() { 
-var file__delegate = function (form,label,ks,p__22707){
-var vec__22709 = p__22707;
-var opts = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__22709,(0),null);
+var file__delegate = function (form,label,ks,p__22278){
+var vec__22280 = p__22278;
+var opts = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__22280,(0),null);
 return lomakkeet.fields.build(cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([form,opts,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$124,lomakkeet.file.file_STAR_,cljs.core.constant$keyword$137,label,cljs.core.constant$keyword$146,ks], null)], 0)));
 };
 var file = function (form,label,ks,var_args){
-var p__22707 = null;
+var p__22278 = null;
 if (arguments.length > 3) {
-var G__22710__i = 0, G__22710__a = new Array(arguments.length -  3);
-while (G__22710__i < G__22710__a.length) {G__22710__a[G__22710__i] = arguments[G__22710__i + 3]; ++G__22710__i;}
-  p__22707 = new cljs.core.IndexedSeq(G__22710__a,0);
+var G__22281__i = 0, G__22281__a = new Array(arguments.length -  3);
+while (G__22281__i < G__22281__a.length) {G__22281__a[G__22281__i] = arguments[G__22281__i + 3]; ++G__22281__i;}
+  p__22278 = new cljs.core.IndexedSeq(G__22281__a,0);
 } 
-return file__delegate.call(this,form,label,ks,p__22707);};
+return file__delegate.call(this,form,label,ks,p__22278);};
 file.cljs$lang$maxFixedArity = 3;
-file.cljs$lang$applyTo = (function (arglist__22711){
-var form = cljs.core.first(arglist__22711);
-arglist__22711 = cljs.core.next(arglist__22711);
-var label = cljs.core.first(arglist__22711);
-arglist__22711 = cljs.core.next(arglist__22711);
-var ks = cljs.core.first(arglist__22711);
-var p__22707 = cljs.core.rest(arglist__22711);
-return file__delegate(form,label,ks,p__22707);
+file.cljs$lang$applyTo = (function (arglist__22282){
+var form = cljs.core.first(arglist__22282);
+arglist__22282 = cljs.core.next(arglist__22282);
+var label = cljs.core.first(arglist__22282);
+arglist__22282 = cljs.core.next(arglist__22282);
+var ks = cljs.core.first(arglist__22282);
+var p__22278 = cljs.core.rest(arglist__22282);
+return file__delegate(form,label,ks,p__22278);
 });
 file.cljs$core$IFn$_invoke$arity$variadic = file__delegate;
 return file;
