@@ -13,32 +13,32 @@ return cljs.core.constant$keyword$80.cljs$core$IFn$_invoke$arity$1(cljs.core.fir
 * @param {...*} var_args
 */
 example.autocomplete.country_select = (function() { 
-var country_select__delegate = function (form,label,ks,p__21680){
-var vec__21682 = p__21680;
-var opts = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__21682,(0),null);
-return lomakkeet.fields.build(cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([form,opts,new cljs.core.PersistentArrayMap(null, 6, [cljs.core.constant$keyword$124,lomakkeet.autocomplete.autocomplete_STAR_,cljs.core.constant$keyword$184,example.autocomplete.country_list_render,cljs.core.constant$keyword$183,example.autocomplete.country_code__GT_name,cljs.core.constant$keyword$137,label,cljs.core.constant$keyword$146,ks,cljs.core.constant$keyword$181,((function (vec__21682,opts){
+var country_select__delegate = function (form,label,ks,p__21676){
+var vec__21678 = p__21676;
+var opts = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__21678,(0),null);
+return lomakkeet.fields.build(cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([form,opts,new cljs.core.PersistentArrayMap(null, 6, [cljs.core.constant$keyword$124,lomakkeet.autocomplete.autocomplete_STAR_,cljs.core.constant$keyword$184,example.autocomplete.country_list_render,cljs.core.constant$keyword$183,example.autocomplete.country_code__GT_name,cljs.core.constant$keyword$137,label,cljs.core.constant$keyword$146,ks,cljs.core.constant$keyword$181,((function (vec__21678,opts){
 return (function (owner){
 return om.core.set_state_BANG_.cljs$core$IFn$_invoke$arity$3(owner,cljs.core.constant$keyword$185,example.autocomplete.countries);
-});})(vec__21682,opts))
+});})(vec__21678,opts))
 ], null)], 0)));
 };
 var country_select = function (form,label,ks,var_args){
-var p__21680 = null;
+var p__21676 = null;
 if (arguments.length > 3) {
-var G__21683__i = 0, G__21683__a = new Array(arguments.length -  3);
-while (G__21683__i < G__21683__a.length) {G__21683__a[G__21683__i] = arguments[G__21683__i + 3]; ++G__21683__i;}
-  p__21680 = new cljs.core.IndexedSeq(G__21683__a,0);
+var G__21679__i = 0, G__21679__a = new Array(arguments.length -  3);
+while (G__21679__i < G__21679__a.length) {G__21679__a[G__21679__i] = arguments[G__21679__i + 3]; ++G__21679__i;}
+  p__21676 = new cljs.core.IndexedSeq(G__21679__a,0);
 } 
-return country_select__delegate.call(this,form,label,ks,p__21680);};
+return country_select__delegate.call(this,form,label,ks,p__21676);};
 country_select.cljs$lang$maxFixedArity = 3;
-country_select.cljs$lang$applyTo = (function (arglist__21684){
-var form = cljs.core.first(arglist__21684);
-arglist__21684 = cljs.core.next(arglist__21684);
-var label = cljs.core.first(arglist__21684);
-arglist__21684 = cljs.core.next(arglist__21684);
-var ks = cljs.core.first(arglist__21684);
-var p__21680 = cljs.core.rest(arglist__21684);
-return country_select__delegate(form,label,ks,p__21680);
+country_select.cljs$lang$applyTo = (function (arglist__21680){
+var form = cljs.core.first(arglist__21680);
+arglist__21680 = cljs.core.next(arglist__21680);
+var label = cljs.core.first(arglist__21680);
+arglist__21680 = cljs.core.next(arglist__21680);
+var ks = cljs.core.first(arglist__21680);
+var p__21676 = cljs.core.rest(arglist__21680);
+return country_select__delegate(form,label,ks,p__21676);
 });
 country_select.cljs$core$IFn$_invoke$arity$variadic = country_select__delegate;
 return country_select;

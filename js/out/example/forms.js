@@ -4,10 +4,10 @@ goog.require('cljs.core');
 goog.require('cljs.core.async');
 example.forms.humanize_error = (function humanize_error(x){
 if((x instanceof schema.utils.ValidationError)){
-var vec__21747 = (function (){var G__21748 = x.expectation_delay;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__21748) : cljs.core.deref.call(null,G__21748));
+var vec__21743 = (function (){var G__21744 = x.expectation_delay;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__21744) : cljs.core.deref.call(null,G__21744));
 })();
-var b = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__21747,(0),null);
+var b = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__21743,(0),null);
 if((b instanceof cljs.core.Symbol)){
 return [cljs.core.str(b)].join('');
 } else {
@@ -17,12 +17,12 @@ return "virhe";
 return "virhe";
 }
 });
-example.forms.form_status = (function form_status(p__21749){
-var map__21751 = p__21749;
-var map__21751__$1 = ((cljs.core.seq_QMARK_(map__21751))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21751):map__21751);
-var initial_value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21751__$1,cljs.core.constant$keyword$162);
-var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21751__$1,cljs.core.constant$keyword$66);
-var errors = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21751__$1,cljs.core.constant$keyword$154);
+example.forms.form_status = (function form_status(p__21745){
+var map__21747 = p__21745;
+var map__21747__$1 = ((cljs.core.seq_QMARK_(map__21747))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21747):map__21747);
+var initial_value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21747__$1,cljs.core.constant$keyword$162);
+var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21747__$1,cljs.core.constant$keyword$66);
+var errors = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21747__$1,cljs.core.constant$keyword$154);
 if(cljs.core.truth_((function (){var and__4239__auto__ = !(cljs.core.empty_QMARK_);
 if(and__4239__auto__){
 return errors;
