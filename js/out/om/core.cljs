@@ -1,5 +1,6 @@
 (ns om.core
-  (:require [om.dom :as dom :include-macros true]
+  (:require [cljsjs.react]
+            [om.dom :as dom :include-macros true]
             [goog.dom :as gdom])
   (:import [goog.ui IdGenerator]))
 
@@ -182,9 +183,14 @@
 (defn get-props
   "Given an owning Pure node return the Om props. Analogous to React
    component props."
-  [x]
-  {:pre [(component? x)]}
-  (aget (.-props x) "__om_cursor"))
+  ([x]
+   {:pre [(component? x)]}
+   (aget (.-props x) "__om_cursor"))
+  ([x korks]
+   {:pre [(component? x)]}
+   (let [korks (if (sequential? korks) korks [korks])]
+     (cond-> (aget (.-props x) "__om_cursor")
+       (seq korks) (get-in korks)))))
 
 (defn get-state
   "Returns the component local state of an owning component. owner is
@@ -449,6 +455,7 @@
       (swap! gstate update-in spath
         (fn [states]
           (-> states
+            (assoc :previous-state (:render-state states))
             (assoc :render-state
               (merge (:render-state states) (:pending-state states)))
             (dissoc :pending-state)))))))
@@ -481,11 +488,10 @@
     :componentWillUnmount
     (fn []
       (this-as this
-        (let [c     (children this)
-              spath [:state-map (react-id this)]]
+        (let [c (children this)]
           (when (satisfies? IWillUnmount c)
             (will-unmount c))
-          (swap! (get-gstate this) update-in spath dissoc)
+          (swap! (get-gstate this) update-in [:state-map] dissoc (react-id this))
           (when-let [refs (seq (aget (.-state this) "__om_refs"))]
             (doseq [ref refs]
               (unobserve this ref))))))
@@ -513,7 +519,7 @@
               (did-update c
                 (get-props #js {:props prev-props :isOmComponent true})
                 (or (:previous-state states)
-                  (:render-state states)))))
+                    (:render-state states)))))
           (when (:previous-state states)
             (swap! gstate update-in spath dissoc :previous-state)))))))
 
@@ -617,6 +623,9 @@
   IHash
   (-hash [_]
     (hash value))
+  IKVReduce
+  (-kv-reduce [_ f init]
+    (-kv-reduce value f init))
   IPrintWithWriter
   (-pr-writer [_ writer opts]
     (-pr-writer value writer opts)))
@@ -691,6 +700,9 @@
   IHash
   (-hash [_]
     (hash value))
+  IKVReduce
+  (-kv-reduce [_ f init]
+    (-kv-reduce value f init))
   IPrintWithWriter
   (-pr-writer [_ writer opts]
     (-pr-writer value writer opts)))
@@ -853,7 +865,7 @@
          " does not return valid instance")))
 
 (defn ^:private valid-opts? [m]
-  (every? #{:key :react-key :fn :init-state :state
+  (every? #{:key :react-key :key-fn :fn :init-state :state
             :opts :shared ::index :instrument :descriptor}
     (keys m)))
 
@@ -865,7 +877,9 @@
   ([f descriptor]
    (when (nil? (aget f "om$descriptor"))
      (aset f "om$descriptor"
-       (js/React.createClass (or descriptor *descriptor* pure-descriptor))))
+       (js/React.createFactory
+         (js/React.createClass
+           (or descriptor *descriptor* pure-descriptor)))))
    (aget f "om$descriptor")))
 
 (defn getf
@@ -885,7 +899,7 @@
   ([f cursor m]
    {:pre [(ifn? f) (or (nil? m) (map? m))]}
    (assert (valid-opts? m)
-     (apply str "build options contains invalid keys, only :key, :react-key, "
+     (apply str "build options contains invalid keys, only :key, :key-fn :react-key, "
        ":fn, :init-state, :state, and :opts allowed, given "
        (interpose ", " (keys m))))
    (cond
@@ -905,16 +919,17 @@
                       ret))}))
 
      :else
-     (let [{:keys [key state init-state opts]} m
+     (let [{:keys [key key-fn state init-state opts]} m
            dataf   (get m :fn)
            cursor' (if-not (nil? dataf)
                      (if-let [i (::index m)]
                        (dataf cursor i)
                        (dataf cursor))
                      cursor)
-           rkey    (if-not (nil? key)
-                     (get cursor' key)
-                     (get m :react-key))
+           rkey    (cond
+                     (not (nil? key)) (get cursor' key)
+                     (not (nil? key-fn)) (key-fn cursor')
+                     :else (get m :react-key))
            shared  (or (:shared m) (get-shared *parent*))
            ctor    (get-descriptor (getf f cursor' opts) (:descriptor m))]
        (ctor #js {:__om_cursor cursor'
@@ -926,7 +941,7 @@
                   :__om_app_state *state*
                   :__om_descriptor *descriptor*
                   :__om_instrument *instrument*
-                  :key rkey
+                  :key (or rkey js/undefined) ;; annoying
                   :children
                   (if (nil? opts)
                     (fn [this]
@@ -1075,6 +1090,9 @@
                  intercept all calls to om.core/build. This function should
                  correspond to the three arity version of om.core/build.
    :adapt      - a function to adapt the root cursor
+   :raf        - override requestAnimationFrame based rendering. If
+                 false setTimeout will be use. If given a function
+                 will be invoked instead.
 
    Example:
 
@@ -1083,7 +1101,7 @@
        ...)
      {:message :hello}
      {:target js/document.body})"
-  ([f value {:keys [target tx-listen path instrument descriptor adapt] :as options}]
+  ([f value {:keys [target tx-listen path instrument descriptor adapt raf] :as options}]
     (assert (ifn? f) "First argument must be a function")
     (assert (not (nil? target)) "No target specified to om.core/root")
     ;; only one root render loop per target
@@ -1096,7 +1114,7 @@
                   (atom value))
           state (setup state watch-key tx-listen)
           adapt (or adapt identity)
-          m     (dissoc options :target :tx-listen :path :adapt)
+          m     (dissoc options :target :tx-listen :path :adapt :raf)
           ret   (atom nil)
           rootf (fn rootf []
                   (swap! refresh-set disj rootf)
@@ -1119,6 +1137,7 @@
                           (reset! ret c))))
                     ;; update state pass
                     (let [queue (-get-queue state)]
+                      (-empty-queue! state)
                       (when-not (empty? queue)
                         (doseq [c queue]
                           (when (.isMounted c)
@@ -1127,8 +1146,7 @@
                               (aset (.-state c) "__om_next_cursor" nil))
                             (when (or (not (satisfies? ICheckState (children c)))
                                       (.shouldComponentUpdate c (.-props c) (.-state c)))
-                              (.forceUpdate c))))
-                        (-empty-queue! state)))
+                              (.forceUpdate c))))))
                     ;; ref cursor pass
                     (let [_refs @_refs]
                       (when-not (empty? _refs)
@@ -1149,9 +1167,16 @@
             (swap! refresh-set conj rootf))
           (when-not refresh-queued
             (set! refresh-queued true)
-            (if (exists? js/requestAnimationFrame)
-              (js/requestAnimationFrame #(render-all state))
-              (js/setTimeout #(render-all state) 16)))))
+            (cond
+              (or (false? raf)
+                  (not (exists? js/requestAnimationFrame)))
+              (js/setTimeout #(render-all state) 16)
+
+              (fn? raf)
+              (raf)
+
+              :else
+              (js/requestAnimationFrame #(render-all state))))))
       ;; store fn to remove previous root render loop
       (swap! roots assoc target
         (fn []
@@ -1169,6 +1194,9 @@
   (when-let [f (get @roots target)]
     (f)))
 
+(defn transactable? [x]
+  (satisfies? ITransact x))
+
 (defn transact!
   "Given a tag, a cursor, an optional list of keys ks, mutate the tree
   at the path specified by the cursor + the optional keys by applying
@@ -1179,7 +1207,7 @@
   ([cursor korks f]
    (transact! cursor korks f nil))
   ([cursor korks f tag]
-   {:pre [(cursor? cursor) (ifn? f)]}
+   {:pre [(transactable? cursor) (ifn? f)]}
    (let [korks (cond
                  (nil? korks) []
                  (sequential? korks) korks

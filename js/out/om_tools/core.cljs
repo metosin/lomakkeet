@@ -1,14 +1,11 @@
 (ns om-tools.core
   "Tools for Om"
-        
-  (:require-macros
-   [schema.macros :as sm])
   (:require
    [om.core :as om]
    [plumbing.fnk.schema]
    [plumbing.core :as p        :include-macros        true]
+   [schema.core :as s        :include-macros        true]
                                  
-                               
                   )
        
           
@@ -208,7 +205,7 @@
                       
                                                                              
                                                                        
-                                                                                        
+                                                                                      
                                                               
 
            
@@ -248,7 +245,7 @@
                                                                              
         
                   
-                     
+                    
                                            
                                        
                  
@@ -317,7 +314,7 @@
                              
 
                                                                                    
-                                                                                
+                                                                              
                     
 
                                                                   
@@ -329,7 +326,7 @@
                                                        
                                                                       
                                                                                 
-                                         
+                                        
                                    
             
                                          

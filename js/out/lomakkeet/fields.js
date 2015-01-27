@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-2496
+// Compiled by ClojureScript 0.0-2727 {}
 goog.provide('lomakkeet.fields');
 goog.require('cljs.core');
 goog.require('cljs.core.async.impl.channels');
@@ -13,38 +13,40 @@ goog.require('schema.utils');
 * @param {...*} var_args
 */
 lomakkeet.fields.get_in_schema = (function() { 
-var get_in_schema__delegate = function (schema__$1,ks,p__20893){
-var vec__20895 = p__20893;
-var not_found = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__20895,(0),null);
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(((function (vec__20895,not_found){
+var get_in_schema__delegate = function (schema__$1,ks,p__22692){
+var vec__22694 = p__22692;
+var not_found = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__22694,(0),null);
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(((function (vec__22694,not_found){
 return (function (acc,k){
-var or__3628__auto__ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(acc,k);
-if(cljs.core.truth_(or__3628__auto__)){
-return or__3628__auto__;
+var or__4251__auto__ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(acc,k);
+if(cljs.core.truth_(or__4251__auto__)){
+return or__4251__auto__;
 } else {
-var or__3628__auto____$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$3(acc,schema.core.optional_key(k),cljs.core.get.cljs$core$IFn$_invoke$arity$2(acc,schema.core.required_key(k)));
-if(cljs.core.truth_(or__3628__auto____$1)){
-return or__3628__auto____$1;
+var or__4251__auto____$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$3(acc,schema.core.optional_key(k),cljs.core.get.cljs$core$IFn$_invoke$arity$2(acc,schema.core.required_key(k)));
+if(cljs.core.truth_(or__4251__auto____$1)){
+return or__4251__auto____$1;
 } else {
 return not_found;
 }
 }
-});})(vec__20895,not_found))
+});})(vec__22694,not_found))
 ,schema__$1,ks);
 };
 var get_in_schema = function (schema__$1,ks,var_args){
-var p__20893 = null;
+var p__22692 = null;
 if (arguments.length > 2) {
-  p__20893 = cljs.core.array_seq(Array.prototype.slice.call(arguments, 2),0);
+var G__22695__i = 0, G__22695__a = new Array(arguments.length -  2);
+while (G__22695__i < G__22695__a.length) {G__22695__a[G__22695__i] = arguments[G__22695__i + 2]; ++G__22695__i;}
+  p__22692 = new cljs.core.IndexedSeq(G__22695__a,0);
 } 
-return get_in_schema__delegate.call(this,schema__$1,ks,p__20893);};
+return get_in_schema__delegate.call(this,schema__$1,ks,p__22692);};
 get_in_schema.cljs$lang$maxFixedArity = 2;
-get_in_schema.cljs$lang$applyTo = (function (arglist__20896){
-var schema__$1 = cljs.core.first(arglist__20896);
-arglist__20896 = cljs.core.next(arglist__20896);
-var ks = cljs.core.first(arglist__20896);
-var p__20893 = cljs.core.rest(arglist__20896);
-return get_in_schema__delegate(schema__$1,ks,p__20893);
+get_in_schema.cljs$lang$applyTo = (function (arglist__22696){
+var schema__$1 = cljs.core.first(arglist__22696);
+arglist__22696 = cljs.core.next(arglist__22696);
+var ks = cljs.core.first(arglist__22696);
+var p__22692 = cljs.core.rest(arglist__22696);
+return get_in_schema__delegate(schema__$1,ks,p__22692);
 });
 get_in_schema.cljs$core$IFn$_invoke$arity$variadic = get_in_schema__delegate;
 return get_in_schema;
@@ -58,11 +60,11 @@ return (v instanceof cljs.core.async.impl.channels.ManyToManyChannel);
 * nested structure. keys is a sequence of keys. Any empty maps that result
 * will not be present in the new structure.
 */
-lomakkeet.fields.dissoc_in = (function dissoc_in(m,p__20897){
-var vec__20901 = p__20897;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__20901,(0),null);
-var ks = cljs.core.nthnext(vec__20901,(1));
-var keys = vec__20901;
+lomakkeet.fields.dissoc_in = (function dissoc_in(m,p__22697){
+var vec__22701 = p__22697;
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__22701,(0),null);
+var ks = cljs.core.nthnext(vec__22701,(1));
+var keys = vec__22701;
 if(ks){
 var temp__4124__auto__ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(m,k);
 if(cljs.core.truth_(temp__4124__auto__)){
@@ -80,190 +82,190 @@ return m;
 return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(m,k);
 }
 });
-lomakkeet.fields.empty_cb = (function empty_cb(p__20902){
-var map__20904 = p__20902;
-var map__20904__$1 = ((cljs.core.seq_QMARK_(map__20904))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20904):map__20904);
-var ks = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20904__$1,cljs.core.constant$keyword$144);
-var ch = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20904__$1,cljs.core.constant$keyword$145);
-return ((function (map__20904,map__20904__$1,ks,ch){
+lomakkeet.fields.empty_cb = (function empty_cb(p__22702){
+var map__22704 = p__22702;
+var map__22704__$1 = ((cljs.core.seq_QMARK_(map__22704))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22704):map__22704);
+var ks = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22704__$1,cljs.core.constant$keyword$146);
+var ch = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22704__$1,cljs.core.constant$keyword$147);
+return ((function (map__22704,map__22704__$1,ks,ch){
 return (function (e){
-return cljs.core.async.put_BANG_.cljs$core$IFn$_invoke$arity$2(ch,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$25,cljs.core.constant$keyword$146,cljs.core.constant$keyword$23,null,cljs.core.constant$keyword$144,ks], null));
+return cljs.core.async.put_BANG_.cljs$core$IFn$_invoke$arity$2(ch,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$68,cljs.core.constant$keyword$148,cljs.core.constant$keyword$66,null,cljs.core.constant$keyword$146,ks], null));
 });
-;})(map__20904,map__20904__$1,ks,ch))
+;})(map__22704,map__22704__$1,ks,ch))
 });
 
-var ufv___20949 = schema.utils.use_fn_validation;
-var output_schema20906_20950 = schema.core.Any;
-var input_schema20907_20951 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"state","state",-348086572,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"owner","owner",1247919588,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg2","arg2",-924884852,null))], null);
-var input_checker20908_20952 = schema.core.checker(input_schema20907_20951);
-var output_checker20909_20953 = schema.core.checker(output_schema20906_20950);
+var ufv___22749 = schema.utils.use_fn_validation;
+var output_schema22706_22750 = schema.core.Any;
+var input_schema22707_22751 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"state","state",-348086572,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"owner","owner",1247919588,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg2","arg2",-924884852,null))], null);
+var input_checker22708_22752 = schema.core.checker(input_schema22707_22751);
+var output_checker22709_22753 = schema.core.checker(output_schema22706_22750);
 /**
 * Inputs: [state owner {:keys [real-input], :as opts}]
 */
-lomakkeet.fields.emptyable_input = ((function (ufv___20949,output_schema20906_20950,input_schema20907_20951,input_checker20908_20952,output_checker20909_20953){
-return (function emptyable_input(G__20910,G__20911,G__20912){
-var validate__6096__auto__ = ufv___20949.get_cell();
-if(cljs.core.truth_(validate__6096__auto__)){
-var args__6097__auto___20954 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__20910,G__20911,G__20912], null);
-var temp__4126__auto___20955 = (function (){var G__20931 = args__6097__auto___20954;
-return (input_checker20908_20952.cljs$core$IFn$_invoke$arity$1 ? input_checker20908_20952.cljs$core$IFn$_invoke$arity$1(G__20931) : input_checker20908_20952.call(null,G__20931));
+lomakkeet.fields.emptyable_input = ((function (ufv___22749,output_schema22706_22750,input_schema22707_22751,input_checker22708_22752,output_checker22709_22753){
+return (function emptyable_input(G__22710,G__22711,G__22712){
+var validate__12581__auto__ = ufv___22749.get_cell();
+if(cljs.core.truth_(validate__12581__auto__)){
+var args__12582__auto___22754 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__22710,G__22711,G__22712], null);
+var temp__4126__auto___22755 = (function (){var G__22731 = args__12582__auto___22754;
+return (input_checker22708_22752.cljs$core$IFn$_invoke$arity$1 ? input_checker22708_22752.cljs$core$IFn$_invoke$arity$1(G__22731) : input_checker22708_22752.call(null,G__22731));
 })();
-if(cljs.core.truth_(temp__4126__auto___20955)){
-var error__6098__auto___20956 = temp__4126__auto___20955;
-throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Input to %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"emptyable-input","emptyable-input",298440140,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__6098__auto___20956], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$22,error__6098__auto___20956,cljs.core.constant$keyword$23,args__6097__auto___20954,cljs.core.constant$keyword$24,input_schema20907_20951,cljs.core.constant$keyword$25,cljs.core.constant$keyword$26], null));
+if(cljs.core.truth_(temp__4126__auto___22755)){
+var error__12583__auto___22756 = temp__4126__auto___22755;
+throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Input to %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"emptyable-input","emptyable-input",298440140,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__12583__auto___22756], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$65,error__12583__auto___22756,cljs.core.constant$keyword$66,args__12582__auto___22754,cljs.core.constant$keyword$67,input_schema22707_22751,cljs.core.constant$keyword$68,cljs.core.constant$keyword$69], null));
 } else {
 }
 } else {
 }
 
-var o__6099__auto__ = (function (){var state = G__20910;
-var owner = G__20911;
-var G__20933 = G__20912;
-var map__20934 = G__20933;
-var map__20934__$1 = ((cljs.core.seq_QMARK_(map__20934))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20934):map__20934);
-var opts = map__20934__$1;
-var real_input = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20934__$1,cljs.core.constant$keyword$147);
+var o__12584__auto__ = (function (){var state = G__22710;
+var owner = G__22711;
+var G__22733 = G__22712;
+var map__22734 = G__22733;
+var map__22734__$1 = ((cljs.core.seq_QMARK_(map__22734))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22734):map__22734);
+var opts = map__22734__$1;
+var real_input = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22734__$1,cljs.core.constant$keyword$149);
 var state__$1 = state;
 var owner__$1 = owner;
-var G__20933__$1 = G__20933;
+var G__22733__$1 = G__22733;
 while(true){
 var state__$2 = state__$1;
 var owner__$2 = owner__$1;
-var map__20935 = G__20933__$1;
-var map__20935__$1 = ((cljs.core.seq_QMARK_(map__20935))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20935):map__20935);
-var opts__$1 = map__20935__$1;
-var real_input__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20935__$1,cljs.core.constant$keyword$147);
-if(typeof lomakkeet.fields.t20936 !== 'undefined'){
+var map__22735 = G__22733__$1;
+var map__22735__$1 = ((cljs.core.seq_QMARK_(map__22735))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22735):map__22735);
+var opts__$1 = map__22735__$1;
+var real_input__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22735__$1,cljs.core.constant$keyword$149);
+if(typeof lomakkeet.fields.t22736 !== 'undefined'){
 } else {
 
 /**
 * @constructor
 */
-lomakkeet.fields.t20936 = (function (G__20912,input_schema20907,G__20933,owner,output_checker20909,map__20935,emptyable_input,validate__6096__auto__,G__20910,real_input,state,output_schema20906,input_checker20908,opts,map__20934,ufv__,G__20911,meta20937){
-this.G__20912 = G__20912;
-this.input_schema20907 = input_schema20907;
-this.G__20933 = G__20933;
+lomakkeet.fields.t22736 = (function (owner,validate__12581__auto__,emptyable_input,output_checker22709,G__22711,G__22733,map__22735,output_schema22706,input_schema22707,input_checker22708,real_input,state,G__22710,map__22734,opts,G__22712,ufv__,meta22737){
 this.owner = owner;
-this.output_checker20909 = output_checker20909;
-this.map__20935 = map__20935;
+this.validate__12581__auto__ = validate__12581__auto__;
 this.emptyable_input = emptyable_input;
-this.validate__6096__auto__ = validate__6096__auto__;
-this.G__20910 = G__20910;
+this.output_checker22709 = output_checker22709;
+this.G__22711 = G__22711;
+this.G__22733 = G__22733;
+this.map__22735 = map__22735;
+this.output_schema22706 = output_schema22706;
+this.input_schema22707 = input_schema22707;
+this.input_checker22708 = input_checker22708;
 this.real_input = real_input;
 this.state = state;
-this.output_schema20906 = output_schema20906;
-this.input_checker20908 = input_checker20908;
+this.G__22710 = G__22710;
+this.map__22734 = map__22734;
 this.opts = opts;
-this.map__20934 = map__20934;
+this.G__22712 = G__22712;
 this.ufv__ = ufv__;
-this.G__20911 = G__20911;
-this.meta20937 = meta20937;
+this.meta22737 = meta22737;
 this.cljs$lang$protocol_mask$partition1$ = 0;
 this.cljs$lang$protocol_mask$partition0$ = 393216;
 })
-lomakkeet.fields.t20936.prototype.om$core$IDisplayName$ = true;
+lomakkeet.fields.t22736.prototype.om$core$IDisplayName$ = true;
 
-lomakkeet.fields.t20936.prototype.om$core$IDisplayName$display_name$arity$1 = ((function (state__$2,owner__$2,map__20935,map__20935__$1,opts__$1,real_input__$1,state,owner,G__20933,map__20934,map__20934__$1,opts,real_input,validate__6096__auto__,ufv___20949,output_schema20906_20950,input_schema20907_20951,input_checker20908_20952,output_checker20909_20953){
+lomakkeet.fields.t22736.prototype.om$core$IDisplayName$display_name$arity$1 = ((function (state__$2,owner__$2,map__22735,map__22735__$1,opts__$1,real_input__$1,state,owner,G__22733,map__22734,map__22734__$1,opts,real_input,validate__12581__auto__,ufv___22749,output_schema22706_22750,input_schema22707_22751,input_checker22708_22752,output_checker22709_22753){
 return (function (_){
 var self__ = this;
 var ___$1 = this;
 return "emptyable-input";
-});})(state__$2,owner__$2,map__20935,map__20935__$1,opts__$1,real_input__$1,state,owner,G__20933,map__20934,map__20934__$1,opts,real_input,validate__6096__auto__,ufv___20949,output_schema20906_20950,input_schema20907_20951,input_checker20908_20952,output_checker20909_20953))
+});})(state__$2,owner__$2,map__22735,map__22735__$1,opts__$1,real_input__$1,state,owner,G__22733,map__22734,map__22734__$1,opts,real_input,validate__12581__auto__,ufv___22749,output_schema22706_22750,input_schema22707_22751,input_checker22708_22752,output_checker22709_22753))
 ;
 
-lomakkeet.fields.t20936.prototype.om$core$IRenderState$ = true;
+lomakkeet.fields.t22736.prototype.om$core$IRenderState$ = true;
 
-lomakkeet.fields.t20936.prototype.om$core$IRenderState$render_state$arity$2 = ((function (state__$2,owner__$2,map__20935,map__20935__$1,opts__$1,real_input__$1,state,owner,G__20933,map__20934,map__20934__$1,opts,real_input,validate__6096__auto__,ufv___20949,output_schema20906_20950,input_schema20907_20951,input_checker20908_20952,output_checker20909_20953){
+lomakkeet.fields.t22736.prototype.om$core$IRenderState$render_state$arity$2 = ((function (state__$2,owner__$2,map__22735,map__22735__$1,opts__$1,real_input__$1,state,owner,G__22733,map__22734,map__22734__$1,opts,real_input,validate__12581__auto__,ufv___22749,output_schema22706_22750,input_schema22707_22751,input_checker22708_22752,output_checker22709_22753){
 return (function (_,s){
 var self__ = this;
 var ___$1 = this;
-var attrs20939 = om.core.build.cljs$core$IFn$_invoke$arity$3(self__.real_input,self__.state,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$87,self__.opts,cljs.core.constant$keyword$86,s], null));
-return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(React.DOM.div,((cljs.core.map_QMARK_(attrs20939))?sablono.interpreter.attributes(sablono.util.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$114,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["input-group"], null)], null),attrs20939], 0))):{"className": "input-group"}),cljs.core.remove.cljs$core$IFn$_invoke$arity$2(cljs.core.nil_QMARK_,((cljs.core.map_QMARK_(attrs20939))?new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(function (){var G__20940 = {"className": "input-group-btn"};
-var G__20941 = (function (){var G__20942 = {"className": "btn btn-default", "type": "button", "onClick": lomakkeet.fields.empty_cb(self__.opts)};
-var G__20943 = "\u00D7";
-return React.DOM.button(G__20942,G__20943);
+var attrs22739 = om.core.build.cljs$core$IFn$_invoke$arity$3(self__.real_input,self__.state,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$55,self__.opts,cljs.core.constant$keyword$53,s], null));
+return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(React.DOM.div,((cljs.core.map_QMARK_(attrs22739))?sablono.interpreter.attributes(sablono.util.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$116,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["input-group"], null)], null),attrs22739], 0))):{"className": "input-group"}),cljs.core.remove.cljs$core$IFn$_invoke$arity$2(cljs.core.nil_QMARK_,((cljs.core.map_QMARK_(attrs22739))?new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(function (){var G__22740 = {"className": "input-group-btn"};
+var G__22741 = (function (){var G__22742 = {"className": "btn btn-default", "type": "button", "onClick": lomakkeet.fields.empty_cb(self__.opts)};
+var G__22743 = "\u00D7";
+return React.DOM.button(G__22742,G__22743);
 })();
-return React.DOM.span(G__20940,G__20941);
-})()], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [sablono.interpreter.interpret(attrs20939),(function (){var G__20944 = {"className": "input-group-btn"};
-var G__20945 = (function (){var G__20946 = {"className": "btn btn-default", "type": "button", "onClick": lomakkeet.fields.empty_cb(self__.opts)};
-var G__20947 = "\u00D7";
-return React.DOM.button(G__20946,G__20947);
+return React.DOM.span(G__22740,G__22741);
+})()], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [sablono.interpreter.interpret(attrs22739),(function (){var G__22744 = {"className": "input-group-btn"};
+var G__22745 = (function (){var G__22746 = {"className": "btn btn-default", "type": "button", "onClick": lomakkeet.fields.empty_cb(self__.opts)};
+var G__22747 = "\u00D7";
+return React.DOM.button(G__22746,G__22747);
 })();
-return React.DOM.span(G__20944,G__20945);
+return React.DOM.span(G__22744,G__22745);
 })()], null))));
-});})(state__$2,owner__$2,map__20935,map__20935__$1,opts__$1,real_input__$1,state,owner,G__20933,map__20934,map__20934__$1,opts,real_input,validate__6096__auto__,ufv___20949,output_schema20906_20950,input_schema20907_20951,input_checker20908_20952,output_checker20909_20953))
+});})(state__$2,owner__$2,map__22735,map__22735__$1,opts__$1,real_input__$1,state,owner,G__22733,map__22734,map__22734__$1,opts,real_input,validate__12581__auto__,ufv___22749,output_schema22706_22750,input_schema22707_22751,input_checker22708_22752,output_checker22709_22753))
 ;
 
-lomakkeet.fields.t20936.prototype.cljs$core$IMeta$_meta$arity$1 = ((function (state__$2,owner__$2,map__20935,map__20935__$1,opts__$1,real_input__$1,state,owner,G__20933,map__20934,map__20934__$1,opts,real_input,validate__6096__auto__,ufv___20949,output_schema20906_20950,input_schema20907_20951,input_checker20908_20952,output_checker20909_20953){
-return (function (_20938){
+lomakkeet.fields.t22736.prototype.cljs$core$IMeta$_meta$arity$1 = ((function (state__$2,owner__$2,map__22735,map__22735__$1,opts__$1,real_input__$1,state,owner,G__22733,map__22734,map__22734__$1,opts,real_input,validate__12581__auto__,ufv___22749,output_schema22706_22750,input_schema22707_22751,input_checker22708_22752,output_checker22709_22753){
+return (function (_22738){
 var self__ = this;
-var _20938__$1 = this;
-return self__.meta20937;
-});})(state__$2,owner__$2,map__20935,map__20935__$1,opts__$1,real_input__$1,state,owner,G__20933,map__20934,map__20934__$1,opts,real_input,validate__6096__auto__,ufv___20949,output_schema20906_20950,input_schema20907_20951,input_checker20908_20952,output_checker20909_20953))
+var _22738__$1 = this;
+return self__.meta22737;
+});})(state__$2,owner__$2,map__22735,map__22735__$1,opts__$1,real_input__$1,state,owner,G__22733,map__22734,map__22734__$1,opts,real_input,validate__12581__auto__,ufv___22749,output_schema22706_22750,input_schema22707_22751,input_checker22708_22752,output_checker22709_22753))
 ;
 
-lomakkeet.fields.t20936.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = ((function (state__$2,owner__$2,map__20935,map__20935__$1,opts__$1,real_input__$1,state,owner,G__20933,map__20934,map__20934__$1,opts,real_input,validate__6096__auto__,ufv___20949,output_schema20906_20950,input_schema20907_20951,input_checker20908_20952,output_checker20909_20953){
-return (function (_20938,meta20937__$1){
+lomakkeet.fields.t22736.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = ((function (state__$2,owner__$2,map__22735,map__22735__$1,opts__$1,real_input__$1,state,owner,G__22733,map__22734,map__22734__$1,opts,real_input,validate__12581__auto__,ufv___22749,output_schema22706_22750,input_schema22707_22751,input_checker22708_22752,output_checker22709_22753){
+return (function (_22738,meta22737__$1){
 var self__ = this;
-var _20938__$1 = this;
-return (new lomakkeet.fields.t20936(self__.G__20912,self__.input_schema20907,self__.G__20933,self__.owner,self__.output_checker20909,self__.map__20935,self__.emptyable_input,self__.validate__6096__auto__,self__.G__20910,self__.real_input,self__.state,self__.output_schema20906,self__.input_checker20908,self__.opts,self__.map__20934,self__.ufv__,self__.G__20911,meta20937__$1));
-});})(state__$2,owner__$2,map__20935,map__20935__$1,opts__$1,real_input__$1,state,owner,G__20933,map__20934,map__20934__$1,opts,real_input,validate__6096__auto__,ufv___20949,output_schema20906_20950,input_schema20907_20951,input_checker20908_20952,output_checker20909_20953))
+var _22738__$1 = this;
+return (new lomakkeet.fields.t22736(self__.owner,self__.validate__12581__auto__,self__.emptyable_input,self__.output_checker22709,self__.G__22711,self__.G__22733,self__.map__22735,self__.output_schema22706,self__.input_schema22707,self__.input_checker22708,self__.real_input,self__.state,self__.G__22710,self__.map__22734,self__.opts,self__.G__22712,self__.ufv__,meta22737__$1));
+});})(state__$2,owner__$2,map__22735,map__22735__$1,opts__$1,real_input__$1,state,owner,G__22733,map__22734,map__22734__$1,opts,real_input,validate__12581__auto__,ufv___22749,output_schema22706_22750,input_schema22707_22751,input_checker22708_22752,output_checker22709_22753))
 ;
 
-lomakkeet.fields.t20936.cljs$lang$type = true;
+lomakkeet.fields.t22736.cljs$lang$type = true;
 
-lomakkeet.fields.t20936.cljs$lang$ctorStr = "lomakkeet.fields/t20936";
+lomakkeet.fields.t22736.cljs$lang$ctorStr = "lomakkeet.fields/t22736";
 
-lomakkeet.fields.t20936.cljs$lang$ctorPrWriter = ((function (state__$2,owner__$2,map__20935,map__20935__$1,opts__$1,real_input__$1,state,owner,G__20933,map__20934,map__20934__$1,opts,real_input,validate__6096__auto__,ufv___20949,output_schema20906_20950,input_schema20907_20951,input_checker20908_20952,output_checker20909_20953){
-return (function (this__4215__auto__,writer__4216__auto__,opt__4217__auto__){
-return cljs.core._write(writer__4216__auto__,"lomakkeet.fields/t20936");
-});})(state__$2,owner__$2,map__20935,map__20935__$1,opts__$1,real_input__$1,state,owner,G__20933,map__20934,map__20934__$1,opts,real_input,validate__6096__auto__,ufv___20949,output_schema20906_20950,input_schema20907_20951,input_checker20908_20952,output_checker20909_20953))
+lomakkeet.fields.t22736.cljs$lang$ctorPrWriter = ((function (state__$2,owner__$2,map__22735,map__22735__$1,opts__$1,real_input__$1,state,owner,G__22733,map__22734,map__22734__$1,opts,real_input,validate__12581__auto__,ufv___22749,output_schema22706_22750,input_schema22707_22751,input_checker22708_22752,output_checker22709_22753){
+return (function (this__4838__auto__,writer__4839__auto__,opt__4840__auto__){
+return cljs.core._write(writer__4839__auto__,"lomakkeet.fields/t22736");
+});})(state__$2,owner__$2,map__22735,map__22735__$1,opts__$1,real_input__$1,state,owner,G__22733,map__22734,map__22734__$1,opts,real_input,validate__12581__auto__,ufv___22749,output_schema22706_22750,input_schema22707_22751,input_checker22708_22752,output_checker22709_22753))
 ;
 
-lomakkeet.fields.__GT_t20936 = ((function (state__$2,owner__$2,map__20935,map__20935__$1,opts__$1,real_input__$1,state,owner,G__20933,map__20934,map__20934__$1,opts,real_input,validate__6096__auto__,ufv___20949,output_schema20906_20950,input_schema20907_20951,input_checker20908_20952,output_checker20909_20953){
-return (function __GT_t20936(G__20912__$1,input_schema20907__$1,G__20933__$2,owner__$3,output_checker20909__$1,map__20935__$2,emptyable_input__$1,validate__6096__auto____$1,G__20910__$1,real_input__$2,state__$3,output_schema20906__$1,input_checker20908__$1,opts__$2,map__20934__$2,ufv____$1,G__20911__$1,meta20937){
-return (new lomakkeet.fields.t20936(G__20912__$1,input_schema20907__$1,G__20933__$2,owner__$3,output_checker20909__$1,map__20935__$2,emptyable_input__$1,validate__6096__auto____$1,G__20910__$1,real_input__$2,state__$3,output_schema20906__$1,input_checker20908__$1,opts__$2,map__20934__$2,ufv____$1,G__20911__$1,meta20937));
-});})(state__$2,owner__$2,map__20935,map__20935__$1,opts__$1,real_input__$1,state,owner,G__20933,map__20934,map__20934__$1,opts,real_input,validate__6096__auto__,ufv___20949,output_schema20906_20950,input_schema20907_20951,input_checker20908_20952,output_checker20909_20953))
+lomakkeet.fields.__GT_t22736 = ((function (state__$2,owner__$2,map__22735,map__22735__$1,opts__$1,real_input__$1,state,owner,G__22733,map__22734,map__22734__$1,opts,real_input,validate__12581__auto__,ufv___22749,output_schema22706_22750,input_schema22707_22751,input_checker22708_22752,output_checker22709_22753){
+return (function __GT_t22736(owner__$3,validate__12581__auto____$1,emptyable_input__$1,output_checker22709__$1,G__22711__$1,G__22733__$2,map__22735__$2,output_schema22706__$1,input_schema22707__$1,input_checker22708__$1,real_input__$2,state__$3,G__22710__$1,map__22734__$2,opts__$2,G__22712__$1,ufv____$1,meta22737){
+return (new lomakkeet.fields.t22736(owner__$3,validate__12581__auto____$1,emptyable_input__$1,output_checker22709__$1,G__22711__$1,G__22733__$2,map__22735__$2,output_schema22706__$1,input_schema22707__$1,input_checker22708__$1,real_input__$2,state__$3,G__22710__$1,map__22734__$2,opts__$2,G__22712__$1,ufv____$1,meta22737));
+});})(state__$2,owner__$2,map__22735,map__22735__$1,opts__$1,real_input__$1,state,owner,G__22733,map__22734,map__22734__$1,opts,real_input,validate__12581__auto__,ufv___22749,output_schema22706_22750,input_schema22707_22751,input_checker22708_22752,output_checker22709_22753))
 ;
 
 }
 
-return (new lomakkeet.fields.t20936(G__20912,input_schema20907_20951,G__20933__$1,owner__$2,output_checker20909_20953,map__20935__$1,emptyable_input,validate__6096__auto__,G__20910,real_input__$1,state__$2,output_schema20906_20950,input_checker20908_20952,opts__$1,map__20934__$1,ufv___20949,G__20911,null));
+return (new lomakkeet.fields.t22736(owner__$2,validate__12581__auto__,emptyable_input,output_checker22709_22753,G__22711,G__22733__$1,map__22735__$1,output_schema22706_22750,input_schema22707_22751,input_checker22708_22752,real_input__$1,state__$2,G__22710,map__22734__$1,opts__$1,G__22712,ufv___22749,null));
 break;
 }
 })();
-if(cljs.core.truth_(validate__6096__auto__)){
-var temp__4126__auto___20957 = (function (){var G__20948 = o__6099__auto__;
-return (output_checker20909_20953.cljs$core$IFn$_invoke$arity$1 ? output_checker20909_20953.cljs$core$IFn$_invoke$arity$1(G__20948) : output_checker20909_20953.call(null,G__20948));
+if(cljs.core.truth_(validate__12581__auto__)){
+var temp__4126__auto___22757 = (function (){var G__22748 = o__12584__auto__;
+return (output_checker22709_22753.cljs$core$IFn$_invoke$arity$1 ? output_checker22709_22753.cljs$core$IFn$_invoke$arity$1(G__22748) : output_checker22709_22753.call(null,G__22748));
 })();
-if(cljs.core.truth_(temp__4126__auto___20957)){
-var error__6098__auto___20958 = temp__4126__auto___20957;
-throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Output of %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"emptyable-input","emptyable-input",298440140,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__6098__auto___20958], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$22,error__6098__auto___20958,cljs.core.constant$keyword$23,o__6099__auto__,cljs.core.constant$keyword$24,output_schema20906_20950,cljs.core.constant$keyword$25,cljs.core.constant$keyword$26], null));
+if(cljs.core.truth_(temp__4126__auto___22757)){
+var error__12583__auto___22758 = temp__4126__auto___22757;
+throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Output of %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"emptyable-input","emptyable-input",298440140,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__12583__auto___22758], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$65,error__12583__auto___22758,cljs.core.constant$keyword$66,o__12584__auto__,cljs.core.constant$keyword$67,output_schema22706_22750,cljs.core.constant$keyword$68,cljs.core.constant$keyword$69], null));
 } else {
 }
 } else {
 }
 
-return o__6099__auto__;
-});})(ufv___20949,output_schema20906_20950,input_schema20907_20951,input_checker20908_20952,output_checker20909_20953))
+return o__12584__auto__;
+});})(ufv___22749,output_schema22706_22750,input_schema22707_22751,input_checker22708_22752,output_checker22709_22753))
 ;
 
-schema.utils.declare_class_schema_BANG_(schema.utils.fn_schema_bearer(lomakkeet.fields.emptyable_input),schema.core.make_fn_schema(output_schema20906_20950,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema20907_20951], null)));
+schema.utils.declare_class_schema_BANG_(schema.utils.fn_schema_bearer(lomakkeet.fields.emptyable_input),schema.core.make_fn_schema(output_schema22706_22750,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema22707_22751], null)));
 
 lomakkeet.fields.__GT_emptyable_input = (function() {
 var __GT_emptyable_input = null;
-var __GT_emptyable_input__1 = (function (cursor__7890__auto__){
-return om.core.build.cljs$core$IFn$_invoke$arity$2(lomakkeet.fields.emptyable_input,cursor__7890__auto__);
+var __GT_emptyable_input__1 = (function (cursor__20832__auto__){
+return om.core.build.cljs$core$IFn$_invoke$arity$2(lomakkeet.fields.emptyable_input,cursor__20832__auto__);
 });
-var __GT_emptyable_input__2 = (function (cursor__7890__auto__,m20905){
-return om.core.build.cljs$core$IFn$_invoke$arity$3(lomakkeet.fields.emptyable_input,cursor__7890__auto__,m20905);
+var __GT_emptyable_input__2 = (function (cursor__20832__auto__,m22705){
+return om.core.build.cljs$core$IFn$_invoke$arity$3(lomakkeet.fields.emptyable_input,cursor__20832__auto__,m22705);
 });
-__GT_emptyable_input = function(cursor__7890__auto__,m20905){
+__GT_emptyable_input = function(cursor__20832__auto__,m22705){
 switch(arguments.length){
 case 1:
-return __GT_emptyable_input__1.call(this,cursor__7890__auto__);
+return __GT_emptyable_input__1.call(this,cursor__20832__auto__);
 case 2:
-return __GT_emptyable_input__2.call(this,cursor__7890__auto__,m20905);
+return __GT_emptyable_input__2.call(this,cursor__20832__auto__,m22705);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
@@ -273,206 +275,206 @@ return __GT_emptyable_input;
 })()
 ;
 
-var ufv___21011 = schema.utils.use_fn_validation;
-var output_schema20960_21012 = schema.core.Any;
-var input_schema20961_21013 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg0","arg0",-1024593414,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"owner","owner",1247919588,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg2","arg2",-924884852,null))], null);
-var input_checker20962_21014 = schema.core.checker(input_schema20961_21013);
-var output_checker20963_21015 = schema.core.checker(output_schema20960_21012);
+var ufv___22811 = schema.utils.use_fn_validation;
+var output_schema22760_22812 = schema.core.Any;
+var input_schema22761_22813 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg0","arg0",-1024593414,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"owner","owner",1247919588,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg2","arg2",-924884852,null))], null);
+var input_checker22762_22814 = schema.core.checker(input_schema22761_22813);
+var output_checker22763_22815 = schema.core.checker(output_schema22760_22812);
 /**
 * Inputs: [{:keys [error], :as input-state} owner {:keys [input label size help-text], :or {size 6}, :as opts}]
 */
-lomakkeet.fields.default_form_group = ((function (ufv___21011,output_schema20960_21012,input_schema20961_21013,input_checker20962_21014,output_checker20963_21015){
-return (function default_form_group(G__20964,G__20965,G__20966){
-var validate__6096__auto__ = ufv___21011.get_cell();
-if(cljs.core.truth_(validate__6096__auto__)){
-var args__6097__auto___21016 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__20964,G__20965,G__20966], null);
-var temp__4126__auto___21017 = (function (){var G__20989 = args__6097__auto___21016;
-return (input_checker20962_21014.cljs$core$IFn$_invoke$arity$1 ? input_checker20962_21014.cljs$core$IFn$_invoke$arity$1(G__20989) : input_checker20962_21014.call(null,G__20989));
+lomakkeet.fields.default_form_group = ((function (ufv___22811,output_schema22760_22812,input_schema22761_22813,input_checker22762_22814,output_checker22763_22815){
+return (function default_form_group(G__22764,G__22765,G__22766){
+var validate__12581__auto__ = ufv___22811.get_cell();
+if(cljs.core.truth_(validate__12581__auto__)){
+var args__12582__auto___22816 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__22764,G__22765,G__22766], null);
+var temp__4126__auto___22817 = (function (){var G__22789 = args__12582__auto___22816;
+return (input_checker22762_22814.cljs$core$IFn$_invoke$arity$1 ? input_checker22762_22814.cljs$core$IFn$_invoke$arity$1(G__22789) : input_checker22762_22814.call(null,G__22789));
 })();
-if(cljs.core.truth_(temp__4126__auto___21017)){
-var error__6098__auto___21018 = temp__4126__auto___21017;
-throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Input to %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"default-form-group","default-form-group",567307618,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__6098__auto___21018], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$22,error__6098__auto___21018,cljs.core.constant$keyword$23,args__6097__auto___21016,cljs.core.constant$keyword$24,input_schema20961_21013,cljs.core.constant$keyword$25,cljs.core.constant$keyword$26], null));
+if(cljs.core.truth_(temp__4126__auto___22817)){
+var error__12583__auto___22818 = temp__4126__auto___22817;
+throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Input to %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"default-form-group","default-form-group",567307618,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__12583__auto___22818], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$65,error__12583__auto___22818,cljs.core.constant$keyword$66,args__12582__auto___22816,cljs.core.constant$keyword$67,input_schema22761_22813,cljs.core.constant$keyword$68,cljs.core.constant$keyword$69], null));
 } else {
 }
 } else {
 }
 
-var o__6099__auto__ = (function (){var G__20992 = G__20964;
-var map__20994 = G__20992;
-var map__20994__$1 = ((cljs.core.seq_QMARK_(map__20994))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20994):map__20994);
-var input_state = map__20994__$1;
-var error = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20994__$1,cljs.core.constant$keyword$22);
-var owner = G__20965;
-var G__20993 = G__20966;
-var map__20995 = G__20993;
-var map__20995__$1 = ((cljs.core.seq_QMARK_(map__20995))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20995):map__20995);
-var opts = map__20995__$1;
-var help_text = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20995__$1,cljs.core.constant$keyword$148);
-var size = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__20995__$1,cljs.core.constant$keyword$149,(6));
-var label = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20995__$1,cljs.core.constant$keyword$135);
-var input = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20995__$1,cljs.core.constant$keyword$122);
-var G__20992__$1 = G__20992;
+var o__12584__auto__ = (function (){var G__22792 = G__22764;
+var map__22794 = G__22792;
+var map__22794__$1 = ((cljs.core.seq_QMARK_(map__22794))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22794):map__22794);
+var input_state = map__22794__$1;
+var error = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22794__$1,cljs.core.constant$keyword$65);
+var owner = G__22765;
+var G__22793 = G__22766;
+var map__22795 = G__22793;
+var map__22795__$1 = ((cljs.core.seq_QMARK_(map__22795))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22795):map__22795);
+var opts = map__22795__$1;
+var help_text = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22795__$1,cljs.core.constant$keyword$150);
+var size = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__22795__$1,cljs.core.constant$keyword$151,(6));
+var label = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22795__$1,cljs.core.constant$keyword$137);
+var input = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22795__$1,cljs.core.constant$keyword$124);
+var G__22792__$1 = G__22792;
 var owner__$1 = owner;
-var G__20993__$1 = G__20993;
+var G__22793__$1 = G__22793;
 while(true){
-var map__20996 = G__20992__$1;
-var map__20996__$1 = ((cljs.core.seq_QMARK_(map__20996))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20996):map__20996);
-var input_state__$1 = map__20996__$1;
-var error__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20996__$1,cljs.core.constant$keyword$22);
+var map__22796 = G__22792__$1;
+var map__22796__$1 = ((cljs.core.seq_QMARK_(map__22796))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22796):map__22796);
+var input_state__$1 = map__22796__$1;
+var error__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22796__$1,cljs.core.constant$keyword$65);
 var owner__$2 = owner__$1;
-var map__20997 = G__20993__$1;
-var map__20997__$1 = ((cljs.core.seq_QMARK_(map__20997))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20997):map__20997);
-var opts__$1 = map__20997__$1;
-var help_text__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20997__$1,cljs.core.constant$keyword$148);
-var size__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__20997__$1,cljs.core.constant$keyword$149,(6));
-var label__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20997__$1,cljs.core.constant$keyword$135);
-var input__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20997__$1,cljs.core.constant$keyword$122);
-if(typeof lomakkeet.fields.t20998 !== 'undefined'){
+var map__22797 = G__22793__$1;
+var map__22797__$1 = ((cljs.core.seq_QMARK_(map__22797))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22797):map__22797);
+var opts__$1 = map__22797__$1;
+var help_text__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22797__$1,cljs.core.constant$keyword$150);
+var size__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__22797__$1,cljs.core.constant$keyword$151,(6));
+var label__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22797__$1,cljs.core.constant$keyword$137);
+var input__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22797__$1,cljs.core.constant$keyword$124);
+if(typeof lomakkeet.fields.t22798 !== 'undefined'){
 } else {
 
 /**
 * @constructor
 */
-lomakkeet.fields.t20998 = (function (G__20992,input,G__20965,default_form_group,map__20996,owner,input_checker20962,G__20964,map__20997,output_schema20960,input_state,validate__6096__auto__,map__20994,input_schema20961,size,map__20995,output_checker20963,label,opts,G__20966,ufv__,help_text,error,G__20993,meta20999){
-this.G__20992 = G__20992;
+lomakkeet.fields.t22798 = (function (map__22794,input,G__22793,default_form_group,map__22797,owner,G__22765,validate__12581__auto__,map__22796,output_checker22763,G__22766,output_schema22760,input_state,input_checker22762,map__22795,input_schema22761,size,G__22764,label,opts,ufv__,help_text,error,G__22792,meta22799){
+this.map__22794 = map__22794;
 this.input = input;
-this.G__20965 = G__20965;
+this.G__22793 = G__22793;
 this.default_form_group = default_form_group;
-this.map__20996 = map__20996;
+this.map__22797 = map__22797;
 this.owner = owner;
-this.input_checker20962 = input_checker20962;
-this.G__20964 = G__20964;
-this.map__20997 = map__20997;
-this.output_schema20960 = output_schema20960;
+this.G__22765 = G__22765;
+this.validate__12581__auto__ = validate__12581__auto__;
+this.map__22796 = map__22796;
+this.output_checker22763 = output_checker22763;
+this.G__22766 = G__22766;
+this.output_schema22760 = output_schema22760;
 this.input_state = input_state;
-this.validate__6096__auto__ = validate__6096__auto__;
-this.map__20994 = map__20994;
-this.input_schema20961 = input_schema20961;
+this.input_checker22762 = input_checker22762;
+this.map__22795 = map__22795;
+this.input_schema22761 = input_schema22761;
 this.size = size;
-this.map__20995 = map__20995;
-this.output_checker20963 = output_checker20963;
+this.G__22764 = G__22764;
 this.label = label;
 this.opts = opts;
-this.G__20966 = G__20966;
 this.ufv__ = ufv__;
 this.help_text = help_text;
 this.error = error;
-this.G__20993 = G__20993;
-this.meta20999 = meta20999;
+this.G__22792 = G__22792;
+this.meta22799 = meta22799;
 this.cljs$lang$protocol_mask$partition1$ = 0;
 this.cljs$lang$protocol_mask$partition0$ = 393216;
 })
-lomakkeet.fields.t20998.prototype.om$core$IDisplayName$ = true;
+lomakkeet.fields.t22798.prototype.om$core$IDisplayName$ = true;
 
-lomakkeet.fields.t20998.prototype.om$core$IDisplayName$display_name$arity$1 = ((function (map__20996,map__20996__$1,input_state__$1,error__$1,owner__$2,map__20997,map__20997__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__20992,map__20994,map__20994__$1,input_state,error,owner,G__20993,map__20995,map__20995__$1,opts,help_text,size,label,input,validate__6096__auto__,ufv___21011,output_schema20960_21012,input_schema20961_21013,input_checker20962_21014,output_checker20963_21015){
+lomakkeet.fields.t22798.prototype.om$core$IDisplayName$display_name$arity$1 = ((function (map__22796,map__22796__$1,input_state__$1,error__$1,owner__$2,map__22797,map__22797__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__22792,map__22794,map__22794__$1,input_state,error,owner,G__22793,map__22795,map__22795__$1,opts,help_text,size,label,input,validate__12581__auto__,ufv___22811,output_schema22760_22812,input_schema22761_22813,input_checker22762_22814,output_checker22763_22815){
 return (function (_){
 var self__ = this;
 var ___$1 = this;
 return "default-form-group";
-});})(map__20996,map__20996__$1,input_state__$1,error__$1,owner__$2,map__20997,map__20997__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__20992,map__20994,map__20994__$1,input_state,error,owner,G__20993,map__20995,map__20995__$1,opts,help_text,size,label,input,validate__6096__auto__,ufv___21011,output_schema20960_21012,input_schema20961_21013,input_checker20962_21014,output_checker20963_21015))
+});})(map__22796,map__22796__$1,input_state__$1,error__$1,owner__$2,map__22797,map__22797__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__22792,map__22794,map__22794__$1,input_state,error,owner,G__22793,map__22795,map__22795__$1,opts,help_text,size,label,input,validate__12581__auto__,ufv___22811,output_schema22760_22812,input_schema22761_22813,input_checker22762_22814,output_checker22763_22815))
 ;
 
-lomakkeet.fields.t20998.prototype.om$core$IRenderState$ = true;
+lomakkeet.fields.t22798.prototype.om$core$IRenderState$ = true;
 
-lomakkeet.fields.t20998.prototype.om$core$IRenderState$render_state$arity$2 = ((function (map__20996,map__20996__$1,input_state__$1,error__$1,owner__$2,map__20997,map__20997__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__20992,map__20994,map__20994__$1,input_state,error,owner,G__20993,map__20995,map__20995__$1,opts,help_text,size,label,input,validate__6096__auto__,ufv___21011,output_schema20960_21012,input_schema20961_21013,input_checker20962_21014,output_checker20963_21015){
+lomakkeet.fields.t22798.prototype.om$core$IRenderState$render_state$arity$2 = ((function (map__22796,map__22796__$1,input_state__$1,error__$1,owner__$2,map__22797,map__22797__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__22792,map__22794,map__22794__$1,input_state,error,owner,G__22793,map__22795,map__22795__$1,opts,help_text,size,label,input,validate__12581__auto__,ufv___22811,output_schema22760_22812,input_schema22761_22813,input_checker22762_22814,output_checker22763_22815){
 return (function (_,s){
 var self__ = this;
 var ___$1 = this;
-var G__21002 = {"className": sablono.util.join_classes(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["form-group",(function (){var G__21007 = cljs.core.PersistentVector.EMPTY;
-var G__21007__$1 = (cljs.core.truth_(self__.error)?cljs.core.conj.cljs$core$IFn$_invoke$arity$2(G__21007,"has-error"):G__21007);
-var G__21007__$2 = (cljs.core.truth_(self__.size)?cljs.core.conj.cljs$core$IFn$_invoke$arity$2(G__21007__$1,[cljs.core.str("col-md-"),cljs.core.str(self__.size)].join('')):G__21007__$1);
-return G__21007__$2;
+var G__22802 = {"className": sablono.util.join_classes(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["form-group",(function (){var G__22807 = cljs.core.PersistentVector.EMPTY;
+var G__22807__$1 = (cljs.core.truth_(self__.error)?cljs.core.conj.cljs$core$IFn$_invoke$arity$2(G__22807,"has-error"):G__22807);
+var G__22807__$2 = (cljs.core.truth_(self__.size)?cljs.core.conj.cljs$core$IFn$_invoke$arity$2(G__22807__$1,[cljs.core.str("col-md-"),cljs.core.str(self__.size)].join('')):G__22807__$1);
+return G__22807__$2;
 })()], null))};
-var G__21003 = (function (){var attrs21001 = self__.label;
-return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(React.DOM.label,((cljs.core.map_QMARK_(attrs21001))?sablono.interpreter.attributes(attrs21001):null),cljs.core.remove.cljs$core$IFn$_invoke$arity$2(cljs.core.nil_QMARK_,((cljs.core.map_QMARK_(attrs21001))?new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [":"], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [sablono.interpreter.interpret(attrs21001),":"], null))));
+var G__22803 = (function (){var attrs22801 = self__.label;
+return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(React.DOM.label,((cljs.core.map_QMARK_(attrs22801))?sablono.interpreter.attributes(attrs22801):null),cljs.core.remove.cljs$core$IFn$_invoke$arity$2(cljs.core.nil_QMARK_,((cljs.core.map_QMARK_(attrs22801))?new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [":"], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [sablono.interpreter.interpret(attrs22801),":"], null))));
 })();
-var G__21004 = sablono.interpreter.interpret(om.core.build.cljs$core$IFn$_invoke$arity$3(self__.input,self__.input_state,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$87,self__.opts,cljs.core.constant$keyword$86,s], null)));
-var G__21005 = (cljs.core.truth_(self__.help_text)?(function (){var attrs21008 = self__.help_text;
-return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(React.DOM.span,((cljs.core.map_QMARK_(attrs21008))?sablono.interpreter.attributes(sablono.util.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$114,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["help-block"], null)], null),attrs21008], 0))):{"className": "help-block"}),cljs.core.remove.cljs$core$IFn$_invoke$arity$2(cljs.core.nil_QMARK_,((cljs.core.map_QMARK_(attrs21008))?cljs.core.PersistentVector.EMPTY:new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [sablono.interpreter.interpret(attrs21008)], null))));
+var G__22804 = sablono.interpreter.interpret(om.core.build.cljs$core$IFn$_invoke$arity$3(self__.input,self__.input_state,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$55,self__.opts,cljs.core.constant$keyword$53,s], null)));
+var G__22805 = (cljs.core.truth_(self__.help_text)?(function (){var attrs22808 = self__.help_text;
+return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(React.DOM.span,((cljs.core.map_QMARK_(attrs22808))?sablono.interpreter.attributes(sablono.util.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$116,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["help-block"], null)], null),attrs22808], 0))):{"className": "help-block"}),cljs.core.remove.cljs$core$IFn$_invoke$arity$2(cljs.core.nil_QMARK_,((cljs.core.map_QMARK_(attrs22808))?cljs.core.PersistentVector.EMPTY:new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [sablono.interpreter.interpret(attrs22808)], null))));
 })():null);
-var G__21006 = (cljs.core.truth_((function (){var and__3616__auto__ = !(cljs.core.empty_QMARK_);
-if(and__3616__auto__){
+var G__22806 = (cljs.core.truth_((function (){var and__4239__auto__ = !(cljs.core.empty_QMARK_);
+if(and__4239__auto__){
 return self__.error;
 } else {
-return and__3616__auto__;
+return and__4239__auto__;
 }
-})())?(function (){var attrs21009 = [cljs.core.str(self__.error)].join('');
-return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(React.DOM.span,((cljs.core.map_QMARK_(attrs21009))?sablono.interpreter.attributes(sablono.util.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$114,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["help-block"], null)], null),attrs21009], 0))):{"className": "help-block"}),cljs.core.remove.cljs$core$IFn$_invoke$arity$2(cljs.core.nil_QMARK_,((cljs.core.map_QMARK_(attrs21009))?cljs.core.PersistentVector.EMPTY:new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [sablono.interpreter.interpret(attrs21009)], null))));
+})())?(function (){var attrs22809 = [cljs.core.str(self__.error)].join('');
+return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(React.DOM.span,((cljs.core.map_QMARK_(attrs22809))?sablono.interpreter.attributes(sablono.util.merge_with_class.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$116,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["help-block"], null)], null),attrs22809], 0))):{"className": "help-block"}),cljs.core.remove.cljs$core$IFn$_invoke$arity$2(cljs.core.nil_QMARK_,((cljs.core.map_QMARK_(attrs22809))?cljs.core.PersistentVector.EMPTY:new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [sablono.interpreter.interpret(attrs22809)], null))));
 })():null);
-return React.DOM.div(G__21002,G__21003,G__21004,G__21005,G__21006);
-});})(map__20996,map__20996__$1,input_state__$1,error__$1,owner__$2,map__20997,map__20997__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__20992,map__20994,map__20994__$1,input_state,error,owner,G__20993,map__20995,map__20995__$1,opts,help_text,size,label,input,validate__6096__auto__,ufv___21011,output_schema20960_21012,input_schema20961_21013,input_checker20962_21014,output_checker20963_21015))
+return React.DOM.div(G__22802,G__22803,G__22804,G__22805,G__22806);
+});})(map__22796,map__22796__$1,input_state__$1,error__$1,owner__$2,map__22797,map__22797__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__22792,map__22794,map__22794__$1,input_state,error,owner,G__22793,map__22795,map__22795__$1,opts,help_text,size,label,input,validate__12581__auto__,ufv___22811,output_schema22760_22812,input_schema22761_22813,input_checker22762_22814,output_checker22763_22815))
 ;
 
-lomakkeet.fields.t20998.prototype.cljs$core$IMeta$_meta$arity$1 = ((function (map__20996,map__20996__$1,input_state__$1,error__$1,owner__$2,map__20997,map__20997__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__20992,map__20994,map__20994__$1,input_state,error,owner,G__20993,map__20995,map__20995__$1,opts,help_text,size,label,input,validate__6096__auto__,ufv___21011,output_schema20960_21012,input_schema20961_21013,input_checker20962_21014,output_checker20963_21015){
-return (function (_21000){
+lomakkeet.fields.t22798.prototype.cljs$core$IMeta$_meta$arity$1 = ((function (map__22796,map__22796__$1,input_state__$1,error__$1,owner__$2,map__22797,map__22797__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__22792,map__22794,map__22794__$1,input_state,error,owner,G__22793,map__22795,map__22795__$1,opts,help_text,size,label,input,validate__12581__auto__,ufv___22811,output_schema22760_22812,input_schema22761_22813,input_checker22762_22814,output_checker22763_22815){
+return (function (_22800){
 var self__ = this;
-var _21000__$1 = this;
-return self__.meta20999;
-});})(map__20996,map__20996__$1,input_state__$1,error__$1,owner__$2,map__20997,map__20997__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__20992,map__20994,map__20994__$1,input_state,error,owner,G__20993,map__20995,map__20995__$1,opts,help_text,size,label,input,validate__6096__auto__,ufv___21011,output_schema20960_21012,input_schema20961_21013,input_checker20962_21014,output_checker20963_21015))
+var _22800__$1 = this;
+return self__.meta22799;
+});})(map__22796,map__22796__$1,input_state__$1,error__$1,owner__$2,map__22797,map__22797__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__22792,map__22794,map__22794__$1,input_state,error,owner,G__22793,map__22795,map__22795__$1,opts,help_text,size,label,input,validate__12581__auto__,ufv___22811,output_schema22760_22812,input_schema22761_22813,input_checker22762_22814,output_checker22763_22815))
 ;
 
-lomakkeet.fields.t20998.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = ((function (map__20996,map__20996__$1,input_state__$1,error__$1,owner__$2,map__20997,map__20997__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__20992,map__20994,map__20994__$1,input_state,error,owner,G__20993,map__20995,map__20995__$1,opts,help_text,size,label,input,validate__6096__auto__,ufv___21011,output_schema20960_21012,input_schema20961_21013,input_checker20962_21014,output_checker20963_21015){
-return (function (_21000,meta20999__$1){
+lomakkeet.fields.t22798.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = ((function (map__22796,map__22796__$1,input_state__$1,error__$1,owner__$2,map__22797,map__22797__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__22792,map__22794,map__22794__$1,input_state,error,owner,G__22793,map__22795,map__22795__$1,opts,help_text,size,label,input,validate__12581__auto__,ufv___22811,output_schema22760_22812,input_schema22761_22813,input_checker22762_22814,output_checker22763_22815){
+return (function (_22800,meta22799__$1){
 var self__ = this;
-var _21000__$1 = this;
-return (new lomakkeet.fields.t20998(self__.G__20992,self__.input,self__.G__20965,self__.default_form_group,self__.map__20996,self__.owner,self__.input_checker20962,self__.G__20964,self__.map__20997,self__.output_schema20960,self__.input_state,self__.validate__6096__auto__,self__.map__20994,self__.input_schema20961,self__.size,self__.map__20995,self__.output_checker20963,self__.label,self__.opts,self__.G__20966,self__.ufv__,self__.help_text,self__.error,self__.G__20993,meta20999__$1));
-});})(map__20996,map__20996__$1,input_state__$1,error__$1,owner__$2,map__20997,map__20997__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__20992,map__20994,map__20994__$1,input_state,error,owner,G__20993,map__20995,map__20995__$1,opts,help_text,size,label,input,validate__6096__auto__,ufv___21011,output_schema20960_21012,input_schema20961_21013,input_checker20962_21014,output_checker20963_21015))
+var _22800__$1 = this;
+return (new lomakkeet.fields.t22798(self__.map__22794,self__.input,self__.G__22793,self__.default_form_group,self__.map__22797,self__.owner,self__.G__22765,self__.validate__12581__auto__,self__.map__22796,self__.output_checker22763,self__.G__22766,self__.output_schema22760,self__.input_state,self__.input_checker22762,self__.map__22795,self__.input_schema22761,self__.size,self__.G__22764,self__.label,self__.opts,self__.ufv__,self__.help_text,self__.error,self__.G__22792,meta22799__$1));
+});})(map__22796,map__22796__$1,input_state__$1,error__$1,owner__$2,map__22797,map__22797__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__22792,map__22794,map__22794__$1,input_state,error,owner,G__22793,map__22795,map__22795__$1,opts,help_text,size,label,input,validate__12581__auto__,ufv___22811,output_schema22760_22812,input_schema22761_22813,input_checker22762_22814,output_checker22763_22815))
 ;
 
-lomakkeet.fields.t20998.cljs$lang$type = true;
+lomakkeet.fields.t22798.cljs$lang$type = true;
 
-lomakkeet.fields.t20998.cljs$lang$ctorStr = "lomakkeet.fields/t20998";
+lomakkeet.fields.t22798.cljs$lang$ctorStr = "lomakkeet.fields/t22798";
 
-lomakkeet.fields.t20998.cljs$lang$ctorPrWriter = ((function (map__20996,map__20996__$1,input_state__$1,error__$1,owner__$2,map__20997,map__20997__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__20992,map__20994,map__20994__$1,input_state,error,owner,G__20993,map__20995,map__20995__$1,opts,help_text,size,label,input,validate__6096__auto__,ufv___21011,output_schema20960_21012,input_schema20961_21013,input_checker20962_21014,output_checker20963_21015){
-return (function (this__4215__auto__,writer__4216__auto__,opt__4217__auto__){
-return cljs.core._write(writer__4216__auto__,"lomakkeet.fields/t20998");
-});})(map__20996,map__20996__$1,input_state__$1,error__$1,owner__$2,map__20997,map__20997__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__20992,map__20994,map__20994__$1,input_state,error,owner,G__20993,map__20995,map__20995__$1,opts,help_text,size,label,input,validate__6096__auto__,ufv___21011,output_schema20960_21012,input_schema20961_21013,input_checker20962_21014,output_checker20963_21015))
+lomakkeet.fields.t22798.cljs$lang$ctorPrWriter = ((function (map__22796,map__22796__$1,input_state__$1,error__$1,owner__$2,map__22797,map__22797__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__22792,map__22794,map__22794__$1,input_state,error,owner,G__22793,map__22795,map__22795__$1,opts,help_text,size,label,input,validate__12581__auto__,ufv___22811,output_schema22760_22812,input_schema22761_22813,input_checker22762_22814,output_checker22763_22815){
+return (function (this__4838__auto__,writer__4839__auto__,opt__4840__auto__){
+return cljs.core._write(writer__4839__auto__,"lomakkeet.fields/t22798");
+});})(map__22796,map__22796__$1,input_state__$1,error__$1,owner__$2,map__22797,map__22797__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__22792,map__22794,map__22794__$1,input_state,error,owner,G__22793,map__22795,map__22795__$1,opts,help_text,size,label,input,validate__12581__auto__,ufv___22811,output_schema22760_22812,input_schema22761_22813,input_checker22762_22814,output_checker22763_22815))
 ;
 
-lomakkeet.fields.__GT_t20998 = ((function (map__20996,map__20996__$1,input_state__$1,error__$1,owner__$2,map__20997,map__20997__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__20992,map__20994,map__20994__$1,input_state,error,owner,G__20993,map__20995,map__20995__$1,opts,help_text,size,label,input,validate__6096__auto__,ufv___21011,output_schema20960_21012,input_schema20961_21013,input_checker20962_21014,output_checker20963_21015){
-return (function __GT_t20998(G__20992__$2,input__$2,G__20965__$1,default_form_group__$1,map__20996__$2,owner__$3,input_checker20962__$1,G__20964__$1,map__20997__$2,output_schema20960__$1,input_state__$2,validate__6096__auto____$1,map__20994__$2,input_schema20961__$1,size__$2,map__20995__$2,output_checker20963__$1,label__$2,opts__$2,G__20966__$1,ufv____$1,help_text__$2,error__$2,G__20993__$2,meta20999){
-return (new lomakkeet.fields.t20998(G__20992__$2,input__$2,G__20965__$1,default_form_group__$1,map__20996__$2,owner__$3,input_checker20962__$1,G__20964__$1,map__20997__$2,output_schema20960__$1,input_state__$2,validate__6096__auto____$1,map__20994__$2,input_schema20961__$1,size__$2,map__20995__$2,output_checker20963__$1,label__$2,opts__$2,G__20966__$1,ufv____$1,help_text__$2,error__$2,G__20993__$2,meta20999));
-});})(map__20996,map__20996__$1,input_state__$1,error__$1,owner__$2,map__20997,map__20997__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__20992,map__20994,map__20994__$1,input_state,error,owner,G__20993,map__20995,map__20995__$1,opts,help_text,size,label,input,validate__6096__auto__,ufv___21011,output_schema20960_21012,input_schema20961_21013,input_checker20962_21014,output_checker20963_21015))
+lomakkeet.fields.__GT_t22798 = ((function (map__22796,map__22796__$1,input_state__$1,error__$1,owner__$2,map__22797,map__22797__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__22792,map__22794,map__22794__$1,input_state,error,owner,G__22793,map__22795,map__22795__$1,opts,help_text,size,label,input,validate__12581__auto__,ufv___22811,output_schema22760_22812,input_schema22761_22813,input_checker22762_22814,output_checker22763_22815){
+return (function __GT_t22798(map__22794__$2,input__$2,G__22793__$2,default_form_group__$1,map__22797__$2,owner__$3,G__22765__$1,validate__12581__auto____$1,map__22796__$2,output_checker22763__$1,G__22766__$1,output_schema22760__$1,input_state__$2,input_checker22762__$1,map__22795__$2,input_schema22761__$1,size__$2,G__22764__$1,label__$2,opts__$2,ufv____$1,help_text__$2,error__$2,G__22792__$2,meta22799){
+return (new lomakkeet.fields.t22798(map__22794__$2,input__$2,G__22793__$2,default_form_group__$1,map__22797__$2,owner__$3,G__22765__$1,validate__12581__auto____$1,map__22796__$2,output_checker22763__$1,G__22766__$1,output_schema22760__$1,input_state__$2,input_checker22762__$1,map__22795__$2,input_schema22761__$1,size__$2,G__22764__$1,label__$2,opts__$2,ufv____$1,help_text__$2,error__$2,G__22792__$2,meta22799));
+});})(map__22796,map__22796__$1,input_state__$1,error__$1,owner__$2,map__22797,map__22797__$1,opts__$1,help_text__$1,size__$1,label__$1,input__$1,G__22792,map__22794,map__22794__$1,input_state,error,owner,G__22793,map__22795,map__22795__$1,opts,help_text,size,label,input,validate__12581__auto__,ufv___22811,output_schema22760_22812,input_schema22761_22813,input_checker22762_22814,output_checker22763_22815))
 ;
 
 }
 
-return (new lomakkeet.fields.t20998(G__20992__$1,input__$1,G__20965,default_form_group,map__20996__$1,owner__$2,input_checker20962_21014,G__20964,map__20997__$1,output_schema20960_21012,input_state__$1,validate__6096__auto__,map__20994__$1,input_schema20961_21013,size__$1,map__20995__$1,output_checker20963_21015,label__$1,opts__$1,G__20966,ufv___21011,help_text__$1,error__$1,G__20993__$1,null));
+return (new lomakkeet.fields.t22798(map__22794__$1,input__$1,G__22793__$1,default_form_group,map__22797__$1,owner__$2,G__22765,validate__12581__auto__,map__22796__$1,output_checker22763_22815,G__22766,output_schema22760_22812,input_state__$1,input_checker22762_22814,map__22795__$1,input_schema22761_22813,size__$1,G__22764,label__$1,opts__$1,ufv___22811,help_text__$1,error__$1,G__22792__$1,null));
 break;
 }
 })();
-if(cljs.core.truth_(validate__6096__auto__)){
-var temp__4126__auto___21019 = (function (){var G__21010 = o__6099__auto__;
-return (output_checker20963_21015.cljs$core$IFn$_invoke$arity$1 ? output_checker20963_21015.cljs$core$IFn$_invoke$arity$1(G__21010) : output_checker20963_21015.call(null,G__21010));
+if(cljs.core.truth_(validate__12581__auto__)){
+var temp__4126__auto___22819 = (function (){var G__22810 = o__12584__auto__;
+return (output_checker22763_22815.cljs$core$IFn$_invoke$arity$1 ? output_checker22763_22815.cljs$core$IFn$_invoke$arity$1(G__22810) : output_checker22763_22815.call(null,G__22810));
 })();
-if(cljs.core.truth_(temp__4126__auto___21019)){
-var error__6098__auto___21020 = temp__4126__auto___21019;
-throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Output of %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"default-form-group","default-form-group",567307618,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__6098__auto___21020], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$22,error__6098__auto___21020,cljs.core.constant$keyword$23,o__6099__auto__,cljs.core.constant$keyword$24,output_schema20960_21012,cljs.core.constant$keyword$25,cljs.core.constant$keyword$26], null));
+if(cljs.core.truth_(temp__4126__auto___22819)){
+var error__12583__auto___22820 = temp__4126__auto___22819;
+throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Output of %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"default-form-group","default-form-group",567307618,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__12583__auto___22820], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$65,error__12583__auto___22820,cljs.core.constant$keyword$66,o__12584__auto__,cljs.core.constant$keyword$67,output_schema22760_22812,cljs.core.constant$keyword$68,cljs.core.constant$keyword$69], null));
 } else {
 }
 } else {
 }
 
-return o__6099__auto__;
-});})(ufv___21011,output_schema20960_21012,input_schema20961_21013,input_checker20962_21014,output_checker20963_21015))
+return o__12584__auto__;
+});})(ufv___22811,output_schema22760_22812,input_schema22761_22813,input_checker22762_22814,output_checker22763_22815))
 ;
 
-schema.utils.declare_class_schema_BANG_(schema.utils.fn_schema_bearer(lomakkeet.fields.default_form_group),schema.core.make_fn_schema(output_schema20960_21012,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema20961_21013], null)));
+schema.utils.declare_class_schema_BANG_(schema.utils.fn_schema_bearer(lomakkeet.fields.default_form_group),schema.core.make_fn_schema(output_schema22760_22812,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema22761_22813], null)));
 
 lomakkeet.fields.__GT_default_form_group = (function() {
 var __GT_default_form_group = null;
-var __GT_default_form_group__1 = (function (cursor__7890__auto__){
-return om.core.build.cljs$core$IFn$_invoke$arity$2(lomakkeet.fields.default_form_group,cursor__7890__auto__);
+var __GT_default_form_group__1 = (function (cursor__20832__auto__){
+return om.core.build.cljs$core$IFn$_invoke$arity$2(lomakkeet.fields.default_form_group,cursor__20832__auto__);
 });
-var __GT_default_form_group__2 = (function (cursor__7890__auto__,m20959){
-return om.core.build.cljs$core$IFn$_invoke$arity$3(lomakkeet.fields.default_form_group,cursor__7890__auto__,m20959);
+var __GT_default_form_group__2 = (function (cursor__20832__auto__,m22759){
+return om.core.build.cljs$core$IFn$_invoke$arity$3(lomakkeet.fields.default_form_group,cursor__20832__auto__,m22759);
 });
-__GT_default_form_group = function(cursor__7890__auto__,m20959){
+__GT_default_form_group = function(cursor__20832__auto__,m22759){
 switch(arguments.length){
 case 1:
-return __GT_default_form_group__1.call(this,cursor__7890__auto__);
+return __GT_default_form_group__1.call(this,cursor__20832__auto__);
 case 2:
-return __GT_default_form_group__2.call(this,cursor__7890__auto__,m20959);
+return __GT_default_form_group__2.call(this,cursor__20832__auto__,m22759);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
@@ -481,233 +483,233 @@ __GT_default_form_group.cljs$core$IFn$_invoke$arity$2 = __GT_default_form_group_
 return __GT_default_form_group;
 })()
 ;
-lomakkeet.fields.build = (function build(p__21021){
-var map__21027 = p__21021;
-var map__21027__$1 = ((cljs.core.seq_QMARK_(map__21027))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21027):map__21027);
-var opts = map__21027__$1;
-var ks = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21027__$1,cljs.core.constant$keyword$144);
-var form_group = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21027__$1,cljs.core.constant$keyword$150);
-var form_state = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21027__$1,cljs.core.constant$keyword$151);
-var map__21028 = form_state;
-var map__21028__$1 = ((cljs.core.seq_QMARK_(map__21028))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21028):map__21028);
-var schema__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21028__$1,cljs.core.constant$keyword$24);
-var errors = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21028__$1,cljs.core.constant$keyword$152);
-var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21028__$1,cljs.core.constant$keyword$23);
-return om.core.build.cljs$core$IFn$_invoke$arity$3(form_group,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$23,cljs.core.get_in.cljs$core$IFn$_invoke$arity$2((function (){var G__21029 = value;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__21029) : cljs.core.deref.call(null,G__21029));
-})(),ks),cljs.core.constant$keyword$22,(cljs.core.truth_(errors)?cljs.core.get_in.cljs$core$IFn$_invoke$arity$2((function (){var G__21030 = errors;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__21030) : cljs.core.deref.call(null,G__21030));
-})(),ks):null),cljs.core.constant$keyword$24,(cljs.core.truth_(schema__$1)?lomakkeet.fields.get_in_schema((function (){var G__21031 = schema__$1;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__21031) : cljs.core.deref.call(null,G__21031));
-})(),ks):null)], null),new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$87,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(opts,cljs.core.constant$keyword$86),cljs.core.constant$keyword$86,cljs.core.constant$keyword$86.cljs$core$IFn$_invoke$arity$1(opts)], null));
+lomakkeet.fields.build = (function build(p__22821){
+var map__22827 = p__22821;
+var map__22827__$1 = ((cljs.core.seq_QMARK_(map__22827))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22827):map__22827);
+var opts = map__22827__$1;
+var ks = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22827__$1,cljs.core.constant$keyword$146);
+var form_group = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22827__$1,cljs.core.constant$keyword$152);
+var form_state = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22827__$1,cljs.core.constant$keyword$153);
+var map__22828 = form_state;
+var map__22828__$1 = ((cljs.core.seq_QMARK_(map__22828))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22828):map__22828);
+var schema__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22828__$1,cljs.core.constant$keyword$67);
+var errors = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22828__$1,cljs.core.constant$keyword$154);
+var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22828__$1,cljs.core.constant$keyword$66);
+return om.core.build.cljs$core$IFn$_invoke$arity$3(form_group,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$66,cljs.core.get_in.cljs$core$IFn$_invoke$arity$2((function (){var G__22829 = value;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__22829) : cljs.core.deref.call(null,G__22829));
+})(),ks),cljs.core.constant$keyword$65,(cljs.core.truth_(errors)?cljs.core.get_in.cljs$core$IFn$_invoke$arity$2((function (){var G__22830 = errors;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__22830) : cljs.core.deref.call(null,G__22830));
+})(),ks):null),cljs.core.constant$keyword$67,(cljs.core.truth_(schema__$1)?lomakkeet.fields.get_in_schema((function (){var G__22831 = schema__$1;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__22831) : cljs.core.deref.call(null,G__22831));
+})(),ks):null)], null),new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$55,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(opts,cljs.core.constant$keyword$53),cljs.core.constant$keyword$53,cljs.core.constant$keyword$53.cljs$core$IFn$_invoke$arity$1(opts)], null));
 });
 lomakkeet.fields.input_input = (function input_input(value,cb){
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$153,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$25,"text",cljs.core.constant$keyword$23,(function (){var or__3628__auto__ = value;
-if(cljs.core.truth_(or__3628__auto__)){
-return or__3628__auto__;
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$155,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$68,"text",cljs.core.constant$keyword$66,(function (){var or__4251__auto__ = value;
+if(cljs.core.truth_(or__4251__auto__)){
+return or__4251__auto__;
 } else {
 return "";
 }
-})(),cljs.core.constant$keyword$154,cb], null)], null);
+})(),cljs.core.constant$keyword$156,cb], null)], null);
 });
 lomakkeet.fields.input_textarea = (function input_textarea(value,cb){
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$155,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$23,(function (){var or__3628__auto__ = value;
-if(cljs.core.truth_(or__3628__auto__)){
-return or__3628__auto__;
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$157,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$66,(function (){var or__4251__auto__ = value;
+if(cljs.core.truth_(or__4251__auto__)){
+return or__4251__auto__;
 } else {
 return "";
 }
-})(),cljs.core.constant$keyword$154,cb], null)], null);
+})(),cljs.core.constant$keyword$156,cb], null)], null);
 });
 lomakkeet.fields.input_static = (function input_static(value,cb){
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$156,value], null);
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$158,value], null);
 });
 
-var ufv___21072 = schema.utils.use_fn_validation;
-var output_schema21033_21073 = schema.core.Any;
-var input_schema21034_21074 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg0","arg0",-1024593414,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"owner","owner",1247919588,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg2","arg2",-924884852,null))], null);
-var input_checker21035_21075 = schema.core.checker(input_schema21034_21074);
-var output_checker21036_21076 = schema.core.checker(output_schema21033_21073);
+var ufv___22872 = schema.utils.use_fn_validation;
+var output_schema22833_22873 = schema.core.Any;
+var input_schema22834_22874 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg0","arg0",-1024593414,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"owner","owner",1247919588,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg2","arg2",-924884852,null))], null);
+var input_checker22835_22875 = schema.core.checker(input_schema22834_22874);
+var output_checker22836_22876 = schema.core.checker(output_schema22833_22873);
 /**
 * Inputs: [{:keys [value]} owner {:keys [ch ks el transform-value], :or {el input-input, transform-value identity}, :as opts}]
 */
-lomakkeet.fields.input_STAR_ = ((function (ufv___21072,output_schema21033_21073,input_schema21034_21074,input_checker21035_21075,output_checker21036_21076){
-return (function input_STAR_(G__21037,G__21038,G__21039){
-var validate__6096__auto__ = ufv___21072.get_cell();
-if(cljs.core.truth_(validate__6096__auto__)){
-var args__6097__auto___21077 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__21037,G__21038,G__21039], null);
-var temp__4126__auto___21078 = (function (){var G__21056 = args__6097__auto___21077;
-return (input_checker21035_21075.cljs$core$IFn$_invoke$arity$1 ? input_checker21035_21075.cljs$core$IFn$_invoke$arity$1(G__21056) : input_checker21035_21075.call(null,G__21056));
+lomakkeet.fields.input_STAR_ = ((function (ufv___22872,output_schema22833_22873,input_schema22834_22874,input_checker22835_22875,output_checker22836_22876){
+return (function input_STAR_(G__22837,G__22838,G__22839){
+var validate__12581__auto__ = ufv___22872.get_cell();
+if(cljs.core.truth_(validate__12581__auto__)){
+var args__12582__auto___22877 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__22837,G__22838,G__22839], null);
+var temp__4126__auto___22878 = (function (){var G__22856 = args__12582__auto___22877;
+return (input_checker22835_22875.cljs$core$IFn$_invoke$arity$1 ? input_checker22835_22875.cljs$core$IFn$_invoke$arity$1(G__22856) : input_checker22835_22875.call(null,G__22856));
 })();
-if(cljs.core.truth_(temp__4126__auto___21078)){
-var error__6098__auto___21079 = temp__4126__auto___21078;
-throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Input to %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"input*","input*",1326385478,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__6098__auto___21079], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$22,error__6098__auto___21079,cljs.core.constant$keyword$23,args__6097__auto___21077,cljs.core.constant$keyword$24,input_schema21034_21074,cljs.core.constant$keyword$25,cljs.core.constant$keyword$26], null));
+if(cljs.core.truth_(temp__4126__auto___22878)){
+var error__12583__auto___22879 = temp__4126__auto___22878;
+throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Input to %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"input*","input*",1326385478,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__12583__auto___22879], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$65,error__12583__auto___22879,cljs.core.constant$keyword$66,args__12582__auto___22877,cljs.core.constant$keyword$67,input_schema22834_22874,cljs.core.constant$keyword$68,cljs.core.constant$keyword$69], null));
 } else {
 }
 } else {
 }
 
-var o__6099__auto__ = (function (){var G__21059 = G__21037;
-var map__21061 = G__21059;
-var map__21061__$1 = ((cljs.core.seq_QMARK_(map__21061))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21061):map__21061);
-var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21061__$1,cljs.core.constant$keyword$23);
-var owner = G__21038;
-var G__21060 = G__21039;
-var map__21062 = G__21060;
-var map__21062__$1 = ((cljs.core.seq_QMARK_(map__21062))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21062):map__21062);
-var opts = map__21062__$1;
-var transform_value = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__21062__$1,cljs.core.constant$keyword$157,cljs.core.identity);
-var el = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__21062__$1,cljs.core.constant$keyword$158,lomakkeet.fields.input_input);
-var ks = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21062__$1,cljs.core.constant$keyword$144);
-var ch = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21062__$1,cljs.core.constant$keyword$145);
-var G__21059__$1 = G__21059;
+var o__12584__auto__ = (function (){var G__22859 = G__22837;
+var map__22861 = G__22859;
+var map__22861__$1 = ((cljs.core.seq_QMARK_(map__22861))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22861):map__22861);
+var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22861__$1,cljs.core.constant$keyword$66);
+var owner = G__22838;
+var G__22860 = G__22839;
+var map__22862 = G__22860;
+var map__22862__$1 = ((cljs.core.seq_QMARK_(map__22862))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22862):map__22862);
+var opts = map__22862__$1;
+var transform_value = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__22862__$1,cljs.core.constant$keyword$159,cljs.core.identity);
+var el = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__22862__$1,cljs.core.constant$keyword$160,lomakkeet.fields.input_input);
+var ks = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22862__$1,cljs.core.constant$keyword$146);
+var ch = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22862__$1,cljs.core.constant$keyword$147);
+var G__22859__$1 = G__22859;
 var owner__$1 = owner;
-var G__21060__$1 = G__21060;
+var G__22860__$1 = G__22860;
 while(true){
-var map__21063 = G__21059__$1;
-var map__21063__$1 = ((cljs.core.seq_QMARK_(map__21063))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21063):map__21063);
-var value__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21063__$1,cljs.core.constant$keyword$23);
+var map__22863 = G__22859__$1;
+var map__22863__$1 = ((cljs.core.seq_QMARK_(map__22863))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22863):map__22863);
+var value__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22863__$1,cljs.core.constant$keyword$66);
 var owner__$2 = owner__$1;
-var map__21064 = G__21060__$1;
-var map__21064__$1 = ((cljs.core.seq_QMARK_(map__21064))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21064):map__21064);
-var opts__$1 = map__21064__$1;
-var transform_value__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__21064__$1,cljs.core.constant$keyword$157,cljs.core.identity);
-var el__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__21064__$1,cljs.core.constant$keyword$158,lomakkeet.fields.input_input);
-var ks__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21064__$1,cljs.core.constant$keyword$144);
-var ch__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21064__$1,cljs.core.constant$keyword$145);
-if(typeof lomakkeet.fields.t21065 !== 'undefined'){
+var map__22864 = G__22860__$1;
+var map__22864__$1 = ((cljs.core.seq_QMARK_(map__22864))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22864):map__22864);
+var opts__$1 = map__22864__$1;
+var transform_value__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__22864__$1,cljs.core.constant$keyword$159,cljs.core.identity);
+var el__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__22864__$1,cljs.core.constant$keyword$160,lomakkeet.fields.input_input);
+var ks__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22864__$1,cljs.core.constant$keyword$146);
+var ch__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22864__$1,cljs.core.constant$keyword$147);
+if(typeof lomakkeet.fields.t22865 !== 'undefined'){
 } else {
 
 /**
 * @constructor
 */
-lomakkeet.fields.t21065 = (function (owner,G__21037,input_STAR_,map__21064,el,G__21060,ks,validate__6096__auto__,G__21059,output_schema21033,value,map__21062,input_schema21034,output_checker21036,map__21063,transform_value,map__21061,G__21038,ch,G__21039,input_checker21035,opts,ufv__,meta21066){
+lomakkeet.fields.t22865 = (function (map__22861,owner,G__22838,output_schema22833,input_STAR_,G__22839,validate__12581__auto__,G__22860,el,G__22837,input_schema22834,ks,map__22862,value,G__22859,transform_value,ch,map__22864,input_checker22835,map__22863,output_checker22836,opts,ufv__,meta22866){
+this.map__22861 = map__22861;
 this.owner = owner;
-this.G__21037 = G__21037;
+this.G__22838 = G__22838;
+this.output_schema22833 = output_schema22833;
 this.input_STAR_ = input_STAR_;
-this.map__21064 = map__21064;
+this.G__22839 = G__22839;
+this.validate__12581__auto__ = validate__12581__auto__;
+this.G__22860 = G__22860;
 this.el = el;
-this.G__21060 = G__21060;
+this.G__22837 = G__22837;
+this.input_schema22834 = input_schema22834;
 this.ks = ks;
-this.validate__6096__auto__ = validate__6096__auto__;
-this.G__21059 = G__21059;
-this.output_schema21033 = output_schema21033;
+this.map__22862 = map__22862;
 this.value = value;
-this.map__21062 = map__21062;
-this.input_schema21034 = input_schema21034;
-this.output_checker21036 = output_checker21036;
-this.map__21063 = map__21063;
+this.G__22859 = G__22859;
 this.transform_value = transform_value;
-this.map__21061 = map__21061;
-this.G__21038 = G__21038;
 this.ch = ch;
-this.G__21039 = G__21039;
-this.input_checker21035 = input_checker21035;
+this.map__22864 = map__22864;
+this.input_checker22835 = input_checker22835;
+this.map__22863 = map__22863;
+this.output_checker22836 = output_checker22836;
 this.opts = opts;
 this.ufv__ = ufv__;
-this.meta21066 = meta21066;
+this.meta22866 = meta22866;
 this.cljs$lang$protocol_mask$partition1$ = 0;
 this.cljs$lang$protocol_mask$partition0$ = 393216;
 })
-lomakkeet.fields.t21065.prototype.om$core$IDisplayName$ = true;
+lomakkeet.fields.t22865.prototype.om$core$IDisplayName$ = true;
 
-lomakkeet.fields.t21065.prototype.om$core$IDisplayName$display_name$arity$1 = ((function (map__21063,map__21063__$1,value__$1,owner__$2,map__21064,map__21064__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__21059,map__21061,map__21061__$1,value,owner,G__21060,map__21062,map__21062__$1,opts,transform_value,el,ks,ch,validate__6096__auto__,ufv___21072,output_schema21033_21073,input_schema21034_21074,input_checker21035_21075,output_checker21036_21076){
+lomakkeet.fields.t22865.prototype.om$core$IDisplayName$display_name$arity$1 = ((function (map__22863,map__22863__$1,value__$1,owner__$2,map__22864,map__22864__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__22859,map__22861,map__22861__$1,value,owner,G__22860,map__22862,map__22862__$1,opts,transform_value,el,ks,ch,validate__12581__auto__,ufv___22872,output_schema22833_22873,input_schema22834_22874,input_checker22835_22875,output_checker22836_22876){
 return (function (_){
 var self__ = this;
 var ___$1 = this;
 return "input*";
-});})(map__21063,map__21063__$1,value__$1,owner__$2,map__21064,map__21064__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__21059,map__21061,map__21061__$1,value,owner,G__21060,map__21062,map__21062__$1,opts,transform_value,el,ks,ch,validate__6096__auto__,ufv___21072,output_schema21033_21073,input_schema21034_21074,input_checker21035_21075,output_checker21036_21076))
+});})(map__22863,map__22863__$1,value__$1,owner__$2,map__22864,map__22864__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__22859,map__22861,map__22861__$1,value,owner,G__22860,map__22862,map__22862__$1,opts,transform_value,el,ks,ch,validate__12581__auto__,ufv___22872,output_schema22833_22873,input_schema22834_22874,input_checker22835_22875,output_checker22836_22876))
 ;
 
-lomakkeet.fields.t21065.prototype.om$core$IRender$ = true;
+lomakkeet.fields.t22865.prototype.om$core$IRender$ = true;
 
-lomakkeet.fields.t21065.prototype.om$core$IRender$render$arity$1 = ((function (map__21063,map__21063__$1,value__$1,owner__$2,map__21064,map__21064__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__21059,map__21061,map__21061__$1,value,owner,G__21060,map__21062,map__21062__$1,opts,transform_value,el,ks,ch,validate__6096__auto__,ufv___21072,output_schema21033_21073,input_schema21034_21074,input_checker21035_21075,output_checker21036_21076){
+lomakkeet.fields.t22865.prototype.om$core$IRender$render$arity$1 = ((function (map__22863,map__22863__$1,value__$1,owner__$2,map__22864,map__22864__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__22859,map__22861,map__22861__$1,value,owner,G__22860,map__22862,map__22862__$1,opts,transform_value,el,ks,ch,validate__12581__auto__,ufv___22872,output_schema22833_22873,input_schema22834_22874,input_checker22835_22875,output_checker22836_22876){
 return (function (_){
 var self__ = this;
 var ___$1 = this;
-return sablono.interpreter.interpret((function (){var G__21068 = (function (){var G__21070 = self__.value;
-return (self__.transform_value.cljs$core$IFn$_invoke$arity$1 ? self__.transform_value.cljs$core$IFn$_invoke$arity$1(G__21070) : self__.transform_value.call(null,G__21070));
+return sablono.interpreter.interpret((function (){var G__22868 = (function (){var G__22870 = self__.value;
+return (self__.transform_value.cljs$core$IFn$_invoke$arity$1 ? self__.transform_value.cljs$core$IFn$_invoke$arity$1(G__22870) : self__.transform_value.call(null,G__22870));
 })();
-var G__21069 = ((function (G__21068,___$1,map__21063,map__21063__$1,value__$1,owner__$2,map__21064,map__21064__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__21059,map__21061,map__21061__$1,value,owner,G__21060,map__21062,map__21062__$1,opts,transform_value,el,ks,ch,validate__6096__auto__,ufv___21072,output_schema21033_21073,input_schema21034_21074,input_checker21035_21075,output_checker21036_21076){
+var G__22869 = ((function (G__22868,___$1,map__22863,map__22863__$1,value__$1,owner__$2,map__22864,map__22864__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__22859,map__22861,map__22861__$1,value,owner,G__22860,map__22862,map__22862__$1,opts,transform_value,el,ks,ch,validate__12581__auto__,ufv___22872,output_schema22833_22873,input_schema22834_22874,input_checker22835_22875,output_checker22836_22876){
 return (function (e){
-return cljs.core.async.put_BANG_.cljs$core$IFn$_invoke$arity$2(self__.ch,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$25,cljs.core.constant$keyword$146,cljs.core.constant$keyword$144,self__.ks,cljs.core.constant$keyword$23,e.target.value], null));
-});})(G__21068,___$1,map__21063,map__21063__$1,value__$1,owner__$2,map__21064,map__21064__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__21059,map__21061,map__21061__$1,value,owner,G__21060,map__21062,map__21062__$1,opts,transform_value,el,ks,ch,validate__6096__auto__,ufv___21072,output_schema21033_21073,input_schema21034_21074,input_checker21035_21075,output_checker21036_21076))
+return cljs.core.async.put_BANG_.cljs$core$IFn$_invoke$arity$2(self__.ch,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$68,cljs.core.constant$keyword$148,cljs.core.constant$keyword$146,self__.ks,cljs.core.constant$keyword$66,e.target.value], null));
+});})(G__22868,___$1,map__22863,map__22863__$1,value__$1,owner__$2,map__22864,map__22864__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__22859,map__22861,map__22861__$1,value,owner,G__22860,map__22862,map__22862__$1,opts,transform_value,el,ks,ch,validate__12581__auto__,ufv___22872,output_schema22833_22873,input_schema22834_22874,input_checker22835_22875,output_checker22836_22876))
 ;
-return (self__.el.cljs$core$IFn$_invoke$arity$2 ? self__.el.cljs$core$IFn$_invoke$arity$2(G__21068,G__21069) : self__.el.call(null,G__21068,G__21069));
+return (self__.el.cljs$core$IFn$_invoke$arity$2 ? self__.el.cljs$core$IFn$_invoke$arity$2(G__22868,G__22869) : self__.el.call(null,G__22868,G__22869));
 })());
-});})(map__21063,map__21063__$1,value__$1,owner__$2,map__21064,map__21064__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__21059,map__21061,map__21061__$1,value,owner,G__21060,map__21062,map__21062__$1,opts,transform_value,el,ks,ch,validate__6096__auto__,ufv___21072,output_schema21033_21073,input_schema21034_21074,input_checker21035_21075,output_checker21036_21076))
+});})(map__22863,map__22863__$1,value__$1,owner__$2,map__22864,map__22864__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__22859,map__22861,map__22861__$1,value,owner,G__22860,map__22862,map__22862__$1,opts,transform_value,el,ks,ch,validate__12581__auto__,ufv___22872,output_schema22833_22873,input_schema22834_22874,input_checker22835_22875,output_checker22836_22876))
 ;
 
-lomakkeet.fields.t21065.prototype.cljs$core$IMeta$_meta$arity$1 = ((function (map__21063,map__21063__$1,value__$1,owner__$2,map__21064,map__21064__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__21059,map__21061,map__21061__$1,value,owner,G__21060,map__21062,map__21062__$1,opts,transform_value,el,ks,ch,validate__6096__auto__,ufv___21072,output_schema21033_21073,input_schema21034_21074,input_checker21035_21075,output_checker21036_21076){
-return (function (_21067){
+lomakkeet.fields.t22865.prototype.cljs$core$IMeta$_meta$arity$1 = ((function (map__22863,map__22863__$1,value__$1,owner__$2,map__22864,map__22864__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__22859,map__22861,map__22861__$1,value,owner,G__22860,map__22862,map__22862__$1,opts,transform_value,el,ks,ch,validate__12581__auto__,ufv___22872,output_schema22833_22873,input_schema22834_22874,input_checker22835_22875,output_checker22836_22876){
+return (function (_22867){
 var self__ = this;
-var _21067__$1 = this;
-return self__.meta21066;
-});})(map__21063,map__21063__$1,value__$1,owner__$2,map__21064,map__21064__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__21059,map__21061,map__21061__$1,value,owner,G__21060,map__21062,map__21062__$1,opts,transform_value,el,ks,ch,validate__6096__auto__,ufv___21072,output_schema21033_21073,input_schema21034_21074,input_checker21035_21075,output_checker21036_21076))
+var _22867__$1 = this;
+return self__.meta22866;
+});})(map__22863,map__22863__$1,value__$1,owner__$2,map__22864,map__22864__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__22859,map__22861,map__22861__$1,value,owner,G__22860,map__22862,map__22862__$1,opts,transform_value,el,ks,ch,validate__12581__auto__,ufv___22872,output_schema22833_22873,input_schema22834_22874,input_checker22835_22875,output_checker22836_22876))
 ;
 
-lomakkeet.fields.t21065.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = ((function (map__21063,map__21063__$1,value__$1,owner__$2,map__21064,map__21064__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__21059,map__21061,map__21061__$1,value,owner,G__21060,map__21062,map__21062__$1,opts,transform_value,el,ks,ch,validate__6096__auto__,ufv___21072,output_schema21033_21073,input_schema21034_21074,input_checker21035_21075,output_checker21036_21076){
-return (function (_21067,meta21066__$1){
+lomakkeet.fields.t22865.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = ((function (map__22863,map__22863__$1,value__$1,owner__$2,map__22864,map__22864__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__22859,map__22861,map__22861__$1,value,owner,G__22860,map__22862,map__22862__$1,opts,transform_value,el,ks,ch,validate__12581__auto__,ufv___22872,output_schema22833_22873,input_schema22834_22874,input_checker22835_22875,output_checker22836_22876){
+return (function (_22867,meta22866__$1){
 var self__ = this;
-var _21067__$1 = this;
-return (new lomakkeet.fields.t21065(self__.owner,self__.G__21037,self__.input_STAR_,self__.map__21064,self__.el,self__.G__21060,self__.ks,self__.validate__6096__auto__,self__.G__21059,self__.output_schema21033,self__.value,self__.map__21062,self__.input_schema21034,self__.output_checker21036,self__.map__21063,self__.transform_value,self__.map__21061,self__.G__21038,self__.ch,self__.G__21039,self__.input_checker21035,self__.opts,self__.ufv__,meta21066__$1));
-});})(map__21063,map__21063__$1,value__$1,owner__$2,map__21064,map__21064__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__21059,map__21061,map__21061__$1,value,owner,G__21060,map__21062,map__21062__$1,opts,transform_value,el,ks,ch,validate__6096__auto__,ufv___21072,output_schema21033_21073,input_schema21034_21074,input_checker21035_21075,output_checker21036_21076))
+var _22867__$1 = this;
+return (new lomakkeet.fields.t22865(self__.map__22861,self__.owner,self__.G__22838,self__.output_schema22833,self__.input_STAR_,self__.G__22839,self__.validate__12581__auto__,self__.G__22860,self__.el,self__.G__22837,self__.input_schema22834,self__.ks,self__.map__22862,self__.value,self__.G__22859,self__.transform_value,self__.ch,self__.map__22864,self__.input_checker22835,self__.map__22863,self__.output_checker22836,self__.opts,self__.ufv__,meta22866__$1));
+});})(map__22863,map__22863__$1,value__$1,owner__$2,map__22864,map__22864__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__22859,map__22861,map__22861__$1,value,owner,G__22860,map__22862,map__22862__$1,opts,transform_value,el,ks,ch,validate__12581__auto__,ufv___22872,output_schema22833_22873,input_schema22834_22874,input_checker22835_22875,output_checker22836_22876))
 ;
 
-lomakkeet.fields.t21065.cljs$lang$type = true;
+lomakkeet.fields.t22865.cljs$lang$type = true;
 
-lomakkeet.fields.t21065.cljs$lang$ctorStr = "lomakkeet.fields/t21065";
+lomakkeet.fields.t22865.cljs$lang$ctorStr = "lomakkeet.fields/t22865";
 
-lomakkeet.fields.t21065.cljs$lang$ctorPrWriter = ((function (map__21063,map__21063__$1,value__$1,owner__$2,map__21064,map__21064__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__21059,map__21061,map__21061__$1,value,owner,G__21060,map__21062,map__21062__$1,opts,transform_value,el,ks,ch,validate__6096__auto__,ufv___21072,output_schema21033_21073,input_schema21034_21074,input_checker21035_21075,output_checker21036_21076){
-return (function (this__4215__auto__,writer__4216__auto__,opt__4217__auto__){
-return cljs.core._write(writer__4216__auto__,"lomakkeet.fields/t21065");
-});})(map__21063,map__21063__$1,value__$1,owner__$2,map__21064,map__21064__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__21059,map__21061,map__21061__$1,value,owner,G__21060,map__21062,map__21062__$1,opts,transform_value,el,ks,ch,validate__6096__auto__,ufv___21072,output_schema21033_21073,input_schema21034_21074,input_checker21035_21075,output_checker21036_21076))
+lomakkeet.fields.t22865.cljs$lang$ctorPrWriter = ((function (map__22863,map__22863__$1,value__$1,owner__$2,map__22864,map__22864__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__22859,map__22861,map__22861__$1,value,owner,G__22860,map__22862,map__22862__$1,opts,transform_value,el,ks,ch,validate__12581__auto__,ufv___22872,output_schema22833_22873,input_schema22834_22874,input_checker22835_22875,output_checker22836_22876){
+return (function (this__4838__auto__,writer__4839__auto__,opt__4840__auto__){
+return cljs.core._write(writer__4839__auto__,"lomakkeet.fields/t22865");
+});})(map__22863,map__22863__$1,value__$1,owner__$2,map__22864,map__22864__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__22859,map__22861,map__22861__$1,value,owner,G__22860,map__22862,map__22862__$1,opts,transform_value,el,ks,ch,validate__12581__auto__,ufv___22872,output_schema22833_22873,input_schema22834_22874,input_checker22835_22875,output_checker22836_22876))
 ;
 
-lomakkeet.fields.__GT_t21065 = ((function (map__21063,map__21063__$1,value__$1,owner__$2,map__21064,map__21064__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__21059,map__21061,map__21061__$1,value,owner,G__21060,map__21062,map__21062__$1,opts,transform_value,el,ks,ch,validate__6096__auto__,ufv___21072,output_schema21033_21073,input_schema21034_21074,input_checker21035_21075,output_checker21036_21076){
-return (function __GT_t21065(owner__$3,G__21037__$1,input_STAR___$1,map__21064__$2,el__$2,G__21060__$2,ks__$2,validate__6096__auto____$1,G__21059__$2,output_schema21033__$1,value__$2,map__21062__$2,input_schema21034__$1,output_checker21036__$1,map__21063__$2,transform_value__$2,map__21061__$2,G__21038__$1,ch__$2,G__21039__$1,input_checker21035__$1,opts__$2,ufv____$1,meta21066){
-return (new lomakkeet.fields.t21065(owner__$3,G__21037__$1,input_STAR___$1,map__21064__$2,el__$2,G__21060__$2,ks__$2,validate__6096__auto____$1,G__21059__$2,output_schema21033__$1,value__$2,map__21062__$2,input_schema21034__$1,output_checker21036__$1,map__21063__$2,transform_value__$2,map__21061__$2,G__21038__$1,ch__$2,G__21039__$1,input_checker21035__$1,opts__$2,ufv____$1,meta21066));
-});})(map__21063,map__21063__$1,value__$1,owner__$2,map__21064,map__21064__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__21059,map__21061,map__21061__$1,value,owner,G__21060,map__21062,map__21062__$1,opts,transform_value,el,ks,ch,validate__6096__auto__,ufv___21072,output_schema21033_21073,input_schema21034_21074,input_checker21035_21075,output_checker21036_21076))
+lomakkeet.fields.__GT_t22865 = ((function (map__22863,map__22863__$1,value__$1,owner__$2,map__22864,map__22864__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__22859,map__22861,map__22861__$1,value,owner,G__22860,map__22862,map__22862__$1,opts,transform_value,el,ks,ch,validate__12581__auto__,ufv___22872,output_schema22833_22873,input_schema22834_22874,input_checker22835_22875,output_checker22836_22876){
+return (function __GT_t22865(map__22861__$2,owner__$3,G__22838__$1,output_schema22833__$1,input_STAR___$1,G__22839__$1,validate__12581__auto____$1,G__22860__$2,el__$2,G__22837__$1,input_schema22834__$1,ks__$2,map__22862__$2,value__$2,G__22859__$2,transform_value__$2,ch__$2,map__22864__$2,input_checker22835__$1,map__22863__$2,output_checker22836__$1,opts__$2,ufv____$1,meta22866){
+return (new lomakkeet.fields.t22865(map__22861__$2,owner__$3,G__22838__$1,output_schema22833__$1,input_STAR___$1,G__22839__$1,validate__12581__auto____$1,G__22860__$2,el__$2,G__22837__$1,input_schema22834__$1,ks__$2,map__22862__$2,value__$2,G__22859__$2,transform_value__$2,ch__$2,map__22864__$2,input_checker22835__$1,map__22863__$2,output_checker22836__$1,opts__$2,ufv____$1,meta22866));
+});})(map__22863,map__22863__$1,value__$1,owner__$2,map__22864,map__22864__$1,opts__$1,transform_value__$1,el__$1,ks__$1,ch__$1,G__22859,map__22861,map__22861__$1,value,owner,G__22860,map__22862,map__22862__$1,opts,transform_value,el,ks,ch,validate__12581__auto__,ufv___22872,output_schema22833_22873,input_schema22834_22874,input_checker22835_22875,output_checker22836_22876))
 ;
 
 }
 
-return (new lomakkeet.fields.t21065(owner__$2,G__21037,input_STAR_,map__21064__$1,el__$1,G__21060__$1,ks__$1,validate__6096__auto__,G__21059__$1,output_schema21033_21073,value__$1,map__21062__$1,input_schema21034_21074,output_checker21036_21076,map__21063__$1,transform_value__$1,map__21061__$1,G__21038,ch__$1,G__21039,input_checker21035_21075,opts__$1,ufv___21072,null));
+return (new lomakkeet.fields.t22865(map__22861__$1,owner__$2,G__22838,output_schema22833_22873,input_STAR_,G__22839,validate__12581__auto__,G__22860__$1,el__$1,G__22837,input_schema22834_22874,ks__$1,map__22862__$1,value__$1,G__22859__$1,transform_value__$1,ch__$1,map__22864__$1,input_checker22835_22875,map__22863__$1,output_checker22836_22876,opts__$1,ufv___22872,null));
 break;
 }
 })();
-if(cljs.core.truth_(validate__6096__auto__)){
-var temp__4126__auto___21080 = (function (){var G__21071 = o__6099__auto__;
-return (output_checker21036_21076.cljs$core$IFn$_invoke$arity$1 ? output_checker21036_21076.cljs$core$IFn$_invoke$arity$1(G__21071) : output_checker21036_21076.call(null,G__21071));
+if(cljs.core.truth_(validate__12581__auto__)){
+var temp__4126__auto___22880 = (function (){var G__22871 = o__12584__auto__;
+return (output_checker22836_22876.cljs$core$IFn$_invoke$arity$1 ? output_checker22836_22876.cljs$core$IFn$_invoke$arity$1(G__22871) : output_checker22836_22876.call(null,G__22871));
 })();
-if(cljs.core.truth_(temp__4126__auto___21080)){
-var error__6098__auto___21081 = temp__4126__auto___21080;
-throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Output of %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"input*","input*",1326385478,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__6098__auto___21081], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$22,error__6098__auto___21081,cljs.core.constant$keyword$23,o__6099__auto__,cljs.core.constant$keyword$24,output_schema21033_21073,cljs.core.constant$keyword$25,cljs.core.constant$keyword$26], null));
+if(cljs.core.truth_(temp__4126__auto___22880)){
+var error__12583__auto___22881 = temp__4126__auto___22880;
+throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Output of %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"input*","input*",1326385478,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__12583__auto___22881], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$65,error__12583__auto___22881,cljs.core.constant$keyword$66,o__12584__auto__,cljs.core.constant$keyword$67,output_schema22833_22873,cljs.core.constant$keyword$68,cljs.core.constant$keyword$69], null));
 } else {
 }
 } else {
 }
 
-return o__6099__auto__;
-});})(ufv___21072,output_schema21033_21073,input_schema21034_21074,input_checker21035_21075,output_checker21036_21076))
+return o__12584__auto__;
+});})(ufv___22872,output_schema22833_22873,input_schema22834_22874,input_checker22835_22875,output_checker22836_22876))
 ;
 
-schema.utils.declare_class_schema_BANG_(schema.utils.fn_schema_bearer(lomakkeet.fields.input_STAR_),schema.core.make_fn_schema(output_schema21033_21073,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema21034_21074], null)));
+schema.utils.declare_class_schema_BANG_(schema.utils.fn_schema_bearer(lomakkeet.fields.input_STAR_),schema.core.make_fn_schema(output_schema22833_22873,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema22834_22874], null)));
 
 lomakkeet.fields.__GT_input_STAR_ = (function() {
 var __GT_input_STAR_ = null;
-var __GT_input_STAR___1 = (function (cursor__7890__auto__){
-return om.core.build.cljs$core$IFn$_invoke$arity$2(lomakkeet.fields.input_STAR_,cursor__7890__auto__);
+var __GT_input_STAR___1 = (function (cursor__20832__auto__){
+return om.core.build.cljs$core$IFn$_invoke$arity$2(lomakkeet.fields.input_STAR_,cursor__20832__auto__);
 });
-var __GT_input_STAR___2 = (function (cursor__7890__auto__,m21032){
-return om.core.build.cljs$core$IFn$_invoke$arity$3(lomakkeet.fields.input_STAR_,cursor__7890__auto__,m21032);
+var __GT_input_STAR___2 = (function (cursor__20832__auto__,m22832){
+return om.core.build.cljs$core$IFn$_invoke$arity$3(lomakkeet.fields.input_STAR_,cursor__20832__auto__,m22832);
 });
-__GT_input_STAR_ = function(cursor__7890__auto__,m21032){
+__GT_input_STAR_ = function(cursor__20832__auto__,m22832){
 switch(arguments.length){
 case 1:
-return __GT_input_STAR___1.call(this,cursor__7890__auto__);
+return __GT_input_STAR___1.call(this,cursor__20832__auto__);
 case 2:
-return __GT_input_STAR___2.call(this,cursor__7890__auto__,m21032);
+return __GT_input_STAR___2.call(this,cursor__20832__auto__,m22832);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
@@ -720,26 +722,28 @@ return __GT_input_STAR_;
 * @param {...*} var_args
 */
 lomakkeet.fields.input = (function() { 
-var input__delegate = function (form,label,ks,p__21082){
-var vec__21084 = p__21082;
-var opts = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__21084,(0),null);
-return lomakkeet.fields.build(cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([form,opts,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$122,lomakkeet.fields.input_STAR_,cljs.core.constant$keyword$135,label,cljs.core.constant$keyword$144,ks], null)], 0)));
+var input__delegate = function (form,label,ks,p__22882){
+var vec__22884 = p__22882;
+var opts = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__22884,(0),null);
+return lomakkeet.fields.build(cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([form,opts,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$124,lomakkeet.fields.input_STAR_,cljs.core.constant$keyword$137,label,cljs.core.constant$keyword$146,ks], null)], 0)));
 };
 var input = function (form,label,ks,var_args){
-var p__21082 = null;
+var p__22882 = null;
 if (arguments.length > 3) {
-  p__21082 = cljs.core.array_seq(Array.prototype.slice.call(arguments, 3),0);
+var G__22885__i = 0, G__22885__a = new Array(arguments.length -  3);
+while (G__22885__i < G__22885__a.length) {G__22885__a[G__22885__i] = arguments[G__22885__i + 3]; ++G__22885__i;}
+  p__22882 = new cljs.core.IndexedSeq(G__22885__a,0);
 } 
-return input__delegate.call(this,form,label,ks,p__21082);};
+return input__delegate.call(this,form,label,ks,p__22882);};
 input.cljs$lang$maxFixedArity = 3;
-input.cljs$lang$applyTo = (function (arglist__21085){
-var form = cljs.core.first(arglist__21085);
-arglist__21085 = cljs.core.next(arglist__21085);
-var label = cljs.core.first(arglist__21085);
-arglist__21085 = cljs.core.next(arglist__21085);
-var ks = cljs.core.first(arglist__21085);
-var p__21082 = cljs.core.rest(arglist__21085);
-return input__delegate(form,label,ks,p__21082);
+input.cljs$lang$applyTo = (function (arglist__22886){
+var form = cljs.core.first(arglist__22886);
+arglist__22886 = cljs.core.next(arglist__22886);
+var label = cljs.core.first(arglist__22886);
+arglist__22886 = cljs.core.next(arglist__22886);
+var ks = cljs.core.first(arglist__22886);
+var p__22882 = cljs.core.rest(arglist__22886);
+return input__delegate(form,label,ks,p__22882);
 });
 input.cljs$core$IFn$_invoke$arity$variadic = input__delegate;
 return input;
@@ -749,26 +753,28 @@ return input;
 * @param {...*} var_args
 */
 lomakkeet.fields.textarea = (function() { 
-var textarea__delegate = function (form,label,ks,p__21086){
-var vec__21088 = p__21086;
-var opts = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__21088,(0),null);
-return lomakkeet.fields.build(cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([form,opts,new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$122,lomakkeet.fields.input_STAR_,cljs.core.constant$keyword$135,label,cljs.core.constant$keyword$144,ks,cljs.core.constant$keyword$158,lomakkeet.fields.input_textarea], null)], 0)));
+var textarea__delegate = function (form,label,ks,p__22887){
+var vec__22889 = p__22887;
+var opts = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__22889,(0),null);
+return lomakkeet.fields.build(cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([form,opts,new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$124,lomakkeet.fields.input_STAR_,cljs.core.constant$keyword$137,label,cljs.core.constant$keyword$146,ks,cljs.core.constant$keyword$160,lomakkeet.fields.input_textarea], null)], 0)));
 };
 var textarea = function (form,label,ks,var_args){
-var p__21086 = null;
+var p__22887 = null;
 if (arguments.length > 3) {
-  p__21086 = cljs.core.array_seq(Array.prototype.slice.call(arguments, 3),0);
+var G__22890__i = 0, G__22890__a = new Array(arguments.length -  3);
+while (G__22890__i < G__22890__a.length) {G__22890__a[G__22890__i] = arguments[G__22890__i + 3]; ++G__22890__i;}
+  p__22887 = new cljs.core.IndexedSeq(G__22890__a,0);
 } 
-return textarea__delegate.call(this,form,label,ks,p__21086);};
+return textarea__delegate.call(this,form,label,ks,p__22887);};
 textarea.cljs$lang$maxFixedArity = 3;
-textarea.cljs$lang$applyTo = (function (arglist__21089){
-var form = cljs.core.first(arglist__21089);
-arglist__21089 = cljs.core.next(arglist__21089);
-var label = cljs.core.first(arglist__21089);
-arglist__21089 = cljs.core.next(arglist__21089);
-var ks = cljs.core.first(arglist__21089);
-var p__21086 = cljs.core.rest(arglist__21089);
-return textarea__delegate(form,label,ks,p__21086);
+textarea.cljs$lang$applyTo = (function (arglist__22891){
+var form = cljs.core.first(arglist__22891);
+arglist__22891 = cljs.core.next(arglist__22891);
+var label = cljs.core.first(arglist__22891);
+arglist__22891 = cljs.core.next(arglist__22891);
+var ks = cljs.core.first(arglist__22891);
+var p__22887 = cljs.core.rest(arglist__22891);
+return textarea__delegate(form,label,ks,p__22887);
 });
 textarea.cljs$core$IFn$_invoke$arity$variadic = textarea__delegate;
 return textarea;
@@ -778,207 +784,209 @@ return textarea;
 * @param {...*} var_args
 */
 lomakkeet.fields.static$ = (function() { 
-var static$__delegate = function (form,label,ks,p__21090){
-var vec__21092 = p__21090;
-var opts = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__21092,(0),null);
-return lomakkeet.fields.build(cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([form,opts,new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$122,lomakkeet.fields.input_STAR_,cljs.core.constant$keyword$135,label,cljs.core.constant$keyword$144,ks,cljs.core.constant$keyword$158,lomakkeet.fields.input_static], null)], 0)));
+var static$__delegate = function (form,label,ks,p__22892){
+var vec__22894 = p__22892;
+var opts = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__22894,(0),null);
+return lomakkeet.fields.build(cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([form,opts,new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$124,lomakkeet.fields.input_STAR_,cljs.core.constant$keyword$137,label,cljs.core.constant$keyword$146,ks,cljs.core.constant$keyword$160,lomakkeet.fields.input_static], null)], 0)));
 };
 var static$ = function (form,label,ks,var_args){
-var p__21090 = null;
+var p__22892 = null;
 if (arguments.length > 3) {
-  p__21090 = cljs.core.array_seq(Array.prototype.slice.call(arguments, 3),0);
+var G__22895__i = 0, G__22895__a = new Array(arguments.length -  3);
+while (G__22895__i < G__22895__a.length) {G__22895__a[G__22895__i] = arguments[G__22895__i + 3]; ++G__22895__i;}
+  p__22892 = new cljs.core.IndexedSeq(G__22895__a,0);
 } 
-return static$__delegate.call(this,form,label,ks,p__21090);};
+return static$__delegate.call(this,form,label,ks,p__22892);};
 static$.cljs$lang$maxFixedArity = 3;
-static$.cljs$lang$applyTo = (function (arglist__21093){
-var form = cljs.core.first(arglist__21093);
-arglist__21093 = cljs.core.next(arglist__21093);
-var label = cljs.core.first(arglist__21093);
-arglist__21093 = cljs.core.next(arglist__21093);
-var ks = cljs.core.first(arglist__21093);
-var p__21090 = cljs.core.rest(arglist__21093);
-return static$__delegate(form,label,ks,p__21090);
+static$.cljs$lang$applyTo = (function (arglist__22896){
+var form = cljs.core.first(arglist__22896);
+arglist__22896 = cljs.core.next(arglist__22896);
+var label = cljs.core.first(arglist__22896);
+arglist__22896 = cljs.core.next(arglist__22896);
+var ks = cljs.core.first(arglist__22896);
+var p__22892 = cljs.core.rest(arglist__22896);
+return static$__delegate(form,label,ks,p__22892);
 });
 static$.cljs$core$IFn$_invoke$arity$variadic = static$__delegate;
 return static$;
 })()
 ;
 
-var ufv___21130 = schema.utils.use_fn_validation;
-var output_schema21095_21131 = schema.core.Any;
-var input_schema21096_21132 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg0","arg0",-1024593414,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"owner","owner",1247919588,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg2","arg2",-924884852,null))], null);
-var input_checker21097_21133 = schema.core.checker(input_schema21096_21132);
-var output_checker21098_21134 = schema.core.checker(output_schema21095_21131);
+var ufv___22933 = schema.utils.use_fn_validation;
+var output_schema22898_22934 = schema.core.Any;
+var input_schema22899_22935 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg0","arg0",-1024593414,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"owner","owner",1247919588,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg2","arg2",-924884852,null))], null);
+var input_checker22900_22936 = schema.core.checker(input_schema22899_22935);
+var output_checker22901_22937 = schema.core.checker(output_schema22898_22934);
 /**
 * Inputs: [{:keys [value]} owner {:keys [ch ks], :as opts}]
 */
-lomakkeet.fields.checkbox_STAR_ = ((function (ufv___21130,output_schema21095_21131,input_schema21096_21132,input_checker21097_21133,output_checker21098_21134){
-return (function checkbox_STAR_(G__21099,G__21100,G__21101){
-var validate__6096__auto__ = ufv___21130.get_cell();
-if(cljs.core.truth_(validate__6096__auto__)){
-var args__6097__auto___21135 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__21099,G__21100,G__21101], null);
-var temp__4126__auto___21136 = (function (){var G__21116 = args__6097__auto___21135;
-return (input_checker21097_21133.cljs$core$IFn$_invoke$arity$1 ? input_checker21097_21133.cljs$core$IFn$_invoke$arity$1(G__21116) : input_checker21097_21133.call(null,G__21116));
+lomakkeet.fields.checkbox_STAR_ = ((function (ufv___22933,output_schema22898_22934,input_schema22899_22935,input_checker22900_22936,output_checker22901_22937){
+return (function checkbox_STAR_(G__22902,G__22903,G__22904){
+var validate__12581__auto__ = ufv___22933.get_cell();
+if(cljs.core.truth_(validate__12581__auto__)){
+var args__12582__auto___22938 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__22902,G__22903,G__22904], null);
+var temp__4126__auto___22939 = (function (){var G__22919 = args__12582__auto___22938;
+return (input_checker22900_22936.cljs$core$IFn$_invoke$arity$1 ? input_checker22900_22936.cljs$core$IFn$_invoke$arity$1(G__22919) : input_checker22900_22936.call(null,G__22919));
 })();
-if(cljs.core.truth_(temp__4126__auto___21136)){
-var error__6098__auto___21137 = temp__4126__auto___21136;
-throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Input to %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"checkbox*","checkbox*",-648650981,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__6098__auto___21137], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$22,error__6098__auto___21137,cljs.core.constant$keyword$23,args__6097__auto___21135,cljs.core.constant$keyword$24,input_schema21096_21132,cljs.core.constant$keyword$25,cljs.core.constant$keyword$26], null));
+if(cljs.core.truth_(temp__4126__auto___22939)){
+var error__12583__auto___22940 = temp__4126__auto___22939;
+throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Input to %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"checkbox*","checkbox*",-648650981,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__12583__auto___22940], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$65,error__12583__auto___22940,cljs.core.constant$keyword$66,args__12582__auto___22938,cljs.core.constant$keyword$67,input_schema22899_22935,cljs.core.constant$keyword$68,cljs.core.constant$keyword$69], null));
 } else {
 }
 } else {
 }
 
-var o__6099__auto__ = (function (){var G__21119 = G__21099;
-var map__21121 = G__21119;
-var map__21121__$1 = ((cljs.core.seq_QMARK_(map__21121))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21121):map__21121);
-var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21121__$1,cljs.core.constant$keyword$23);
-var owner = G__21100;
-var G__21120 = G__21101;
-var map__21122 = G__21120;
-var map__21122__$1 = ((cljs.core.seq_QMARK_(map__21122))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21122):map__21122);
-var opts = map__21122__$1;
-var ks = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21122__$1,cljs.core.constant$keyword$144);
-var ch = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21122__$1,cljs.core.constant$keyword$145);
-var G__21119__$1 = G__21119;
+var o__12584__auto__ = (function (){var G__22922 = G__22902;
+var map__22924 = G__22922;
+var map__22924__$1 = ((cljs.core.seq_QMARK_(map__22924))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22924):map__22924);
+var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22924__$1,cljs.core.constant$keyword$66);
+var owner = G__22903;
+var G__22923 = G__22904;
+var map__22925 = G__22923;
+var map__22925__$1 = ((cljs.core.seq_QMARK_(map__22925))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22925):map__22925);
+var opts = map__22925__$1;
+var ks = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22925__$1,cljs.core.constant$keyword$146);
+var ch = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22925__$1,cljs.core.constant$keyword$147);
+var G__22922__$1 = G__22922;
 var owner__$1 = owner;
-var G__21120__$1 = G__21120;
+var G__22923__$1 = G__22923;
 while(true){
-var map__21123 = G__21119__$1;
-var map__21123__$1 = ((cljs.core.seq_QMARK_(map__21123))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21123):map__21123);
-var value__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21123__$1,cljs.core.constant$keyword$23);
+var map__22926 = G__22922__$1;
+var map__22926__$1 = ((cljs.core.seq_QMARK_(map__22926))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22926):map__22926);
+var value__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22926__$1,cljs.core.constant$keyword$66);
 var owner__$2 = owner__$1;
-var map__21124 = G__21120__$1;
-var map__21124__$1 = ((cljs.core.seq_QMARK_(map__21124))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21124):map__21124);
-var opts__$1 = map__21124__$1;
-var ks__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21124__$1,cljs.core.constant$keyword$144);
-var ch__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21124__$1,cljs.core.constant$keyword$145);
-if(typeof lomakkeet.fields.t21125 !== 'undefined'){
+var map__22927 = G__22923__$1;
+var map__22927__$1 = ((cljs.core.seq_QMARK_(map__22927))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22927):map__22927);
+var opts__$1 = map__22927__$1;
+var ks__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22927__$1,cljs.core.constant$keyword$146);
+var ch__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22927__$1,cljs.core.constant$keyword$147);
+if(typeof lomakkeet.fields.t22928 !== 'undefined'){
 } else {
 
 /**
 * @constructor
 */
-lomakkeet.fields.t21125 = (function (G__21119,input_checker21097,map__21121,owner,map__21124,input_schema21096,ks,validate__6096__auto__,value,G__21120,G__21101,output_schema21095,ch,map__21123,output_checker21098,G__21099,map__21122,checkbox_STAR_,G__21100,opts,ufv__,meta21126){
-this.G__21119 = G__21119;
-this.input_checker21097 = input_checker21097;
-this.map__21121 = map__21121;
+lomakkeet.fields.t22928 = (function (input_schema22899,output_schema22898,owner,validate__12581__auto__,G__22923,map__22926,input_checker22900,map__22927,ks,G__22903,G__22902,value,G__22904,G__22922,output_checker22901,ch,map__22925,checkbox_STAR_,opts,map__22924,ufv__,meta22929){
+this.input_schema22899 = input_schema22899;
+this.output_schema22898 = output_schema22898;
 this.owner = owner;
-this.map__21124 = map__21124;
-this.input_schema21096 = input_schema21096;
+this.validate__12581__auto__ = validate__12581__auto__;
+this.G__22923 = G__22923;
+this.map__22926 = map__22926;
+this.input_checker22900 = input_checker22900;
+this.map__22927 = map__22927;
 this.ks = ks;
-this.validate__6096__auto__ = validate__6096__auto__;
+this.G__22903 = G__22903;
+this.G__22902 = G__22902;
 this.value = value;
-this.G__21120 = G__21120;
-this.G__21101 = G__21101;
-this.output_schema21095 = output_schema21095;
+this.G__22904 = G__22904;
+this.G__22922 = G__22922;
+this.output_checker22901 = output_checker22901;
 this.ch = ch;
-this.map__21123 = map__21123;
-this.output_checker21098 = output_checker21098;
-this.G__21099 = G__21099;
-this.map__21122 = map__21122;
+this.map__22925 = map__22925;
 this.checkbox_STAR_ = checkbox_STAR_;
-this.G__21100 = G__21100;
 this.opts = opts;
+this.map__22924 = map__22924;
 this.ufv__ = ufv__;
-this.meta21126 = meta21126;
+this.meta22929 = meta22929;
 this.cljs$lang$protocol_mask$partition1$ = 0;
 this.cljs$lang$protocol_mask$partition0$ = 393216;
 })
-lomakkeet.fields.t21125.prototype.om$core$IDisplayName$ = true;
+lomakkeet.fields.t22928.prototype.om$core$IDisplayName$ = true;
 
-lomakkeet.fields.t21125.prototype.om$core$IDisplayName$display_name$arity$1 = ((function (map__21123,map__21123__$1,value__$1,owner__$2,map__21124,map__21124__$1,opts__$1,ks__$1,ch__$1,G__21119,map__21121,map__21121__$1,value,owner,G__21120,map__21122,map__21122__$1,opts,ks,ch,validate__6096__auto__,ufv___21130,output_schema21095_21131,input_schema21096_21132,input_checker21097_21133,output_checker21098_21134){
+lomakkeet.fields.t22928.prototype.om$core$IDisplayName$display_name$arity$1 = ((function (map__22926,map__22926__$1,value__$1,owner__$2,map__22927,map__22927__$1,opts__$1,ks__$1,ch__$1,G__22922,map__22924,map__22924__$1,value,owner,G__22923,map__22925,map__22925__$1,opts,ks,ch,validate__12581__auto__,ufv___22933,output_schema22898_22934,input_schema22899_22935,input_checker22900_22936,output_checker22901_22937){
 return (function (_){
 var self__ = this;
 var ___$1 = this;
 return "checkbox*";
-});})(map__21123,map__21123__$1,value__$1,owner__$2,map__21124,map__21124__$1,opts__$1,ks__$1,ch__$1,G__21119,map__21121,map__21121__$1,value,owner,G__21120,map__21122,map__21122__$1,opts,ks,ch,validate__6096__auto__,ufv___21130,output_schema21095_21131,input_schema21096_21132,input_checker21097_21133,output_checker21098_21134))
+});})(map__22926,map__22926__$1,value__$1,owner__$2,map__22927,map__22927__$1,opts__$1,ks__$1,ch__$1,G__22922,map__22924,map__22924__$1,value,owner,G__22923,map__22925,map__22925__$1,opts,ks,ch,validate__12581__auto__,ufv___22933,output_schema22898_22934,input_schema22899_22935,input_checker22900_22936,output_checker22901_22937))
 ;
 
-lomakkeet.fields.t21125.prototype.om$core$IRender$ = true;
+lomakkeet.fields.t22928.prototype.om$core$IRender$ = true;
 
-lomakkeet.fields.t21125.prototype.om$core$IRender$render$arity$1 = ((function (map__21123,map__21123__$1,value__$1,owner__$2,map__21124,map__21124__$1,opts__$1,ks__$1,ch__$1,G__21119,map__21121,map__21121__$1,value,owner,G__21120,map__21122,map__21122__$1,opts,ks,ch,validate__6096__auto__,ufv___21130,output_schema21095_21131,input_schema21096_21132,input_checker21097_21133,output_checker21098_21134){
+lomakkeet.fields.t22928.prototype.om$core$IRender$render$arity$1 = ((function (map__22926,map__22926__$1,value__$1,owner__$2,map__22927,map__22927__$1,opts__$1,ks__$1,ch__$1,G__22922,map__22924,map__22924__$1,value,owner,G__22923,map__22925,map__22925__$1,opts,ks,ch,validate__12581__auto__,ufv___22933,output_schema22898_22934,input_schema22899_22935,input_checker22900_22936,output_checker22901_22937){
 return (function (_){
 var self__ = this;
 var ___$1 = this;
-var G__21128 = {"type": "checkbox", "checked": cljs.core.boolean$(self__.value), "onChange": ((function (___$1,map__21123,map__21123__$1,value__$1,owner__$2,map__21124,map__21124__$1,opts__$1,ks__$1,ch__$1,G__21119,map__21121,map__21121__$1,value,owner,G__21120,map__21122,map__21122__$1,opts,ks,ch,validate__6096__auto__,ufv___21130,output_schema21095_21131,input_schema21096_21132,input_checker21097_21133,output_checker21098_21134){
+var G__22931 = {"type": "checkbox", "checked": cljs.core.boolean$(self__.value), "onChange": ((function (___$1,map__22926,map__22926__$1,value__$1,owner__$2,map__22927,map__22927__$1,opts__$1,ks__$1,ch__$1,G__22922,map__22924,map__22924__$1,value,owner,G__22923,map__22925,map__22925__$1,opts,ks,ch,validate__12581__auto__,ufv___22933,output_schema22898_22934,input_schema22899_22935,input_checker22900_22936,output_checker22901_22937){
 return (function (e){
-return cljs.core.async.put_BANG_.cljs$core$IFn$_invoke$arity$2(self__.ch,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$25,cljs.core.constant$keyword$146,cljs.core.constant$keyword$144,self__.ks,cljs.core.constant$keyword$23,e.target.checked], null));
-});})(___$1,map__21123,map__21123__$1,value__$1,owner__$2,map__21124,map__21124__$1,opts__$1,ks__$1,ch__$1,G__21119,map__21121,map__21121__$1,value,owner,G__21120,map__21122,map__21122__$1,opts,ks,ch,validate__6096__auto__,ufv___21130,output_schema21095_21131,input_schema21096_21132,input_checker21097_21133,output_checker21098_21134))
+return cljs.core.async.put_BANG_.cljs$core$IFn$_invoke$arity$2(self__.ch,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$68,cljs.core.constant$keyword$148,cljs.core.constant$keyword$146,self__.ks,cljs.core.constant$keyword$66,e.target.checked], null));
+});})(___$1,map__22926,map__22926__$1,value__$1,owner__$2,map__22927,map__22927__$1,opts__$1,ks__$1,ch__$1,G__22922,map__22924,map__22924__$1,value,owner,G__22923,map__22925,map__22925__$1,opts,ks,ch,validate__12581__auto__,ufv___22933,output_schema22898_22934,input_schema22899_22935,input_checker22900_22936,output_checker22901_22937))
 };
-return (sablono.interpreter.input.cljs$core$IFn$_invoke$arity$1 ? sablono.interpreter.input.cljs$core$IFn$_invoke$arity$1(G__21128) : sablono.interpreter.input.call(null,G__21128));
-});})(map__21123,map__21123__$1,value__$1,owner__$2,map__21124,map__21124__$1,opts__$1,ks__$1,ch__$1,G__21119,map__21121,map__21121__$1,value,owner,G__21120,map__21122,map__21122__$1,opts,ks,ch,validate__6096__auto__,ufv___21130,output_schema21095_21131,input_schema21096_21132,input_checker21097_21133,output_checker21098_21134))
+return (sablono.interpreter.input.cljs$core$IFn$_invoke$arity$1 ? sablono.interpreter.input.cljs$core$IFn$_invoke$arity$1(G__22931) : sablono.interpreter.input.call(null,G__22931));
+});})(map__22926,map__22926__$1,value__$1,owner__$2,map__22927,map__22927__$1,opts__$1,ks__$1,ch__$1,G__22922,map__22924,map__22924__$1,value,owner,G__22923,map__22925,map__22925__$1,opts,ks,ch,validate__12581__auto__,ufv___22933,output_schema22898_22934,input_schema22899_22935,input_checker22900_22936,output_checker22901_22937))
 ;
 
-lomakkeet.fields.t21125.prototype.cljs$core$IMeta$_meta$arity$1 = ((function (map__21123,map__21123__$1,value__$1,owner__$2,map__21124,map__21124__$1,opts__$1,ks__$1,ch__$1,G__21119,map__21121,map__21121__$1,value,owner,G__21120,map__21122,map__21122__$1,opts,ks,ch,validate__6096__auto__,ufv___21130,output_schema21095_21131,input_schema21096_21132,input_checker21097_21133,output_checker21098_21134){
-return (function (_21127){
+lomakkeet.fields.t22928.prototype.cljs$core$IMeta$_meta$arity$1 = ((function (map__22926,map__22926__$1,value__$1,owner__$2,map__22927,map__22927__$1,opts__$1,ks__$1,ch__$1,G__22922,map__22924,map__22924__$1,value,owner,G__22923,map__22925,map__22925__$1,opts,ks,ch,validate__12581__auto__,ufv___22933,output_schema22898_22934,input_schema22899_22935,input_checker22900_22936,output_checker22901_22937){
+return (function (_22930){
 var self__ = this;
-var _21127__$1 = this;
-return self__.meta21126;
-});})(map__21123,map__21123__$1,value__$1,owner__$2,map__21124,map__21124__$1,opts__$1,ks__$1,ch__$1,G__21119,map__21121,map__21121__$1,value,owner,G__21120,map__21122,map__21122__$1,opts,ks,ch,validate__6096__auto__,ufv___21130,output_schema21095_21131,input_schema21096_21132,input_checker21097_21133,output_checker21098_21134))
+var _22930__$1 = this;
+return self__.meta22929;
+});})(map__22926,map__22926__$1,value__$1,owner__$2,map__22927,map__22927__$1,opts__$1,ks__$1,ch__$1,G__22922,map__22924,map__22924__$1,value,owner,G__22923,map__22925,map__22925__$1,opts,ks,ch,validate__12581__auto__,ufv___22933,output_schema22898_22934,input_schema22899_22935,input_checker22900_22936,output_checker22901_22937))
 ;
 
-lomakkeet.fields.t21125.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = ((function (map__21123,map__21123__$1,value__$1,owner__$2,map__21124,map__21124__$1,opts__$1,ks__$1,ch__$1,G__21119,map__21121,map__21121__$1,value,owner,G__21120,map__21122,map__21122__$1,opts,ks,ch,validate__6096__auto__,ufv___21130,output_schema21095_21131,input_schema21096_21132,input_checker21097_21133,output_checker21098_21134){
-return (function (_21127,meta21126__$1){
+lomakkeet.fields.t22928.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = ((function (map__22926,map__22926__$1,value__$1,owner__$2,map__22927,map__22927__$1,opts__$1,ks__$1,ch__$1,G__22922,map__22924,map__22924__$1,value,owner,G__22923,map__22925,map__22925__$1,opts,ks,ch,validate__12581__auto__,ufv___22933,output_schema22898_22934,input_schema22899_22935,input_checker22900_22936,output_checker22901_22937){
+return (function (_22930,meta22929__$1){
 var self__ = this;
-var _21127__$1 = this;
-return (new lomakkeet.fields.t21125(self__.G__21119,self__.input_checker21097,self__.map__21121,self__.owner,self__.map__21124,self__.input_schema21096,self__.ks,self__.validate__6096__auto__,self__.value,self__.G__21120,self__.G__21101,self__.output_schema21095,self__.ch,self__.map__21123,self__.output_checker21098,self__.G__21099,self__.map__21122,self__.checkbox_STAR_,self__.G__21100,self__.opts,self__.ufv__,meta21126__$1));
-});})(map__21123,map__21123__$1,value__$1,owner__$2,map__21124,map__21124__$1,opts__$1,ks__$1,ch__$1,G__21119,map__21121,map__21121__$1,value,owner,G__21120,map__21122,map__21122__$1,opts,ks,ch,validate__6096__auto__,ufv___21130,output_schema21095_21131,input_schema21096_21132,input_checker21097_21133,output_checker21098_21134))
+var _22930__$1 = this;
+return (new lomakkeet.fields.t22928(self__.input_schema22899,self__.output_schema22898,self__.owner,self__.validate__12581__auto__,self__.G__22923,self__.map__22926,self__.input_checker22900,self__.map__22927,self__.ks,self__.G__22903,self__.G__22902,self__.value,self__.G__22904,self__.G__22922,self__.output_checker22901,self__.ch,self__.map__22925,self__.checkbox_STAR_,self__.opts,self__.map__22924,self__.ufv__,meta22929__$1));
+});})(map__22926,map__22926__$1,value__$1,owner__$2,map__22927,map__22927__$1,opts__$1,ks__$1,ch__$1,G__22922,map__22924,map__22924__$1,value,owner,G__22923,map__22925,map__22925__$1,opts,ks,ch,validate__12581__auto__,ufv___22933,output_schema22898_22934,input_schema22899_22935,input_checker22900_22936,output_checker22901_22937))
 ;
 
-lomakkeet.fields.t21125.cljs$lang$type = true;
+lomakkeet.fields.t22928.cljs$lang$type = true;
 
-lomakkeet.fields.t21125.cljs$lang$ctorStr = "lomakkeet.fields/t21125";
+lomakkeet.fields.t22928.cljs$lang$ctorStr = "lomakkeet.fields/t22928";
 
-lomakkeet.fields.t21125.cljs$lang$ctorPrWriter = ((function (map__21123,map__21123__$1,value__$1,owner__$2,map__21124,map__21124__$1,opts__$1,ks__$1,ch__$1,G__21119,map__21121,map__21121__$1,value,owner,G__21120,map__21122,map__21122__$1,opts,ks,ch,validate__6096__auto__,ufv___21130,output_schema21095_21131,input_schema21096_21132,input_checker21097_21133,output_checker21098_21134){
-return (function (this__4215__auto__,writer__4216__auto__,opt__4217__auto__){
-return cljs.core._write(writer__4216__auto__,"lomakkeet.fields/t21125");
-});})(map__21123,map__21123__$1,value__$1,owner__$2,map__21124,map__21124__$1,opts__$1,ks__$1,ch__$1,G__21119,map__21121,map__21121__$1,value,owner,G__21120,map__21122,map__21122__$1,opts,ks,ch,validate__6096__auto__,ufv___21130,output_schema21095_21131,input_schema21096_21132,input_checker21097_21133,output_checker21098_21134))
+lomakkeet.fields.t22928.cljs$lang$ctorPrWriter = ((function (map__22926,map__22926__$1,value__$1,owner__$2,map__22927,map__22927__$1,opts__$1,ks__$1,ch__$1,G__22922,map__22924,map__22924__$1,value,owner,G__22923,map__22925,map__22925__$1,opts,ks,ch,validate__12581__auto__,ufv___22933,output_schema22898_22934,input_schema22899_22935,input_checker22900_22936,output_checker22901_22937){
+return (function (this__4838__auto__,writer__4839__auto__,opt__4840__auto__){
+return cljs.core._write(writer__4839__auto__,"lomakkeet.fields/t22928");
+});})(map__22926,map__22926__$1,value__$1,owner__$2,map__22927,map__22927__$1,opts__$1,ks__$1,ch__$1,G__22922,map__22924,map__22924__$1,value,owner,G__22923,map__22925,map__22925__$1,opts,ks,ch,validate__12581__auto__,ufv___22933,output_schema22898_22934,input_schema22899_22935,input_checker22900_22936,output_checker22901_22937))
 ;
 
-lomakkeet.fields.__GT_t21125 = ((function (map__21123,map__21123__$1,value__$1,owner__$2,map__21124,map__21124__$1,opts__$1,ks__$1,ch__$1,G__21119,map__21121,map__21121__$1,value,owner,G__21120,map__21122,map__21122__$1,opts,ks,ch,validate__6096__auto__,ufv___21130,output_schema21095_21131,input_schema21096_21132,input_checker21097_21133,output_checker21098_21134){
-return (function __GT_t21125(G__21119__$2,input_checker21097__$1,map__21121__$2,owner__$3,map__21124__$2,input_schema21096__$1,ks__$2,validate__6096__auto____$1,value__$2,G__21120__$2,G__21101__$1,output_schema21095__$1,ch__$2,map__21123__$2,output_checker21098__$1,G__21099__$1,map__21122__$2,checkbox_STAR___$1,G__21100__$1,opts__$2,ufv____$1,meta21126){
-return (new lomakkeet.fields.t21125(G__21119__$2,input_checker21097__$1,map__21121__$2,owner__$3,map__21124__$2,input_schema21096__$1,ks__$2,validate__6096__auto____$1,value__$2,G__21120__$2,G__21101__$1,output_schema21095__$1,ch__$2,map__21123__$2,output_checker21098__$1,G__21099__$1,map__21122__$2,checkbox_STAR___$1,G__21100__$1,opts__$2,ufv____$1,meta21126));
-});})(map__21123,map__21123__$1,value__$1,owner__$2,map__21124,map__21124__$1,opts__$1,ks__$1,ch__$1,G__21119,map__21121,map__21121__$1,value,owner,G__21120,map__21122,map__21122__$1,opts,ks,ch,validate__6096__auto__,ufv___21130,output_schema21095_21131,input_schema21096_21132,input_checker21097_21133,output_checker21098_21134))
+lomakkeet.fields.__GT_t22928 = ((function (map__22926,map__22926__$1,value__$1,owner__$2,map__22927,map__22927__$1,opts__$1,ks__$1,ch__$1,G__22922,map__22924,map__22924__$1,value,owner,G__22923,map__22925,map__22925__$1,opts,ks,ch,validate__12581__auto__,ufv___22933,output_schema22898_22934,input_schema22899_22935,input_checker22900_22936,output_checker22901_22937){
+return (function __GT_t22928(input_schema22899__$1,output_schema22898__$1,owner__$3,validate__12581__auto____$1,G__22923__$2,map__22926__$2,input_checker22900__$1,map__22927__$2,ks__$2,G__22903__$1,G__22902__$1,value__$2,G__22904__$1,G__22922__$2,output_checker22901__$1,ch__$2,map__22925__$2,checkbox_STAR___$1,opts__$2,map__22924__$2,ufv____$1,meta22929){
+return (new lomakkeet.fields.t22928(input_schema22899__$1,output_schema22898__$1,owner__$3,validate__12581__auto____$1,G__22923__$2,map__22926__$2,input_checker22900__$1,map__22927__$2,ks__$2,G__22903__$1,G__22902__$1,value__$2,G__22904__$1,G__22922__$2,output_checker22901__$1,ch__$2,map__22925__$2,checkbox_STAR___$1,opts__$2,map__22924__$2,ufv____$1,meta22929));
+});})(map__22926,map__22926__$1,value__$1,owner__$2,map__22927,map__22927__$1,opts__$1,ks__$1,ch__$1,G__22922,map__22924,map__22924__$1,value,owner,G__22923,map__22925,map__22925__$1,opts,ks,ch,validate__12581__auto__,ufv___22933,output_schema22898_22934,input_schema22899_22935,input_checker22900_22936,output_checker22901_22937))
 ;
 
 }
 
-return (new lomakkeet.fields.t21125(G__21119__$1,input_checker21097_21133,map__21121__$1,owner__$2,map__21124__$1,input_schema21096_21132,ks__$1,validate__6096__auto__,value__$1,G__21120__$1,G__21101,output_schema21095_21131,ch__$1,map__21123__$1,output_checker21098_21134,G__21099,map__21122__$1,checkbox_STAR_,G__21100,opts__$1,ufv___21130,null));
+return (new lomakkeet.fields.t22928(input_schema22899_22935,output_schema22898_22934,owner__$2,validate__12581__auto__,G__22923__$1,map__22926__$1,input_checker22900_22936,map__22927__$1,ks__$1,G__22903,G__22902,value__$1,G__22904,G__22922__$1,output_checker22901_22937,ch__$1,map__22925__$1,checkbox_STAR_,opts__$1,map__22924__$1,ufv___22933,null));
 break;
 }
 })();
-if(cljs.core.truth_(validate__6096__auto__)){
-var temp__4126__auto___21138 = (function (){var G__21129 = o__6099__auto__;
-return (output_checker21098_21134.cljs$core$IFn$_invoke$arity$1 ? output_checker21098_21134.cljs$core$IFn$_invoke$arity$1(G__21129) : output_checker21098_21134.call(null,G__21129));
+if(cljs.core.truth_(validate__12581__auto__)){
+var temp__4126__auto___22941 = (function (){var G__22932 = o__12584__auto__;
+return (output_checker22901_22937.cljs$core$IFn$_invoke$arity$1 ? output_checker22901_22937.cljs$core$IFn$_invoke$arity$1(G__22932) : output_checker22901_22937.call(null,G__22932));
 })();
-if(cljs.core.truth_(temp__4126__auto___21138)){
-var error__6098__auto___21139 = temp__4126__auto___21138;
-throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Output of %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"checkbox*","checkbox*",-648650981,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__6098__auto___21139], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$22,error__6098__auto___21139,cljs.core.constant$keyword$23,o__6099__auto__,cljs.core.constant$keyword$24,output_schema21095_21131,cljs.core.constant$keyword$25,cljs.core.constant$keyword$26], null));
+if(cljs.core.truth_(temp__4126__auto___22941)){
+var error__12583__auto___22942 = temp__4126__auto___22941;
+throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Output of %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"checkbox*","checkbox*",-648650981,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__12583__auto___22942], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$65,error__12583__auto___22942,cljs.core.constant$keyword$66,o__12584__auto__,cljs.core.constant$keyword$67,output_schema22898_22934,cljs.core.constant$keyword$68,cljs.core.constant$keyword$69], null));
 } else {
 }
 } else {
 }
 
-return o__6099__auto__;
-});})(ufv___21130,output_schema21095_21131,input_schema21096_21132,input_checker21097_21133,output_checker21098_21134))
+return o__12584__auto__;
+});})(ufv___22933,output_schema22898_22934,input_schema22899_22935,input_checker22900_22936,output_checker22901_22937))
 ;
 
-schema.utils.declare_class_schema_BANG_(schema.utils.fn_schema_bearer(lomakkeet.fields.checkbox_STAR_),schema.core.make_fn_schema(output_schema21095_21131,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema21096_21132], null)));
+schema.utils.declare_class_schema_BANG_(schema.utils.fn_schema_bearer(lomakkeet.fields.checkbox_STAR_),schema.core.make_fn_schema(output_schema22898_22934,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema22899_22935], null)));
 
 lomakkeet.fields.__GT_checkbox_STAR_ = (function() {
 var __GT_checkbox_STAR_ = null;
-var __GT_checkbox_STAR___1 = (function (cursor__7890__auto__){
-return om.core.build.cljs$core$IFn$_invoke$arity$2(lomakkeet.fields.checkbox_STAR_,cursor__7890__auto__);
+var __GT_checkbox_STAR___1 = (function (cursor__20832__auto__){
+return om.core.build.cljs$core$IFn$_invoke$arity$2(lomakkeet.fields.checkbox_STAR_,cursor__20832__auto__);
 });
-var __GT_checkbox_STAR___2 = (function (cursor__7890__auto__,m21094){
-return om.core.build.cljs$core$IFn$_invoke$arity$3(lomakkeet.fields.checkbox_STAR_,cursor__7890__auto__,m21094);
+var __GT_checkbox_STAR___2 = (function (cursor__20832__auto__,m22897){
+return om.core.build.cljs$core$IFn$_invoke$arity$3(lomakkeet.fields.checkbox_STAR_,cursor__20832__auto__,m22897);
 });
-__GT_checkbox_STAR_ = function(cursor__7890__auto__,m21094){
+__GT_checkbox_STAR_ = function(cursor__20832__auto__,m22897){
 switch(arguments.length){
 case 1:
-return __GT_checkbox_STAR___1.call(this,cursor__7890__auto__);
+return __GT_checkbox_STAR___1.call(this,cursor__20832__auto__);
 case 2:
-return __GT_checkbox_STAR___2.call(this,cursor__7890__auto__,m21094);
+return __GT_checkbox_STAR___2.call(this,cursor__20832__auto__,m22897);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
@@ -991,159 +999,161 @@ return __GT_checkbox_STAR_;
 * @param {...*} var_args
 */
 lomakkeet.fields.checkbox = (function() { 
-var checkbox__delegate = function (form,label,ks,p__21140){
-var vec__21142 = p__21140;
-var opts = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__21142,(0),null);
-return lomakkeet.fields.build(cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([form,opts,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$122,lomakkeet.fields.checkbox_STAR_,cljs.core.constant$keyword$135,label,cljs.core.constant$keyword$144,ks], null)], 0)));
+var checkbox__delegate = function (form,label,ks,p__22943){
+var vec__22945 = p__22943;
+var opts = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__22945,(0),null);
+return lomakkeet.fields.build(cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([form,opts,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$124,lomakkeet.fields.checkbox_STAR_,cljs.core.constant$keyword$137,label,cljs.core.constant$keyword$146,ks], null)], 0)));
 };
 var checkbox = function (form,label,ks,var_args){
-var p__21140 = null;
+var p__22943 = null;
 if (arguments.length > 3) {
-  p__21140 = cljs.core.array_seq(Array.prototype.slice.call(arguments, 3),0);
+var G__22946__i = 0, G__22946__a = new Array(arguments.length -  3);
+while (G__22946__i < G__22946__a.length) {G__22946__a[G__22946__i] = arguments[G__22946__i + 3]; ++G__22946__i;}
+  p__22943 = new cljs.core.IndexedSeq(G__22946__a,0);
 } 
-return checkbox__delegate.call(this,form,label,ks,p__21140);};
+return checkbox__delegate.call(this,form,label,ks,p__22943);};
 checkbox.cljs$lang$maxFixedArity = 3;
-checkbox.cljs$lang$applyTo = (function (arglist__21143){
-var form = cljs.core.first(arglist__21143);
-arglist__21143 = cljs.core.next(arglist__21143);
-var label = cljs.core.first(arglist__21143);
-arglist__21143 = cljs.core.next(arglist__21143);
-var ks = cljs.core.first(arglist__21143);
-var p__21140 = cljs.core.rest(arglist__21143);
-return checkbox__delegate(form,label,ks,p__21140);
+checkbox.cljs$lang$applyTo = (function (arglist__22947){
+var form = cljs.core.first(arglist__22947);
+arglist__22947 = cljs.core.next(arglist__22947);
+var label = cljs.core.first(arglist__22947);
+arglist__22947 = cljs.core.next(arglist__22947);
+var ks = cljs.core.first(arglist__22947);
+var p__22943 = cljs.core.rest(arglist__22947);
+return checkbox__delegate(form,label,ks,p__22943);
 });
 checkbox.cljs$core$IFn$_invoke$arity$variadic = checkbox__delegate;
 return checkbox;
 })()
 ;
 
-var ufv___21202 = schema.utils.use_fn_validation;
-var output_schema21145_21203 = schema.core.Any;
-var input_schema21146_21204 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg0","arg0",-1024593414,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"owner","owner",1247919588,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg2","arg2",-924884852,null))], null);
-var input_checker21147_21205 = schema.core.checker(input_schema21146_21204);
-var output_checker21148_21206 = schema.core.checker(output_schema21145_21203);
+var ufv___23006 = schema.utils.use_fn_validation;
+var output_schema22949_23007 = schema.core.Any;
+var input_schema22950_23008 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg0","arg0",-1024593414,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"owner","owner",1247919588,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg2","arg2",-924884852,null))], null);
+var input_checker22951_23009 = schema.core.checker(input_schema22950_23008);
+var output_checker22952_23010 = schema.core.checker(output_schema22949_23007);
 /**
 * Inputs: [{:keys [value]} owner {:keys [ch ks options], :as opts}]
 */
-lomakkeet.fields.select_STAR_ = ((function (ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206){
-return (function select_STAR_(G__21149,G__21150,G__21151){
-var validate__6096__auto__ = ufv___21202.get_cell();
-if(cljs.core.truth_(validate__6096__auto__)){
-var args__6097__auto___21207 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__21149,G__21150,G__21151], null);
-var temp__4126__auto___21208 = (function (){var G__21177 = args__6097__auto___21207;
-return (input_checker21147_21205.cljs$core$IFn$_invoke$arity$1 ? input_checker21147_21205.cljs$core$IFn$_invoke$arity$1(G__21177) : input_checker21147_21205.call(null,G__21177));
+lomakkeet.fields.select_STAR_ = ((function (ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010){
+return (function select_STAR_(G__22953,G__22954,G__22955){
+var validate__12581__auto__ = ufv___23006.get_cell();
+if(cljs.core.truth_(validate__12581__auto__)){
+var args__12582__auto___23011 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__22953,G__22954,G__22955], null);
+var temp__4126__auto___23012 = (function (){var G__22981 = args__12582__auto___23011;
+return (input_checker22951_23009.cljs$core$IFn$_invoke$arity$1 ? input_checker22951_23009.cljs$core$IFn$_invoke$arity$1(G__22981) : input_checker22951_23009.call(null,G__22981));
 })();
-if(cljs.core.truth_(temp__4126__auto___21208)){
-var error__6098__auto___21209 = temp__4126__auto___21208;
-throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Input to %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"select*","select*",-189382533,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__6098__auto___21209], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$22,error__6098__auto___21209,cljs.core.constant$keyword$23,args__6097__auto___21207,cljs.core.constant$keyword$24,input_schema21146_21204,cljs.core.constant$keyword$25,cljs.core.constant$keyword$26], null));
+if(cljs.core.truth_(temp__4126__auto___23012)){
+var error__12583__auto___23013 = temp__4126__auto___23012;
+throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Input to %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"select*","select*",-189382533,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__12583__auto___23013], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$65,error__12583__auto___23013,cljs.core.constant$keyword$66,args__12582__auto___23011,cljs.core.constant$keyword$67,input_schema22950_23008,cljs.core.constant$keyword$68,cljs.core.constant$keyword$69], null));
 } else {
 }
 } else {
 }
 
-var o__6099__auto__ = (function (){var G__21180 = G__21149;
-var map__21182 = G__21180;
-var map__21182__$1 = ((cljs.core.seq_QMARK_(map__21182))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21182):map__21182);
-var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21182__$1,cljs.core.constant$keyword$23);
-var owner = G__21150;
-var G__21181 = G__21151;
-var map__21183 = G__21181;
-var map__21183__$1 = ((cljs.core.seq_QMARK_(map__21183))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21183):map__21183);
-var opts = map__21183__$1;
-var options = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21183__$1,cljs.core.constant$keyword$159);
-var ks = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21183__$1,cljs.core.constant$keyword$144);
-var ch = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21183__$1,cljs.core.constant$keyword$145);
-var G__21180__$1 = G__21180;
+var o__12584__auto__ = (function (){var G__22984 = G__22953;
+var map__22986 = G__22984;
+var map__22986__$1 = ((cljs.core.seq_QMARK_(map__22986))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22986):map__22986);
+var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22986__$1,cljs.core.constant$keyword$66);
+var owner = G__22954;
+var G__22985 = G__22955;
+var map__22987 = G__22985;
+var map__22987__$1 = ((cljs.core.seq_QMARK_(map__22987))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22987):map__22987);
+var opts = map__22987__$1;
+var options = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22987__$1,cljs.core.constant$keyword$161);
+var ks = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22987__$1,cljs.core.constant$keyword$146);
+var ch = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22987__$1,cljs.core.constant$keyword$147);
+var G__22984__$1 = G__22984;
 var owner__$1 = owner;
-var G__21181__$1 = G__21181;
+var G__22985__$1 = G__22985;
 while(true){
-var map__21184 = G__21180__$1;
-var map__21184__$1 = ((cljs.core.seq_QMARK_(map__21184))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21184):map__21184);
-var value__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21184__$1,cljs.core.constant$keyword$23);
+var map__22988 = G__22984__$1;
+var map__22988__$1 = ((cljs.core.seq_QMARK_(map__22988))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22988):map__22988);
+var value__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22988__$1,cljs.core.constant$keyword$66);
 var owner__$2 = owner__$1;
-var map__21185 = G__21181__$1;
-var map__21185__$1 = ((cljs.core.seq_QMARK_(map__21185))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21185):map__21185);
-var opts__$1 = map__21185__$1;
-var options__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21185__$1,cljs.core.constant$keyword$159);
-var ks__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21185__$1,cljs.core.constant$keyword$144);
-var ch__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21185__$1,cljs.core.constant$keyword$145);
-if(typeof lomakkeet.fields.t21186 !== 'undefined'){
+var map__22989 = G__22985__$1;
+var map__22989__$1 = ((cljs.core.seq_QMARK_(map__22989))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__22989):map__22989);
+var opts__$1 = map__22989__$1;
+var options__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22989__$1,cljs.core.constant$keyword$161);
+var ks__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22989__$1,cljs.core.constant$keyword$146);
+var ch__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__22989__$1,cljs.core.constant$keyword$147);
+if(typeof lomakkeet.fields.t22990 !== 'undefined'){
 } else {
 
 /**
 * @constructor
 */
-lomakkeet.fields.t21186 = (function (options,G__21181,owner,map__21185,G__21149,input_schema21146,ks,G__21151,validate__6096__auto__,G__21180,G__21150,value,map__21182,output_checker21148,map__21184,input_checker21147,ch,map__21183,select_STAR_,opts,ufv__,output_schema21145,meta21187){
+lomakkeet.fields.t22990 = (function (G__22984,options,map__22989,G__22954,owner,output_schema22949,validate__12581__auto__,map__22988,G__22985,ks,G__22953,value,map__22987,G__22955,output_checker22952,ch,map__22986,input_checker22951,select_STAR_,input_schema22950,opts,ufv__,meta22991){
+this.G__22984 = G__22984;
 this.options = options;
-this.G__21181 = G__21181;
+this.map__22989 = map__22989;
+this.G__22954 = G__22954;
 this.owner = owner;
-this.map__21185 = map__21185;
-this.G__21149 = G__21149;
-this.input_schema21146 = input_schema21146;
+this.output_schema22949 = output_schema22949;
+this.validate__12581__auto__ = validate__12581__auto__;
+this.map__22988 = map__22988;
+this.G__22985 = G__22985;
 this.ks = ks;
-this.G__21151 = G__21151;
-this.validate__6096__auto__ = validate__6096__auto__;
-this.G__21180 = G__21180;
-this.G__21150 = G__21150;
+this.G__22953 = G__22953;
 this.value = value;
-this.map__21182 = map__21182;
-this.output_checker21148 = output_checker21148;
-this.map__21184 = map__21184;
-this.input_checker21147 = input_checker21147;
+this.map__22987 = map__22987;
+this.G__22955 = G__22955;
+this.output_checker22952 = output_checker22952;
 this.ch = ch;
-this.map__21183 = map__21183;
+this.map__22986 = map__22986;
+this.input_checker22951 = input_checker22951;
 this.select_STAR_ = select_STAR_;
+this.input_schema22950 = input_schema22950;
 this.opts = opts;
 this.ufv__ = ufv__;
-this.output_schema21145 = output_schema21145;
-this.meta21187 = meta21187;
+this.meta22991 = meta22991;
 this.cljs$lang$protocol_mask$partition1$ = 0;
 this.cljs$lang$protocol_mask$partition0$ = 393216;
 })
-lomakkeet.fields.t21186.prototype.om$core$IDisplayName$ = true;
+lomakkeet.fields.t22990.prototype.om$core$IDisplayName$ = true;
 
-lomakkeet.fields.t21186.prototype.om$core$IDisplayName$display_name$arity$1 = ((function (map__21184,map__21184__$1,value__$1,owner__$2,map__21185,map__21185__$1,opts__$1,options__$1,ks__$1,ch__$1,G__21180,map__21182,map__21182__$1,value,owner,G__21181,map__21183,map__21183__$1,opts,options,ks,ch,validate__6096__auto__,ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206){
+lomakkeet.fields.t22990.prototype.om$core$IDisplayName$display_name$arity$1 = ((function (map__22988,map__22988__$1,value__$1,owner__$2,map__22989,map__22989__$1,opts__$1,options__$1,ks__$1,ch__$1,G__22984,map__22986,map__22986__$1,value,owner,G__22985,map__22987,map__22987__$1,opts,options,ks,ch,validate__12581__auto__,ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010){
 return (function (_){
 var self__ = this;
 var ___$1 = this;
 return "select*";
-});})(map__21184,map__21184__$1,value__$1,owner__$2,map__21185,map__21185__$1,opts__$1,options__$1,ks__$1,ch__$1,G__21180,map__21182,map__21182__$1,value,owner,G__21181,map__21183,map__21183__$1,opts,options,ks,ch,validate__6096__auto__,ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206))
+});})(map__22988,map__22988__$1,value__$1,owner__$2,map__22989,map__22989__$1,opts__$1,options__$1,ks__$1,ch__$1,G__22984,map__22986,map__22986__$1,value,owner,G__22985,map__22987,map__22987__$1,opts,options,ks,ch,validate__12581__auto__,ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010))
 ;
 
-lomakkeet.fields.t21186.prototype.om$core$IRender$ = true;
+lomakkeet.fields.t22990.prototype.om$core$IRender$ = true;
 
-lomakkeet.fields.t21186.prototype.om$core$IRender$render$arity$1 = ((function (map__21184,map__21184__$1,value__$1,owner__$2,map__21185,map__21185__$1,opts__$1,options__$1,ks__$1,ch__$1,G__21180,map__21182,map__21182__$1,value,owner,G__21181,map__21183,map__21183__$1,opts,options,ks,ch,validate__6096__auto__,ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206){
+lomakkeet.fields.t22990.prototype.om$core$IRender$render$arity$1 = ((function (map__22988,map__22988__$1,value__$1,owner__$2,map__22989,map__22989__$1,opts__$1,options__$1,ks__$1,ch__$1,G__22984,map__22986,map__22986__$1,value,owner,G__22985,map__22987,map__22987__$1,opts,options,ks,ch,validate__12581__auto__,ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010){
 return (function (_){
 var self__ = this;
 var ___$1 = this;
-var G__21189 = {"className": "form-control", "value": self__.value, "onChange": ((function (___$1,map__21184,map__21184__$1,value__$1,owner__$2,map__21185,map__21185__$1,opts__$1,options__$1,ks__$1,ch__$1,G__21180,map__21182,map__21182__$1,value,owner,G__21181,map__21183,map__21183__$1,opts,options,ks,ch,validate__6096__auto__,ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206){
+var G__22993 = {"className": "form-control", "value": self__.value, "onChange": ((function (___$1,map__22988,map__22988__$1,value__$1,owner__$2,map__22989,map__22989__$1,opts__$1,options__$1,ks__$1,ch__$1,G__22984,map__22986,map__22986__$1,value,owner,G__22985,map__22987,map__22987__$1,opts,options,ks,ch,validate__12581__auto__,ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010){
 return (function (e){
-return cljs.core.async.put_BANG_.cljs$core$IFn$_invoke$arity$2(self__.ch,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$25,cljs.core.constant$keyword$146,cljs.core.constant$keyword$144,self__.ks,cljs.core.constant$keyword$23,e.target.value], null));
-});})(___$1,map__21184,map__21184__$1,value__$1,owner__$2,map__21185,map__21185__$1,opts__$1,options__$1,ks__$1,ch__$1,G__21180,map__21182,map__21182__$1,value,owner,G__21181,map__21183,map__21183__$1,opts,options,ks,ch,validate__6096__auto__,ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206))
+return cljs.core.async.put_BANG_.cljs$core$IFn$_invoke$arity$2(self__.ch,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$68,cljs.core.constant$keyword$148,cljs.core.constant$keyword$146,self__.ks,cljs.core.constant$keyword$66,e.target.value], null));
+});})(___$1,map__22988,map__22988__$1,value__$1,owner__$2,map__22989,map__22989__$1,opts__$1,options__$1,ks__$1,ch__$1,G__22984,map__22986,map__22986__$1,value,owner,G__22985,map__22987,map__22987__$1,opts,options,ks,ch,validate__12581__auto__,ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010))
 };
-var G__21190 = sablono.interpreter.interpret(((cljs.core.map_QMARK_(self__.options))?(function (){var iter__4384__auto__ = ((function (G__21189,___$1,map__21184,map__21184__$1,value__$1,owner__$2,map__21185,map__21185__$1,opts__$1,options__$1,ks__$1,ch__$1,G__21180,map__21182,map__21182__$1,value,owner,G__21181,map__21183,map__21183__$1,opts,options,ks,ch,validate__6096__auto__,ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206){
-return (function iter__21191(s__21192){
-return (new cljs.core.LazySeq(null,((function (G__21189,___$1,map__21184,map__21184__$1,value__$1,owner__$2,map__21185,map__21185__$1,opts__$1,options__$1,ks__$1,ch__$1,G__21180,map__21182,map__21182__$1,value,owner,G__21181,map__21183,map__21183__$1,opts,options,ks,ch,validate__6096__auto__,ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206){
+var G__22994 = sablono.interpreter.interpret(((cljs.core.map_QMARK_(self__.options))?(function (){var iter__5007__auto__ = ((function (G__22993,___$1,map__22988,map__22988__$1,value__$1,owner__$2,map__22989,map__22989__$1,opts__$1,options__$1,ks__$1,ch__$1,G__22984,map__22986,map__22986__$1,value,owner,G__22985,map__22987,map__22987__$1,opts,options,ks,ch,validate__12581__auto__,ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010){
+return (function iter__22995(s__22996){
+return (new cljs.core.LazySeq(null,((function (G__22993,___$1,map__22988,map__22988__$1,value__$1,owner__$2,map__22989,map__22989__$1,opts__$1,options__$1,ks__$1,ch__$1,G__22984,map__22986,map__22986__$1,value,owner,G__22985,map__22987,map__22987__$1,opts,options,ks,ch,validate__12581__auto__,ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010){
 return (function (){
-var s__21192__$1 = s__21192;
+var s__22996__$1 = s__22996;
 while(true){
-var temp__4126__auto__ = cljs.core.seq(s__21192__$1);
+var temp__4126__auto__ = cljs.core.seq(s__22996__$1);
 if(temp__4126__auto__){
-var s__21192__$2 = temp__4126__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__21192__$2)){
-var c__4382__auto__ = cljs.core.chunk_first(s__21192__$2);
-var size__4383__auto__ = cljs.core.count(c__4382__auto__);
-var b__21194 = cljs.core.chunk_buffer(size__4383__auto__);
-if((function (){var i__21193 = (0);
+var s__22996__$2 = temp__4126__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__22996__$2)){
+var c__5005__auto__ = cljs.core.chunk_first(s__22996__$2);
+var size__5006__auto__ = cljs.core.count(c__5005__auto__);
+var b__22998 = cljs.core.chunk_buffer(size__5006__auto__);
+if((function (){var i__22997 = (0);
 while(true){
-if((i__21193 < size__4383__auto__)){
-var vec__21199 = cljs.core._nth.cljs$core$IFn$_invoke$arity$2(c__4382__auto__,i__21193);
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__21199,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__21199,(1),null);
-cljs.core.chunk_append(b__21194,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$121,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$23,k,cljs.core.constant$keyword$49,k], null),v], null));
+if((i__22997 < size__5006__auto__)){
+var vec__23003 = cljs.core._nth.cljs$core$IFn$_invoke$arity$2(c__5005__auto__,i__22997);
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__23003,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__23003,(1),null);
+cljs.core.chunk_append(b__22998,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$123,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$66,k,cljs.core.constant$keyword$51,k], null),v], null));
 
-var G__21210 = (i__21193 + (1));
-i__21193 = G__21210;
+var G__23014 = (i__22997 + (1));
+i__22997 = G__23014;
 continue;
 } else {
 return true;
@@ -1151,101 +1161,101 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__21194),iter__21191(cljs.core.chunk_rest(s__21192__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__22998),iter__22995(cljs.core.chunk_rest(s__22996__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__21194),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__22998),null);
 }
 } else {
-var vec__21200 = cljs.core.first(s__21192__$2);
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__21200,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__21200,(1),null);
-return cljs.core.cons(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$121,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$23,k,cljs.core.constant$keyword$49,k], null),v], null),iter__21191(cljs.core.rest(s__21192__$2)));
+var vec__23004 = cljs.core.first(s__22996__$2);
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__23004,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__23004,(1),null);
+return cljs.core.cons(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$123,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$66,k,cljs.core.constant$keyword$51,k], null),v], null),iter__22995(cljs.core.rest(s__22996__$2)));
 }
 } else {
 return null;
 }
 break;
 }
-});})(G__21189,___$1,map__21184,map__21184__$1,value__$1,owner__$2,map__21185,map__21185__$1,opts__$1,options__$1,ks__$1,ch__$1,G__21180,map__21182,map__21182__$1,value,owner,G__21181,map__21183,map__21183__$1,opts,options,ks,ch,validate__6096__auto__,ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206))
+});})(G__22993,___$1,map__22988,map__22988__$1,value__$1,owner__$2,map__22989,map__22989__$1,opts__$1,options__$1,ks__$1,ch__$1,G__22984,map__22986,map__22986__$1,value,owner,G__22985,map__22987,map__22987__$1,opts,options,ks,ch,validate__12581__auto__,ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010))
 ,null,null));
-});})(G__21189,___$1,map__21184,map__21184__$1,value__$1,owner__$2,map__21185,map__21185__$1,opts__$1,options__$1,ks__$1,ch__$1,G__21180,map__21182,map__21182__$1,value,owner,G__21181,map__21183,map__21183__$1,opts,options,ks,ch,validate__6096__auto__,ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206))
+});})(G__22993,___$1,map__22988,map__22988__$1,value__$1,owner__$2,map__22989,map__22989__$1,opts__$1,options__$1,ks__$1,ch__$1,G__22984,map__22986,map__22986__$1,value,owner,G__22985,map__22987,map__22987__$1,opts,options,ks,ch,validate__12581__auto__,ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010))
 ;
-return iter__4384__auto__(self__.options);
+return iter__5007__auto__(self__.options);
 })():null));
-return React.DOM.select(G__21189,G__21190);
-});})(map__21184,map__21184__$1,value__$1,owner__$2,map__21185,map__21185__$1,opts__$1,options__$1,ks__$1,ch__$1,G__21180,map__21182,map__21182__$1,value,owner,G__21181,map__21183,map__21183__$1,opts,options,ks,ch,validate__6096__auto__,ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206))
+return React.DOM.select(G__22993,G__22994);
+});})(map__22988,map__22988__$1,value__$1,owner__$2,map__22989,map__22989__$1,opts__$1,options__$1,ks__$1,ch__$1,G__22984,map__22986,map__22986__$1,value,owner,G__22985,map__22987,map__22987__$1,opts,options,ks,ch,validate__12581__auto__,ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010))
 ;
 
-lomakkeet.fields.t21186.prototype.cljs$core$IMeta$_meta$arity$1 = ((function (map__21184,map__21184__$1,value__$1,owner__$2,map__21185,map__21185__$1,opts__$1,options__$1,ks__$1,ch__$1,G__21180,map__21182,map__21182__$1,value,owner,G__21181,map__21183,map__21183__$1,opts,options,ks,ch,validate__6096__auto__,ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206){
-return (function (_21188){
+lomakkeet.fields.t22990.prototype.cljs$core$IMeta$_meta$arity$1 = ((function (map__22988,map__22988__$1,value__$1,owner__$2,map__22989,map__22989__$1,opts__$1,options__$1,ks__$1,ch__$1,G__22984,map__22986,map__22986__$1,value,owner,G__22985,map__22987,map__22987__$1,opts,options,ks,ch,validate__12581__auto__,ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010){
+return (function (_22992){
 var self__ = this;
-var _21188__$1 = this;
-return self__.meta21187;
-});})(map__21184,map__21184__$1,value__$1,owner__$2,map__21185,map__21185__$1,opts__$1,options__$1,ks__$1,ch__$1,G__21180,map__21182,map__21182__$1,value,owner,G__21181,map__21183,map__21183__$1,opts,options,ks,ch,validate__6096__auto__,ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206))
+var _22992__$1 = this;
+return self__.meta22991;
+});})(map__22988,map__22988__$1,value__$1,owner__$2,map__22989,map__22989__$1,opts__$1,options__$1,ks__$1,ch__$1,G__22984,map__22986,map__22986__$1,value,owner,G__22985,map__22987,map__22987__$1,opts,options,ks,ch,validate__12581__auto__,ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010))
 ;
 
-lomakkeet.fields.t21186.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = ((function (map__21184,map__21184__$1,value__$1,owner__$2,map__21185,map__21185__$1,opts__$1,options__$1,ks__$1,ch__$1,G__21180,map__21182,map__21182__$1,value,owner,G__21181,map__21183,map__21183__$1,opts,options,ks,ch,validate__6096__auto__,ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206){
-return (function (_21188,meta21187__$1){
+lomakkeet.fields.t22990.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = ((function (map__22988,map__22988__$1,value__$1,owner__$2,map__22989,map__22989__$1,opts__$1,options__$1,ks__$1,ch__$1,G__22984,map__22986,map__22986__$1,value,owner,G__22985,map__22987,map__22987__$1,opts,options,ks,ch,validate__12581__auto__,ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010){
+return (function (_22992,meta22991__$1){
 var self__ = this;
-var _21188__$1 = this;
-return (new lomakkeet.fields.t21186(self__.options,self__.G__21181,self__.owner,self__.map__21185,self__.G__21149,self__.input_schema21146,self__.ks,self__.G__21151,self__.validate__6096__auto__,self__.G__21180,self__.G__21150,self__.value,self__.map__21182,self__.output_checker21148,self__.map__21184,self__.input_checker21147,self__.ch,self__.map__21183,self__.select_STAR_,self__.opts,self__.ufv__,self__.output_schema21145,meta21187__$1));
-});})(map__21184,map__21184__$1,value__$1,owner__$2,map__21185,map__21185__$1,opts__$1,options__$1,ks__$1,ch__$1,G__21180,map__21182,map__21182__$1,value,owner,G__21181,map__21183,map__21183__$1,opts,options,ks,ch,validate__6096__auto__,ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206))
+var _22992__$1 = this;
+return (new lomakkeet.fields.t22990(self__.G__22984,self__.options,self__.map__22989,self__.G__22954,self__.owner,self__.output_schema22949,self__.validate__12581__auto__,self__.map__22988,self__.G__22985,self__.ks,self__.G__22953,self__.value,self__.map__22987,self__.G__22955,self__.output_checker22952,self__.ch,self__.map__22986,self__.input_checker22951,self__.select_STAR_,self__.input_schema22950,self__.opts,self__.ufv__,meta22991__$1));
+});})(map__22988,map__22988__$1,value__$1,owner__$2,map__22989,map__22989__$1,opts__$1,options__$1,ks__$1,ch__$1,G__22984,map__22986,map__22986__$1,value,owner,G__22985,map__22987,map__22987__$1,opts,options,ks,ch,validate__12581__auto__,ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010))
 ;
 
-lomakkeet.fields.t21186.cljs$lang$type = true;
+lomakkeet.fields.t22990.cljs$lang$type = true;
 
-lomakkeet.fields.t21186.cljs$lang$ctorStr = "lomakkeet.fields/t21186";
+lomakkeet.fields.t22990.cljs$lang$ctorStr = "lomakkeet.fields/t22990";
 
-lomakkeet.fields.t21186.cljs$lang$ctorPrWriter = ((function (map__21184,map__21184__$1,value__$1,owner__$2,map__21185,map__21185__$1,opts__$1,options__$1,ks__$1,ch__$1,G__21180,map__21182,map__21182__$1,value,owner,G__21181,map__21183,map__21183__$1,opts,options,ks,ch,validate__6096__auto__,ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206){
-return (function (this__4215__auto__,writer__4216__auto__,opt__4217__auto__){
-return cljs.core._write(writer__4216__auto__,"lomakkeet.fields/t21186");
-});})(map__21184,map__21184__$1,value__$1,owner__$2,map__21185,map__21185__$1,opts__$1,options__$1,ks__$1,ch__$1,G__21180,map__21182,map__21182__$1,value,owner,G__21181,map__21183,map__21183__$1,opts,options,ks,ch,validate__6096__auto__,ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206))
+lomakkeet.fields.t22990.cljs$lang$ctorPrWriter = ((function (map__22988,map__22988__$1,value__$1,owner__$2,map__22989,map__22989__$1,opts__$1,options__$1,ks__$1,ch__$1,G__22984,map__22986,map__22986__$1,value,owner,G__22985,map__22987,map__22987__$1,opts,options,ks,ch,validate__12581__auto__,ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010){
+return (function (this__4838__auto__,writer__4839__auto__,opt__4840__auto__){
+return cljs.core._write(writer__4839__auto__,"lomakkeet.fields/t22990");
+});})(map__22988,map__22988__$1,value__$1,owner__$2,map__22989,map__22989__$1,opts__$1,options__$1,ks__$1,ch__$1,G__22984,map__22986,map__22986__$1,value,owner,G__22985,map__22987,map__22987__$1,opts,options,ks,ch,validate__12581__auto__,ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010))
 ;
 
-lomakkeet.fields.__GT_t21186 = ((function (map__21184,map__21184__$1,value__$1,owner__$2,map__21185,map__21185__$1,opts__$1,options__$1,ks__$1,ch__$1,G__21180,map__21182,map__21182__$1,value,owner,G__21181,map__21183,map__21183__$1,opts,options,ks,ch,validate__6096__auto__,ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206){
-return (function __GT_t21186(options__$2,G__21181__$2,owner__$3,map__21185__$2,G__21149__$1,input_schema21146__$1,ks__$2,G__21151__$1,validate__6096__auto____$1,G__21180__$2,G__21150__$1,value__$2,map__21182__$2,output_checker21148__$1,map__21184__$2,input_checker21147__$1,ch__$2,map__21183__$2,select_STAR___$1,opts__$2,ufv____$1,output_schema21145__$1,meta21187){
-return (new lomakkeet.fields.t21186(options__$2,G__21181__$2,owner__$3,map__21185__$2,G__21149__$1,input_schema21146__$1,ks__$2,G__21151__$1,validate__6096__auto____$1,G__21180__$2,G__21150__$1,value__$2,map__21182__$2,output_checker21148__$1,map__21184__$2,input_checker21147__$1,ch__$2,map__21183__$2,select_STAR___$1,opts__$2,ufv____$1,output_schema21145__$1,meta21187));
-});})(map__21184,map__21184__$1,value__$1,owner__$2,map__21185,map__21185__$1,opts__$1,options__$1,ks__$1,ch__$1,G__21180,map__21182,map__21182__$1,value,owner,G__21181,map__21183,map__21183__$1,opts,options,ks,ch,validate__6096__auto__,ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206))
+lomakkeet.fields.__GT_t22990 = ((function (map__22988,map__22988__$1,value__$1,owner__$2,map__22989,map__22989__$1,opts__$1,options__$1,ks__$1,ch__$1,G__22984,map__22986,map__22986__$1,value,owner,G__22985,map__22987,map__22987__$1,opts,options,ks,ch,validate__12581__auto__,ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010){
+return (function __GT_t22990(G__22984__$2,options__$2,map__22989__$2,G__22954__$1,owner__$3,output_schema22949__$1,validate__12581__auto____$1,map__22988__$2,G__22985__$2,ks__$2,G__22953__$1,value__$2,map__22987__$2,G__22955__$1,output_checker22952__$1,ch__$2,map__22986__$2,input_checker22951__$1,select_STAR___$1,input_schema22950__$1,opts__$2,ufv____$1,meta22991){
+return (new lomakkeet.fields.t22990(G__22984__$2,options__$2,map__22989__$2,G__22954__$1,owner__$3,output_schema22949__$1,validate__12581__auto____$1,map__22988__$2,G__22985__$2,ks__$2,G__22953__$1,value__$2,map__22987__$2,G__22955__$1,output_checker22952__$1,ch__$2,map__22986__$2,input_checker22951__$1,select_STAR___$1,input_schema22950__$1,opts__$2,ufv____$1,meta22991));
+});})(map__22988,map__22988__$1,value__$1,owner__$2,map__22989,map__22989__$1,opts__$1,options__$1,ks__$1,ch__$1,G__22984,map__22986,map__22986__$1,value,owner,G__22985,map__22987,map__22987__$1,opts,options,ks,ch,validate__12581__auto__,ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010))
 ;
 
 }
 
-return (new lomakkeet.fields.t21186(options__$1,G__21181__$1,owner__$2,map__21185__$1,G__21149,input_schema21146_21204,ks__$1,G__21151,validate__6096__auto__,G__21180__$1,G__21150,value__$1,map__21182__$1,output_checker21148_21206,map__21184__$1,input_checker21147_21205,ch__$1,map__21183__$1,select_STAR_,opts__$1,ufv___21202,output_schema21145_21203,null));
+return (new lomakkeet.fields.t22990(G__22984__$1,options__$1,map__22989__$1,G__22954,owner__$2,output_schema22949_23007,validate__12581__auto__,map__22988__$1,G__22985__$1,ks__$1,G__22953,value__$1,map__22987__$1,G__22955,output_checker22952_23010,ch__$1,map__22986__$1,input_checker22951_23009,select_STAR_,input_schema22950_23008,opts__$1,ufv___23006,null));
 break;
 }
 })();
-if(cljs.core.truth_(validate__6096__auto__)){
-var temp__4126__auto___21211 = (function (){var G__21201 = o__6099__auto__;
-return (output_checker21148_21206.cljs$core$IFn$_invoke$arity$1 ? output_checker21148_21206.cljs$core$IFn$_invoke$arity$1(G__21201) : output_checker21148_21206.call(null,G__21201));
+if(cljs.core.truth_(validate__12581__auto__)){
+var temp__4126__auto___23015 = (function (){var G__23005 = o__12584__auto__;
+return (output_checker22952_23010.cljs$core$IFn$_invoke$arity$1 ? output_checker22952_23010.cljs$core$IFn$_invoke$arity$1(G__23005) : output_checker22952_23010.call(null,G__23005));
 })();
-if(cljs.core.truth_(temp__4126__auto___21211)){
-var error__6098__auto___21212 = temp__4126__auto___21211;
-throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Output of %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"select*","select*",-189382533,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__6098__auto___21212], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$22,error__6098__auto___21212,cljs.core.constant$keyword$23,o__6099__auto__,cljs.core.constant$keyword$24,output_schema21145_21203,cljs.core.constant$keyword$25,cljs.core.constant$keyword$26], null));
+if(cljs.core.truth_(temp__4126__auto___23015)){
+var error__12583__auto___23016 = temp__4126__auto___23015;
+throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Output of %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"select*","select*",-189382533,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__12583__auto___23016], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$65,error__12583__auto___23016,cljs.core.constant$keyword$66,o__12584__auto__,cljs.core.constant$keyword$67,output_schema22949_23007,cljs.core.constant$keyword$68,cljs.core.constant$keyword$69], null));
 } else {
 }
 } else {
 }
 
-return o__6099__auto__;
-});})(ufv___21202,output_schema21145_21203,input_schema21146_21204,input_checker21147_21205,output_checker21148_21206))
+return o__12584__auto__;
+});})(ufv___23006,output_schema22949_23007,input_schema22950_23008,input_checker22951_23009,output_checker22952_23010))
 ;
 
-schema.utils.declare_class_schema_BANG_(schema.utils.fn_schema_bearer(lomakkeet.fields.select_STAR_),schema.core.make_fn_schema(output_schema21145_21203,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema21146_21204], null)));
+schema.utils.declare_class_schema_BANG_(schema.utils.fn_schema_bearer(lomakkeet.fields.select_STAR_),schema.core.make_fn_schema(output_schema22949_23007,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema22950_23008], null)));
 
 lomakkeet.fields.__GT_select_STAR_ = (function() {
 var __GT_select_STAR_ = null;
-var __GT_select_STAR___1 = (function (cursor__7890__auto__){
-return om.core.build.cljs$core$IFn$_invoke$arity$2(lomakkeet.fields.select_STAR_,cursor__7890__auto__);
+var __GT_select_STAR___1 = (function (cursor__20832__auto__){
+return om.core.build.cljs$core$IFn$_invoke$arity$2(lomakkeet.fields.select_STAR_,cursor__20832__auto__);
 });
-var __GT_select_STAR___2 = (function (cursor__7890__auto__,m21144){
-return om.core.build.cljs$core$IFn$_invoke$arity$3(lomakkeet.fields.select_STAR_,cursor__7890__auto__,m21144);
+var __GT_select_STAR___2 = (function (cursor__20832__auto__,m22948){
+return om.core.build.cljs$core$IFn$_invoke$arity$3(lomakkeet.fields.select_STAR_,cursor__20832__auto__,m22948);
 });
-__GT_select_STAR_ = function(cursor__7890__auto__,m21144){
+__GT_select_STAR_ = function(cursor__20832__auto__,m22948){
 switch(arguments.length){
 case 1:
-return __GT_select_STAR___1.call(this,cursor__7890__auto__);
+return __GT_select_STAR___1.call(this,cursor__20832__auto__);
 case 2:
-return __GT_select_STAR___2.call(this,cursor__7890__auto__,m21144);
+return __GT_select_STAR___2.call(this,cursor__20832__auto__,m22948);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
@@ -1258,28 +1268,30 @@ return __GT_select_STAR_;
 * @param {...*} var_args
 */
 lomakkeet.fields.select = (function() { 
-var select__delegate = function (form,label,ks,options,p__21213){
-var vec__21215 = p__21213;
-var opts = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__21215,(0),null);
-return lomakkeet.fields.build(cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([form,opts,new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$122,lomakkeet.fields.select_STAR_,cljs.core.constant$keyword$135,label,cljs.core.constant$keyword$144,ks,cljs.core.constant$keyword$159,options], null)], 0)));
+var select__delegate = function (form,label,ks,options,p__23017){
+var vec__23019 = p__23017;
+var opts = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__23019,(0),null);
+return lomakkeet.fields.build(cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([form,opts,new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$124,lomakkeet.fields.select_STAR_,cljs.core.constant$keyword$137,label,cljs.core.constant$keyword$146,ks,cljs.core.constant$keyword$161,options], null)], 0)));
 };
 var select = function (form,label,ks,options,var_args){
-var p__21213 = null;
+var p__23017 = null;
 if (arguments.length > 4) {
-  p__21213 = cljs.core.array_seq(Array.prototype.slice.call(arguments, 4),0);
+var G__23020__i = 0, G__23020__a = new Array(arguments.length -  4);
+while (G__23020__i < G__23020__a.length) {G__23020__a[G__23020__i] = arguments[G__23020__i + 4]; ++G__23020__i;}
+  p__23017 = new cljs.core.IndexedSeq(G__23020__a,0);
 } 
-return select__delegate.call(this,form,label,ks,options,p__21213);};
+return select__delegate.call(this,form,label,ks,options,p__23017);};
 select.cljs$lang$maxFixedArity = 4;
-select.cljs$lang$applyTo = (function (arglist__21216){
-var form = cljs.core.first(arglist__21216);
-arglist__21216 = cljs.core.next(arglist__21216);
-var label = cljs.core.first(arglist__21216);
-arglist__21216 = cljs.core.next(arglist__21216);
-var ks = cljs.core.first(arglist__21216);
-arglist__21216 = cljs.core.next(arglist__21216);
-var options = cljs.core.first(arglist__21216);
-var p__21213 = cljs.core.rest(arglist__21216);
-return select__delegate(form,label,ks,options,p__21213);
+select.cljs$lang$applyTo = (function (arglist__23021){
+var form = cljs.core.first(arglist__23021);
+arglist__23021 = cljs.core.next(arglist__23021);
+var label = cljs.core.first(arglist__23021);
+arglist__23021 = cljs.core.next(arglist__23021);
+var ks = cljs.core.first(arglist__23021);
+arglist__23021 = cljs.core.next(arglist__23021);
+var options = cljs.core.first(arglist__23021);
+var p__23017 = cljs.core.rest(arglist__23021);
+return select__delegate(form,label,ks,options,p__23017);
 });
 select.cljs$core$IFn$_invoke$arity$variadic = select__delegate;
 return select;
@@ -1300,14 +1312,14 @@ return value;
 /**
 * 
 */
-lomakkeet.fields.FormState = schema.core.schema_with_name(new cljs.core.PersistentArrayMap.fromArray([cljs.core.constant$keyword$23,schema.core.Any,cljs.core.constant$keyword$160,schema.core.Any,cljs.core.constant$keyword$152,schema.core.Any,cljs.core.constant$keyword$24,schema.core.Any,schema.core.Keyword,schema.core.Any], true, false),new cljs.core.Symbol(null,"FormState","FormState",834878066,null));
+lomakkeet.fields.FormState = schema.core.schema_with_name(new cljs.core.PersistentArrayMap.fromArray([cljs.core.constant$keyword$66,schema.core.Any,cljs.core.constant$keyword$162,schema.core.Any,cljs.core.constant$keyword$154,schema.core.Any,cljs.core.constant$keyword$67,schema.core.Any,schema.core.Keyword,schema.core.Any], true, false),new cljs.core.Symbol(null,"FormState","FormState",834878066,null));
 lomakkeet.fields.__GT_form_state = (function() {
 var __GT_form_state = null;
 var __GT_form_state__1 = (function (value){
 return __GT_form_state.cljs$core$IFn$_invoke$arity$2(value,null);
 });
 var __GT_form_state__2 = (function (value,schema__$1){
-return new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$23,value,cljs.core.constant$keyword$160,value,cljs.core.constant$keyword$152,(cljs.core.truth_(schema__$1)?schema.core.check(schema__$1,value):null),cljs.core.constant$keyword$24,schema__$1], null);
+return new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$66,value,cljs.core.constant$keyword$162,value,cljs.core.constant$keyword$154,(cljs.core.truth_(schema__$1)?schema.core.check(schema__$1,value):null),cljs.core.constant$keyword$67,schema__$1], null);
 });
 __GT_form_state = function(value,schema__$1){
 switch(arguments.length){
@@ -1324,40 +1336,42 @@ return __GT_form_state;
 })()
 ;
 lomakkeet.fields.cancel_form = (function cancel_form(form_state){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(form_state,cljs.core.constant$keyword$23,cljs.core.constant$keyword$160.cljs$core$IFn$_invoke$arity$1(form_state));
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(form_state,cljs.core.constant$keyword$66,cljs.core.constant$keyword$162.cljs$core$IFn$_invoke$arity$1(form_state));
 });
-lomakkeet.fields.save_form = (function save_form(p__21219,value){
-var map__21221 = p__21219;
-var map__21221__$1 = ((cljs.core.seq_QMARK_(map__21221))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21221):map__21221);
-var form_state = map__21221__$1;
-var schema__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21221__$1,cljs.core.constant$keyword$24);
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$variadic(form_state,cljs.core.constant$keyword$23,value,cljs.core.array_seq([cljs.core.constant$keyword$160,value,cljs.core.constant$keyword$152,(cljs.core.truth_(schema__$1)?schema.core.check(schema__$1,value):null)], 0));
+lomakkeet.fields.save_form = (function save_form(p__23024,value){
+var map__23026 = p__23024;
+var map__23026__$1 = ((cljs.core.seq_QMARK_(map__23026))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__23026):map__23026);
+var form_state = map__23026__$1;
+var schema__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23026__$1,cljs.core.constant$keyword$67);
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$variadic(form_state,cljs.core.constant$keyword$66,value,cljs.core.array_seq([cljs.core.constant$keyword$162,value,cljs.core.constant$keyword$154,(cljs.core.truth_(schema__$1)?schema.core.check(schema__$1,value):null)], 0));
 });
 /**
 * @param {...*} var_args
 */
 lomakkeet.fields.update_form = (function() { 
-var update_form__delegate = function (p__21222,f,args){
-var map__21224 = p__21222;
-var map__21224__$1 = ((cljs.core.seq_QMARK_(map__21224))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21224):map__21224);
-var form_state = map__21224__$1;
-var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21224__$1,cljs.core.constant$keyword$23);
+var update_form__delegate = function (p__23027,f,args){
+var map__23029 = p__23027;
+var map__23029__$1 = ((cljs.core.seq_QMARK_(map__23029))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__23029):map__23029);
+var form_state = map__23029__$1;
+var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23029__$1,cljs.core.constant$keyword$66);
 var new_value = cljs.core.apply.cljs$core$IFn$_invoke$arity$3(f,value,args);
 return lomakkeet.fields.save_form(form_state,new_value);
 };
-var update_form = function (p__21222,f,var_args){
+var update_form = function (p__23027,f,var_args){
 var args = null;
 if (arguments.length > 2) {
-  args = cljs.core.array_seq(Array.prototype.slice.call(arguments, 2),0);
+var G__23030__i = 0, G__23030__a = new Array(arguments.length -  2);
+while (G__23030__i < G__23030__a.length) {G__23030__a[G__23030__i] = arguments[G__23030__i + 2]; ++G__23030__i;}
+  args = new cljs.core.IndexedSeq(G__23030__a,0);
 } 
-return update_form__delegate.call(this,p__21222,f,args);};
+return update_form__delegate.call(this,p__23027,f,args);};
 update_form.cljs$lang$maxFixedArity = 2;
-update_form.cljs$lang$applyTo = (function (arglist__21225){
-var p__21222 = cljs.core.first(arglist__21225);
-arglist__21225 = cljs.core.next(arglist__21225);
-var f = cljs.core.first(arglist__21225);
-var args = cljs.core.rest(arglist__21225);
-return update_form__delegate(p__21222,f,args);
+update_form.cljs$lang$applyTo = (function (arglist__23031){
+var p__23027 = cljs.core.first(arglist__23031);
+arglist__23031 = cljs.core.next(arglist__23031);
+var f = cljs.core.first(arglist__23031);
+var args = cljs.core.rest(arglist__23031);
+return update_form__delegate(p__23027,f,args);
 });
 update_form.cljs$core$IFn$_invoke$arity$variadic = update_form__delegate;
 return update_form;
@@ -1376,8 +1390,8 @@ return om.core.update_BANG_.cljs$core$IFn$_invoke$arity$3(value_cursor,ks,value)
 var schema__$2 = lomakkeet.fields.get_in_schema(schema__$1,cljs.core.butlast(ks));
 if(cljs.core.contains_QMARK_(schema__$2,schema.core.optional_key(cljs.core.last(ks)))){
 return om.core.transact_BANG_.cljs$core$IFn$_invoke$arity$2(value_cursor,((function (schema__$2){
-return (function (p1__21226_SHARP_){
-return lomakkeet.fields.dissoc_in(p1__21226_SHARP_,ks);
+return (function (p1__23032_SHARP_){
+return lomakkeet.fields.dissoc_in(p1__23032_SHARP_,ks);
 });})(schema__$2))
 );
 } else {
@@ -1386,706 +1400,768 @@ return om.core.update_BANG_.cljs$core$IFn$_invoke$arity$3(value_cursor,ks,value)
 }
 });
 
-var ufv___21531 = schema.utils.use_fn_validation;
-var output_schema21228_21532 = schema.core.Any;
-var input_schema21229_21533 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one(lomakkeet.fields.FormState,new cljs.core.Symbol(null,"arg0","arg0",-1024593414,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"owner","owner",1247919588,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg2","arg2",-924884852,null))], null);
-var input_checker21230_21534 = schema.core.checker(input_schema21229_21533);
-var output_checker21231_21535 = schema.core.checker(output_schema21228_21532);
+var ufv___23373 = schema.utils.use_fn_validation;
+var output_schema23034_23374 = schema.core.Any;
+var input_schema23035_23375 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one(lomakkeet.fields.FormState,new cljs.core.Symbol(null,"arg0","arg0",-1024593414,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"owner","owner",1247919588,null)),schema.core.one(schema.core.Any,new cljs.core.Symbol(null,"arg2","arg2",-924884852,null))], null);
+var input_checker23036_23376 = schema.core.checker(input_schema23035_23375);
+var output_checker23037_23377 = schema.core.checker(output_schema23034_23374);
 /**
-* Inputs: [{:keys [value initial-value], :as form-state} :- FormState owner {:keys [actions render-fn form form-validation-fn], :as opts}]
+* Inputs: [{:keys [value initial-value], :as form-state} :- FormState owner {:keys [actions render-fn form form-validation-fn after-change], :as opts}]
 */
-lomakkeet.fields.form = ((function (ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535){
-return (function form(G__21232,G__21233,G__21234){
-var validate__6096__auto__ = ufv___21531.get_cell();
-if(cljs.core.truth_(validate__6096__auto__)){
-var args__6097__auto___21536 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__21232,G__21233,G__21234], null);
-var temp__4126__auto___21537 = (function (){var G__21383 = args__6097__auto___21536;
-return (input_checker21230_21534.cljs$core$IFn$_invoke$arity$1 ? input_checker21230_21534.cljs$core$IFn$_invoke$arity$1(G__21383) : input_checker21230_21534.call(null,G__21383));
+lomakkeet.fields.form = ((function (ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377){
+return (function form(G__23038,G__23039,G__23040){
+var validate__12581__auto__ = ufv___23373.get_cell();
+if(cljs.core.truth_(validate__12581__auto__)){
+var args__12582__auto___23378 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__23038,G__23039,G__23040], null);
+var temp__4126__auto___23379 = (function (){var G__23207 = args__12582__auto___23378;
+return (input_checker23036_23376.cljs$core$IFn$_invoke$arity$1 ? input_checker23036_23376.cljs$core$IFn$_invoke$arity$1(G__23207) : input_checker23036_23376.call(null,G__23207));
 })();
-if(cljs.core.truth_(temp__4126__auto___21537)){
-var error__6098__auto___21538 = temp__4126__auto___21537;
-throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Input to %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"form","form",16469056,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__6098__auto___21538], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$22,error__6098__auto___21538,cljs.core.constant$keyword$23,args__6097__auto___21536,cljs.core.constant$keyword$24,input_schema21229_21533,cljs.core.constant$keyword$25,cljs.core.constant$keyword$26], null));
+if(cljs.core.truth_(temp__4126__auto___23379)){
+var error__12583__auto___23380 = temp__4126__auto___23379;
+throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Input to %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"form","form",16469056,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__12583__auto___23380], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$65,error__12583__auto___23380,cljs.core.constant$keyword$66,args__12582__auto___23378,cljs.core.constant$keyword$67,input_schema23035_23375,cljs.core.constant$keyword$68,cljs.core.constant$keyword$69], null));
 } else {
 }
 } else {
 }
 
-var o__6099__auto__ = (function (){var G__21386 = G__21232;
-var map__21388 = G__21386;
-var map__21388__$1 = ((cljs.core.seq_QMARK_(map__21388))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21388):map__21388);
-var form_state = map__21388__$1;
-var initial_value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21388__$1,cljs.core.constant$keyword$160);
-var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21388__$1,cljs.core.constant$keyword$23);
-var owner = G__21233;
-var G__21387 = G__21234;
-var map__21389 = G__21387;
-var map__21389__$1 = ((cljs.core.seq_QMARK_(map__21389))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21389):map__21389);
-var opts = map__21389__$1;
-var form_validation_fn = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21389__$1,cljs.core.constant$keyword$161);
-var form__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21389__$1,cljs.core.constant$keyword$141);
-var render_fn = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21389__$1,cljs.core.constant$keyword$162);
-var actions = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21389__$1,cljs.core.constant$keyword$163);
-var G__21386__$1 = G__21386;
+var o__12584__auto__ = (function (){var G__23210 = G__23038;
+var map__23212 = G__23210;
+var map__23212__$1 = ((cljs.core.seq_QMARK_(map__23212))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__23212):map__23212);
+var form_state = map__23212__$1;
+var initial_value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23212__$1,cljs.core.constant$keyword$162);
+var value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23212__$1,cljs.core.constant$keyword$66);
+var owner = G__23039;
+var G__23211 = G__23040;
+var map__23213 = G__23211;
+var map__23213__$1 = ((cljs.core.seq_QMARK_(map__23213))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__23213):map__23213);
+var opts = map__23213__$1;
+var after_change = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23213__$1,cljs.core.constant$keyword$163);
+var form_validation_fn = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23213__$1,cljs.core.constant$keyword$164);
+var form__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23213__$1,cljs.core.constant$keyword$143);
+var render_fn = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23213__$1,cljs.core.constant$keyword$165);
+var actions = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23213__$1,cljs.core.constant$keyword$166);
+var G__23210__$1 = G__23210;
 var owner__$1 = owner;
-var G__21387__$1 = G__21387;
+var G__23211__$1 = G__23211;
 while(true){
-var map__21390 = G__21386__$1;
-var map__21390__$1 = ((cljs.core.seq_QMARK_(map__21390))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21390):map__21390);
-var form_state__$1 = map__21390__$1;
-var initial_value__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21390__$1,cljs.core.constant$keyword$160);
-var value__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21390__$1,cljs.core.constant$keyword$23);
+var map__23214 = G__23210__$1;
+var map__23214__$1 = ((cljs.core.seq_QMARK_(map__23214))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__23214):map__23214);
+var form_state__$1 = map__23214__$1;
+var initial_value__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23214__$1,cljs.core.constant$keyword$162);
+var value__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23214__$1,cljs.core.constant$keyword$66);
 var owner__$2 = owner__$1;
-var map__21391 = G__21387__$1;
-var map__21391__$1 = ((cljs.core.seq_QMARK_(map__21391))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21391):map__21391);
-var opts__$1 = map__21391__$1;
-var form_validation_fn__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21391__$1,cljs.core.constant$keyword$161);
-var form__$2 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21391__$1,cljs.core.constant$keyword$141);
-var render_fn__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21391__$1,cljs.core.constant$keyword$162);
-var actions__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21391__$1,cljs.core.constant$keyword$163);
-if(typeof lomakkeet.fields.t21392 !== 'undefined'){
+var map__23215 = G__23211__$1;
+var map__23215__$1 = ((cljs.core.seq_QMARK_(map__23215))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__23215):map__23215);
+var opts__$1 = map__23215__$1;
+var after_change__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23215__$1,cljs.core.constant$keyword$163);
+var form_validation_fn__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23215__$1,cljs.core.constant$keyword$164);
+var form__$2 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23215__$1,cljs.core.constant$keyword$143);
+var render_fn__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23215__$1,cljs.core.constant$keyword$165);
+var actions__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23215__$1,cljs.core.constant$keyword$166);
+if(typeof lomakkeet.fields.t23216 !== 'undefined'){
 } else {
 
 /**
 * @constructor
 */
-lomakkeet.fields.t21392 = (function (form,output_checker21231,owner,map__21390,G__21232,G__21387,G__21386,form_validation_fn,map__21391,form_state,map__21389,G__21233,render_fn,validate__6096__auto__,value,map__21388,actions,input_schema21229,input_checker21230,G__21234,output_schema21228,opts,initial_value,ufv__,meta21393){
+lomakkeet.fields.t23216 = (function (form,after_change,owner,validate__12581__auto__,G__23039,map__23212,form_validation_fn,input_checker23036,form_state,G__23040,G__23038,render_fn,map__23214,output_checker23037,value,output_schema23034,map__23213,actions,G__23210,G__23211,map__23215,opts,initial_value,ufv__,input_schema23035,meta23217){
 this.form = form;
-this.output_checker21231 = output_checker21231;
+this.after_change = after_change;
 this.owner = owner;
-this.map__21390 = map__21390;
-this.G__21232 = G__21232;
-this.G__21387 = G__21387;
-this.G__21386 = G__21386;
+this.validate__12581__auto__ = validate__12581__auto__;
+this.G__23039 = G__23039;
+this.map__23212 = map__23212;
 this.form_validation_fn = form_validation_fn;
-this.map__21391 = map__21391;
+this.input_checker23036 = input_checker23036;
 this.form_state = form_state;
-this.map__21389 = map__21389;
-this.G__21233 = G__21233;
+this.G__23040 = G__23040;
+this.G__23038 = G__23038;
 this.render_fn = render_fn;
-this.validate__6096__auto__ = validate__6096__auto__;
+this.map__23214 = map__23214;
+this.output_checker23037 = output_checker23037;
 this.value = value;
-this.map__21388 = map__21388;
+this.output_schema23034 = output_schema23034;
+this.map__23213 = map__23213;
 this.actions = actions;
-this.input_schema21229 = input_schema21229;
-this.input_checker21230 = input_checker21230;
-this.G__21234 = G__21234;
-this.output_schema21228 = output_schema21228;
+this.G__23210 = G__23210;
+this.G__23211 = G__23211;
+this.map__23215 = map__23215;
 this.opts = opts;
 this.initial_value = initial_value;
 this.ufv__ = ufv__;
-this.meta21393 = meta21393;
+this.input_schema23035 = input_schema23035;
+this.meta23217 = meta23217;
 this.cljs$lang$protocol_mask$partition1$ = 0;
 this.cljs$lang$protocol_mask$partition0$ = 393216;
 })
-lomakkeet.fields.t21392.prototype.om$core$IDisplayName$ = true;
+lomakkeet.fields.t23216.prototype.om$core$IDisplayName$ = true;
 
-lomakkeet.fields.t21392.prototype.om$core$IDisplayName$display_name$arity$1 = ((function (map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535){
+lomakkeet.fields.t23216.prototype.om$core$IDisplayName$display_name$arity$1 = ((function (map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377){
 return (function (_){
 var self__ = this;
 var ___$1 = this;
 return "form";
-});})(map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535))
+});})(map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377))
 ;
 
-lomakkeet.fields.t21392.prototype.om$core$IRenderState$ = true;
+lomakkeet.fields.t23216.prototype.om$core$IRenderState$ = true;
 
-lomakkeet.fields.t21392.prototype.om$core$IRenderState$render_state$arity$2 = ((function (map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535){
+lomakkeet.fields.t23216.prototype.om$core$IRenderState$render_state$arity$2 = ((function (map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377){
 return (function (_,form__$1){
 var self__ = this;
 var ___$1 = this;
-return sablono.interpreter.interpret((function (){var G__21395 = new cljs.core.PersistentArrayMap(null, 5, [cljs.core.constant$keyword$151,self__.form_state,cljs.core.constant$keyword$23,(function (){var G__21396 = self__.value;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__21396) : cljs.core.deref.call(null,G__21396));
-})(),cljs.core.constant$keyword$160,(function (){var G__21397 = self__.initial_value;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__21397) : cljs.core.deref.call(null,G__21397));
-})(),cljs.core.constant$keyword$141,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(form__$1,cljs.core.constant$keyword$151,self__.form_state),cljs.core.constant$keyword$145,cljs.core.constant$keyword$145.cljs$core$IFn$_invoke$arity$1(form__$1)], null);
-return (self__.render_fn.cljs$core$IFn$_invoke$arity$1 ? self__.render_fn.cljs$core$IFn$_invoke$arity$1(G__21395) : self__.render_fn.call(null,G__21395));
+return sablono.interpreter.interpret((function (){var G__23219 = new cljs.core.PersistentArrayMap(null, 5, [cljs.core.constant$keyword$153,self__.form_state,cljs.core.constant$keyword$66,(function (){var G__23220 = self__.value;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__23220) : cljs.core.deref.call(null,G__23220));
+})(),cljs.core.constant$keyword$162,(function (){var G__23221 = self__.initial_value;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__23221) : cljs.core.deref.call(null,G__23221));
+})(),cljs.core.constant$keyword$143,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(form__$1,cljs.core.constant$keyword$153,self__.form_state),cljs.core.constant$keyword$147,cljs.core.constant$keyword$147.cljs$core$IFn$_invoke$arity$1(form__$1)], null);
+return (self__.render_fn.cljs$core$IFn$_invoke$arity$1 ? self__.render_fn.cljs$core$IFn$_invoke$arity$1(G__23219) : self__.render_fn.call(null,G__23219));
 })());
-});})(map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535))
+});})(map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377))
 ;
 
-lomakkeet.fields.t21392.prototype.om$core$IWillMount$ = true;
+lomakkeet.fields.t23216.prototype.om$core$IWillMount$ = true;
 
-lomakkeet.fields.t21392.prototype.om$core$IWillMount$will_mount$arity$1 = ((function (map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535){
+lomakkeet.fields.t23216.prototype.om$core$IWillMount$will_mount$arity$1 = ((function (map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377){
 return (function (_){
 var self__ = this;
 var ___$1 = this;
-var schema__$1 = (cljs.core.truth_(cljs.core.constant$keyword$24.cljs$core$IFn$_invoke$arity$1(self__.form_state))?(function (){var G__21399 = cljs.core.constant$keyword$24.cljs$core$IFn$_invoke$arity$1(self__.form_state);
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__21399) : cljs.core.deref.call(null,G__21399));
+var schema__$1 = (cljs.core.truth_(cljs.core.constant$keyword$67.cljs$core$IFn$_invoke$arity$1(self__.form_state))?(function (){var G__23223 = cljs.core.constant$keyword$67.cljs$core$IFn$_invoke$arity$1(self__.form_state);
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__23223) : cljs.core.deref.call(null,G__23223));
 })():null);
-var map__21398 = om.core.get_state.cljs$core$IFn$_invoke$arity$1(self__.owner);
-var map__21398__$1 = ((cljs.core.seq_QMARK_(map__21398))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__21398):map__21398);
-var coercion_matcher = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21398__$1,cljs.core.constant$keyword$164);
-var ch = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__21398__$1,cljs.core.constant$keyword$145);
-var c__16610__auto__ = cljs.core.async.chan.cljs$core$IFn$_invoke$arity$1((1));
-cljs.core.async.impl.dispatch.run(((function (c__16610__auto__,schema__$1,map__21398,map__21398__$1,coercion_matcher,ch,___$1,map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535){
+var map__23222 = om.core.get_state.cljs$core$IFn$_invoke$arity$1(self__.owner);
+var map__23222__$1 = ((cljs.core.seq_QMARK_(map__23222))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__23222):map__23222);
+var coercion_matcher = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23222__$1,cljs.core.constant$keyword$167);
+var ch = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23222__$1,cljs.core.constant$keyword$147);
+var c__16627__auto__ = cljs.core.async.chan.cljs$core$IFn$_invoke$arity$1((1));
+cljs.core.async.impl.dispatch.run(((function (c__16627__auto__,schema__$1,map__23222,map__23222__$1,coercion_matcher,ch,___$1,map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377){
 return (function (){
-var f__16611__auto__ = (function (){var switch__16530__auto__ = ((function (c__16610__auto__,schema__$1,map__21398,map__21398__$1,coercion_matcher,ch,___$1,map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535){
-return (function (state_21470){
-var state_val_21471 = (state_21470[(1)]);
-if((state_val_21471 === (7))){
-var inst_21407 = (state_21470[(7)]);
-var inst_21402 = (state_21470[(8)]);
-var inst_21404 = (state_21470[(9)]);
-var inst_21406 = (function (){var G__21472 = self__.form_state;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__21472) : cljs.core.deref.call(null,G__21472));
+var f__16628__auto__ = (function (){var switch__16547__auto__ = ((function (c__16627__auto__,schema__$1,map__23222,map__23222__$1,coercion_matcher,ch,___$1,map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377){
+return (function (state_23304){
+var state_val_23305 = (state_23304[(1)]);
+if((state_val_23305 === (7))){
+var inst_23232 = (state_23304[(7)]);
+var inst_23226 = (state_23304[(8)]);
+var inst_23229 = (state_23304[(9)]);
+var inst_23231 = (function (){var G__23306 = self__.form_state;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__23306) : cljs.core.deref.call(null,G__23306));
 })();
-var inst_21407__$1 = (function (){var G__21473 = inst_21406;
-var G__21474 = inst_21402;
-return (inst_21404.cljs$core$IFn$_invoke$arity$2 ? inst_21404.cljs$core$IFn$_invoke$arity$2(G__21473,G__21474) : inst_21404.call(null,G__21473,G__21474));
+var inst_23232__$1 = (function (){var G__23307 = inst_23231;
+var G__23308 = inst_23226;
+return (inst_23229.cljs$core$IFn$_invoke$arity$2 ? inst_23229.cljs$core$IFn$_invoke$arity$2(G__23307,G__23308) : inst_23229.call(null,G__23307,G__23308));
 })();
-var inst_21408 = lomakkeet.fields.chan_QMARK_(inst_21407__$1);
-var state_21470__$1 = (function (){var statearr_21475 = state_21470;
-(statearr_21475[(7)] = inst_21407__$1);
+var inst_23233 = lomakkeet.fields.chan_QMARK_(inst_23232__$1);
+var state_23304__$1 = (function (){var statearr_23309 = state_23304;
+(statearr_23309[(7)] = inst_23232__$1);
 
-return statearr_21475;
+return statearr_23309;
 })();
-if(inst_21408){
-var statearr_21476_21539 = state_21470__$1;
-(statearr_21476_21539[(1)] = (10));
+if(inst_23233){
+var statearr_23310_23381 = state_23304__$1;
+(statearr_23310_23381[(1)] = (10));
 
 } else {
-var statearr_21477_21540 = state_21470__$1;
-(statearr_21477_21540[(1)] = (11));
+var statearr_23311_23382 = state_23304__$1;
+(statearr_23311_23382[(1)] = (11));
 
 }
 
-return cljs.core.constant$keyword$97;
+return cljs.core.constant$keyword$99;
 } else {
-if((state_val_21471 === (20))){
-var state_21470__$1 = state_21470;
-var statearr_21478_21541 = state_21470__$1;
-(statearr_21478_21541[(2)] = null);
+if((state_val_23305 === (20))){
+var state_23304__$1 = state_23304;
+var statearr_23312_23383 = state_23304__$1;
+(statearr_23312_23383[(2)] = null);
 
-(statearr_21478_21541[(1)] = (21));
+(statearr_23312_23383[(1)] = (21));
 
 
-return cljs.core.constant$keyword$97;
+return cljs.core.constant$keyword$99;
 } else {
-if((state_val_21471 === (1))){
-var state_21470__$1 = state_21470;
-var statearr_21479_21542 = state_21470__$1;
-(statearr_21479_21542[(2)] = null);
+if((state_val_23305 === (27))){
+var inst_23291 = (state_23304[(10)]);
+var inst_23297 = (state_23304[(2)]);
+var inst_23298 = cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([inst_23291,inst_23297], 0));
+var inst_23299 = om.core.update_BANG_.cljs$core$IFn$_invoke$arity$3(self__.form_state,cljs.core.constant$keyword$154,inst_23298);
+var state_23304__$1 = (function (){var statearr_23313 = state_23304;
+(statearr_23313[(11)] = inst_23299);
 
-(statearr_21479_21542[(1)] = (2));
-
-
-return cljs.core.constant$keyword$97;
-} else {
-if((state_val_21471 === (24))){
-var inst_21457 = (state_21470[(10)]);
-var inst_21463 = (state_21470[(2)]);
-var inst_21464 = cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([inst_21457,inst_21463], 0));
-var inst_21465 = om.core.update_BANG_.cljs$core$IFn$_invoke$arity$3(self__.form_state,cljs.core.constant$keyword$152,inst_21464);
-var state_21470__$1 = (function (){var statearr_21480 = state_21470;
-(statearr_21480[(11)] = inst_21465);
-
-return statearr_21480;
+return statearr_23313;
 })();
-var statearr_21481_21543 = state_21470__$1;
-(statearr_21481_21543[(2)] = null);
+var statearr_23314_23384 = state_23304__$1;
+(statearr_23314_23384[(2)] = null);
 
-(statearr_21481_21543[(1)] = (2));
+(statearr_23314_23384[(1)] = (2));
 
 
-return cljs.core.constant$keyword$97;
+return cljs.core.constant$keyword$99;
 } else {
-if((state_val_21471 === (4))){
-var inst_21402 = (state_21470[(8)]);
-var inst_21402__$1 = (state_21470[(2)]);
-var inst_21449 = cljs.core.constant$keyword$25.cljs$core$IFn$_invoke$arity$1(inst_21402__$1);
-var state_21470__$1 = (function (){var statearr_21482 = state_21470;
-(statearr_21482[(8)] = inst_21402__$1);
+if((state_val_23305 === (1))){
+var state_23304__$1 = state_23304;
+var statearr_23315_23385 = state_23304__$1;
+(statearr_23315_23385[(2)] = null);
 
-return statearr_21482;
+(statearr_23315_23385[(1)] = (2));
+
+
+return cljs.core.constant$keyword$99;
+} else {
+if((state_val_23305 === (24))){
+var inst_23291 = (state_23304[(2)]);
+var state_23304__$1 = (function (){var statearr_23316 = state_23304;
+(statearr_23316[(10)] = inst_23291);
+
+return statearr_23316;
 })();
-var G__21483_21544 = (((inst_21449 instanceof cljs.core.Keyword))?inst_21449.fqn:null);
-switch (G__21483_21544) {
+if(cljs.core.truth_(schema__$1)){
+var statearr_23317_23386 = state_23304__$1;
+(statearr_23317_23386[(1)] = (25));
+
+} else {
+var statearr_23318_23387 = state_23304__$1;
+(statearr_23318_23387[(1)] = (26));
+
+}
+
+return cljs.core.constant$keyword$99;
+} else {
+if((state_val_23305 === (4))){
+var inst_23226 = (state_23304[(8)]);
+var inst_23226__$1 = (state_23304[(2)]);
+var inst_23227 = (function (){var G__23319 = self__.value;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__23319) : cljs.core.deref.call(null,G__23319));
+})();
+var inst_23274 = cljs.core.constant$keyword$68.cljs$core$IFn$_invoke$arity$1(inst_23226__$1);
+var state_23304__$1 = (function (){var statearr_23320 = state_23304;
+(statearr_23320[(8)] = inst_23226__$1);
+
+(statearr_23320[(12)] = inst_23227);
+
+return statearr_23320;
+})();
+var G__23321_23388 = (((inst_23274 instanceof cljs.core.Keyword))?inst_23274.fqn:null);
+switch (G__23321_23388) {
 case "change":
-var statearr_21484_21546 = state_21470__$1;
-(statearr_21484_21546[(1)] = (14));
+var statearr_23322_23390 = state_23304__$1;
+(statearr_23322_23390[(1)] = (14));
 
 
 break;
 case "cancel":
-var statearr_21485_21547 = state_21470__$1;
-(statearr_21485_21547[(1)] = (13));
+var statearr_23323_23391 = state_23304__$1;
+(statearr_23323_23391[(1)] = (13));
 
 
 break;
 case "action":
-var statearr_21486_21548 = state_21470__$1;
-(statearr_21486_21548[(1)] = (6));
+var statearr_23324_23392 = state_23304__$1;
+(statearr_23324_23392[(1)] = (6));
 
 
 break;
 default:
-var statearr_21487_21549 = state_21470__$1;
-(statearr_21487_21549[(1)] = (18));
+var statearr_23325_23393 = state_23304__$1;
+(statearr_23325_23393[(1)] = (18));
 
 
 
 }
 
-return cljs.core.constant$keyword$97;
+return cljs.core.constant$keyword$99;
 } else {
-if((state_val_21471 === (15))){
-var inst_21402 = (state_21470[(8)]);
-var inst_21435 = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,inst_21402);
-var state_21470__$1 = state_21470;
-var statearr_21488_21550 = state_21470__$1;
-(statearr_21488_21550[(2)] = inst_21435);
+if((state_val_23305 === (15))){
+var inst_23226 = (state_23304[(8)]);
+var inst_23260 = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,inst_23226);
+var state_23304__$1 = state_23304;
+var statearr_23326_23394 = state_23304__$1;
+(statearr_23326_23394[(2)] = inst_23260);
 
-(statearr_21488_21550[(1)] = (17));
+(statearr_23326_23394[(1)] = (17));
 
 
-return cljs.core.constant$keyword$97;
+return cljs.core.constant$keyword$99;
 } else {
-if((state_val_21471 === (21))){
-var inst_21457 = (state_21470[(2)]);
-var state_21470__$1 = (function (){var statearr_21489 = state_21470;
-(statearr_21489[(10)] = inst_21457);
+if((state_val_23305 === (21))){
+var inst_23285 = (state_23304[(2)]);
+var state_23304__$1 = (function (){var statearr_23327 = state_23304;
+(statearr_23327[(13)] = inst_23285);
 
-return statearr_21489;
-})();
-if(cljs.core.truth_(schema__$1)){
-var statearr_21490_21551 = state_21470__$1;
-(statearr_21490_21551[(1)] = (22));
-
-} else {
-var statearr_21491_21552 = state_21470__$1;
-(statearr_21491_21552[(1)] = (23));
-
-}
-
-return cljs.core.constant$keyword$97;
-} else {
-if((state_val_21471 === (13))){
-var inst_21430 = om.core.transact_BANG_.cljs$core$IFn$_invoke$arity$2(self__.form_state,lomakkeet.fields.cancel_form);
-var state_21470__$1 = state_21470;
-var statearr_21492_21553 = state_21470__$1;
-(statearr_21492_21553[(2)] = inst_21430);
-
-(statearr_21492_21553[(1)] = (5));
-
-
-return cljs.core.constant$keyword$97;
-} else {
-if((state_val_21471 === (22))){
-var inst_21459 = (function (){var G__21493 = self__.value;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__21493) : cljs.core.deref.call(null,G__21493));
-})();
-var inst_21460 = schema.core.check(schema__$1,inst_21459);
-var state_21470__$1 = state_21470;
-var statearr_21494_21554 = state_21470__$1;
-(statearr_21494_21554[(2)] = inst_21460);
-
-(statearr_21494_21554[(1)] = (24));
-
-
-return cljs.core.constant$keyword$97;
-} else {
-if((state_val_21471 === (6))){
-var inst_21402 = (state_21470[(8)]);
-var inst_21404 = (state_21470[(9)]);
-var inst_21403 = cljs.core.constant$keyword$143.cljs$core$IFn$_invoke$arity$1(inst_21402);
-var inst_21404__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(self__.actions,inst_21403);
-var state_21470__$1 = (function (){var statearr_21495 = state_21470;
-(statearr_21495[(9)] = inst_21404__$1);
-
-return statearr_21495;
-})();
-if(cljs.core.truth_(inst_21404__$1)){
-var statearr_21496_21555 = state_21470__$1;
-(statearr_21496_21555[(1)] = (7));
-
-} else {
-var statearr_21497_21556 = state_21470__$1;
-(statearr_21497_21556[(1)] = (8));
-
-}
-
-return cljs.core.constant$keyword$97;
-} else {
-if((state_val_21471 === (17))){
-var inst_21402 = (state_21470[(8)]);
-var inst_21438 = (state_21470[(2)]);
-var inst_21439 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(inst_21438,cljs.core.constant$keyword$144);
-var inst_21440 = lomakkeet.fields.get_in_schema(schema__$1,inst_21439);
-var inst_21441 = cljs.core.constant$keyword$23.cljs$core$IFn$_invoke$arity$1(inst_21402);
-var inst_21442 = lomakkeet.fields.coerce(coercion_matcher,inst_21440,inst_21441);
-var inst_21443 = lomakkeet.fields.change_value(self__.value,schema__$1,inst_21439,inst_21442);
-var state_21470__$1 = state_21470;
-var statearr_21498_21557 = state_21470__$1;
-(statearr_21498_21557[(2)] = inst_21443);
-
-(statearr_21498_21557[(1)] = (5));
-
-
-return cljs.core.constant$keyword$97;
-} else {
-if((state_val_21471 === (3))){
-var inst_21468 = (state_21470[(2)]);
-var state_21470__$1 = state_21470;
-return cljs.core.async.impl.ioc_helpers.return_chan(state_21470__$1,inst_21468);
-} else {
-if((state_val_21471 === (12))){
-var inst_21422 = (state_21470[(2)]);
-var state_21470__$1 = state_21470;
-var statearr_21499_21558 = state_21470__$1;
-(statearr_21499_21558[(2)] = inst_21422);
-
-(statearr_21499_21558[(1)] = (9));
-
-
-return cljs.core.constant$keyword$97;
-} else {
-if((state_val_21471 === (2))){
-var state_21470__$1 = state_21470;
-return cljs.core.async.impl.ioc_helpers.take_BANG_(state_21470__$1,(4),ch);
-} else {
-if((state_val_21471 === (23))){
-var state_21470__$1 = state_21470;
-var statearr_21500_21559 = state_21470__$1;
-(statearr_21500_21559[(2)] = null);
-
-(statearr_21500_21559[(1)] = (24));
-
-
-return cljs.core.constant$keyword$97;
-} else {
-if((state_val_21471 === (19))){
-var inst_21453 = (function (){var G__21501 = self__.value;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__21501) : cljs.core.deref.call(null,G__21501));
-})();
-var inst_21454 = (function (){var G__21502 = inst_21453;
-return (self__.form_validation_fn.cljs$core$IFn$_invoke$arity$1 ? self__.form_validation_fn.cljs$core$IFn$_invoke$arity$1(G__21502) : self__.form_validation_fn.call(null,G__21502));
-})();
-var state_21470__$1 = state_21470;
-var statearr_21503_21560 = state_21470__$1;
-(statearr_21503_21560[(2)] = inst_21454);
-
-(statearr_21503_21560[(1)] = (21));
-
-
-return cljs.core.constant$keyword$97;
-} else {
-if((state_val_21471 === (11))){
-var inst_21407 = (state_21470[(7)]);
-var inst_21420 = om.core.update_BANG_.cljs$core$IFn$_invoke$arity$2(self__.form_state,inst_21407);
-var state_21470__$1 = state_21470;
-var statearr_21504_21561 = state_21470__$1;
-(statearr_21504_21561[(2)] = inst_21420);
-
-(statearr_21504_21561[(1)] = (12));
-
-
-return cljs.core.constant$keyword$97;
-} else {
-if((state_val_21471 === (9))){
-var inst_21428 = (state_21470[(2)]);
-var state_21470__$1 = state_21470;
-var statearr_21505_21562 = state_21470__$1;
-(statearr_21505_21562[(2)] = inst_21428);
-
-(statearr_21505_21562[(1)] = (5));
-
-
-return cljs.core.constant$keyword$97;
-} else {
-if((state_val_21471 === (5))){
-var inst_21451 = (state_21470[(2)]);
-var state_21470__$1 = (function (){var statearr_21506 = state_21470;
-(statearr_21506[(12)] = inst_21451);
-
-return statearr_21506;
+return statearr_23327;
 })();
 if(cljs.core.truth_(self__.form_validation_fn)){
-var statearr_21507_21563 = state_21470__$1;
-(statearr_21507_21563[(1)] = (19));
+var statearr_23328_23395 = state_23304__$1;
+(statearr_23328_23395[(1)] = (22));
 
 } else {
-var statearr_21508_21564 = state_21470__$1;
-(statearr_21508_21564[(1)] = (20));
+var statearr_23329_23396 = state_23304__$1;
+(statearr_23329_23396[(1)] = (23));
 
 }
 
-return cljs.core.constant$keyword$97;
+return cljs.core.constant$keyword$99;
 } else {
-if((state_val_21471 === (14))){
-var inst_21402 = (state_21470[(8)]);
-var inst_21433 = cljs.core.seq_QMARK_(inst_21402);
-var state_21470__$1 = state_21470;
-if(inst_21433){
-var statearr_21509_21565 = state_21470__$1;
-(statearr_21509_21565[(1)] = (15));
+if((state_val_23305 === (13))){
+var inst_23255 = om.core.transact_BANG_.cljs$core$IFn$_invoke$arity$2(self__.form_state,lomakkeet.fields.cancel_form);
+var state_23304__$1 = state_23304;
+var statearr_23330_23397 = state_23304__$1;
+(statearr_23330_23397[(2)] = inst_23255);
+
+(statearr_23330_23397[(1)] = (5));
+
+
+return cljs.core.constant$keyword$99;
+} else {
+if((state_val_23305 === (22))){
+var inst_23287 = (function (){var G__23331 = self__.value;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__23331) : cljs.core.deref.call(null,G__23331));
+})();
+var inst_23288 = (function (){var G__23332 = inst_23287;
+return (self__.form_validation_fn.cljs$core$IFn$_invoke$arity$1 ? self__.form_validation_fn.cljs$core$IFn$_invoke$arity$1(G__23332) : self__.form_validation_fn.call(null,G__23332));
+})();
+var state_23304__$1 = state_23304;
+var statearr_23333_23398 = state_23304__$1;
+(statearr_23333_23398[(2)] = inst_23288);
+
+(statearr_23333_23398[(1)] = (24));
+
+
+return cljs.core.constant$keyword$99;
+} else {
+if((state_val_23305 === (6))){
+var inst_23226 = (state_23304[(8)]);
+var inst_23229 = (state_23304[(9)]);
+var inst_23228 = cljs.core.constant$keyword$145.cljs$core$IFn$_invoke$arity$1(inst_23226);
+var inst_23229__$1 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(self__.actions,inst_23228);
+var state_23304__$1 = (function (){var statearr_23334 = state_23304;
+(statearr_23334[(9)] = inst_23229__$1);
+
+return statearr_23334;
+})();
+if(cljs.core.truth_(inst_23229__$1)){
+var statearr_23335_23399 = state_23304__$1;
+(statearr_23335_23399[(1)] = (7));
 
 } else {
-var statearr_21510_21566 = state_21470__$1;
-(statearr_21510_21566[(1)] = (16));
+var statearr_23336_23400 = state_23304__$1;
+(statearr_23336_23400[(1)] = (8));
 
 }
 
-return cljs.core.constant$keyword$97;
+return cljs.core.constant$keyword$99;
 } else {
-if((state_val_21471 === (16))){
-var inst_21402 = (state_21470[(8)]);
-var state_21470__$1 = state_21470;
-var statearr_21511_21567 = state_21470__$1;
-(statearr_21511_21567[(2)] = inst_21402);
+if((state_val_23305 === (25))){
+var inst_23293 = (function (){var G__23337 = self__.value;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__23337) : cljs.core.deref.call(null,G__23337));
+})();
+var inst_23294 = schema.core.check(schema__$1,inst_23293);
+var state_23304__$1 = state_23304;
+var statearr_23338_23401 = state_23304__$1;
+(statearr_23338_23401[(2)] = inst_23294);
 
-(statearr_21511_21567[(1)] = (17));
+(statearr_23338_23401[(1)] = (27));
 
 
-return cljs.core.constant$keyword$97;
+return cljs.core.constant$keyword$99;
 } else {
-if((state_val_21471 === (10))){
-var inst_21407 = (state_21470[(7)]);
-var inst_21402 = (state_21470[(8)]);
-var inst_21404 = (state_21470[(9)]);
-var inst_21416 = cljs.core.async.chan.cljs$core$IFn$_invoke$arity$1((1));
-var inst_21417 = (function (){var c__16610__auto____$1 = inst_21416;
-var next = inst_21407;
-var action_fn = inst_21404;
-var temp__4124__auto__ = inst_21404;
-var evt = inst_21402;
-return ((function (c__16610__auto____$1,next,action_fn,temp__4124__auto__,evt,inst_21407,inst_21402,inst_21404,inst_21416,state_val_21471,c__16610__auto__,schema__$1,map__21398,map__21398__$1,coercion_matcher,ch,___$1,map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535){
+if((state_val_23305 === (17))){
+var inst_23226 = (state_23304[(8)]);
+var inst_23263 = (state_23304[(2)]);
+var inst_23264 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(inst_23263,cljs.core.constant$keyword$146);
+var inst_23265 = lomakkeet.fields.get_in_schema(schema__$1,inst_23264);
+var inst_23266 = cljs.core.constant$keyword$66.cljs$core$IFn$_invoke$arity$1(inst_23226);
+var inst_23267 = lomakkeet.fields.coerce(coercion_matcher,inst_23265,inst_23266);
+var inst_23268 = lomakkeet.fields.change_value(self__.value,schema__$1,inst_23264,inst_23267);
+var state_23304__$1 = state_23304;
+var statearr_23339_23402 = state_23304__$1;
+(statearr_23339_23402[(2)] = inst_23268);
+
+(statearr_23339_23402[(1)] = (5));
+
+
+return cljs.core.constant$keyword$99;
+} else {
+if((state_val_23305 === (3))){
+var inst_23302 = (state_23304[(2)]);
+var state_23304__$1 = state_23304;
+return cljs.core.async.impl.ioc_helpers.return_chan(state_23304__$1,inst_23302);
+} else {
+if((state_val_23305 === (12))){
+var inst_23247 = (state_23304[(2)]);
+var state_23304__$1 = state_23304;
+var statearr_23340_23403 = state_23304__$1;
+(statearr_23340_23403[(2)] = inst_23247);
+
+(statearr_23340_23403[(1)] = (9));
+
+
+return cljs.core.constant$keyword$99;
+} else {
+if((state_val_23305 === (2))){
+var state_23304__$1 = state_23304;
+return cljs.core.async.impl.ioc_helpers.take_BANG_(state_23304__$1,(4),ch);
+} else {
+if((state_val_23305 === (23))){
+var state_23304__$1 = state_23304;
+var statearr_23341_23404 = state_23304__$1;
+(statearr_23341_23404[(2)] = null);
+
+(statearr_23341_23404[(1)] = (24));
+
+
+return cljs.core.constant$keyword$99;
+} else {
+if((state_val_23305 === (19))){
+var inst_23227 = (state_23304[(12)]);
+var inst_23278 = [cljs.core.constant$keyword$153,cljs.core.constant$keyword$66,cljs.core.constant$keyword$168,cljs.core.constant$keyword$169];
+var inst_23279 = (function (){var G__23342 = self__.value;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__23342) : cljs.core.deref.call(null,G__23342));
+})();
+var inst_23280 = [self__.form_state,inst_23279,self__.value,inst_23227];
+var inst_23281 = cljs.core.PersistentHashMap.fromArrays(inst_23278,inst_23280);
+var inst_23282 = (function (){var G__23343 = inst_23281;
+return (self__.after_change.cljs$core$IFn$_invoke$arity$1 ? self__.after_change.cljs$core$IFn$_invoke$arity$1(G__23343) : self__.after_change.call(null,G__23343));
+})();
+var state_23304__$1 = state_23304;
+var statearr_23344_23405 = state_23304__$1;
+(statearr_23344_23405[(2)] = inst_23282);
+
+(statearr_23344_23405[(1)] = (21));
+
+
+return cljs.core.constant$keyword$99;
+} else {
+if((state_val_23305 === (11))){
+var inst_23232 = (state_23304[(7)]);
+var inst_23245 = om.core.update_BANG_.cljs$core$IFn$_invoke$arity$2(self__.form_state,inst_23232);
+var state_23304__$1 = state_23304;
+var statearr_23345_23406 = state_23304__$1;
+(statearr_23345_23406[(2)] = inst_23245);
+
+(statearr_23345_23406[(1)] = (12));
+
+
+return cljs.core.constant$keyword$99;
+} else {
+if((state_val_23305 === (9))){
+var inst_23253 = (state_23304[(2)]);
+var state_23304__$1 = state_23304;
+var statearr_23346_23407 = state_23304__$1;
+(statearr_23346_23407[(2)] = inst_23253);
+
+(statearr_23346_23407[(1)] = (5));
+
+
+return cljs.core.constant$keyword$99;
+} else {
+if((state_val_23305 === (5))){
+var inst_23276 = (state_23304[(2)]);
+var state_23304__$1 = (function (){var statearr_23347 = state_23304;
+(statearr_23347[(14)] = inst_23276);
+
+return statearr_23347;
+})();
+if(cljs.core.truth_(self__.after_change)){
+var statearr_23348_23408 = state_23304__$1;
+(statearr_23348_23408[(1)] = (19));
+
+} else {
+var statearr_23349_23409 = state_23304__$1;
+(statearr_23349_23409[(1)] = (20));
+
+}
+
+return cljs.core.constant$keyword$99;
+} else {
+if((state_val_23305 === (14))){
+var inst_23226 = (state_23304[(8)]);
+var inst_23258 = cljs.core.seq_QMARK_(inst_23226);
+var state_23304__$1 = state_23304;
+if(inst_23258){
+var statearr_23350_23410 = state_23304__$1;
+(statearr_23350_23410[(1)] = (15));
+
+} else {
+var statearr_23351_23411 = state_23304__$1;
+(statearr_23351_23411[(1)] = (16));
+
+}
+
+return cljs.core.constant$keyword$99;
+} else {
+if((state_val_23305 === (26))){
+var state_23304__$1 = state_23304;
+var statearr_23352_23412 = state_23304__$1;
+(statearr_23352_23412[(2)] = null);
+
+(statearr_23352_23412[(1)] = (27));
+
+
+return cljs.core.constant$keyword$99;
+} else {
+if((state_val_23305 === (16))){
+var inst_23226 = (state_23304[(8)]);
+var state_23304__$1 = state_23304;
+var statearr_23353_23413 = state_23304__$1;
+(statearr_23353_23413[(2)] = inst_23226);
+
+(statearr_23353_23413[(1)] = (17));
+
+
+return cljs.core.constant$keyword$99;
+} else {
+if((state_val_23305 === (10))){
+var inst_23232 = (state_23304[(7)]);
+var inst_23226 = (state_23304[(8)]);
+var inst_23227 = (state_23304[(12)]);
+var inst_23229 = (state_23304[(9)]);
+var inst_23241 = cljs.core.async.chan.cljs$core$IFn$_invoke$arity$1((1));
+var inst_23242 = (function (){var c__16627__auto____$1 = inst_23241;
+var next = inst_23232;
+var action_fn = inst_23229;
+var temp__4124__auto__ = inst_23229;
+var prev_value = inst_23227;
+var evt = inst_23226;
+return ((function (c__16627__auto____$1,next,action_fn,temp__4124__auto__,prev_value,evt,inst_23232,inst_23226,inst_23227,inst_23229,inst_23241,state_val_23305,c__16627__auto__,schema__$1,map__23222,map__23222__$1,coercion_matcher,ch,___$1,map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377){
 return (function (){
-var f__16611__auto__ = (function (){var switch__16530__auto__ = ((function (c__16610__auto____$1,next,action_fn,temp__4124__auto__,evt,inst_21407,inst_21402,inst_21404,inst_21416,state_val_21471,c__16610__auto__,schema__$1,map__21398,map__21398__$1,coercion_matcher,ch,___$1,map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535){
-return (function (state_21414){
-var state_val_21415 = (state_21414[(1)]);
-if((state_val_21415 === (2))){
-var inst_21411 = (state_21414[(2)]);
-var inst_21412 = om.core.update_BANG_.cljs$core$IFn$_invoke$arity$2(self__.form_state,inst_21411);
-var state_21414__$1 = state_21414;
-return cljs.core.async.impl.ioc_helpers.return_chan(state_21414__$1,inst_21412);
+var f__16628__auto__ = (function (){var switch__16547__auto__ = ((function (c__16627__auto____$1,next,action_fn,temp__4124__auto__,prev_value,evt,inst_23232,inst_23226,inst_23227,inst_23229,inst_23241,state_val_23305,c__16627__auto__,schema__$1,map__23222,map__23222__$1,coercion_matcher,ch,___$1,map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377){
+return (function (state_23239){
+var state_val_23240 = (state_23239[(1)]);
+if((state_val_23240 === (2))){
+var inst_23236 = (state_23239[(2)]);
+var inst_23237 = om.core.update_BANG_.cljs$core$IFn$_invoke$arity$2(self__.form_state,inst_23236);
+var state_23239__$1 = state_23239;
+return cljs.core.async.impl.ioc_helpers.return_chan(state_23239__$1,inst_23237);
 } else {
-if((state_val_21415 === (1))){
-var state_21414__$1 = state_21414;
-return cljs.core.async.impl.ioc_helpers.take_BANG_(state_21414__$1,(2),next);
-} else {
-return null;
-}
-}
-});})(c__16610__auto____$1,next,action_fn,temp__4124__auto__,evt,inst_21407,inst_21402,inst_21404,inst_21416,state_val_21471,c__16610__auto__,schema__$1,map__21398,map__21398__$1,coercion_matcher,ch,___$1,map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535))
-;
-return ((function (switch__16530__auto__,c__16610__auto____$1,next,action_fn,temp__4124__auto__,evt,inst_21407,inst_21402,inst_21404,inst_21416,state_val_21471,c__16610__auto__,schema__$1,map__21398,map__21398__$1,coercion_matcher,ch,___$1,map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535){
-return (function() {
-var state_machine__16531__auto__ = null;
-var state_machine__16531__auto____0 = (function (){
-var statearr_21515 = [null,null,null,null,null,null,null];
-(statearr_21515[(0)] = state_machine__16531__auto__);
-
-(statearr_21515[(1)] = (1));
-
-return statearr_21515;
-});
-var state_machine__16531__auto____1 = (function (state_21414){
-while(true){
-var ret_value__16532__auto__ = (function (){try{while(true){
-var result__16533__auto__ = switch__16530__auto__(state_21414);
-if(cljs.core.keyword_identical_QMARK_(result__16533__auto__,cljs.core.constant$keyword$97)){
-continue;
-} else {
-return result__16533__auto__;
-}
-break;
-}
-}catch (e21516){if((e21516 instanceof Object)){
-var ex__16534__auto__ = e21516;
-var statearr_21517_21568 = state_21414;
-(statearr_21517_21568[(5)] = ex__16534__auto__);
-
-
-cljs.core.async.impl.ioc_helpers.process_exception(state_21414);
-
-return cljs.core.constant$keyword$97;
-} else {
-throw e21516;
-
-}
-}})();
-if(cljs.core.keyword_identical_QMARK_(ret_value__16532__auto__,cljs.core.constant$keyword$97)){
-var G__21569 = state_21414;
-state_21414 = G__21569;
-continue;
-} else {
-return ret_value__16532__auto__;
-}
-break;
-}
-});
-state_machine__16531__auto__ = function(state_21414){
-switch(arguments.length){
-case 0:
-return state_machine__16531__auto____0.call(this);
-case 1:
-return state_machine__16531__auto____1.call(this,state_21414);
-}
-throw(new Error('Invalid arity: ' + arguments.length));
-};
-state_machine__16531__auto__.cljs$core$IFn$_invoke$arity$0 = state_machine__16531__auto____0;
-state_machine__16531__auto__.cljs$core$IFn$_invoke$arity$1 = state_machine__16531__auto____1;
-return state_machine__16531__auto__;
-})()
-;})(switch__16530__auto__,c__16610__auto____$1,next,action_fn,temp__4124__auto__,evt,inst_21407,inst_21402,inst_21404,inst_21416,state_val_21471,c__16610__auto__,schema__$1,map__21398,map__21398__$1,coercion_matcher,ch,___$1,map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535))
-})();
-var state__16612__auto__ = (function (){var statearr_21518 = (function (){return (f__16611__auto__.cljs$core$IFn$_invoke$arity$0 ? f__16611__auto__.cljs$core$IFn$_invoke$arity$0() : f__16611__auto__.call(null));
-})();
-(statearr_21518[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__16610__auto____$1);
-
-return statearr_21518;
-})();
-return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped(state__16612__auto__);
-});
-;})(c__16610__auto____$1,next,action_fn,temp__4124__auto__,evt,inst_21407,inst_21402,inst_21404,inst_21416,state_val_21471,c__16610__auto__,schema__$1,map__21398,map__21398__$1,coercion_matcher,ch,___$1,map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535))
-})();
-var inst_21418 = cljs.core.async.impl.dispatch.run(inst_21417);
-var state_21470__$1 = (function (){var statearr_21519 = state_21470;
-(statearr_21519[(13)] = inst_21418);
-
-return statearr_21519;
-})();
-var statearr_21520_21570 = state_21470__$1;
-(statearr_21520_21570[(2)] = inst_21416);
-
-(statearr_21520_21570[(1)] = (12));
-
-
-return cljs.core.constant$keyword$97;
-} else {
-if((state_val_21471 === (18))){
-var inst_21402 = (state_21470[(8)]);
-var inst_21445 = cljs.core.constant$keyword$25.cljs$core$IFn$_invoke$arity$1(inst_21402);
-var inst_21446 = [cljs.core.str("Unknown event-type: "),cljs.core.str(inst_21445)].join('');
-var inst_21447 = cljs.core.prn.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([inst_21446], 0));
-var state_21470__$1 = state_21470;
-var statearr_21521_21571 = state_21470__$1;
-(statearr_21521_21571[(2)] = inst_21447);
-
-(statearr_21521_21571[(1)] = (5));
-
-
-return cljs.core.constant$keyword$97;
-} else {
-if((state_val_21471 === (8))){
-var inst_21402 = (state_21470[(8)]);
-var inst_21424 = cljs.core.constant$keyword$143.cljs$core$IFn$_invoke$arity$1(inst_21402);
-var inst_21425 = [cljs.core.str("WARNING: "),cljs.core.str(inst_21424),cljs.core.str(" is unknown")].join('');
-var inst_21426 = cljs.core.prn.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([inst_21425], 0));
-var state_21470__$1 = state_21470;
-var statearr_21522_21572 = state_21470__$1;
-(statearr_21522_21572[(2)] = inst_21426);
-
-(statearr_21522_21572[(1)] = (9));
-
-
-return cljs.core.constant$keyword$97;
+if((state_val_23240 === (1))){
+var state_23239__$1 = state_23239;
+return cljs.core.async.impl.ioc_helpers.take_BANG_(state_23239__$1,(2),next);
 } else {
 return null;
 }
 }
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-});})(c__16610__auto__,schema__$1,map__21398,map__21398__$1,coercion_matcher,ch,___$1,map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535))
+});})(c__16627__auto____$1,next,action_fn,temp__4124__auto__,prev_value,evt,inst_23232,inst_23226,inst_23227,inst_23229,inst_23241,state_val_23305,c__16627__auto__,schema__$1,map__23222,map__23222__$1,coercion_matcher,ch,___$1,map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377))
 ;
-return ((function (switch__16530__auto__,c__16610__auto__,schema__$1,map__21398,map__21398__$1,coercion_matcher,ch,___$1,map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535){
+return ((function (switch__16547__auto__,c__16627__auto____$1,next,action_fn,temp__4124__auto__,prev_value,evt,inst_23232,inst_23226,inst_23227,inst_23229,inst_23241,state_val_23305,c__16627__auto__,schema__$1,map__23222,map__23222__$1,coercion_matcher,ch,___$1,map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377){
 return (function() {
-var state_machine__16531__auto__ = null;
-var state_machine__16531__auto____0 = (function (){
-var statearr_21526 = [null,null,null,null,null,null,null,null,null,null,null,null,null,null];
-(statearr_21526[(0)] = state_machine__16531__auto__);
+var state_machine__16548__auto__ = null;
+var state_machine__16548__auto____0 = (function (){
+var statearr_23357 = [null,null,null,null,null,null,null];
+(statearr_23357[(0)] = state_machine__16548__auto__);
 
-(statearr_21526[(1)] = (1));
+(statearr_23357[(1)] = (1));
 
-return statearr_21526;
+return statearr_23357;
 });
-var state_machine__16531__auto____1 = (function (state_21470){
+var state_machine__16548__auto____1 = (function (state_23239){
 while(true){
-var ret_value__16532__auto__ = (function (){try{while(true){
-var result__16533__auto__ = switch__16530__auto__(state_21470);
-if(cljs.core.keyword_identical_QMARK_(result__16533__auto__,cljs.core.constant$keyword$97)){
+var ret_value__16549__auto__ = (function (){try{while(true){
+var result__16550__auto__ = switch__16547__auto__(state_23239);
+if(cljs.core.keyword_identical_QMARK_(result__16550__auto__,cljs.core.constant$keyword$99)){
 continue;
 } else {
-return result__16533__auto__;
+return result__16550__auto__;
 }
 break;
 }
-}catch (e21527){if((e21527 instanceof Object)){
-var ex__16534__auto__ = e21527;
-var statearr_21528_21573 = state_21470;
-(statearr_21528_21573[(5)] = ex__16534__auto__);
+}catch (e23358){if((e23358 instanceof Object)){
+var ex__16551__auto__ = e23358;
+var statearr_23359_23414 = state_23239;
+(statearr_23359_23414[(5)] = ex__16551__auto__);
 
 
-cljs.core.async.impl.ioc_helpers.process_exception(state_21470);
+cljs.core.async.impl.ioc_helpers.process_exception(state_23239);
 
-return cljs.core.constant$keyword$97;
+return cljs.core.constant$keyword$99;
 } else {
-throw e21527;
+throw e23358;
 
 }
 }})();
-if(cljs.core.keyword_identical_QMARK_(ret_value__16532__auto__,cljs.core.constant$keyword$97)){
-var G__21574 = state_21470;
-state_21470 = G__21574;
+if(cljs.core.keyword_identical_QMARK_(ret_value__16549__auto__,cljs.core.constant$keyword$99)){
+var G__23415 = state_23239;
+state_23239 = G__23415;
 continue;
 } else {
-return ret_value__16532__auto__;
+return ret_value__16549__auto__;
 }
 break;
 }
 });
-state_machine__16531__auto__ = function(state_21470){
+state_machine__16548__auto__ = function(state_23239){
 switch(arguments.length){
 case 0:
-return state_machine__16531__auto____0.call(this);
+return state_machine__16548__auto____0.call(this);
 case 1:
-return state_machine__16531__auto____1.call(this,state_21470);
+return state_machine__16548__auto____1.call(this,state_23239);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
-state_machine__16531__auto__.cljs$core$IFn$_invoke$arity$0 = state_machine__16531__auto____0;
-state_machine__16531__auto__.cljs$core$IFn$_invoke$arity$1 = state_machine__16531__auto____1;
-return state_machine__16531__auto__;
+state_machine__16548__auto__.cljs$core$IFn$_invoke$arity$0 = state_machine__16548__auto____0;
+state_machine__16548__auto__.cljs$core$IFn$_invoke$arity$1 = state_machine__16548__auto____1;
+return state_machine__16548__auto__;
 })()
-;})(switch__16530__auto__,c__16610__auto__,schema__$1,map__21398,map__21398__$1,coercion_matcher,ch,___$1,map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535))
+;})(switch__16547__auto__,c__16627__auto____$1,next,action_fn,temp__4124__auto__,prev_value,evt,inst_23232,inst_23226,inst_23227,inst_23229,inst_23241,state_val_23305,c__16627__auto__,schema__$1,map__23222,map__23222__$1,coercion_matcher,ch,___$1,map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377))
 })();
-var state__16612__auto__ = (function (){var statearr_21529 = (function (){return (f__16611__auto__.cljs$core$IFn$_invoke$arity$0 ? f__16611__auto__.cljs$core$IFn$_invoke$arity$0() : f__16611__auto__.call(null));
+var state__16629__auto__ = (function (){var statearr_23360 = (function (){return (f__16628__auto__.cljs$core$IFn$_invoke$arity$0 ? f__16628__auto__.cljs$core$IFn$_invoke$arity$0() : f__16628__auto__.call(null));
 })();
-(statearr_21529[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__16610__auto__);
+(statearr_23360[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__16627__auto____$1);
 
-return statearr_21529;
+return statearr_23360;
 })();
-return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped(state__16612__auto__);
-});})(c__16610__auto__,schema__$1,map__21398,map__21398__$1,coercion_matcher,ch,___$1,map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535))
+return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped(state__16629__auto__);
+});
+;})(c__16627__auto____$1,next,action_fn,temp__4124__auto__,prev_value,evt,inst_23232,inst_23226,inst_23227,inst_23229,inst_23241,state_val_23305,c__16627__auto__,schema__$1,map__23222,map__23222__$1,coercion_matcher,ch,___$1,map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377))
+})();
+var inst_23243 = cljs.core.async.impl.dispatch.run(inst_23242);
+var state_23304__$1 = (function (){var statearr_23361 = state_23304;
+(statearr_23361[(15)] = inst_23243);
+
+return statearr_23361;
+})();
+var statearr_23362_23416 = state_23304__$1;
+(statearr_23362_23416[(2)] = inst_23241);
+
+(statearr_23362_23416[(1)] = (12));
+
+
+return cljs.core.constant$keyword$99;
+} else {
+if((state_val_23305 === (18))){
+var inst_23226 = (state_23304[(8)]);
+var inst_23270 = cljs.core.constant$keyword$68.cljs$core$IFn$_invoke$arity$1(inst_23226);
+var inst_23271 = [cljs.core.str("Unknown event-type: "),cljs.core.str(inst_23270)].join('');
+var inst_23272 = cljs.core.prn.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([inst_23271], 0));
+var state_23304__$1 = state_23304;
+var statearr_23363_23417 = state_23304__$1;
+(statearr_23363_23417[(2)] = inst_23272);
+
+(statearr_23363_23417[(1)] = (5));
+
+
+return cljs.core.constant$keyword$99;
+} else {
+if((state_val_23305 === (8))){
+var inst_23226 = (state_23304[(8)]);
+var inst_23249 = cljs.core.constant$keyword$145.cljs$core$IFn$_invoke$arity$1(inst_23226);
+var inst_23250 = [cljs.core.str("WARNING: "),cljs.core.str(inst_23249),cljs.core.str(" is unknown")].join('');
+var inst_23251 = cljs.core.prn.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([inst_23250], 0));
+var state_23304__$1 = state_23304;
+var statearr_23364_23418 = state_23304__$1;
+(statearr_23364_23418[(2)] = inst_23251);
+
+(statearr_23364_23418[(1)] = (9));
+
+
+return cljs.core.constant$keyword$99;
+} else {
+return null;
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+});})(c__16627__auto__,schema__$1,map__23222,map__23222__$1,coercion_matcher,ch,___$1,map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377))
+;
+return ((function (switch__16547__auto__,c__16627__auto__,schema__$1,map__23222,map__23222__$1,coercion_matcher,ch,___$1,map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377){
+return (function() {
+var state_machine__16548__auto__ = null;
+var state_machine__16548__auto____0 = (function (){
+var statearr_23368 = [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null];
+(statearr_23368[(0)] = state_machine__16548__auto__);
+
+(statearr_23368[(1)] = (1));
+
+return statearr_23368;
+});
+var state_machine__16548__auto____1 = (function (state_23304){
+while(true){
+var ret_value__16549__auto__ = (function (){try{while(true){
+var result__16550__auto__ = switch__16547__auto__(state_23304);
+if(cljs.core.keyword_identical_QMARK_(result__16550__auto__,cljs.core.constant$keyword$99)){
+continue;
+} else {
+return result__16550__auto__;
+}
+break;
+}
+}catch (e23369){if((e23369 instanceof Object)){
+var ex__16551__auto__ = e23369;
+var statearr_23370_23419 = state_23304;
+(statearr_23370_23419[(5)] = ex__16551__auto__);
+
+
+cljs.core.async.impl.ioc_helpers.process_exception(state_23304);
+
+return cljs.core.constant$keyword$99;
+} else {
+throw e23369;
+
+}
+}})();
+if(cljs.core.keyword_identical_QMARK_(ret_value__16549__auto__,cljs.core.constant$keyword$99)){
+var G__23420 = state_23304;
+state_23304 = G__23420;
+continue;
+} else {
+return ret_value__16549__auto__;
+}
+break;
+}
+});
+state_machine__16548__auto__ = function(state_23304){
+switch(arguments.length){
+case 0:
+return state_machine__16548__auto____0.call(this);
+case 1:
+return state_machine__16548__auto____1.call(this,state_23304);
+}
+throw(new Error('Invalid arity: ' + arguments.length));
+};
+state_machine__16548__auto__.cljs$core$IFn$_invoke$arity$0 = state_machine__16548__auto____0;
+state_machine__16548__auto__.cljs$core$IFn$_invoke$arity$1 = state_machine__16548__auto____1;
+return state_machine__16548__auto__;
+})()
+;})(switch__16547__auto__,c__16627__auto__,schema__$1,map__23222,map__23222__$1,coercion_matcher,ch,___$1,map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377))
+})();
+var state__16629__auto__ = (function (){var statearr_23371 = (function (){return (f__16628__auto__.cljs$core$IFn$_invoke$arity$0 ? f__16628__auto__.cljs$core$IFn$_invoke$arity$0() : f__16628__auto__.call(null));
+})();
+(statearr_23371[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__16627__auto__);
+
+return statearr_23371;
+})();
+return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped(state__16629__auto__);
+});})(c__16627__auto__,schema__$1,map__23222,map__23222__$1,coercion_matcher,ch,___$1,map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377))
 );
 
-return c__16610__auto__;
-});})(map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535))
+return c__16627__auto__;
+});})(map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377))
 ;
 
-lomakkeet.fields.t21392.prototype.om$core$IInitState$ = true;
+lomakkeet.fields.t23216.prototype.om$core$IInitState$ = true;
 
-lomakkeet.fields.t21392.prototype.om$core$IInitState$init_state$arity$1 = ((function (map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535){
+lomakkeet.fields.t23216.prototype.om$core$IInitState$init_state$arity$1 = ((function (map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377){
 return (function (_){
 var self__ = this;
 var ___$1 = this;
@@ -2094,80 +2170,80 @@ if((schema.core.check(lomakkeet.fields.FormState,self__.form_state) == null)){
 throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol(null,"nil?","nil?",1612038930,null),cljs.core.list(new cljs.core.Symbol("s","check","s/check",-1428127528,null),new cljs.core.Symbol(null,"FormState","FormState",834878066,null),new cljs.core.Symbol(null,"form-state","form-state",-256843510,null)))], 0)))].join('')));
 }
 
-return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$145,cljs.core.async.chan.cljs$core$IFn$_invoke$arity$0(),cljs.core.constant$keyword$150,lomakkeet.fields.default_form_group,cljs.core.constant$keyword$164,schema.coerce.json_coercion_matcher], null),self__.form], 0));
-});})(map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535))
+return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$147,cljs.core.async.chan.cljs$core$IFn$_invoke$arity$0(),cljs.core.constant$keyword$152,lomakkeet.fields.default_form_group,cljs.core.constant$keyword$167,schema.coerce.json_coercion_matcher], null),self__.form], 0));
+});})(map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377))
 ;
 
-lomakkeet.fields.t21392.prototype.cljs$core$IMeta$_meta$arity$1 = ((function (map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535){
-return (function (_21394){
+lomakkeet.fields.t23216.prototype.cljs$core$IMeta$_meta$arity$1 = ((function (map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377){
+return (function (_23218){
 var self__ = this;
-var _21394__$1 = this;
-return self__.meta21393;
-});})(map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535))
+var _23218__$1 = this;
+return self__.meta23217;
+});})(map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377))
 ;
 
-lomakkeet.fields.t21392.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = ((function (map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535){
-return (function (_21394,meta21393__$1){
+lomakkeet.fields.t23216.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = ((function (map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377){
+return (function (_23218,meta23217__$1){
 var self__ = this;
-var _21394__$1 = this;
-return (new lomakkeet.fields.t21392(self__.form,self__.output_checker21231,self__.owner,self__.map__21390,self__.G__21232,self__.G__21387,self__.G__21386,self__.form_validation_fn,self__.map__21391,self__.form_state,self__.map__21389,self__.G__21233,self__.render_fn,self__.validate__6096__auto__,self__.value,self__.map__21388,self__.actions,self__.input_schema21229,self__.input_checker21230,self__.G__21234,self__.output_schema21228,self__.opts,self__.initial_value,self__.ufv__,meta21393__$1));
-});})(map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535))
+var _23218__$1 = this;
+return (new lomakkeet.fields.t23216(self__.form,self__.after_change,self__.owner,self__.validate__12581__auto__,self__.G__23039,self__.map__23212,self__.form_validation_fn,self__.input_checker23036,self__.form_state,self__.G__23040,self__.G__23038,self__.render_fn,self__.map__23214,self__.output_checker23037,self__.value,self__.output_schema23034,self__.map__23213,self__.actions,self__.G__23210,self__.G__23211,self__.map__23215,self__.opts,self__.initial_value,self__.ufv__,self__.input_schema23035,meta23217__$1));
+});})(map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377))
 ;
 
-lomakkeet.fields.t21392.cljs$lang$type = true;
+lomakkeet.fields.t23216.cljs$lang$type = true;
 
-lomakkeet.fields.t21392.cljs$lang$ctorStr = "lomakkeet.fields/t21392";
+lomakkeet.fields.t23216.cljs$lang$ctorStr = "lomakkeet.fields/t23216";
 
-lomakkeet.fields.t21392.cljs$lang$ctorPrWriter = ((function (map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535){
-return (function (this__4215__auto__,writer__4216__auto__,opt__4217__auto__){
-return cljs.core._write(writer__4216__auto__,"lomakkeet.fields/t21392");
-});})(map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535))
+lomakkeet.fields.t23216.cljs$lang$ctorPrWriter = ((function (map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377){
+return (function (this__4838__auto__,writer__4839__auto__,opt__4840__auto__){
+return cljs.core._write(writer__4839__auto__,"lomakkeet.fields/t23216");
+});})(map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377))
 ;
 
-lomakkeet.fields.__GT_t21392 = ((function (map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535){
-return (function __GT_t21392(form__$3,output_checker21231__$1,owner__$3,map__21390__$2,G__21232__$1,G__21387__$2,G__21386__$2,form_validation_fn__$2,map__21391__$2,form_state__$2,map__21389__$2,G__21233__$1,render_fn__$2,validate__6096__auto____$1,value__$2,map__21388__$2,actions__$2,input_schema21229__$1,input_checker21230__$1,G__21234__$1,output_schema21228__$1,opts__$2,initial_value__$2,ufv____$1,meta21393){
-return (new lomakkeet.fields.t21392(form__$3,output_checker21231__$1,owner__$3,map__21390__$2,G__21232__$1,G__21387__$2,G__21386__$2,form_validation_fn__$2,map__21391__$2,form_state__$2,map__21389__$2,G__21233__$1,render_fn__$2,validate__6096__auto____$1,value__$2,map__21388__$2,actions__$2,input_schema21229__$1,input_checker21230__$1,G__21234__$1,output_schema21228__$1,opts__$2,initial_value__$2,ufv____$1,meta21393));
-});})(map__21390,map__21390__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__21391,map__21391__$1,opts__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__21386,map__21388,map__21388__$1,form_state,initial_value,value,owner,G__21387,map__21389,map__21389__$1,opts,form_validation_fn,form__$1,render_fn,actions,validate__6096__auto__,ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535))
+lomakkeet.fields.__GT_t23216 = ((function (map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377){
+return (function __GT_t23216(form__$3,after_change__$2,owner__$3,validate__12581__auto____$1,G__23039__$1,map__23212__$2,form_validation_fn__$2,input_checker23036__$1,form_state__$2,G__23040__$1,G__23038__$1,render_fn__$2,map__23214__$2,output_checker23037__$1,value__$2,output_schema23034__$1,map__23213__$2,actions__$2,G__23210__$2,G__23211__$2,map__23215__$2,opts__$2,initial_value__$2,ufv____$1,input_schema23035__$1,meta23217){
+return (new lomakkeet.fields.t23216(form__$3,after_change__$2,owner__$3,validate__12581__auto____$1,G__23039__$1,map__23212__$2,form_validation_fn__$2,input_checker23036__$1,form_state__$2,G__23040__$1,G__23038__$1,render_fn__$2,map__23214__$2,output_checker23037__$1,value__$2,output_schema23034__$1,map__23213__$2,actions__$2,G__23210__$2,G__23211__$2,map__23215__$2,opts__$2,initial_value__$2,ufv____$1,input_schema23035__$1,meta23217));
+});})(map__23214,map__23214__$1,form_state__$1,initial_value__$1,value__$1,owner__$2,map__23215,map__23215__$1,opts__$1,after_change__$1,form_validation_fn__$1,form__$2,render_fn__$1,actions__$1,G__23210,map__23212,map__23212__$1,form_state,initial_value,value,owner,G__23211,map__23213,map__23213__$1,opts,after_change,form_validation_fn,form__$1,render_fn,actions,validate__12581__auto__,ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377))
 ;
 
 }
 
-return (new lomakkeet.fields.t21392(form__$2,output_checker21231_21535,owner__$2,map__21390__$1,G__21232,G__21387__$1,G__21386__$1,form_validation_fn__$1,map__21391__$1,form_state__$1,map__21389__$1,G__21233,render_fn__$1,validate__6096__auto__,value__$1,map__21388__$1,actions__$1,input_schema21229_21533,input_checker21230_21534,G__21234,output_schema21228_21532,opts__$1,initial_value__$1,ufv___21531,null));
+return (new lomakkeet.fields.t23216(form__$2,after_change__$1,owner__$2,validate__12581__auto__,G__23039,map__23212__$1,form_validation_fn__$1,input_checker23036_23376,form_state__$1,G__23040,G__23038,render_fn__$1,map__23214__$1,output_checker23037_23377,value__$1,output_schema23034_23374,map__23213__$1,actions__$1,G__23210__$1,G__23211__$1,map__23215__$1,opts__$1,initial_value__$1,ufv___23373,input_schema23035_23375,null));
 break;
 }
 })();
-if(cljs.core.truth_(validate__6096__auto__)){
-var temp__4126__auto___21575 = (function (){var G__21530 = o__6099__auto__;
-return (output_checker21231_21535.cljs$core$IFn$_invoke$arity$1 ? output_checker21231_21535.cljs$core$IFn$_invoke$arity$1(G__21530) : output_checker21231_21535.call(null,G__21530));
+if(cljs.core.truth_(validate__12581__auto__)){
+var temp__4126__auto___23421 = (function (){var G__23372 = o__12584__auto__;
+return (output_checker23037_23377.cljs$core$IFn$_invoke$arity$1 ? output_checker23037_23377.cljs$core$IFn$_invoke$arity$1(G__23372) : output_checker23037_23377.call(null,G__23372));
 })();
-if(cljs.core.truth_(temp__4126__auto___21575)){
-var error__6098__auto___21576 = temp__4126__auto___21575;
-throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Output of %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"form","form",16469056,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__6098__auto___21576], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$22,error__6098__auto___21576,cljs.core.constant$keyword$23,o__6099__auto__,cljs.core.constant$keyword$24,output_schema21228_21532,cljs.core.constant$keyword$25,cljs.core.constant$keyword$26], null));
+if(cljs.core.truth_(temp__4126__auto___23421)){
+var error__12583__auto___23422 = temp__4126__auto___23421;
+throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2(schema.utils.format_STAR_.cljs$core$IFn$_invoke$arity$variadic("Output of %s does not match schema: %s",cljs.core.array_seq([new cljs.core.Symbol(null,"form","form",16469056,null),cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([error__12583__auto___23422], 0))], 0)),new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$65,error__12583__auto___23422,cljs.core.constant$keyword$66,o__12584__auto__,cljs.core.constant$keyword$67,output_schema23034_23374,cljs.core.constant$keyword$68,cljs.core.constant$keyword$69], null));
 } else {
 }
 } else {
 }
 
-return o__6099__auto__;
-});})(ufv___21531,output_schema21228_21532,input_schema21229_21533,input_checker21230_21534,output_checker21231_21535))
+return o__12584__auto__;
+});})(ufv___23373,output_schema23034_23374,input_schema23035_23375,input_checker23036_23376,output_checker23037_23377))
 ;
 
-schema.utils.declare_class_schema_BANG_(schema.utils.fn_schema_bearer(lomakkeet.fields.form),schema.core.make_fn_schema(output_schema21228_21532,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema21229_21533], null)));
+schema.utils.declare_class_schema_BANG_(schema.utils.fn_schema_bearer(lomakkeet.fields.form),schema.core.make_fn_schema(output_schema23034_23374,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema23035_23375], null)));
 
 lomakkeet.fields.__GT_form = (function() {
 var __GT_form = null;
-var __GT_form__1 = (function (cursor__7890__auto__){
-return om.core.build.cljs$core$IFn$_invoke$arity$2(lomakkeet.fields.form,cursor__7890__auto__);
+var __GT_form__1 = (function (cursor__20832__auto__){
+return om.core.build.cljs$core$IFn$_invoke$arity$2(lomakkeet.fields.form,cursor__20832__auto__);
 });
-var __GT_form__2 = (function (cursor__7890__auto__,m21227){
-return om.core.build.cljs$core$IFn$_invoke$arity$3(lomakkeet.fields.form,cursor__7890__auto__,m21227);
+var __GT_form__2 = (function (cursor__20832__auto__,m23033){
+return om.core.build.cljs$core$IFn$_invoke$arity$3(lomakkeet.fields.form,cursor__20832__auto__,m23033);
 });
-__GT_form = function(cursor__7890__auto__,m21227){
+__GT_form = function(cursor__20832__auto__,m23033){
 switch(arguments.length){
 case 1:
-return __GT_form__1.call(this,cursor__7890__auto__);
+return __GT_form__1.call(this,cursor__20832__auto__);
 case 2:
-return __GT_form__2.call(this,cursor__7890__auto__,m21227);
+return __GT_form__2.call(this,cursor__20832__auto__,m23033);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
@@ -2177,8 +2253,8 @@ return __GT_form;
 })()
 ;
 lomakkeet.fields.dirty_QMARK_ = (function dirty_QMARK_(form_state){
-return cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.constant$keyword$23.cljs$core$IFn$_invoke$arity$1(form_state),cljs.core.constant$keyword$160.cljs$core$IFn$_invoke$arity$1(form_state));
+return cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.constant$keyword$66.cljs$core$IFn$_invoke$arity$1(form_state),cljs.core.constant$keyword$162.cljs$core$IFn$_invoke$arity$1(form_state));
 });
 lomakkeet.fields.errors_QMARK_ = (function errors_QMARK_(form_state){
-return cljs.core.seq(cljs.core.constant$keyword$152.cljs$core$IFn$_invoke$arity$1(form_state));
+return cljs.core.seq(cljs.core.constant$keyword$154.cljs$core$IFn$_invoke$arity$1(form_state));
 });

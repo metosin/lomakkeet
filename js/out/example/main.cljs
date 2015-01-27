@@ -7,15 +7,21 @@
             [plumbing.core :refer-macros [defnk]]
             [sablono.core :refer-macros [html]]
             [cljs-time.core :as t]
+            [potpuri.core :as util]
             [lomakkeet.fields :as f]
             [lomakkeet.datepicker :as df]
             [lomakkeet.file :as ff]
-            [lomakkeet.utils :as util]
             [example.forms :as forms]
-            [example.dev :as dev]))
+            [example.dev :as dev]
+            [example.autocomplete :as eac]))
 
-; goog.date.Date?
-(def LocalDate (s/pred t/date?))
+(def LocalDate goog.date.Date)
+
+(defn DateRange [start end]
+  (s/pred (fn [x]
+            (and (or (not start) (.equals x start) (t/after?  x start))
+                 (or (not end)   (.equals x end)   (t/before? x end))))
+          'invalid-date))
 
 (s/defschema Thingie
   {:name (s/both s/Str (s/pred seq 'required))
@@ -23,13 +29,13 @@
    :start-date LocalDate
    :end-date   (s/maybe LocalDate)
    :foobar {:desc s/Str
-            :file (s/maybe (s/both js/File (s/pred (fn [f] (if f (< (.-size f) 1000000))) 'large-file)))}})
+            :file (s/maybe (s/both js/File (s/pred (fn [f] (if f (< (.-size f) 1000000))) 'large-file)))}
+   :country s/Str})
 
 (defn ThingieDates [{:keys [start-date end-date] :as thingie}]
-  {:start-date (s/both LocalDate(s/pred (fn [x] (and (or (.equals x (t/today)) (t/after? x (t/today)))
-                                                     (or (not end-date) (.equals x end-date) (t/before? x end-date)))) 'invalid-date))
-   :end-date   (s/both (s/maybe LocalDate) (s/pred (fn [x] (and (or (not x) (.equals x start-date) (t/after? x start-date)))) 'invalid-date))
-   s/Keyword s/Any})
+  (-> Thingie
+      (update-in [:start-date] #(s/both % (DateRange (t/today) end-date)))
+      (assoc-in  [:end-date]    (s/maybe (s/both LocalDate (DateRange start-date nil))))))
 
 ; Description of the state tree
 (def empty-thing
@@ -78,10 +84,10 @@
       [:div.row
        (f/textarea  form "Description" [:foobar :desc])
        (ff/file     form "File"        [:foobar :file]
-                {:help-text "Under 1MB"})]]
-
-     [:div.btn-toolbar.pull-right
-      (forms/save-btn form-state ch)]]))
+                {:help-text "Under 1MB"})]
+      [:div.row
+       [:div.col-sm-12 [:h2 "Autocomplete"]]
+       (eac/country-select form "Country" [:country])]]]))
 
 (defn save-thing [state evt]
   (-> state
@@ -104,7 +110,10 @@
   (render [_]
     (html
       [:div
+       [:h1 "Example form "
+        [:a {:href "https://github.com/metosin/lomakkeet/blob/master/example/example/main.cljs"} "(Code)"]]
        (om/build thing-view (:thing-page app-state))
+       [:h1 "Om state tree"]
        (om/build dev/state-view app-state)])))
 
 (defn restart! []
