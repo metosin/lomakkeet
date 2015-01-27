@@ -1,5 +1,5 @@
 (ns om.core
-  (:require [cljsjs.react]
+  (:require com.facebook.React
             [om.dom :as dom :include-macros true]
             [goog.dom :as gdom])
   (:import [goog.ui IdGenerator]))
@@ -1137,7 +1137,6 @@
                           (reset! ret c))))
                     ;; update state pass
                     (let [queue (-get-queue state)]
-                      (-empty-queue! state)
                       (when-not (empty? queue)
                         (doseq [c queue]
                           (when (.isMounted c)
@@ -1146,7 +1145,8 @@
                               (aset (.-state c) "__om_next_cursor" nil))
                             (when (or (not (satisfies? ICheckState (children c)))
                                       (.shouldComponentUpdate c (.-props c) (.-state c)))
-                              (.forceUpdate c))))))
+                              (.forceUpdate c))))
+                        (-empty-queue! state)))
                     ;; ref cursor pass
                     (let [_refs @_refs]
                       (when-not (empty? _refs)
