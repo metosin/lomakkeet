@@ -111,7 +111,7 @@
     (html
       [:div
        [:h1 "Example form "
-        [:a {:href "https://github.com/metosin/lomakkeet/"} "(Code)"]]
+        [:a {:href "https://github.com/metosin/lomakkeet/blob/master/example/example/main.cljs"} "(Code)"]]
        (om/build thing-view (:thing-page app-state))
        [:h1 "Om state tree"]
        (om/build dev/state-view app-state)])))
