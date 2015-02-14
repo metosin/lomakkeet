@@ -1,58 +1,69 @@
 (ns sablono.interpreter
   (:require [clojure.string :refer [blank? join]]
-            [sablono.util :refer [html-to-dom-attrs normalize-element]]))
+            [sablono.util :as util]
+                   [goog.object :as gobject]
+                   cljsjs.react))
 
 (defprotocol IInterpreter
   (interpret [this] "Interpret a Clojure data structure as a React fn call."))
 
 ;; Taken from om, to hack around form elements.
+;; https://github.com/swannodette/om/blob/master/src/om/dom.cljs
 
       
 (defn wrap-form-element [ctor display-name]
-  (js/React.createClass
-   #js
-   {:getDisplayName
-    (fn [] display-name)
-    :getInitialState
-    (fn []
-      (this-as this #js {:value (aget (.-props this) "value")}))
-    :onChange
-    (fn [e]
-      (this-as
-       this
-       (let [handler (aget (.-props this) "onChange")]
-         (when-not (nil? handler)
-           (handler e)
-           (.setState this #js {:value (.. e -target -value)})))))
-    :componentWillReceiveProps
-    (fn [new-props]
-      (this-as this (.setState this #js {:value (aget new-props "value")})))
-    :render
-    (fn []
-      (this-as
-       this
-       (.transferPropsTo
-        this
-        (ctor #js {:value (aget (.-state this) "value")
-                   :onChange (aget this "onChange")
-                   :children (aget (.-props this) "children")}))))}))
+  (js/React.createFactory
+   (js/React.createClass
+    #js
+    {:getDisplayName
+     (fn [] (name display-name))
+     :getInitialState
+     (fn []
+       (this-as this
+         #js {:value (aget (.-props this) "value")}))
+     :onChange
+     (fn [e]
+       (this-as this
+         (let [handler (aget (.-props this) "onChange")]
+           (when-not (nil? handler)
+             (handler e)
+             (.setState this #js {:value (.. e -target -value)})))))
+     :componentWillReceiveProps
+     (fn [new-props]
+       (this-as this
+         (.setState this #js {:value (aget new-props "value")})))
+     :render
+     (fn []
+       (this-as this
+         ;; NOTE: if switch to macro we remove a closure allocation
+         (let [props #js {}]
+           (gobject/extend props (.-props this)
+                           #js {:value (aget (.-state this) "value")
+                                :onChange (aget this "onChange")
+                                :children (aget (.-props this) "children")})
+           (ctor props))))})))
+
 
        (def input (wrap-form-element js/React.DOM.input "input"))
        (def option (wrap-form-element js/React.DOM.option "option"))
        (def textarea (wrap-form-element js/React.DOM.textarea "textarea"))
 
       
-(defn dom-fn [tag]
-  (if-let [dom-fn (aget js/React.DOM (name tag))]
-    (get {:input sablono.interpreter/input
-          :option sablono.interpreter/option
-          :textarea sablono.interpreter/textarea}
-         (keyword tag) dom-fn)
-    (throw (ex-info (str "Unsupported HTML tag: " (name tag)) {:tag tag}))))
+(defn create-element [type props & children]
+  ((if (util/wrapped-type? type)
+     (get {:input sablono.interpreter/input
+           :option sablono.interpreter/option
+           :textarea sablono.interpreter/textarea}
+          (keyword type))
+     (partial js/React.createElement (name type)))
+   props
+   (if (and (sequential? children)
+            (= 1 (count children)))
+     (first children) children)))
 
       
 (defn attributes [attrs]
-  (let [attrs (clj->js (html-to-dom-attrs attrs))
+  (let [attrs (clj->js (util/html-to-dom-attrs attrs))
         class (.-className attrs)
         class (if (array? class) (join " " class) class)]
     (if (blank? class)
@@ -64,16 +75,15 @@
 (defn element
   "Render an element vector as a HTML element."
   [element]
-  (let [[tag attrs content] (normalize-element element)
-        f (dom-fn tag)
+  (let [[type attrs content] (util/normalize-element element)
         js-attrs (attributes attrs)]
     (cond
-     (and (sequential? content)
-          (= 1 (count content)))
-     (f js-attrs (interpret (first content)))
-     content
-     (apply f js-attrs (interpret content))
-     :else (f js-attrs nil))))
+      (and (sequential? content)
+           (= 1 (count content)))
+      (create-element type js-attrs (interpret (first content)))
+      content
+      (create-element type js-attrs (interpret content))
+      :else (create-element type js-attrs nil))))
 
 (defn- interpret-seq [s]
   (into-array (map interpret s)))

@@ -1,4 +1,5 @@
 (ns om.core
+  (:require-macros om.core)
   (:require [cljsjs.react]
             [om.dom :as dom :include-macros true]
             [goog.dom :as gdom])
@@ -1183,6 +1184,7 @@
           (-remove-properties! state watch-key)
           (remove-watch state watch-key)
           (tear-down state watch-key)
+          (swap! refresh-set disj rootf)
           (swap! roots dissoc target)
           (js/React.unmountComponentAtNode target)))
       (rootf))))

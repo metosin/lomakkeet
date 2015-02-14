@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-2727 {}
+// Compiled by ClojureScript 0.0-2850 {}
 goog.provide('om.dom');
 goog.require('cljs.core');
 goog.require('goog.object');
@@ -6,22 +6,22 @@ goog.require('goog.object');
 * @param {...*} var_args
 */
 om.dom.a = (function() { 
-var a__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.a.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var a__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.a.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var a = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var a = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30277__i = 0, G__30277__a = new Array(arguments.length -  1);
-while (G__30277__i < G__30277__a.length) {G__30277__a[G__30277__i] = arguments[G__30277__i + 1]; ++G__30277__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30277__a,0);
+var G__30788__i = 0, G__30788__a = new Array(arguments.length -  1);
+while (G__30788__i < G__30788__a.length) {G__30788__a[G__30788__i] = arguments[G__30788__i + 1]; ++G__30788__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30788__a,0);
 } 
-return a__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return a__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 a.cljs$lang$maxFixedArity = 1;
-a.cljs$lang$applyTo = (function (arglist__30278){
-var opts__10443__auto__ = cljs.core.first(arglist__30278);
-var children__10444__auto__ = cljs.core.rest(arglist__30278);
-return a__delegate(opts__10443__auto__,children__10444__auto__);
+a.cljs$lang$applyTo = (function (arglist__30789){
+var opts__10509__auto__ = cljs.core.first(arglist__30789);
+var children__10510__auto__ = cljs.core.rest(arglist__30789);
+return a__delegate(opts__10509__auto__,children__10510__auto__);
 });
 a.cljs$core$IFn$_invoke$arity$variadic = a__delegate;
 return a;
@@ -32,22 +32,22 @@ return a;
 * @param {...*} var_args
 */
 om.dom.abbr = (function() { 
-var abbr__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.abbr.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var abbr__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.abbr.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var abbr = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var abbr = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30279__i = 0, G__30279__a = new Array(arguments.length -  1);
-while (G__30279__i < G__30279__a.length) {G__30279__a[G__30279__i] = arguments[G__30279__i + 1]; ++G__30279__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30279__a,0);
+var G__30790__i = 0, G__30790__a = new Array(arguments.length -  1);
+while (G__30790__i < G__30790__a.length) {G__30790__a[G__30790__i] = arguments[G__30790__i + 1]; ++G__30790__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30790__a,0);
 } 
-return abbr__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return abbr__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 abbr.cljs$lang$maxFixedArity = 1;
-abbr.cljs$lang$applyTo = (function (arglist__30280){
-var opts__10443__auto__ = cljs.core.first(arglist__30280);
-var children__10444__auto__ = cljs.core.rest(arglist__30280);
-return abbr__delegate(opts__10443__auto__,children__10444__auto__);
+abbr.cljs$lang$applyTo = (function (arglist__30791){
+var opts__10509__auto__ = cljs.core.first(arglist__30791);
+var children__10510__auto__ = cljs.core.rest(arglist__30791);
+return abbr__delegate(opts__10509__auto__,children__10510__auto__);
 });
 abbr.cljs$core$IFn$_invoke$arity$variadic = abbr__delegate;
 return abbr;
@@ -58,22 +58,22 @@ return abbr;
 * @param {...*} var_args
 */
 om.dom.address = (function() { 
-var address__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.address.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var address__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.address.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var address = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var address = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30281__i = 0, G__30281__a = new Array(arguments.length -  1);
-while (G__30281__i < G__30281__a.length) {G__30281__a[G__30281__i] = arguments[G__30281__i + 1]; ++G__30281__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30281__a,0);
+var G__30792__i = 0, G__30792__a = new Array(arguments.length -  1);
+while (G__30792__i < G__30792__a.length) {G__30792__a[G__30792__i] = arguments[G__30792__i + 1]; ++G__30792__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30792__a,0);
 } 
-return address__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return address__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 address.cljs$lang$maxFixedArity = 1;
-address.cljs$lang$applyTo = (function (arglist__30282){
-var opts__10443__auto__ = cljs.core.first(arglist__30282);
-var children__10444__auto__ = cljs.core.rest(arglist__30282);
-return address__delegate(opts__10443__auto__,children__10444__auto__);
+address.cljs$lang$applyTo = (function (arglist__30793){
+var opts__10509__auto__ = cljs.core.first(arglist__30793);
+var children__10510__auto__ = cljs.core.rest(arglist__30793);
+return address__delegate(opts__10509__auto__,children__10510__auto__);
 });
 address.cljs$core$IFn$_invoke$arity$variadic = address__delegate;
 return address;
@@ -84,22 +84,22 @@ return address;
 * @param {...*} var_args
 */
 om.dom.area = (function() { 
-var area__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.area.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var area__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.area.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var area = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var area = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30283__i = 0, G__30283__a = new Array(arguments.length -  1);
-while (G__30283__i < G__30283__a.length) {G__30283__a[G__30283__i] = arguments[G__30283__i + 1]; ++G__30283__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30283__a,0);
+var G__30794__i = 0, G__30794__a = new Array(arguments.length -  1);
+while (G__30794__i < G__30794__a.length) {G__30794__a[G__30794__i] = arguments[G__30794__i + 1]; ++G__30794__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30794__a,0);
 } 
-return area__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return area__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 area.cljs$lang$maxFixedArity = 1;
-area.cljs$lang$applyTo = (function (arglist__30284){
-var opts__10443__auto__ = cljs.core.first(arglist__30284);
-var children__10444__auto__ = cljs.core.rest(arglist__30284);
-return area__delegate(opts__10443__auto__,children__10444__auto__);
+area.cljs$lang$applyTo = (function (arglist__30795){
+var opts__10509__auto__ = cljs.core.first(arglist__30795);
+var children__10510__auto__ = cljs.core.rest(arglist__30795);
+return area__delegate(opts__10509__auto__,children__10510__auto__);
 });
 area.cljs$core$IFn$_invoke$arity$variadic = area__delegate;
 return area;
@@ -110,22 +110,22 @@ return area;
 * @param {...*} var_args
 */
 om.dom.article = (function() { 
-var article__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.article.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var article__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.article.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var article = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var article = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30285__i = 0, G__30285__a = new Array(arguments.length -  1);
-while (G__30285__i < G__30285__a.length) {G__30285__a[G__30285__i] = arguments[G__30285__i + 1]; ++G__30285__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30285__a,0);
+var G__30796__i = 0, G__30796__a = new Array(arguments.length -  1);
+while (G__30796__i < G__30796__a.length) {G__30796__a[G__30796__i] = arguments[G__30796__i + 1]; ++G__30796__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30796__a,0);
 } 
-return article__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return article__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 article.cljs$lang$maxFixedArity = 1;
-article.cljs$lang$applyTo = (function (arglist__30286){
-var opts__10443__auto__ = cljs.core.first(arglist__30286);
-var children__10444__auto__ = cljs.core.rest(arglist__30286);
-return article__delegate(opts__10443__auto__,children__10444__auto__);
+article.cljs$lang$applyTo = (function (arglist__30797){
+var opts__10509__auto__ = cljs.core.first(arglist__30797);
+var children__10510__auto__ = cljs.core.rest(arglist__30797);
+return article__delegate(opts__10509__auto__,children__10510__auto__);
 });
 article.cljs$core$IFn$_invoke$arity$variadic = article__delegate;
 return article;
@@ -136,22 +136,22 @@ return article;
 * @param {...*} var_args
 */
 om.dom.aside = (function() { 
-var aside__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.aside.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var aside__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.aside.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var aside = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var aside = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30287__i = 0, G__30287__a = new Array(arguments.length -  1);
-while (G__30287__i < G__30287__a.length) {G__30287__a[G__30287__i] = arguments[G__30287__i + 1]; ++G__30287__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30287__a,0);
+var G__30798__i = 0, G__30798__a = new Array(arguments.length -  1);
+while (G__30798__i < G__30798__a.length) {G__30798__a[G__30798__i] = arguments[G__30798__i + 1]; ++G__30798__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30798__a,0);
 } 
-return aside__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return aside__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 aside.cljs$lang$maxFixedArity = 1;
-aside.cljs$lang$applyTo = (function (arglist__30288){
-var opts__10443__auto__ = cljs.core.first(arglist__30288);
-var children__10444__auto__ = cljs.core.rest(arglist__30288);
-return aside__delegate(opts__10443__auto__,children__10444__auto__);
+aside.cljs$lang$applyTo = (function (arglist__30799){
+var opts__10509__auto__ = cljs.core.first(arglist__30799);
+var children__10510__auto__ = cljs.core.rest(arglist__30799);
+return aside__delegate(opts__10509__auto__,children__10510__auto__);
 });
 aside.cljs$core$IFn$_invoke$arity$variadic = aside__delegate;
 return aside;
@@ -162,22 +162,22 @@ return aside;
 * @param {...*} var_args
 */
 om.dom.audio = (function() { 
-var audio__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.audio.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var audio__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.audio.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var audio = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var audio = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30289__i = 0, G__30289__a = new Array(arguments.length -  1);
-while (G__30289__i < G__30289__a.length) {G__30289__a[G__30289__i] = arguments[G__30289__i + 1]; ++G__30289__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30289__a,0);
+var G__30800__i = 0, G__30800__a = new Array(arguments.length -  1);
+while (G__30800__i < G__30800__a.length) {G__30800__a[G__30800__i] = arguments[G__30800__i + 1]; ++G__30800__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30800__a,0);
 } 
-return audio__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return audio__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 audio.cljs$lang$maxFixedArity = 1;
-audio.cljs$lang$applyTo = (function (arglist__30290){
-var opts__10443__auto__ = cljs.core.first(arglist__30290);
-var children__10444__auto__ = cljs.core.rest(arglist__30290);
-return audio__delegate(opts__10443__auto__,children__10444__auto__);
+audio.cljs$lang$applyTo = (function (arglist__30801){
+var opts__10509__auto__ = cljs.core.first(arglist__30801);
+var children__10510__auto__ = cljs.core.rest(arglist__30801);
+return audio__delegate(opts__10509__auto__,children__10510__auto__);
 });
 audio.cljs$core$IFn$_invoke$arity$variadic = audio__delegate;
 return audio;
@@ -188,22 +188,22 @@ return audio;
 * @param {...*} var_args
 */
 om.dom.b = (function() { 
-var b__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.b.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var b__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.b.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var b = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var b = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30291__i = 0, G__30291__a = new Array(arguments.length -  1);
-while (G__30291__i < G__30291__a.length) {G__30291__a[G__30291__i] = arguments[G__30291__i + 1]; ++G__30291__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30291__a,0);
+var G__30802__i = 0, G__30802__a = new Array(arguments.length -  1);
+while (G__30802__i < G__30802__a.length) {G__30802__a[G__30802__i] = arguments[G__30802__i + 1]; ++G__30802__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30802__a,0);
 } 
-return b__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return b__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 b.cljs$lang$maxFixedArity = 1;
-b.cljs$lang$applyTo = (function (arglist__30292){
-var opts__10443__auto__ = cljs.core.first(arglist__30292);
-var children__10444__auto__ = cljs.core.rest(arglist__30292);
-return b__delegate(opts__10443__auto__,children__10444__auto__);
+b.cljs$lang$applyTo = (function (arglist__30803){
+var opts__10509__auto__ = cljs.core.first(arglist__30803);
+var children__10510__auto__ = cljs.core.rest(arglist__30803);
+return b__delegate(opts__10509__auto__,children__10510__auto__);
 });
 b.cljs$core$IFn$_invoke$arity$variadic = b__delegate;
 return b;
@@ -214,22 +214,22 @@ return b;
 * @param {...*} var_args
 */
 om.dom.base = (function() { 
-var base__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.base.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var base__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.base.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var base = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var base = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30293__i = 0, G__30293__a = new Array(arguments.length -  1);
-while (G__30293__i < G__30293__a.length) {G__30293__a[G__30293__i] = arguments[G__30293__i + 1]; ++G__30293__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30293__a,0);
+var G__30804__i = 0, G__30804__a = new Array(arguments.length -  1);
+while (G__30804__i < G__30804__a.length) {G__30804__a[G__30804__i] = arguments[G__30804__i + 1]; ++G__30804__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30804__a,0);
 } 
-return base__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return base__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 base.cljs$lang$maxFixedArity = 1;
-base.cljs$lang$applyTo = (function (arglist__30294){
-var opts__10443__auto__ = cljs.core.first(arglist__30294);
-var children__10444__auto__ = cljs.core.rest(arglist__30294);
-return base__delegate(opts__10443__auto__,children__10444__auto__);
+base.cljs$lang$applyTo = (function (arglist__30805){
+var opts__10509__auto__ = cljs.core.first(arglist__30805);
+var children__10510__auto__ = cljs.core.rest(arglist__30805);
+return base__delegate(opts__10509__auto__,children__10510__auto__);
 });
 base.cljs$core$IFn$_invoke$arity$variadic = base__delegate;
 return base;
@@ -240,22 +240,22 @@ return base;
 * @param {...*} var_args
 */
 om.dom.bdi = (function() { 
-var bdi__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.bdi.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var bdi__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.bdi.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var bdi = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var bdi = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30295__i = 0, G__30295__a = new Array(arguments.length -  1);
-while (G__30295__i < G__30295__a.length) {G__30295__a[G__30295__i] = arguments[G__30295__i + 1]; ++G__30295__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30295__a,0);
+var G__30806__i = 0, G__30806__a = new Array(arguments.length -  1);
+while (G__30806__i < G__30806__a.length) {G__30806__a[G__30806__i] = arguments[G__30806__i + 1]; ++G__30806__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30806__a,0);
 } 
-return bdi__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return bdi__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 bdi.cljs$lang$maxFixedArity = 1;
-bdi.cljs$lang$applyTo = (function (arglist__30296){
-var opts__10443__auto__ = cljs.core.first(arglist__30296);
-var children__10444__auto__ = cljs.core.rest(arglist__30296);
-return bdi__delegate(opts__10443__auto__,children__10444__auto__);
+bdi.cljs$lang$applyTo = (function (arglist__30807){
+var opts__10509__auto__ = cljs.core.first(arglist__30807);
+var children__10510__auto__ = cljs.core.rest(arglist__30807);
+return bdi__delegate(opts__10509__auto__,children__10510__auto__);
 });
 bdi.cljs$core$IFn$_invoke$arity$variadic = bdi__delegate;
 return bdi;
@@ -266,22 +266,22 @@ return bdi;
 * @param {...*} var_args
 */
 om.dom.bdo = (function() { 
-var bdo__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.bdo.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var bdo__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.bdo.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var bdo = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var bdo = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30297__i = 0, G__30297__a = new Array(arguments.length -  1);
-while (G__30297__i < G__30297__a.length) {G__30297__a[G__30297__i] = arguments[G__30297__i + 1]; ++G__30297__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30297__a,0);
+var G__30808__i = 0, G__30808__a = new Array(arguments.length -  1);
+while (G__30808__i < G__30808__a.length) {G__30808__a[G__30808__i] = arguments[G__30808__i + 1]; ++G__30808__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30808__a,0);
 } 
-return bdo__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return bdo__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 bdo.cljs$lang$maxFixedArity = 1;
-bdo.cljs$lang$applyTo = (function (arglist__30298){
-var opts__10443__auto__ = cljs.core.first(arglist__30298);
-var children__10444__auto__ = cljs.core.rest(arglist__30298);
-return bdo__delegate(opts__10443__auto__,children__10444__auto__);
+bdo.cljs$lang$applyTo = (function (arglist__30809){
+var opts__10509__auto__ = cljs.core.first(arglist__30809);
+var children__10510__auto__ = cljs.core.rest(arglist__30809);
+return bdo__delegate(opts__10509__auto__,children__10510__auto__);
 });
 bdo.cljs$core$IFn$_invoke$arity$variadic = bdo__delegate;
 return bdo;
@@ -292,22 +292,22 @@ return bdo;
 * @param {...*} var_args
 */
 om.dom.big = (function() { 
-var big__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.big.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var big__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.big.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var big = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var big = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30299__i = 0, G__30299__a = new Array(arguments.length -  1);
-while (G__30299__i < G__30299__a.length) {G__30299__a[G__30299__i] = arguments[G__30299__i + 1]; ++G__30299__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30299__a,0);
+var G__30810__i = 0, G__30810__a = new Array(arguments.length -  1);
+while (G__30810__i < G__30810__a.length) {G__30810__a[G__30810__i] = arguments[G__30810__i + 1]; ++G__30810__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30810__a,0);
 } 
-return big__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return big__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 big.cljs$lang$maxFixedArity = 1;
-big.cljs$lang$applyTo = (function (arglist__30300){
-var opts__10443__auto__ = cljs.core.first(arglist__30300);
-var children__10444__auto__ = cljs.core.rest(arglist__30300);
-return big__delegate(opts__10443__auto__,children__10444__auto__);
+big.cljs$lang$applyTo = (function (arglist__30811){
+var opts__10509__auto__ = cljs.core.first(arglist__30811);
+var children__10510__auto__ = cljs.core.rest(arglist__30811);
+return big__delegate(opts__10509__auto__,children__10510__auto__);
 });
 big.cljs$core$IFn$_invoke$arity$variadic = big__delegate;
 return big;
@@ -318,22 +318,22 @@ return big;
 * @param {...*} var_args
 */
 om.dom.blockquote = (function() { 
-var blockquote__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.blockquote.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var blockquote__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.blockquote.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var blockquote = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var blockquote = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30301__i = 0, G__30301__a = new Array(arguments.length -  1);
-while (G__30301__i < G__30301__a.length) {G__30301__a[G__30301__i] = arguments[G__30301__i + 1]; ++G__30301__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30301__a,0);
+var G__30812__i = 0, G__30812__a = new Array(arguments.length -  1);
+while (G__30812__i < G__30812__a.length) {G__30812__a[G__30812__i] = arguments[G__30812__i + 1]; ++G__30812__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30812__a,0);
 } 
-return blockquote__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return blockquote__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 blockquote.cljs$lang$maxFixedArity = 1;
-blockquote.cljs$lang$applyTo = (function (arglist__30302){
-var opts__10443__auto__ = cljs.core.first(arglist__30302);
-var children__10444__auto__ = cljs.core.rest(arglist__30302);
-return blockquote__delegate(opts__10443__auto__,children__10444__auto__);
+blockquote.cljs$lang$applyTo = (function (arglist__30813){
+var opts__10509__auto__ = cljs.core.first(arglist__30813);
+var children__10510__auto__ = cljs.core.rest(arglist__30813);
+return blockquote__delegate(opts__10509__auto__,children__10510__auto__);
 });
 blockquote.cljs$core$IFn$_invoke$arity$variadic = blockquote__delegate;
 return blockquote;
@@ -344,22 +344,22 @@ return blockquote;
 * @param {...*} var_args
 */
 om.dom.body = (function() { 
-var body__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.body.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var body__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.body.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var body = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var body = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30303__i = 0, G__30303__a = new Array(arguments.length -  1);
-while (G__30303__i < G__30303__a.length) {G__30303__a[G__30303__i] = arguments[G__30303__i + 1]; ++G__30303__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30303__a,0);
+var G__30814__i = 0, G__30814__a = new Array(arguments.length -  1);
+while (G__30814__i < G__30814__a.length) {G__30814__a[G__30814__i] = arguments[G__30814__i + 1]; ++G__30814__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30814__a,0);
 } 
-return body__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return body__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 body.cljs$lang$maxFixedArity = 1;
-body.cljs$lang$applyTo = (function (arglist__30304){
-var opts__10443__auto__ = cljs.core.first(arglist__30304);
-var children__10444__auto__ = cljs.core.rest(arglist__30304);
-return body__delegate(opts__10443__auto__,children__10444__auto__);
+body.cljs$lang$applyTo = (function (arglist__30815){
+var opts__10509__auto__ = cljs.core.first(arglist__30815);
+var children__10510__auto__ = cljs.core.rest(arglist__30815);
+return body__delegate(opts__10509__auto__,children__10510__auto__);
 });
 body.cljs$core$IFn$_invoke$arity$variadic = body__delegate;
 return body;
@@ -370,22 +370,22 @@ return body;
 * @param {...*} var_args
 */
 om.dom.br = (function() { 
-var br__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.br.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var br__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.br.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var br = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var br = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30305__i = 0, G__30305__a = new Array(arguments.length -  1);
-while (G__30305__i < G__30305__a.length) {G__30305__a[G__30305__i] = arguments[G__30305__i + 1]; ++G__30305__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30305__a,0);
+var G__30816__i = 0, G__30816__a = new Array(arguments.length -  1);
+while (G__30816__i < G__30816__a.length) {G__30816__a[G__30816__i] = arguments[G__30816__i + 1]; ++G__30816__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30816__a,0);
 } 
-return br__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return br__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 br.cljs$lang$maxFixedArity = 1;
-br.cljs$lang$applyTo = (function (arglist__30306){
-var opts__10443__auto__ = cljs.core.first(arglist__30306);
-var children__10444__auto__ = cljs.core.rest(arglist__30306);
-return br__delegate(opts__10443__auto__,children__10444__auto__);
+br.cljs$lang$applyTo = (function (arglist__30817){
+var opts__10509__auto__ = cljs.core.first(arglist__30817);
+var children__10510__auto__ = cljs.core.rest(arglist__30817);
+return br__delegate(opts__10509__auto__,children__10510__auto__);
 });
 br.cljs$core$IFn$_invoke$arity$variadic = br__delegate;
 return br;
@@ -396,22 +396,22 @@ return br;
 * @param {...*} var_args
 */
 om.dom.button = (function() { 
-var button__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.button.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var button__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.button.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var button = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var button = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30307__i = 0, G__30307__a = new Array(arguments.length -  1);
-while (G__30307__i < G__30307__a.length) {G__30307__a[G__30307__i] = arguments[G__30307__i + 1]; ++G__30307__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30307__a,0);
+var G__30818__i = 0, G__30818__a = new Array(arguments.length -  1);
+while (G__30818__i < G__30818__a.length) {G__30818__a[G__30818__i] = arguments[G__30818__i + 1]; ++G__30818__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30818__a,0);
 } 
-return button__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return button__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 button.cljs$lang$maxFixedArity = 1;
-button.cljs$lang$applyTo = (function (arglist__30308){
-var opts__10443__auto__ = cljs.core.first(arglist__30308);
-var children__10444__auto__ = cljs.core.rest(arglist__30308);
-return button__delegate(opts__10443__auto__,children__10444__auto__);
+button.cljs$lang$applyTo = (function (arglist__30819){
+var opts__10509__auto__ = cljs.core.first(arglist__30819);
+var children__10510__auto__ = cljs.core.rest(arglist__30819);
+return button__delegate(opts__10509__auto__,children__10510__auto__);
 });
 button.cljs$core$IFn$_invoke$arity$variadic = button__delegate;
 return button;
@@ -422,22 +422,22 @@ return button;
 * @param {...*} var_args
 */
 om.dom.canvas = (function() { 
-var canvas__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.canvas.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var canvas__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.canvas.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var canvas = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var canvas = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30309__i = 0, G__30309__a = new Array(arguments.length -  1);
-while (G__30309__i < G__30309__a.length) {G__30309__a[G__30309__i] = arguments[G__30309__i + 1]; ++G__30309__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30309__a,0);
+var G__30820__i = 0, G__30820__a = new Array(arguments.length -  1);
+while (G__30820__i < G__30820__a.length) {G__30820__a[G__30820__i] = arguments[G__30820__i + 1]; ++G__30820__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30820__a,0);
 } 
-return canvas__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return canvas__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 canvas.cljs$lang$maxFixedArity = 1;
-canvas.cljs$lang$applyTo = (function (arglist__30310){
-var opts__10443__auto__ = cljs.core.first(arglist__30310);
-var children__10444__auto__ = cljs.core.rest(arglist__30310);
-return canvas__delegate(opts__10443__auto__,children__10444__auto__);
+canvas.cljs$lang$applyTo = (function (arglist__30821){
+var opts__10509__auto__ = cljs.core.first(arglist__30821);
+var children__10510__auto__ = cljs.core.rest(arglist__30821);
+return canvas__delegate(opts__10509__auto__,children__10510__auto__);
 });
 canvas.cljs$core$IFn$_invoke$arity$variadic = canvas__delegate;
 return canvas;
@@ -448,22 +448,22 @@ return canvas;
 * @param {...*} var_args
 */
 om.dom.caption = (function() { 
-var caption__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.caption.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var caption__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.caption.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var caption = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var caption = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30311__i = 0, G__30311__a = new Array(arguments.length -  1);
-while (G__30311__i < G__30311__a.length) {G__30311__a[G__30311__i] = arguments[G__30311__i + 1]; ++G__30311__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30311__a,0);
+var G__30822__i = 0, G__30822__a = new Array(arguments.length -  1);
+while (G__30822__i < G__30822__a.length) {G__30822__a[G__30822__i] = arguments[G__30822__i + 1]; ++G__30822__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30822__a,0);
 } 
-return caption__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return caption__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 caption.cljs$lang$maxFixedArity = 1;
-caption.cljs$lang$applyTo = (function (arglist__30312){
-var opts__10443__auto__ = cljs.core.first(arglist__30312);
-var children__10444__auto__ = cljs.core.rest(arglist__30312);
-return caption__delegate(opts__10443__auto__,children__10444__auto__);
+caption.cljs$lang$applyTo = (function (arglist__30823){
+var opts__10509__auto__ = cljs.core.first(arglist__30823);
+var children__10510__auto__ = cljs.core.rest(arglist__30823);
+return caption__delegate(opts__10509__auto__,children__10510__auto__);
 });
 caption.cljs$core$IFn$_invoke$arity$variadic = caption__delegate;
 return caption;
@@ -474,22 +474,22 @@ return caption;
 * @param {...*} var_args
 */
 om.dom.cite = (function() { 
-var cite__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.cite.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var cite__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.cite.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var cite = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var cite = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30313__i = 0, G__30313__a = new Array(arguments.length -  1);
-while (G__30313__i < G__30313__a.length) {G__30313__a[G__30313__i] = arguments[G__30313__i + 1]; ++G__30313__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30313__a,0);
+var G__30824__i = 0, G__30824__a = new Array(arguments.length -  1);
+while (G__30824__i < G__30824__a.length) {G__30824__a[G__30824__i] = arguments[G__30824__i + 1]; ++G__30824__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30824__a,0);
 } 
-return cite__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return cite__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 cite.cljs$lang$maxFixedArity = 1;
-cite.cljs$lang$applyTo = (function (arglist__30314){
-var opts__10443__auto__ = cljs.core.first(arglist__30314);
-var children__10444__auto__ = cljs.core.rest(arglist__30314);
-return cite__delegate(opts__10443__auto__,children__10444__auto__);
+cite.cljs$lang$applyTo = (function (arglist__30825){
+var opts__10509__auto__ = cljs.core.first(arglist__30825);
+var children__10510__auto__ = cljs.core.rest(arglist__30825);
+return cite__delegate(opts__10509__auto__,children__10510__auto__);
 });
 cite.cljs$core$IFn$_invoke$arity$variadic = cite__delegate;
 return cite;
@@ -500,22 +500,22 @@ return cite;
 * @param {...*} var_args
 */
 om.dom.code = (function() { 
-var code__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.code.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var code__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.code.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var code = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var code = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30315__i = 0, G__30315__a = new Array(arguments.length -  1);
-while (G__30315__i < G__30315__a.length) {G__30315__a[G__30315__i] = arguments[G__30315__i + 1]; ++G__30315__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30315__a,0);
+var G__30826__i = 0, G__30826__a = new Array(arguments.length -  1);
+while (G__30826__i < G__30826__a.length) {G__30826__a[G__30826__i] = arguments[G__30826__i + 1]; ++G__30826__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30826__a,0);
 } 
-return code__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return code__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 code.cljs$lang$maxFixedArity = 1;
-code.cljs$lang$applyTo = (function (arglist__30316){
-var opts__10443__auto__ = cljs.core.first(arglist__30316);
-var children__10444__auto__ = cljs.core.rest(arglist__30316);
-return code__delegate(opts__10443__auto__,children__10444__auto__);
+code.cljs$lang$applyTo = (function (arglist__30827){
+var opts__10509__auto__ = cljs.core.first(arglist__30827);
+var children__10510__auto__ = cljs.core.rest(arglist__30827);
+return code__delegate(opts__10509__auto__,children__10510__auto__);
 });
 code.cljs$core$IFn$_invoke$arity$variadic = code__delegate;
 return code;
@@ -526,22 +526,22 @@ return code;
 * @param {...*} var_args
 */
 om.dom.col = (function() { 
-var col__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.col.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var col__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.col.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var col = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var col = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30317__i = 0, G__30317__a = new Array(arguments.length -  1);
-while (G__30317__i < G__30317__a.length) {G__30317__a[G__30317__i] = arguments[G__30317__i + 1]; ++G__30317__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30317__a,0);
+var G__30828__i = 0, G__30828__a = new Array(arguments.length -  1);
+while (G__30828__i < G__30828__a.length) {G__30828__a[G__30828__i] = arguments[G__30828__i + 1]; ++G__30828__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30828__a,0);
 } 
-return col__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return col__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 col.cljs$lang$maxFixedArity = 1;
-col.cljs$lang$applyTo = (function (arglist__30318){
-var opts__10443__auto__ = cljs.core.first(arglist__30318);
-var children__10444__auto__ = cljs.core.rest(arglist__30318);
-return col__delegate(opts__10443__auto__,children__10444__auto__);
+col.cljs$lang$applyTo = (function (arglist__30829){
+var opts__10509__auto__ = cljs.core.first(arglist__30829);
+var children__10510__auto__ = cljs.core.rest(arglist__30829);
+return col__delegate(opts__10509__auto__,children__10510__auto__);
 });
 col.cljs$core$IFn$_invoke$arity$variadic = col__delegate;
 return col;
@@ -552,22 +552,22 @@ return col;
 * @param {...*} var_args
 */
 om.dom.colgroup = (function() { 
-var colgroup__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.colgroup.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var colgroup__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.colgroup.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var colgroup = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var colgroup = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30319__i = 0, G__30319__a = new Array(arguments.length -  1);
-while (G__30319__i < G__30319__a.length) {G__30319__a[G__30319__i] = arguments[G__30319__i + 1]; ++G__30319__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30319__a,0);
+var G__30830__i = 0, G__30830__a = new Array(arguments.length -  1);
+while (G__30830__i < G__30830__a.length) {G__30830__a[G__30830__i] = arguments[G__30830__i + 1]; ++G__30830__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30830__a,0);
 } 
-return colgroup__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return colgroup__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 colgroup.cljs$lang$maxFixedArity = 1;
-colgroup.cljs$lang$applyTo = (function (arglist__30320){
-var opts__10443__auto__ = cljs.core.first(arglist__30320);
-var children__10444__auto__ = cljs.core.rest(arglist__30320);
-return colgroup__delegate(opts__10443__auto__,children__10444__auto__);
+colgroup.cljs$lang$applyTo = (function (arglist__30831){
+var opts__10509__auto__ = cljs.core.first(arglist__30831);
+var children__10510__auto__ = cljs.core.rest(arglist__30831);
+return colgroup__delegate(opts__10509__auto__,children__10510__auto__);
 });
 colgroup.cljs$core$IFn$_invoke$arity$variadic = colgroup__delegate;
 return colgroup;
@@ -578,22 +578,22 @@ return colgroup;
 * @param {...*} var_args
 */
 om.dom.data = (function() { 
-var data__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.data.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var data__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.data.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var data = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var data = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30321__i = 0, G__30321__a = new Array(arguments.length -  1);
-while (G__30321__i < G__30321__a.length) {G__30321__a[G__30321__i] = arguments[G__30321__i + 1]; ++G__30321__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30321__a,0);
+var G__30832__i = 0, G__30832__a = new Array(arguments.length -  1);
+while (G__30832__i < G__30832__a.length) {G__30832__a[G__30832__i] = arguments[G__30832__i + 1]; ++G__30832__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30832__a,0);
 } 
-return data__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return data__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 data.cljs$lang$maxFixedArity = 1;
-data.cljs$lang$applyTo = (function (arglist__30322){
-var opts__10443__auto__ = cljs.core.first(arglist__30322);
-var children__10444__auto__ = cljs.core.rest(arglist__30322);
-return data__delegate(opts__10443__auto__,children__10444__auto__);
+data.cljs$lang$applyTo = (function (arglist__30833){
+var opts__10509__auto__ = cljs.core.first(arglist__30833);
+var children__10510__auto__ = cljs.core.rest(arglist__30833);
+return data__delegate(opts__10509__auto__,children__10510__auto__);
 });
 data.cljs$core$IFn$_invoke$arity$variadic = data__delegate;
 return data;
@@ -604,22 +604,22 @@ return data;
 * @param {...*} var_args
 */
 om.dom.datalist = (function() { 
-var datalist__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.datalist.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var datalist__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.datalist.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var datalist = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var datalist = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30323__i = 0, G__30323__a = new Array(arguments.length -  1);
-while (G__30323__i < G__30323__a.length) {G__30323__a[G__30323__i] = arguments[G__30323__i + 1]; ++G__30323__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30323__a,0);
+var G__30834__i = 0, G__30834__a = new Array(arguments.length -  1);
+while (G__30834__i < G__30834__a.length) {G__30834__a[G__30834__i] = arguments[G__30834__i + 1]; ++G__30834__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30834__a,0);
 } 
-return datalist__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return datalist__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 datalist.cljs$lang$maxFixedArity = 1;
-datalist.cljs$lang$applyTo = (function (arglist__30324){
-var opts__10443__auto__ = cljs.core.first(arglist__30324);
-var children__10444__auto__ = cljs.core.rest(arglist__30324);
-return datalist__delegate(opts__10443__auto__,children__10444__auto__);
+datalist.cljs$lang$applyTo = (function (arglist__30835){
+var opts__10509__auto__ = cljs.core.first(arglist__30835);
+var children__10510__auto__ = cljs.core.rest(arglist__30835);
+return datalist__delegate(opts__10509__auto__,children__10510__auto__);
 });
 datalist.cljs$core$IFn$_invoke$arity$variadic = datalist__delegate;
 return datalist;
@@ -630,22 +630,22 @@ return datalist;
 * @param {...*} var_args
 */
 om.dom.dd = (function() { 
-var dd__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.dd.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var dd__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.dd.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var dd = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var dd = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30325__i = 0, G__30325__a = new Array(arguments.length -  1);
-while (G__30325__i < G__30325__a.length) {G__30325__a[G__30325__i] = arguments[G__30325__i + 1]; ++G__30325__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30325__a,0);
+var G__30836__i = 0, G__30836__a = new Array(arguments.length -  1);
+while (G__30836__i < G__30836__a.length) {G__30836__a[G__30836__i] = arguments[G__30836__i + 1]; ++G__30836__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30836__a,0);
 } 
-return dd__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return dd__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 dd.cljs$lang$maxFixedArity = 1;
-dd.cljs$lang$applyTo = (function (arglist__30326){
-var opts__10443__auto__ = cljs.core.first(arglist__30326);
-var children__10444__auto__ = cljs.core.rest(arglist__30326);
-return dd__delegate(opts__10443__auto__,children__10444__auto__);
+dd.cljs$lang$applyTo = (function (arglist__30837){
+var opts__10509__auto__ = cljs.core.first(arglist__30837);
+var children__10510__auto__ = cljs.core.rest(arglist__30837);
+return dd__delegate(opts__10509__auto__,children__10510__auto__);
 });
 dd.cljs$core$IFn$_invoke$arity$variadic = dd__delegate;
 return dd;
@@ -656,22 +656,22 @@ return dd;
 * @param {...*} var_args
 */
 om.dom.del = (function() { 
-var del__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.del.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var del__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.del.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var del = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var del = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30327__i = 0, G__30327__a = new Array(arguments.length -  1);
-while (G__30327__i < G__30327__a.length) {G__30327__a[G__30327__i] = arguments[G__30327__i + 1]; ++G__30327__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30327__a,0);
+var G__30838__i = 0, G__30838__a = new Array(arguments.length -  1);
+while (G__30838__i < G__30838__a.length) {G__30838__a[G__30838__i] = arguments[G__30838__i + 1]; ++G__30838__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30838__a,0);
 } 
-return del__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return del__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 del.cljs$lang$maxFixedArity = 1;
-del.cljs$lang$applyTo = (function (arglist__30328){
-var opts__10443__auto__ = cljs.core.first(arglist__30328);
-var children__10444__auto__ = cljs.core.rest(arglist__30328);
-return del__delegate(opts__10443__auto__,children__10444__auto__);
+del.cljs$lang$applyTo = (function (arglist__30839){
+var opts__10509__auto__ = cljs.core.first(arglist__30839);
+var children__10510__auto__ = cljs.core.rest(arglist__30839);
+return del__delegate(opts__10509__auto__,children__10510__auto__);
 });
 del.cljs$core$IFn$_invoke$arity$variadic = del__delegate;
 return del;
@@ -682,22 +682,22 @@ return del;
 * @param {...*} var_args
 */
 om.dom.dfn = (function() { 
-var dfn__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.dfn.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var dfn__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.dfn.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var dfn = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var dfn = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30329__i = 0, G__30329__a = new Array(arguments.length -  1);
-while (G__30329__i < G__30329__a.length) {G__30329__a[G__30329__i] = arguments[G__30329__i + 1]; ++G__30329__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30329__a,0);
+var G__30840__i = 0, G__30840__a = new Array(arguments.length -  1);
+while (G__30840__i < G__30840__a.length) {G__30840__a[G__30840__i] = arguments[G__30840__i + 1]; ++G__30840__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30840__a,0);
 } 
-return dfn__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return dfn__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 dfn.cljs$lang$maxFixedArity = 1;
-dfn.cljs$lang$applyTo = (function (arglist__30330){
-var opts__10443__auto__ = cljs.core.first(arglist__30330);
-var children__10444__auto__ = cljs.core.rest(arglist__30330);
-return dfn__delegate(opts__10443__auto__,children__10444__auto__);
+dfn.cljs$lang$applyTo = (function (arglist__30841){
+var opts__10509__auto__ = cljs.core.first(arglist__30841);
+var children__10510__auto__ = cljs.core.rest(arglist__30841);
+return dfn__delegate(opts__10509__auto__,children__10510__auto__);
 });
 dfn.cljs$core$IFn$_invoke$arity$variadic = dfn__delegate;
 return dfn;
@@ -708,22 +708,22 @@ return dfn;
 * @param {...*} var_args
 */
 om.dom.div = (function() { 
-var div__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.div.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var div__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.div.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var div = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var div = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30331__i = 0, G__30331__a = new Array(arguments.length -  1);
-while (G__30331__i < G__30331__a.length) {G__30331__a[G__30331__i] = arguments[G__30331__i + 1]; ++G__30331__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30331__a,0);
+var G__30842__i = 0, G__30842__a = new Array(arguments.length -  1);
+while (G__30842__i < G__30842__a.length) {G__30842__a[G__30842__i] = arguments[G__30842__i + 1]; ++G__30842__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30842__a,0);
 } 
-return div__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return div__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 div.cljs$lang$maxFixedArity = 1;
-div.cljs$lang$applyTo = (function (arglist__30332){
-var opts__10443__auto__ = cljs.core.first(arglist__30332);
-var children__10444__auto__ = cljs.core.rest(arglist__30332);
-return div__delegate(opts__10443__auto__,children__10444__auto__);
+div.cljs$lang$applyTo = (function (arglist__30843){
+var opts__10509__auto__ = cljs.core.first(arglist__30843);
+var children__10510__auto__ = cljs.core.rest(arglist__30843);
+return div__delegate(opts__10509__auto__,children__10510__auto__);
 });
 div.cljs$core$IFn$_invoke$arity$variadic = div__delegate;
 return div;
@@ -734,22 +734,22 @@ return div;
 * @param {...*} var_args
 */
 om.dom.dl = (function() { 
-var dl__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.dl.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var dl__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.dl.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var dl = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var dl = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30333__i = 0, G__30333__a = new Array(arguments.length -  1);
-while (G__30333__i < G__30333__a.length) {G__30333__a[G__30333__i] = arguments[G__30333__i + 1]; ++G__30333__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30333__a,0);
+var G__30844__i = 0, G__30844__a = new Array(arguments.length -  1);
+while (G__30844__i < G__30844__a.length) {G__30844__a[G__30844__i] = arguments[G__30844__i + 1]; ++G__30844__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30844__a,0);
 } 
-return dl__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return dl__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 dl.cljs$lang$maxFixedArity = 1;
-dl.cljs$lang$applyTo = (function (arglist__30334){
-var opts__10443__auto__ = cljs.core.first(arglist__30334);
-var children__10444__auto__ = cljs.core.rest(arglist__30334);
-return dl__delegate(opts__10443__auto__,children__10444__auto__);
+dl.cljs$lang$applyTo = (function (arglist__30845){
+var opts__10509__auto__ = cljs.core.first(arglist__30845);
+var children__10510__auto__ = cljs.core.rest(arglist__30845);
+return dl__delegate(opts__10509__auto__,children__10510__auto__);
 });
 dl.cljs$core$IFn$_invoke$arity$variadic = dl__delegate;
 return dl;
@@ -760,22 +760,22 @@ return dl;
 * @param {...*} var_args
 */
 om.dom.dt = (function() { 
-var dt__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.dt.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var dt__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.dt.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var dt = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var dt = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30335__i = 0, G__30335__a = new Array(arguments.length -  1);
-while (G__30335__i < G__30335__a.length) {G__30335__a[G__30335__i] = arguments[G__30335__i + 1]; ++G__30335__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30335__a,0);
+var G__30846__i = 0, G__30846__a = new Array(arguments.length -  1);
+while (G__30846__i < G__30846__a.length) {G__30846__a[G__30846__i] = arguments[G__30846__i + 1]; ++G__30846__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30846__a,0);
 } 
-return dt__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return dt__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 dt.cljs$lang$maxFixedArity = 1;
-dt.cljs$lang$applyTo = (function (arglist__30336){
-var opts__10443__auto__ = cljs.core.first(arglist__30336);
-var children__10444__auto__ = cljs.core.rest(arglist__30336);
-return dt__delegate(opts__10443__auto__,children__10444__auto__);
+dt.cljs$lang$applyTo = (function (arglist__30847){
+var opts__10509__auto__ = cljs.core.first(arglist__30847);
+var children__10510__auto__ = cljs.core.rest(arglist__30847);
+return dt__delegate(opts__10509__auto__,children__10510__auto__);
 });
 dt.cljs$core$IFn$_invoke$arity$variadic = dt__delegate;
 return dt;
@@ -786,22 +786,22 @@ return dt;
 * @param {...*} var_args
 */
 om.dom.em = (function() { 
-var em__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.em.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var em__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.em.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var em = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var em = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30337__i = 0, G__30337__a = new Array(arguments.length -  1);
-while (G__30337__i < G__30337__a.length) {G__30337__a[G__30337__i] = arguments[G__30337__i + 1]; ++G__30337__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30337__a,0);
+var G__30848__i = 0, G__30848__a = new Array(arguments.length -  1);
+while (G__30848__i < G__30848__a.length) {G__30848__a[G__30848__i] = arguments[G__30848__i + 1]; ++G__30848__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30848__a,0);
 } 
-return em__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return em__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 em.cljs$lang$maxFixedArity = 1;
-em.cljs$lang$applyTo = (function (arglist__30338){
-var opts__10443__auto__ = cljs.core.first(arglist__30338);
-var children__10444__auto__ = cljs.core.rest(arglist__30338);
-return em__delegate(opts__10443__auto__,children__10444__auto__);
+em.cljs$lang$applyTo = (function (arglist__30849){
+var opts__10509__auto__ = cljs.core.first(arglist__30849);
+var children__10510__auto__ = cljs.core.rest(arglist__30849);
+return em__delegate(opts__10509__auto__,children__10510__auto__);
 });
 em.cljs$core$IFn$_invoke$arity$variadic = em__delegate;
 return em;
@@ -812,22 +812,22 @@ return em;
 * @param {...*} var_args
 */
 om.dom.embed = (function() { 
-var embed__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.embed.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var embed__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.embed.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var embed = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var embed = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30339__i = 0, G__30339__a = new Array(arguments.length -  1);
-while (G__30339__i < G__30339__a.length) {G__30339__a[G__30339__i] = arguments[G__30339__i + 1]; ++G__30339__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30339__a,0);
+var G__30850__i = 0, G__30850__a = new Array(arguments.length -  1);
+while (G__30850__i < G__30850__a.length) {G__30850__a[G__30850__i] = arguments[G__30850__i + 1]; ++G__30850__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30850__a,0);
 } 
-return embed__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return embed__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 embed.cljs$lang$maxFixedArity = 1;
-embed.cljs$lang$applyTo = (function (arglist__30340){
-var opts__10443__auto__ = cljs.core.first(arglist__30340);
-var children__10444__auto__ = cljs.core.rest(arglist__30340);
-return embed__delegate(opts__10443__auto__,children__10444__auto__);
+embed.cljs$lang$applyTo = (function (arglist__30851){
+var opts__10509__auto__ = cljs.core.first(arglist__30851);
+var children__10510__auto__ = cljs.core.rest(arglist__30851);
+return embed__delegate(opts__10509__auto__,children__10510__auto__);
 });
 embed.cljs$core$IFn$_invoke$arity$variadic = embed__delegate;
 return embed;
@@ -838,22 +838,22 @@ return embed;
 * @param {...*} var_args
 */
 om.dom.fieldset = (function() { 
-var fieldset__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.fieldset.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var fieldset__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.fieldset.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var fieldset = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var fieldset = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30341__i = 0, G__30341__a = new Array(arguments.length -  1);
-while (G__30341__i < G__30341__a.length) {G__30341__a[G__30341__i] = arguments[G__30341__i + 1]; ++G__30341__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30341__a,0);
+var G__30852__i = 0, G__30852__a = new Array(arguments.length -  1);
+while (G__30852__i < G__30852__a.length) {G__30852__a[G__30852__i] = arguments[G__30852__i + 1]; ++G__30852__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30852__a,0);
 } 
-return fieldset__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return fieldset__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 fieldset.cljs$lang$maxFixedArity = 1;
-fieldset.cljs$lang$applyTo = (function (arglist__30342){
-var opts__10443__auto__ = cljs.core.first(arglist__30342);
-var children__10444__auto__ = cljs.core.rest(arglist__30342);
-return fieldset__delegate(opts__10443__auto__,children__10444__auto__);
+fieldset.cljs$lang$applyTo = (function (arglist__30853){
+var opts__10509__auto__ = cljs.core.first(arglist__30853);
+var children__10510__auto__ = cljs.core.rest(arglist__30853);
+return fieldset__delegate(opts__10509__auto__,children__10510__auto__);
 });
 fieldset.cljs$core$IFn$_invoke$arity$variadic = fieldset__delegate;
 return fieldset;
@@ -864,22 +864,22 @@ return fieldset;
 * @param {...*} var_args
 */
 om.dom.figcaption = (function() { 
-var figcaption__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.figcaption.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var figcaption__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.figcaption.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var figcaption = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var figcaption = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30343__i = 0, G__30343__a = new Array(arguments.length -  1);
-while (G__30343__i < G__30343__a.length) {G__30343__a[G__30343__i] = arguments[G__30343__i + 1]; ++G__30343__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30343__a,0);
+var G__30854__i = 0, G__30854__a = new Array(arguments.length -  1);
+while (G__30854__i < G__30854__a.length) {G__30854__a[G__30854__i] = arguments[G__30854__i + 1]; ++G__30854__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30854__a,0);
 } 
-return figcaption__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return figcaption__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 figcaption.cljs$lang$maxFixedArity = 1;
-figcaption.cljs$lang$applyTo = (function (arglist__30344){
-var opts__10443__auto__ = cljs.core.first(arglist__30344);
-var children__10444__auto__ = cljs.core.rest(arglist__30344);
-return figcaption__delegate(opts__10443__auto__,children__10444__auto__);
+figcaption.cljs$lang$applyTo = (function (arglist__30855){
+var opts__10509__auto__ = cljs.core.first(arglist__30855);
+var children__10510__auto__ = cljs.core.rest(arglist__30855);
+return figcaption__delegate(opts__10509__auto__,children__10510__auto__);
 });
 figcaption.cljs$core$IFn$_invoke$arity$variadic = figcaption__delegate;
 return figcaption;
@@ -890,22 +890,22 @@ return figcaption;
 * @param {...*} var_args
 */
 om.dom.figure = (function() { 
-var figure__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.figure.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var figure__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.figure.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var figure = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var figure = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30345__i = 0, G__30345__a = new Array(arguments.length -  1);
-while (G__30345__i < G__30345__a.length) {G__30345__a[G__30345__i] = arguments[G__30345__i + 1]; ++G__30345__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30345__a,0);
+var G__30856__i = 0, G__30856__a = new Array(arguments.length -  1);
+while (G__30856__i < G__30856__a.length) {G__30856__a[G__30856__i] = arguments[G__30856__i + 1]; ++G__30856__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30856__a,0);
 } 
-return figure__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return figure__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 figure.cljs$lang$maxFixedArity = 1;
-figure.cljs$lang$applyTo = (function (arglist__30346){
-var opts__10443__auto__ = cljs.core.first(arglist__30346);
-var children__10444__auto__ = cljs.core.rest(arglist__30346);
-return figure__delegate(opts__10443__auto__,children__10444__auto__);
+figure.cljs$lang$applyTo = (function (arglist__30857){
+var opts__10509__auto__ = cljs.core.first(arglist__30857);
+var children__10510__auto__ = cljs.core.rest(arglist__30857);
+return figure__delegate(opts__10509__auto__,children__10510__auto__);
 });
 figure.cljs$core$IFn$_invoke$arity$variadic = figure__delegate;
 return figure;
@@ -916,22 +916,22 @@ return figure;
 * @param {...*} var_args
 */
 om.dom.footer = (function() { 
-var footer__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.footer.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var footer__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.footer.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var footer = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var footer = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30347__i = 0, G__30347__a = new Array(arguments.length -  1);
-while (G__30347__i < G__30347__a.length) {G__30347__a[G__30347__i] = arguments[G__30347__i + 1]; ++G__30347__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30347__a,0);
+var G__30858__i = 0, G__30858__a = new Array(arguments.length -  1);
+while (G__30858__i < G__30858__a.length) {G__30858__a[G__30858__i] = arguments[G__30858__i + 1]; ++G__30858__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30858__a,0);
 } 
-return footer__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return footer__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 footer.cljs$lang$maxFixedArity = 1;
-footer.cljs$lang$applyTo = (function (arglist__30348){
-var opts__10443__auto__ = cljs.core.first(arglist__30348);
-var children__10444__auto__ = cljs.core.rest(arglist__30348);
-return footer__delegate(opts__10443__auto__,children__10444__auto__);
+footer.cljs$lang$applyTo = (function (arglist__30859){
+var opts__10509__auto__ = cljs.core.first(arglist__30859);
+var children__10510__auto__ = cljs.core.rest(arglist__30859);
+return footer__delegate(opts__10509__auto__,children__10510__auto__);
 });
 footer.cljs$core$IFn$_invoke$arity$variadic = footer__delegate;
 return footer;
@@ -942,22 +942,22 @@ return footer;
 * @param {...*} var_args
 */
 om.dom.form = (function() { 
-var form__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.form.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var form__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.form.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var form = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var form = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30349__i = 0, G__30349__a = new Array(arguments.length -  1);
-while (G__30349__i < G__30349__a.length) {G__30349__a[G__30349__i] = arguments[G__30349__i + 1]; ++G__30349__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30349__a,0);
+var G__30860__i = 0, G__30860__a = new Array(arguments.length -  1);
+while (G__30860__i < G__30860__a.length) {G__30860__a[G__30860__i] = arguments[G__30860__i + 1]; ++G__30860__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30860__a,0);
 } 
-return form__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return form__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 form.cljs$lang$maxFixedArity = 1;
-form.cljs$lang$applyTo = (function (arglist__30350){
-var opts__10443__auto__ = cljs.core.first(arglist__30350);
-var children__10444__auto__ = cljs.core.rest(arglist__30350);
-return form__delegate(opts__10443__auto__,children__10444__auto__);
+form.cljs$lang$applyTo = (function (arglist__30861){
+var opts__10509__auto__ = cljs.core.first(arglist__30861);
+var children__10510__auto__ = cljs.core.rest(arglist__30861);
+return form__delegate(opts__10509__auto__,children__10510__auto__);
 });
 form.cljs$core$IFn$_invoke$arity$variadic = form__delegate;
 return form;
@@ -968,22 +968,22 @@ return form;
 * @param {...*} var_args
 */
 om.dom.h1 = (function() { 
-var h1__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.h1.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var h1__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.h1.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var h1 = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var h1 = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30351__i = 0, G__30351__a = new Array(arguments.length -  1);
-while (G__30351__i < G__30351__a.length) {G__30351__a[G__30351__i] = arguments[G__30351__i + 1]; ++G__30351__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30351__a,0);
+var G__30862__i = 0, G__30862__a = new Array(arguments.length -  1);
+while (G__30862__i < G__30862__a.length) {G__30862__a[G__30862__i] = arguments[G__30862__i + 1]; ++G__30862__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30862__a,0);
 } 
-return h1__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return h1__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 h1.cljs$lang$maxFixedArity = 1;
-h1.cljs$lang$applyTo = (function (arglist__30352){
-var opts__10443__auto__ = cljs.core.first(arglist__30352);
-var children__10444__auto__ = cljs.core.rest(arglist__30352);
-return h1__delegate(opts__10443__auto__,children__10444__auto__);
+h1.cljs$lang$applyTo = (function (arglist__30863){
+var opts__10509__auto__ = cljs.core.first(arglist__30863);
+var children__10510__auto__ = cljs.core.rest(arglist__30863);
+return h1__delegate(opts__10509__auto__,children__10510__auto__);
 });
 h1.cljs$core$IFn$_invoke$arity$variadic = h1__delegate;
 return h1;
@@ -994,22 +994,22 @@ return h1;
 * @param {...*} var_args
 */
 om.dom.h2 = (function() { 
-var h2__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.h2.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var h2__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.h2.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var h2 = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var h2 = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30353__i = 0, G__30353__a = new Array(arguments.length -  1);
-while (G__30353__i < G__30353__a.length) {G__30353__a[G__30353__i] = arguments[G__30353__i + 1]; ++G__30353__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30353__a,0);
+var G__30864__i = 0, G__30864__a = new Array(arguments.length -  1);
+while (G__30864__i < G__30864__a.length) {G__30864__a[G__30864__i] = arguments[G__30864__i + 1]; ++G__30864__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30864__a,0);
 } 
-return h2__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return h2__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 h2.cljs$lang$maxFixedArity = 1;
-h2.cljs$lang$applyTo = (function (arglist__30354){
-var opts__10443__auto__ = cljs.core.first(arglist__30354);
-var children__10444__auto__ = cljs.core.rest(arglist__30354);
-return h2__delegate(opts__10443__auto__,children__10444__auto__);
+h2.cljs$lang$applyTo = (function (arglist__30865){
+var opts__10509__auto__ = cljs.core.first(arglist__30865);
+var children__10510__auto__ = cljs.core.rest(arglist__30865);
+return h2__delegate(opts__10509__auto__,children__10510__auto__);
 });
 h2.cljs$core$IFn$_invoke$arity$variadic = h2__delegate;
 return h2;
@@ -1020,22 +1020,22 @@ return h2;
 * @param {...*} var_args
 */
 om.dom.h3 = (function() { 
-var h3__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.h3.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var h3__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.h3.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var h3 = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var h3 = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30355__i = 0, G__30355__a = new Array(arguments.length -  1);
-while (G__30355__i < G__30355__a.length) {G__30355__a[G__30355__i] = arguments[G__30355__i + 1]; ++G__30355__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30355__a,0);
+var G__30866__i = 0, G__30866__a = new Array(arguments.length -  1);
+while (G__30866__i < G__30866__a.length) {G__30866__a[G__30866__i] = arguments[G__30866__i + 1]; ++G__30866__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30866__a,0);
 } 
-return h3__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return h3__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 h3.cljs$lang$maxFixedArity = 1;
-h3.cljs$lang$applyTo = (function (arglist__30356){
-var opts__10443__auto__ = cljs.core.first(arglist__30356);
-var children__10444__auto__ = cljs.core.rest(arglist__30356);
-return h3__delegate(opts__10443__auto__,children__10444__auto__);
+h3.cljs$lang$applyTo = (function (arglist__30867){
+var opts__10509__auto__ = cljs.core.first(arglist__30867);
+var children__10510__auto__ = cljs.core.rest(arglist__30867);
+return h3__delegate(opts__10509__auto__,children__10510__auto__);
 });
 h3.cljs$core$IFn$_invoke$arity$variadic = h3__delegate;
 return h3;
@@ -1046,22 +1046,22 @@ return h3;
 * @param {...*} var_args
 */
 om.dom.h4 = (function() { 
-var h4__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.h4.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var h4__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.h4.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var h4 = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var h4 = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30357__i = 0, G__30357__a = new Array(arguments.length -  1);
-while (G__30357__i < G__30357__a.length) {G__30357__a[G__30357__i] = arguments[G__30357__i + 1]; ++G__30357__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30357__a,0);
+var G__30868__i = 0, G__30868__a = new Array(arguments.length -  1);
+while (G__30868__i < G__30868__a.length) {G__30868__a[G__30868__i] = arguments[G__30868__i + 1]; ++G__30868__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30868__a,0);
 } 
-return h4__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return h4__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 h4.cljs$lang$maxFixedArity = 1;
-h4.cljs$lang$applyTo = (function (arglist__30358){
-var opts__10443__auto__ = cljs.core.first(arglist__30358);
-var children__10444__auto__ = cljs.core.rest(arglist__30358);
-return h4__delegate(opts__10443__auto__,children__10444__auto__);
+h4.cljs$lang$applyTo = (function (arglist__30869){
+var opts__10509__auto__ = cljs.core.first(arglist__30869);
+var children__10510__auto__ = cljs.core.rest(arglist__30869);
+return h4__delegate(opts__10509__auto__,children__10510__auto__);
 });
 h4.cljs$core$IFn$_invoke$arity$variadic = h4__delegate;
 return h4;
@@ -1072,22 +1072,22 @@ return h4;
 * @param {...*} var_args
 */
 om.dom.h5 = (function() { 
-var h5__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.h5.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var h5__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.h5.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var h5 = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var h5 = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30359__i = 0, G__30359__a = new Array(arguments.length -  1);
-while (G__30359__i < G__30359__a.length) {G__30359__a[G__30359__i] = arguments[G__30359__i + 1]; ++G__30359__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30359__a,0);
+var G__30870__i = 0, G__30870__a = new Array(arguments.length -  1);
+while (G__30870__i < G__30870__a.length) {G__30870__a[G__30870__i] = arguments[G__30870__i + 1]; ++G__30870__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30870__a,0);
 } 
-return h5__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return h5__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 h5.cljs$lang$maxFixedArity = 1;
-h5.cljs$lang$applyTo = (function (arglist__30360){
-var opts__10443__auto__ = cljs.core.first(arglist__30360);
-var children__10444__auto__ = cljs.core.rest(arglist__30360);
-return h5__delegate(opts__10443__auto__,children__10444__auto__);
+h5.cljs$lang$applyTo = (function (arglist__30871){
+var opts__10509__auto__ = cljs.core.first(arglist__30871);
+var children__10510__auto__ = cljs.core.rest(arglist__30871);
+return h5__delegate(opts__10509__auto__,children__10510__auto__);
 });
 h5.cljs$core$IFn$_invoke$arity$variadic = h5__delegate;
 return h5;
@@ -1098,22 +1098,22 @@ return h5;
 * @param {...*} var_args
 */
 om.dom.h6 = (function() { 
-var h6__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.h6.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var h6__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.h6.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var h6 = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var h6 = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30361__i = 0, G__30361__a = new Array(arguments.length -  1);
-while (G__30361__i < G__30361__a.length) {G__30361__a[G__30361__i] = arguments[G__30361__i + 1]; ++G__30361__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30361__a,0);
+var G__30872__i = 0, G__30872__a = new Array(arguments.length -  1);
+while (G__30872__i < G__30872__a.length) {G__30872__a[G__30872__i] = arguments[G__30872__i + 1]; ++G__30872__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30872__a,0);
 } 
-return h6__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return h6__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 h6.cljs$lang$maxFixedArity = 1;
-h6.cljs$lang$applyTo = (function (arglist__30362){
-var opts__10443__auto__ = cljs.core.first(arglist__30362);
-var children__10444__auto__ = cljs.core.rest(arglist__30362);
-return h6__delegate(opts__10443__auto__,children__10444__auto__);
+h6.cljs$lang$applyTo = (function (arglist__30873){
+var opts__10509__auto__ = cljs.core.first(arglist__30873);
+var children__10510__auto__ = cljs.core.rest(arglist__30873);
+return h6__delegate(opts__10509__auto__,children__10510__auto__);
 });
 h6.cljs$core$IFn$_invoke$arity$variadic = h6__delegate;
 return h6;
@@ -1124,22 +1124,22 @@ return h6;
 * @param {...*} var_args
 */
 om.dom.head = (function() { 
-var head__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.head.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var head__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.head.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var head = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var head = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30363__i = 0, G__30363__a = new Array(arguments.length -  1);
-while (G__30363__i < G__30363__a.length) {G__30363__a[G__30363__i] = arguments[G__30363__i + 1]; ++G__30363__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30363__a,0);
+var G__30874__i = 0, G__30874__a = new Array(arguments.length -  1);
+while (G__30874__i < G__30874__a.length) {G__30874__a[G__30874__i] = arguments[G__30874__i + 1]; ++G__30874__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30874__a,0);
 } 
-return head__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return head__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 head.cljs$lang$maxFixedArity = 1;
-head.cljs$lang$applyTo = (function (arglist__30364){
-var opts__10443__auto__ = cljs.core.first(arglist__30364);
-var children__10444__auto__ = cljs.core.rest(arglist__30364);
-return head__delegate(opts__10443__auto__,children__10444__auto__);
+head.cljs$lang$applyTo = (function (arglist__30875){
+var opts__10509__auto__ = cljs.core.first(arglist__30875);
+var children__10510__auto__ = cljs.core.rest(arglist__30875);
+return head__delegate(opts__10509__auto__,children__10510__auto__);
 });
 head.cljs$core$IFn$_invoke$arity$variadic = head__delegate;
 return head;
@@ -1150,22 +1150,22 @@ return head;
 * @param {...*} var_args
 */
 om.dom.header = (function() { 
-var header__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.header.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var header__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.header.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var header = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var header = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30365__i = 0, G__30365__a = new Array(arguments.length -  1);
-while (G__30365__i < G__30365__a.length) {G__30365__a[G__30365__i] = arguments[G__30365__i + 1]; ++G__30365__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30365__a,0);
+var G__30876__i = 0, G__30876__a = new Array(arguments.length -  1);
+while (G__30876__i < G__30876__a.length) {G__30876__a[G__30876__i] = arguments[G__30876__i + 1]; ++G__30876__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30876__a,0);
 } 
-return header__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return header__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 header.cljs$lang$maxFixedArity = 1;
-header.cljs$lang$applyTo = (function (arglist__30366){
-var opts__10443__auto__ = cljs.core.first(arglist__30366);
-var children__10444__auto__ = cljs.core.rest(arglist__30366);
-return header__delegate(opts__10443__auto__,children__10444__auto__);
+header.cljs$lang$applyTo = (function (arglist__30877){
+var opts__10509__auto__ = cljs.core.first(arglist__30877);
+var children__10510__auto__ = cljs.core.rest(arglist__30877);
+return header__delegate(opts__10509__auto__,children__10510__auto__);
 });
 header.cljs$core$IFn$_invoke$arity$variadic = header__delegate;
 return header;
@@ -1176,22 +1176,22 @@ return header;
 * @param {...*} var_args
 */
 om.dom.hr = (function() { 
-var hr__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.hr.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var hr__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.hr.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var hr = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var hr = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30367__i = 0, G__30367__a = new Array(arguments.length -  1);
-while (G__30367__i < G__30367__a.length) {G__30367__a[G__30367__i] = arguments[G__30367__i + 1]; ++G__30367__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30367__a,0);
+var G__30878__i = 0, G__30878__a = new Array(arguments.length -  1);
+while (G__30878__i < G__30878__a.length) {G__30878__a[G__30878__i] = arguments[G__30878__i + 1]; ++G__30878__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30878__a,0);
 } 
-return hr__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return hr__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 hr.cljs$lang$maxFixedArity = 1;
-hr.cljs$lang$applyTo = (function (arglist__30368){
-var opts__10443__auto__ = cljs.core.first(arglist__30368);
-var children__10444__auto__ = cljs.core.rest(arglist__30368);
-return hr__delegate(opts__10443__auto__,children__10444__auto__);
+hr.cljs$lang$applyTo = (function (arglist__30879){
+var opts__10509__auto__ = cljs.core.first(arglist__30879);
+var children__10510__auto__ = cljs.core.rest(arglist__30879);
+return hr__delegate(opts__10509__auto__,children__10510__auto__);
 });
 hr.cljs$core$IFn$_invoke$arity$variadic = hr__delegate;
 return hr;
@@ -1202,22 +1202,22 @@ return hr;
 * @param {...*} var_args
 */
 om.dom.html = (function() { 
-var html__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.html.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var html__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.html.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var html = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var html = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30369__i = 0, G__30369__a = new Array(arguments.length -  1);
-while (G__30369__i < G__30369__a.length) {G__30369__a[G__30369__i] = arguments[G__30369__i + 1]; ++G__30369__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30369__a,0);
+var G__30880__i = 0, G__30880__a = new Array(arguments.length -  1);
+while (G__30880__i < G__30880__a.length) {G__30880__a[G__30880__i] = arguments[G__30880__i + 1]; ++G__30880__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30880__a,0);
 } 
-return html__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return html__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 html.cljs$lang$maxFixedArity = 1;
-html.cljs$lang$applyTo = (function (arglist__30370){
-var opts__10443__auto__ = cljs.core.first(arglist__30370);
-var children__10444__auto__ = cljs.core.rest(arglist__30370);
-return html__delegate(opts__10443__auto__,children__10444__auto__);
+html.cljs$lang$applyTo = (function (arglist__30881){
+var opts__10509__auto__ = cljs.core.first(arglist__30881);
+var children__10510__auto__ = cljs.core.rest(arglist__30881);
+return html__delegate(opts__10509__auto__,children__10510__auto__);
 });
 html.cljs$core$IFn$_invoke$arity$variadic = html__delegate;
 return html;
@@ -1228,22 +1228,22 @@ return html;
 * @param {...*} var_args
 */
 om.dom.i = (function() { 
-var i__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.i.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var i__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.i.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var i = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var i = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30371__i = 0, G__30371__a = new Array(arguments.length -  1);
-while (G__30371__i < G__30371__a.length) {G__30371__a[G__30371__i] = arguments[G__30371__i + 1]; ++G__30371__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30371__a,0);
+var G__30882__i = 0, G__30882__a = new Array(arguments.length -  1);
+while (G__30882__i < G__30882__a.length) {G__30882__a[G__30882__i] = arguments[G__30882__i + 1]; ++G__30882__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30882__a,0);
 } 
-return i__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return i__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 i.cljs$lang$maxFixedArity = 1;
-i.cljs$lang$applyTo = (function (arglist__30372){
-var opts__10443__auto__ = cljs.core.first(arglist__30372);
-var children__10444__auto__ = cljs.core.rest(arglist__30372);
-return i__delegate(opts__10443__auto__,children__10444__auto__);
+i.cljs$lang$applyTo = (function (arglist__30883){
+var opts__10509__auto__ = cljs.core.first(arglist__30883);
+var children__10510__auto__ = cljs.core.rest(arglist__30883);
+return i__delegate(opts__10509__auto__,children__10510__auto__);
 });
 i.cljs$core$IFn$_invoke$arity$variadic = i__delegate;
 return i;
@@ -1254,22 +1254,22 @@ return i;
 * @param {...*} var_args
 */
 om.dom.iframe = (function() { 
-var iframe__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.iframe.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var iframe__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.iframe.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var iframe = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var iframe = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30373__i = 0, G__30373__a = new Array(arguments.length -  1);
-while (G__30373__i < G__30373__a.length) {G__30373__a[G__30373__i] = arguments[G__30373__i + 1]; ++G__30373__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30373__a,0);
+var G__30884__i = 0, G__30884__a = new Array(arguments.length -  1);
+while (G__30884__i < G__30884__a.length) {G__30884__a[G__30884__i] = arguments[G__30884__i + 1]; ++G__30884__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30884__a,0);
 } 
-return iframe__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return iframe__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 iframe.cljs$lang$maxFixedArity = 1;
-iframe.cljs$lang$applyTo = (function (arglist__30374){
-var opts__10443__auto__ = cljs.core.first(arglist__30374);
-var children__10444__auto__ = cljs.core.rest(arglist__30374);
-return iframe__delegate(opts__10443__auto__,children__10444__auto__);
+iframe.cljs$lang$applyTo = (function (arglist__30885){
+var opts__10509__auto__ = cljs.core.first(arglist__30885);
+var children__10510__auto__ = cljs.core.rest(arglist__30885);
+return iframe__delegate(opts__10509__auto__,children__10510__auto__);
 });
 iframe.cljs$core$IFn$_invoke$arity$variadic = iframe__delegate;
 return iframe;
@@ -1280,22 +1280,22 @@ return iframe;
 * @param {...*} var_args
 */
 om.dom.img = (function() { 
-var img__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.img.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var img__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.img.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var img = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var img = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30375__i = 0, G__30375__a = new Array(arguments.length -  1);
-while (G__30375__i < G__30375__a.length) {G__30375__a[G__30375__i] = arguments[G__30375__i + 1]; ++G__30375__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30375__a,0);
+var G__30886__i = 0, G__30886__a = new Array(arguments.length -  1);
+while (G__30886__i < G__30886__a.length) {G__30886__a[G__30886__i] = arguments[G__30886__i + 1]; ++G__30886__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30886__a,0);
 } 
-return img__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return img__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 img.cljs$lang$maxFixedArity = 1;
-img.cljs$lang$applyTo = (function (arglist__30376){
-var opts__10443__auto__ = cljs.core.first(arglist__30376);
-var children__10444__auto__ = cljs.core.rest(arglist__30376);
-return img__delegate(opts__10443__auto__,children__10444__auto__);
+img.cljs$lang$applyTo = (function (arglist__30887){
+var opts__10509__auto__ = cljs.core.first(arglist__30887);
+var children__10510__auto__ = cljs.core.rest(arglist__30887);
+return img__delegate(opts__10509__auto__,children__10510__auto__);
 });
 img.cljs$core$IFn$_invoke$arity$variadic = img__delegate;
 return img;
@@ -1306,22 +1306,22 @@ return img;
 * @param {...*} var_args
 */
 om.dom.ins = (function() { 
-var ins__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.ins.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var ins__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.ins.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var ins = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var ins = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30377__i = 0, G__30377__a = new Array(arguments.length -  1);
-while (G__30377__i < G__30377__a.length) {G__30377__a[G__30377__i] = arguments[G__30377__i + 1]; ++G__30377__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30377__a,0);
+var G__30888__i = 0, G__30888__a = new Array(arguments.length -  1);
+while (G__30888__i < G__30888__a.length) {G__30888__a[G__30888__i] = arguments[G__30888__i + 1]; ++G__30888__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30888__a,0);
 } 
-return ins__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return ins__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 ins.cljs$lang$maxFixedArity = 1;
-ins.cljs$lang$applyTo = (function (arglist__30378){
-var opts__10443__auto__ = cljs.core.first(arglist__30378);
-var children__10444__auto__ = cljs.core.rest(arglist__30378);
-return ins__delegate(opts__10443__auto__,children__10444__auto__);
+ins.cljs$lang$applyTo = (function (arglist__30889){
+var opts__10509__auto__ = cljs.core.first(arglist__30889);
+var children__10510__auto__ = cljs.core.rest(arglist__30889);
+return ins__delegate(opts__10509__auto__,children__10510__auto__);
 });
 ins.cljs$core$IFn$_invoke$arity$variadic = ins__delegate;
 return ins;
@@ -1332,22 +1332,22 @@ return ins;
 * @param {...*} var_args
 */
 om.dom.kbd = (function() { 
-var kbd__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.kbd.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var kbd__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.kbd.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var kbd = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var kbd = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30379__i = 0, G__30379__a = new Array(arguments.length -  1);
-while (G__30379__i < G__30379__a.length) {G__30379__a[G__30379__i] = arguments[G__30379__i + 1]; ++G__30379__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30379__a,0);
+var G__30890__i = 0, G__30890__a = new Array(arguments.length -  1);
+while (G__30890__i < G__30890__a.length) {G__30890__a[G__30890__i] = arguments[G__30890__i + 1]; ++G__30890__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30890__a,0);
 } 
-return kbd__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return kbd__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 kbd.cljs$lang$maxFixedArity = 1;
-kbd.cljs$lang$applyTo = (function (arglist__30380){
-var opts__10443__auto__ = cljs.core.first(arglist__30380);
-var children__10444__auto__ = cljs.core.rest(arglist__30380);
-return kbd__delegate(opts__10443__auto__,children__10444__auto__);
+kbd.cljs$lang$applyTo = (function (arglist__30891){
+var opts__10509__auto__ = cljs.core.first(arglist__30891);
+var children__10510__auto__ = cljs.core.rest(arglist__30891);
+return kbd__delegate(opts__10509__auto__,children__10510__auto__);
 });
 kbd.cljs$core$IFn$_invoke$arity$variadic = kbd__delegate;
 return kbd;
@@ -1358,22 +1358,22 @@ return kbd;
 * @param {...*} var_args
 */
 om.dom.keygen = (function() { 
-var keygen__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.keygen.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var keygen__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.keygen.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var keygen = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var keygen = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30381__i = 0, G__30381__a = new Array(arguments.length -  1);
-while (G__30381__i < G__30381__a.length) {G__30381__a[G__30381__i] = arguments[G__30381__i + 1]; ++G__30381__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30381__a,0);
+var G__30892__i = 0, G__30892__a = new Array(arguments.length -  1);
+while (G__30892__i < G__30892__a.length) {G__30892__a[G__30892__i] = arguments[G__30892__i + 1]; ++G__30892__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30892__a,0);
 } 
-return keygen__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return keygen__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 keygen.cljs$lang$maxFixedArity = 1;
-keygen.cljs$lang$applyTo = (function (arglist__30382){
-var opts__10443__auto__ = cljs.core.first(arglist__30382);
-var children__10444__auto__ = cljs.core.rest(arglist__30382);
-return keygen__delegate(opts__10443__auto__,children__10444__auto__);
+keygen.cljs$lang$applyTo = (function (arglist__30893){
+var opts__10509__auto__ = cljs.core.first(arglist__30893);
+var children__10510__auto__ = cljs.core.rest(arglist__30893);
+return keygen__delegate(opts__10509__auto__,children__10510__auto__);
 });
 keygen.cljs$core$IFn$_invoke$arity$variadic = keygen__delegate;
 return keygen;
@@ -1384,22 +1384,22 @@ return keygen;
 * @param {...*} var_args
 */
 om.dom.label = (function() { 
-var label__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.label.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var label__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.label.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var label = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var label = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30383__i = 0, G__30383__a = new Array(arguments.length -  1);
-while (G__30383__i < G__30383__a.length) {G__30383__a[G__30383__i] = arguments[G__30383__i + 1]; ++G__30383__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30383__a,0);
+var G__30894__i = 0, G__30894__a = new Array(arguments.length -  1);
+while (G__30894__i < G__30894__a.length) {G__30894__a[G__30894__i] = arguments[G__30894__i + 1]; ++G__30894__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30894__a,0);
 } 
-return label__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return label__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 label.cljs$lang$maxFixedArity = 1;
-label.cljs$lang$applyTo = (function (arglist__30384){
-var opts__10443__auto__ = cljs.core.first(arglist__30384);
-var children__10444__auto__ = cljs.core.rest(arglist__30384);
-return label__delegate(opts__10443__auto__,children__10444__auto__);
+label.cljs$lang$applyTo = (function (arglist__30895){
+var opts__10509__auto__ = cljs.core.first(arglist__30895);
+var children__10510__auto__ = cljs.core.rest(arglist__30895);
+return label__delegate(opts__10509__auto__,children__10510__auto__);
 });
 label.cljs$core$IFn$_invoke$arity$variadic = label__delegate;
 return label;
@@ -1410,22 +1410,22 @@ return label;
 * @param {...*} var_args
 */
 om.dom.legend = (function() { 
-var legend__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.legend.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var legend__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.legend.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var legend = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var legend = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30385__i = 0, G__30385__a = new Array(arguments.length -  1);
-while (G__30385__i < G__30385__a.length) {G__30385__a[G__30385__i] = arguments[G__30385__i + 1]; ++G__30385__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30385__a,0);
+var G__30896__i = 0, G__30896__a = new Array(arguments.length -  1);
+while (G__30896__i < G__30896__a.length) {G__30896__a[G__30896__i] = arguments[G__30896__i + 1]; ++G__30896__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30896__a,0);
 } 
-return legend__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return legend__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 legend.cljs$lang$maxFixedArity = 1;
-legend.cljs$lang$applyTo = (function (arglist__30386){
-var opts__10443__auto__ = cljs.core.first(arglist__30386);
-var children__10444__auto__ = cljs.core.rest(arglist__30386);
-return legend__delegate(opts__10443__auto__,children__10444__auto__);
+legend.cljs$lang$applyTo = (function (arglist__30897){
+var opts__10509__auto__ = cljs.core.first(arglist__30897);
+var children__10510__auto__ = cljs.core.rest(arglist__30897);
+return legend__delegate(opts__10509__auto__,children__10510__auto__);
 });
 legend.cljs$core$IFn$_invoke$arity$variadic = legend__delegate;
 return legend;
@@ -1436,22 +1436,22 @@ return legend;
 * @param {...*} var_args
 */
 om.dom.li = (function() { 
-var li__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.li.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var li__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.li.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var li = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var li = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30387__i = 0, G__30387__a = new Array(arguments.length -  1);
-while (G__30387__i < G__30387__a.length) {G__30387__a[G__30387__i] = arguments[G__30387__i + 1]; ++G__30387__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30387__a,0);
+var G__30898__i = 0, G__30898__a = new Array(arguments.length -  1);
+while (G__30898__i < G__30898__a.length) {G__30898__a[G__30898__i] = arguments[G__30898__i + 1]; ++G__30898__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30898__a,0);
 } 
-return li__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return li__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 li.cljs$lang$maxFixedArity = 1;
-li.cljs$lang$applyTo = (function (arglist__30388){
-var opts__10443__auto__ = cljs.core.first(arglist__30388);
-var children__10444__auto__ = cljs.core.rest(arglist__30388);
-return li__delegate(opts__10443__auto__,children__10444__auto__);
+li.cljs$lang$applyTo = (function (arglist__30899){
+var opts__10509__auto__ = cljs.core.first(arglist__30899);
+var children__10510__auto__ = cljs.core.rest(arglist__30899);
+return li__delegate(opts__10509__auto__,children__10510__auto__);
 });
 li.cljs$core$IFn$_invoke$arity$variadic = li__delegate;
 return li;
@@ -1462,22 +1462,22 @@ return li;
 * @param {...*} var_args
 */
 om.dom.link = (function() { 
-var link__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.link.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var link__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.link.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var link = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var link = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30389__i = 0, G__30389__a = new Array(arguments.length -  1);
-while (G__30389__i < G__30389__a.length) {G__30389__a[G__30389__i] = arguments[G__30389__i + 1]; ++G__30389__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30389__a,0);
+var G__30900__i = 0, G__30900__a = new Array(arguments.length -  1);
+while (G__30900__i < G__30900__a.length) {G__30900__a[G__30900__i] = arguments[G__30900__i + 1]; ++G__30900__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30900__a,0);
 } 
-return link__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return link__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 link.cljs$lang$maxFixedArity = 1;
-link.cljs$lang$applyTo = (function (arglist__30390){
-var opts__10443__auto__ = cljs.core.first(arglist__30390);
-var children__10444__auto__ = cljs.core.rest(arglist__30390);
-return link__delegate(opts__10443__auto__,children__10444__auto__);
+link.cljs$lang$applyTo = (function (arglist__30901){
+var opts__10509__auto__ = cljs.core.first(arglist__30901);
+var children__10510__auto__ = cljs.core.rest(arglist__30901);
+return link__delegate(opts__10509__auto__,children__10510__auto__);
 });
 link.cljs$core$IFn$_invoke$arity$variadic = link__delegate;
 return link;
@@ -1488,22 +1488,22 @@ return link;
 * @param {...*} var_args
 */
 om.dom.main = (function() { 
-var main__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.main.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var main__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.main.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var main = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var main = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30391__i = 0, G__30391__a = new Array(arguments.length -  1);
-while (G__30391__i < G__30391__a.length) {G__30391__a[G__30391__i] = arguments[G__30391__i + 1]; ++G__30391__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30391__a,0);
+var G__30902__i = 0, G__30902__a = new Array(arguments.length -  1);
+while (G__30902__i < G__30902__a.length) {G__30902__a[G__30902__i] = arguments[G__30902__i + 1]; ++G__30902__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30902__a,0);
 } 
-return main__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return main__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 main.cljs$lang$maxFixedArity = 1;
-main.cljs$lang$applyTo = (function (arglist__30392){
-var opts__10443__auto__ = cljs.core.first(arglist__30392);
-var children__10444__auto__ = cljs.core.rest(arglist__30392);
-return main__delegate(opts__10443__auto__,children__10444__auto__);
+main.cljs$lang$applyTo = (function (arglist__30903){
+var opts__10509__auto__ = cljs.core.first(arglist__30903);
+var children__10510__auto__ = cljs.core.rest(arglist__30903);
+return main__delegate(opts__10509__auto__,children__10510__auto__);
 });
 main.cljs$core$IFn$_invoke$arity$variadic = main__delegate;
 return main;
@@ -1514,22 +1514,22 @@ return main;
 * @param {...*} var_args
 */
 om.dom.map = (function() { 
-var map__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.map.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var map__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.map.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var map = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var map = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30393__i = 0, G__30393__a = new Array(arguments.length -  1);
-while (G__30393__i < G__30393__a.length) {G__30393__a[G__30393__i] = arguments[G__30393__i + 1]; ++G__30393__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30393__a,0);
+var G__30904__i = 0, G__30904__a = new Array(arguments.length -  1);
+while (G__30904__i < G__30904__a.length) {G__30904__a[G__30904__i] = arguments[G__30904__i + 1]; ++G__30904__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30904__a,0);
 } 
-return map__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return map__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 map.cljs$lang$maxFixedArity = 1;
-map.cljs$lang$applyTo = (function (arglist__30394){
-var opts__10443__auto__ = cljs.core.first(arglist__30394);
-var children__10444__auto__ = cljs.core.rest(arglist__30394);
-return map__delegate(opts__10443__auto__,children__10444__auto__);
+map.cljs$lang$applyTo = (function (arglist__30905){
+var opts__10509__auto__ = cljs.core.first(arglist__30905);
+var children__10510__auto__ = cljs.core.rest(arglist__30905);
+return map__delegate(opts__10509__auto__,children__10510__auto__);
 });
 map.cljs$core$IFn$_invoke$arity$variadic = map__delegate;
 return map;
@@ -1540,22 +1540,22 @@ return map;
 * @param {...*} var_args
 */
 om.dom.mark = (function() { 
-var mark__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.mark.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var mark__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.mark.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var mark = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var mark = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30395__i = 0, G__30395__a = new Array(arguments.length -  1);
-while (G__30395__i < G__30395__a.length) {G__30395__a[G__30395__i] = arguments[G__30395__i + 1]; ++G__30395__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30395__a,0);
+var G__30906__i = 0, G__30906__a = new Array(arguments.length -  1);
+while (G__30906__i < G__30906__a.length) {G__30906__a[G__30906__i] = arguments[G__30906__i + 1]; ++G__30906__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30906__a,0);
 } 
-return mark__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return mark__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 mark.cljs$lang$maxFixedArity = 1;
-mark.cljs$lang$applyTo = (function (arglist__30396){
-var opts__10443__auto__ = cljs.core.first(arglist__30396);
-var children__10444__auto__ = cljs.core.rest(arglist__30396);
-return mark__delegate(opts__10443__auto__,children__10444__auto__);
+mark.cljs$lang$applyTo = (function (arglist__30907){
+var opts__10509__auto__ = cljs.core.first(arglist__30907);
+var children__10510__auto__ = cljs.core.rest(arglist__30907);
+return mark__delegate(opts__10509__auto__,children__10510__auto__);
 });
 mark.cljs$core$IFn$_invoke$arity$variadic = mark__delegate;
 return mark;
@@ -1566,22 +1566,22 @@ return mark;
 * @param {...*} var_args
 */
 om.dom.marquee = (function() { 
-var marquee__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.marquee.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var marquee__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.marquee.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var marquee = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var marquee = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30397__i = 0, G__30397__a = new Array(arguments.length -  1);
-while (G__30397__i < G__30397__a.length) {G__30397__a[G__30397__i] = arguments[G__30397__i + 1]; ++G__30397__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30397__a,0);
+var G__30908__i = 0, G__30908__a = new Array(arguments.length -  1);
+while (G__30908__i < G__30908__a.length) {G__30908__a[G__30908__i] = arguments[G__30908__i + 1]; ++G__30908__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30908__a,0);
 } 
-return marquee__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return marquee__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 marquee.cljs$lang$maxFixedArity = 1;
-marquee.cljs$lang$applyTo = (function (arglist__30398){
-var opts__10443__auto__ = cljs.core.first(arglist__30398);
-var children__10444__auto__ = cljs.core.rest(arglist__30398);
-return marquee__delegate(opts__10443__auto__,children__10444__auto__);
+marquee.cljs$lang$applyTo = (function (arglist__30909){
+var opts__10509__auto__ = cljs.core.first(arglist__30909);
+var children__10510__auto__ = cljs.core.rest(arglist__30909);
+return marquee__delegate(opts__10509__auto__,children__10510__auto__);
 });
 marquee.cljs$core$IFn$_invoke$arity$variadic = marquee__delegate;
 return marquee;
@@ -1592,22 +1592,22 @@ return marquee;
 * @param {...*} var_args
 */
 om.dom.menu = (function() { 
-var menu__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.menu.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var menu__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.menu.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var menu = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var menu = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30399__i = 0, G__30399__a = new Array(arguments.length -  1);
-while (G__30399__i < G__30399__a.length) {G__30399__a[G__30399__i] = arguments[G__30399__i + 1]; ++G__30399__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30399__a,0);
+var G__30910__i = 0, G__30910__a = new Array(arguments.length -  1);
+while (G__30910__i < G__30910__a.length) {G__30910__a[G__30910__i] = arguments[G__30910__i + 1]; ++G__30910__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30910__a,0);
 } 
-return menu__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return menu__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 menu.cljs$lang$maxFixedArity = 1;
-menu.cljs$lang$applyTo = (function (arglist__30400){
-var opts__10443__auto__ = cljs.core.first(arglist__30400);
-var children__10444__auto__ = cljs.core.rest(arglist__30400);
-return menu__delegate(opts__10443__auto__,children__10444__auto__);
+menu.cljs$lang$applyTo = (function (arglist__30911){
+var opts__10509__auto__ = cljs.core.first(arglist__30911);
+var children__10510__auto__ = cljs.core.rest(arglist__30911);
+return menu__delegate(opts__10509__auto__,children__10510__auto__);
 });
 menu.cljs$core$IFn$_invoke$arity$variadic = menu__delegate;
 return menu;
@@ -1618,22 +1618,22 @@ return menu;
 * @param {...*} var_args
 */
 om.dom.menuitem = (function() { 
-var menuitem__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.menuitem.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var menuitem__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.menuitem.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var menuitem = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var menuitem = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30401__i = 0, G__30401__a = new Array(arguments.length -  1);
-while (G__30401__i < G__30401__a.length) {G__30401__a[G__30401__i] = arguments[G__30401__i + 1]; ++G__30401__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30401__a,0);
+var G__30912__i = 0, G__30912__a = new Array(arguments.length -  1);
+while (G__30912__i < G__30912__a.length) {G__30912__a[G__30912__i] = arguments[G__30912__i + 1]; ++G__30912__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30912__a,0);
 } 
-return menuitem__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return menuitem__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 menuitem.cljs$lang$maxFixedArity = 1;
-menuitem.cljs$lang$applyTo = (function (arglist__30402){
-var opts__10443__auto__ = cljs.core.first(arglist__30402);
-var children__10444__auto__ = cljs.core.rest(arglist__30402);
-return menuitem__delegate(opts__10443__auto__,children__10444__auto__);
+menuitem.cljs$lang$applyTo = (function (arglist__30913){
+var opts__10509__auto__ = cljs.core.first(arglist__30913);
+var children__10510__auto__ = cljs.core.rest(arglist__30913);
+return menuitem__delegate(opts__10509__auto__,children__10510__auto__);
 });
 menuitem.cljs$core$IFn$_invoke$arity$variadic = menuitem__delegate;
 return menuitem;
@@ -1644,22 +1644,22 @@ return menuitem;
 * @param {...*} var_args
 */
 om.dom.meta = (function() { 
-var meta__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.meta.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var meta__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.meta.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var meta = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var meta = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30403__i = 0, G__30403__a = new Array(arguments.length -  1);
-while (G__30403__i < G__30403__a.length) {G__30403__a[G__30403__i] = arguments[G__30403__i + 1]; ++G__30403__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30403__a,0);
+var G__30914__i = 0, G__30914__a = new Array(arguments.length -  1);
+while (G__30914__i < G__30914__a.length) {G__30914__a[G__30914__i] = arguments[G__30914__i + 1]; ++G__30914__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30914__a,0);
 } 
-return meta__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return meta__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 meta.cljs$lang$maxFixedArity = 1;
-meta.cljs$lang$applyTo = (function (arglist__30404){
-var opts__10443__auto__ = cljs.core.first(arglist__30404);
-var children__10444__auto__ = cljs.core.rest(arglist__30404);
-return meta__delegate(opts__10443__auto__,children__10444__auto__);
+meta.cljs$lang$applyTo = (function (arglist__30915){
+var opts__10509__auto__ = cljs.core.first(arglist__30915);
+var children__10510__auto__ = cljs.core.rest(arglist__30915);
+return meta__delegate(opts__10509__auto__,children__10510__auto__);
 });
 meta.cljs$core$IFn$_invoke$arity$variadic = meta__delegate;
 return meta;
@@ -1670,22 +1670,22 @@ return meta;
 * @param {...*} var_args
 */
 om.dom.meter = (function() { 
-var meter__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.meter.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var meter__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.meter.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var meter = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var meter = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30405__i = 0, G__30405__a = new Array(arguments.length -  1);
-while (G__30405__i < G__30405__a.length) {G__30405__a[G__30405__i] = arguments[G__30405__i + 1]; ++G__30405__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30405__a,0);
+var G__30916__i = 0, G__30916__a = new Array(arguments.length -  1);
+while (G__30916__i < G__30916__a.length) {G__30916__a[G__30916__i] = arguments[G__30916__i + 1]; ++G__30916__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30916__a,0);
 } 
-return meter__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return meter__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 meter.cljs$lang$maxFixedArity = 1;
-meter.cljs$lang$applyTo = (function (arglist__30406){
-var opts__10443__auto__ = cljs.core.first(arglist__30406);
-var children__10444__auto__ = cljs.core.rest(arglist__30406);
-return meter__delegate(opts__10443__auto__,children__10444__auto__);
+meter.cljs$lang$applyTo = (function (arglist__30917){
+var opts__10509__auto__ = cljs.core.first(arglist__30917);
+var children__10510__auto__ = cljs.core.rest(arglist__30917);
+return meter__delegate(opts__10509__auto__,children__10510__auto__);
 });
 meter.cljs$core$IFn$_invoke$arity$variadic = meter__delegate;
 return meter;
@@ -1696,22 +1696,22 @@ return meter;
 * @param {...*} var_args
 */
 om.dom.nav = (function() { 
-var nav__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.nav.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var nav__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.nav.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var nav = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var nav = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30407__i = 0, G__30407__a = new Array(arguments.length -  1);
-while (G__30407__i < G__30407__a.length) {G__30407__a[G__30407__i] = arguments[G__30407__i + 1]; ++G__30407__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30407__a,0);
+var G__30918__i = 0, G__30918__a = new Array(arguments.length -  1);
+while (G__30918__i < G__30918__a.length) {G__30918__a[G__30918__i] = arguments[G__30918__i + 1]; ++G__30918__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30918__a,0);
 } 
-return nav__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return nav__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 nav.cljs$lang$maxFixedArity = 1;
-nav.cljs$lang$applyTo = (function (arglist__30408){
-var opts__10443__auto__ = cljs.core.first(arglist__30408);
-var children__10444__auto__ = cljs.core.rest(arglist__30408);
-return nav__delegate(opts__10443__auto__,children__10444__auto__);
+nav.cljs$lang$applyTo = (function (arglist__30919){
+var opts__10509__auto__ = cljs.core.first(arglist__30919);
+var children__10510__auto__ = cljs.core.rest(arglist__30919);
+return nav__delegate(opts__10509__auto__,children__10510__auto__);
 });
 nav.cljs$core$IFn$_invoke$arity$variadic = nav__delegate;
 return nav;
@@ -1722,22 +1722,22 @@ return nav;
 * @param {...*} var_args
 */
 om.dom.noscript = (function() { 
-var noscript__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.noscript.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var noscript__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.noscript.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var noscript = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var noscript = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30409__i = 0, G__30409__a = new Array(arguments.length -  1);
-while (G__30409__i < G__30409__a.length) {G__30409__a[G__30409__i] = arguments[G__30409__i + 1]; ++G__30409__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30409__a,0);
+var G__30920__i = 0, G__30920__a = new Array(arguments.length -  1);
+while (G__30920__i < G__30920__a.length) {G__30920__a[G__30920__i] = arguments[G__30920__i + 1]; ++G__30920__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30920__a,0);
 } 
-return noscript__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return noscript__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 noscript.cljs$lang$maxFixedArity = 1;
-noscript.cljs$lang$applyTo = (function (arglist__30410){
-var opts__10443__auto__ = cljs.core.first(arglist__30410);
-var children__10444__auto__ = cljs.core.rest(arglist__30410);
-return noscript__delegate(opts__10443__auto__,children__10444__auto__);
+noscript.cljs$lang$applyTo = (function (arglist__30921){
+var opts__10509__auto__ = cljs.core.first(arglist__30921);
+var children__10510__auto__ = cljs.core.rest(arglist__30921);
+return noscript__delegate(opts__10509__auto__,children__10510__auto__);
 });
 noscript.cljs$core$IFn$_invoke$arity$variadic = noscript__delegate;
 return noscript;
@@ -1748,22 +1748,22 @@ return noscript;
 * @param {...*} var_args
 */
 om.dom.object = (function() { 
-var object__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.object.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var object__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.object.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var object = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var object = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30411__i = 0, G__30411__a = new Array(arguments.length -  1);
-while (G__30411__i < G__30411__a.length) {G__30411__a[G__30411__i] = arguments[G__30411__i + 1]; ++G__30411__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30411__a,0);
+var G__30922__i = 0, G__30922__a = new Array(arguments.length -  1);
+while (G__30922__i < G__30922__a.length) {G__30922__a[G__30922__i] = arguments[G__30922__i + 1]; ++G__30922__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30922__a,0);
 } 
-return object__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return object__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 object.cljs$lang$maxFixedArity = 1;
-object.cljs$lang$applyTo = (function (arglist__30412){
-var opts__10443__auto__ = cljs.core.first(arglist__30412);
-var children__10444__auto__ = cljs.core.rest(arglist__30412);
-return object__delegate(opts__10443__auto__,children__10444__auto__);
+object.cljs$lang$applyTo = (function (arglist__30923){
+var opts__10509__auto__ = cljs.core.first(arglist__30923);
+var children__10510__auto__ = cljs.core.rest(arglist__30923);
+return object__delegate(opts__10509__auto__,children__10510__auto__);
 });
 object.cljs$core$IFn$_invoke$arity$variadic = object__delegate;
 return object;
@@ -1774,22 +1774,22 @@ return object;
 * @param {...*} var_args
 */
 om.dom.ol = (function() { 
-var ol__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.ol.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var ol__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.ol.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var ol = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var ol = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30413__i = 0, G__30413__a = new Array(arguments.length -  1);
-while (G__30413__i < G__30413__a.length) {G__30413__a[G__30413__i] = arguments[G__30413__i + 1]; ++G__30413__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30413__a,0);
+var G__30924__i = 0, G__30924__a = new Array(arguments.length -  1);
+while (G__30924__i < G__30924__a.length) {G__30924__a[G__30924__i] = arguments[G__30924__i + 1]; ++G__30924__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30924__a,0);
 } 
-return ol__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return ol__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 ol.cljs$lang$maxFixedArity = 1;
-ol.cljs$lang$applyTo = (function (arglist__30414){
-var opts__10443__auto__ = cljs.core.first(arglist__30414);
-var children__10444__auto__ = cljs.core.rest(arglist__30414);
-return ol__delegate(opts__10443__auto__,children__10444__auto__);
+ol.cljs$lang$applyTo = (function (arglist__30925){
+var opts__10509__auto__ = cljs.core.first(arglist__30925);
+var children__10510__auto__ = cljs.core.rest(arglist__30925);
+return ol__delegate(opts__10509__auto__,children__10510__auto__);
 });
 ol.cljs$core$IFn$_invoke$arity$variadic = ol__delegate;
 return ol;
@@ -1800,22 +1800,22 @@ return ol;
 * @param {...*} var_args
 */
 om.dom.optgroup = (function() { 
-var optgroup__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.optgroup.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var optgroup__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.optgroup.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var optgroup = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var optgroup = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30415__i = 0, G__30415__a = new Array(arguments.length -  1);
-while (G__30415__i < G__30415__a.length) {G__30415__a[G__30415__i] = arguments[G__30415__i + 1]; ++G__30415__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30415__a,0);
+var G__30926__i = 0, G__30926__a = new Array(arguments.length -  1);
+while (G__30926__i < G__30926__a.length) {G__30926__a[G__30926__i] = arguments[G__30926__i + 1]; ++G__30926__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30926__a,0);
 } 
-return optgroup__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return optgroup__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 optgroup.cljs$lang$maxFixedArity = 1;
-optgroup.cljs$lang$applyTo = (function (arglist__30416){
-var opts__10443__auto__ = cljs.core.first(arglist__30416);
-var children__10444__auto__ = cljs.core.rest(arglist__30416);
-return optgroup__delegate(opts__10443__auto__,children__10444__auto__);
+optgroup.cljs$lang$applyTo = (function (arglist__30927){
+var opts__10509__auto__ = cljs.core.first(arglist__30927);
+var children__10510__auto__ = cljs.core.rest(arglist__30927);
+return optgroup__delegate(opts__10509__auto__,children__10510__auto__);
 });
 optgroup.cljs$core$IFn$_invoke$arity$variadic = optgroup__delegate;
 return optgroup;
@@ -1826,22 +1826,22 @@ return optgroup;
 * @param {...*} var_args
 */
 om.dom.output = (function() { 
-var output__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.output.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var output__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.output.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var output = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var output = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30417__i = 0, G__30417__a = new Array(arguments.length -  1);
-while (G__30417__i < G__30417__a.length) {G__30417__a[G__30417__i] = arguments[G__30417__i + 1]; ++G__30417__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30417__a,0);
+var G__30928__i = 0, G__30928__a = new Array(arguments.length -  1);
+while (G__30928__i < G__30928__a.length) {G__30928__a[G__30928__i] = arguments[G__30928__i + 1]; ++G__30928__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30928__a,0);
 } 
-return output__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return output__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 output.cljs$lang$maxFixedArity = 1;
-output.cljs$lang$applyTo = (function (arglist__30418){
-var opts__10443__auto__ = cljs.core.first(arglist__30418);
-var children__10444__auto__ = cljs.core.rest(arglist__30418);
-return output__delegate(opts__10443__auto__,children__10444__auto__);
+output.cljs$lang$applyTo = (function (arglist__30929){
+var opts__10509__auto__ = cljs.core.first(arglist__30929);
+var children__10510__auto__ = cljs.core.rest(arglist__30929);
+return output__delegate(opts__10509__auto__,children__10510__auto__);
 });
 output.cljs$core$IFn$_invoke$arity$variadic = output__delegate;
 return output;
@@ -1852,22 +1852,22 @@ return output;
 * @param {...*} var_args
 */
 om.dom.p = (function() { 
-var p__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.p.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var p__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.p.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var p = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var p = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30419__i = 0, G__30419__a = new Array(arguments.length -  1);
-while (G__30419__i < G__30419__a.length) {G__30419__a[G__30419__i] = arguments[G__30419__i + 1]; ++G__30419__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30419__a,0);
+var G__30930__i = 0, G__30930__a = new Array(arguments.length -  1);
+while (G__30930__i < G__30930__a.length) {G__30930__a[G__30930__i] = arguments[G__30930__i + 1]; ++G__30930__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30930__a,0);
 } 
-return p__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return p__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 p.cljs$lang$maxFixedArity = 1;
-p.cljs$lang$applyTo = (function (arglist__30420){
-var opts__10443__auto__ = cljs.core.first(arglist__30420);
-var children__10444__auto__ = cljs.core.rest(arglist__30420);
-return p__delegate(opts__10443__auto__,children__10444__auto__);
+p.cljs$lang$applyTo = (function (arglist__30931){
+var opts__10509__auto__ = cljs.core.first(arglist__30931);
+var children__10510__auto__ = cljs.core.rest(arglist__30931);
+return p__delegate(opts__10509__auto__,children__10510__auto__);
 });
 p.cljs$core$IFn$_invoke$arity$variadic = p__delegate;
 return p;
@@ -1878,22 +1878,22 @@ return p;
 * @param {...*} var_args
 */
 om.dom.param = (function() { 
-var param__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.param.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var param__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.param.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var param = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var param = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30421__i = 0, G__30421__a = new Array(arguments.length -  1);
-while (G__30421__i < G__30421__a.length) {G__30421__a[G__30421__i] = arguments[G__30421__i + 1]; ++G__30421__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30421__a,0);
+var G__30932__i = 0, G__30932__a = new Array(arguments.length -  1);
+while (G__30932__i < G__30932__a.length) {G__30932__a[G__30932__i] = arguments[G__30932__i + 1]; ++G__30932__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30932__a,0);
 } 
-return param__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return param__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 param.cljs$lang$maxFixedArity = 1;
-param.cljs$lang$applyTo = (function (arglist__30422){
-var opts__10443__auto__ = cljs.core.first(arglist__30422);
-var children__10444__auto__ = cljs.core.rest(arglist__30422);
-return param__delegate(opts__10443__auto__,children__10444__auto__);
+param.cljs$lang$applyTo = (function (arglist__30933){
+var opts__10509__auto__ = cljs.core.first(arglist__30933);
+var children__10510__auto__ = cljs.core.rest(arglist__30933);
+return param__delegate(opts__10509__auto__,children__10510__auto__);
 });
 param.cljs$core$IFn$_invoke$arity$variadic = param__delegate;
 return param;
@@ -1904,22 +1904,22 @@ return param;
 * @param {...*} var_args
 */
 om.dom.pre = (function() { 
-var pre__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.pre.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var pre__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.pre.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var pre = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var pre = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30423__i = 0, G__30423__a = new Array(arguments.length -  1);
-while (G__30423__i < G__30423__a.length) {G__30423__a[G__30423__i] = arguments[G__30423__i + 1]; ++G__30423__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30423__a,0);
+var G__30934__i = 0, G__30934__a = new Array(arguments.length -  1);
+while (G__30934__i < G__30934__a.length) {G__30934__a[G__30934__i] = arguments[G__30934__i + 1]; ++G__30934__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30934__a,0);
 } 
-return pre__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return pre__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 pre.cljs$lang$maxFixedArity = 1;
-pre.cljs$lang$applyTo = (function (arglist__30424){
-var opts__10443__auto__ = cljs.core.first(arglist__30424);
-var children__10444__auto__ = cljs.core.rest(arglist__30424);
-return pre__delegate(opts__10443__auto__,children__10444__auto__);
+pre.cljs$lang$applyTo = (function (arglist__30935){
+var opts__10509__auto__ = cljs.core.first(arglist__30935);
+var children__10510__auto__ = cljs.core.rest(arglist__30935);
+return pre__delegate(opts__10509__auto__,children__10510__auto__);
 });
 pre.cljs$core$IFn$_invoke$arity$variadic = pre__delegate;
 return pre;
@@ -1930,22 +1930,22 @@ return pre;
 * @param {...*} var_args
 */
 om.dom.progress = (function() { 
-var progress__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.progress.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var progress__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.progress.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var progress = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var progress = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30425__i = 0, G__30425__a = new Array(arguments.length -  1);
-while (G__30425__i < G__30425__a.length) {G__30425__a[G__30425__i] = arguments[G__30425__i + 1]; ++G__30425__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30425__a,0);
+var G__30936__i = 0, G__30936__a = new Array(arguments.length -  1);
+while (G__30936__i < G__30936__a.length) {G__30936__a[G__30936__i] = arguments[G__30936__i + 1]; ++G__30936__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30936__a,0);
 } 
-return progress__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return progress__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 progress.cljs$lang$maxFixedArity = 1;
-progress.cljs$lang$applyTo = (function (arglist__30426){
-var opts__10443__auto__ = cljs.core.first(arglist__30426);
-var children__10444__auto__ = cljs.core.rest(arglist__30426);
-return progress__delegate(opts__10443__auto__,children__10444__auto__);
+progress.cljs$lang$applyTo = (function (arglist__30937){
+var opts__10509__auto__ = cljs.core.first(arglist__30937);
+var children__10510__auto__ = cljs.core.rest(arglist__30937);
+return progress__delegate(opts__10509__auto__,children__10510__auto__);
 });
 progress.cljs$core$IFn$_invoke$arity$variadic = progress__delegate;
 return progress;
@@ -1956,22 +1956,22 @@ return progress;
 * @param {...*} var_args
 */
 om.dom.q = (function() { 
-var q__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.q.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var q__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.q.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var q = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var q = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30427__i = 0, G__30427__a = new Array(arguments.length -  1);
-while (G__30427__i < G__30427__a.length) {G__30427__a[G__30427__i] = arguments[G__30427__i + 1]; ++G__30427__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30427__a,0);
+var G__30938__i = 0, G__30938__a = new Array(arguments.length -  1);
+while (G__30938__i < G__30938__a.length) {G__30938__a[G__30938__i] = arguments[G__30938__i + 1]; ++G__30938__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30938__a,0);
 } 
-return q__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return q__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 q.cljs$lang$maxFixedArity = 1;
-q.cljs$lang$applyTo = (function (arglist__30428){
-var opts__10443__auto__ = cljs.core.first(arglist__30428);
-var children__10444__auto__ = cljs.core.rest(arglist__30428);
-return q__delegate(opts__10443__auto__,children__10444__auto__);
+q.cljs$lang$applyTo = (function (arglist__30939){
+var opts__10509__auto__ = cljs.core.first(arglist__30939);
+var children__10510__auto__ = cljs.core.rest(arglist__30939);
+return q__delegate(opts__10509__auto__,children__10510__auto__);
 });
 q.cljs$core$IFn$_invoke$arity$variadic = q__delegate;
 return q;
@@ -1982,22 +1982,22 @@ return q;
 * @param {...*} var_args
 */
 om.dom.rp = (function() { 
-var rp__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.rp.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var rp__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.rp.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var rp = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var rp = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30429__i = 0, G__30429__a = new Array(arguments.length -  1);
-while (G__30429__i < G__30429__a.length) {G__30429__a[G__30429__i] = arguments[G__30429__i + 1]; ++G__30429__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30429__a,0);
+var G__30940__i = 0, G__30940__a = new Array(arguments.length -  1);
+while (G__30940__i < G__30940__a.length) {G__30940__a[G__30940__i] = arguments[G__30940__i + 1]; ++G__30940__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30940__a,0);
 } 
-return rp__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return rp__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 rp.cljs$lang$maxFixedArity = 1;
-rp.cljs$lang$applyTo = (function (arglist__30430){
-var opts__10443__auto__ = cljs.core.first(arglist__30430);
-var children__10444__auto__ = cljs.core.rest(arglist__30430);
-return rp__delegate(opts__10443__auto__,children__10444__auto__);
+rp.cljs$lang$applyTo = (function (arglist__30941){
+var opts__10509__auto__ = cljs.core.first(arglist__30941);
+var children__10510__auto__ = cljs.core.rest(arglist__30941);
+return rp__delegate(opts__10509__auto__,children__10510__auto__);
 });
 rp.cljs$core$IFn$_invoke$arity$variadic = rp__delegate;
 return rp;
@@ -2008,22 +2008,22 @@ return rp;
 * @param {...*} var_args
 */
 om.dom.rt = (function() { 
-var rt__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.rt.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var rt__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.rt.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var rt = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var rt = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30431__i = 0, G__30431__a = new Array(arguments.length -  1);
-while (G__30431__i < G__30431__a.length) {G__30431__a[G__30431__i] = arguments[G__30431__i + 1]; ++G__30431__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30431__a,0);
+var G__30942__i = 0, G__30942__a = new Array(arguments.length -  1);
+while (G__30942__i < G__30942__a.length) {G__30942__a[G__30942__i] = arguments[G__30942__i + 1]; ++G__30942__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30942__a,0);
 } 
-return rt__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return rt__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 rt.cljs$lang$maxFixedArity = 1;
-rt.cljs$lang$applyTo = (function (arglist__30432){
-var opts__10443__auto__ = cljs.core.first(arglist__30432);
-var children__10444__auto__ = cljs.core.rest(arglist__30432);
-return rt__delegate(opts__10443__auto__,children__10444__auto__);
+rt.cljs$lang$applyTo = (function (arglist__30943){
+var opts__10509__auto__ = cljs.core.first(arglist__30943);
+var children__10510__auto__ = cljs.core.rest(arglist__30943);
+return rt__delegate(opts__10509__auto__,children__10510__auto__);
 });
 rt.cljs$core$IFn$_invoke$arity$variadic = rt__delegate;
 return rt;
@@ -2034,22 +2034,22 @@ return rt;
 * @param {...*} var_args
 */
 om.dom.ruby = (function() { 
-var ruby__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.ruby.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var ruby__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.ruby.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var ruby = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var ruby = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30433__i = 0, G__30433__a = new Array(arguments.length -  1);
-while (G__30433__i < G__30433__a.length) {G__30433__a[G__30433__i] = arguments[G__30433__i + 1]; ++G__30433__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30433__a,0);
+var G__30944__i = 0, G__30944__a = new Array(arguments.length -  1);
+while (G__30944__i < G__30944__a.length) {G__30944__a[G__30944__i] = arguments[G__30944__i + 1]; ++G__30944__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30944__a,0);
 } 
-return ruby__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return ruby__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 ruby.cljs$lang$maxFixedArity = 1;
-ruby.cljs$lang$applyTo = (function (arglist__30434){
-var opts__10443__auto__ = cljs.core.first(arglist__30434);
-var children__10444__auto__ = cljs.core.rest(arglist__30434);
-return ruby__delegate(opts__10443__auto__,children__10444__auto__);
+ruby.cljs$lang$applyTo = (function (arglist__30945){
+var opts__10509__auto__ = cljs.core.first(arglist__30945);
+var children__10510__auto__ = cljs.core.rest(arglist__30945);
+return ruby__delegate(opts__10509__auto__,children__10510__auto__);
 });
 ruby.cljs$core$IFn$_invoke$arity$variadic = ruby__delegate;
 return ruby;
@@ -2060,22 +2060,22 @@ return ruby;
 * @param {...*} var_args
 */
 om.dom.s = (function() { 
-var s__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.s.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var s__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.s.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var s = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var s = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30435__i = 0, G__30435__a = new Array(arguments.length -  1);
-while (G__30435__i < G__30435__a.length) {G__30435__a[G__30435__i] = arguments[G__30435__i + 1]; ++G__30435__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30435__a,0);
+var G__30946__i = 0, G__30946__a = new Array(arguments.length -  1);
+while (G__30946__i < G__30946__a.length) {G__30946__a[G__30946__i] = arguments[G__30946__i + 1]; ++G__30946__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30946__a,0);
 } 
-return s__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return s__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 s.cljs$lang$maxFixedArity = 1;
-s.cljs$lang$applyTo = (function (arglist__30436){
-var opts__10443__auto__ = cljs.core.first(arglist__30436);
-var children__10444__auto__ = cljs.core.rest(arglist__30436);
-return s__delegate(opts__10443__auto__,children__10444__auto__);
+s.cljs$lang$applyTo = (function (arglist__30947){
+var opts__10509__auto__ = cljs.core.first(arglist__30947);
+var children__10510__auto__ = cljs.core.rest(arglist__30947);
+return s__delegate(opts__10509__auto__,children__10510__auto__);
 });
 s.cljs$core$IFn$_invoke$arity$variadic = s__delegate;
 return s;
@@ -2086,22 +2086,22 @@ return s;
 * @param {...*} var_args
 */
 om.dom.samp = (function() { 
-var samp__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.samp.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var samp__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.samp.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var samp = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var samp = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30437__i = 0, G__30437__a = new Array(arguments.length -  1);
-while (G__30437__i < G__30437__a.length) {G__30437__a[G__30437__i] = arguments[G__30437__i + 1]; ++G__30437__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30437__a,0);
+var G__30948__i = 0, G__30948__a = new Array(arguments.length -  1);
+while (G__30948__i < G__30948__a.length) {G__30948__a[G__30948__i] = arguments[G__30948__i + 1]; ++G__30948__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30948__a,0);
 } 
-return samp__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return samp__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 samp.cljs$lang$maxFixedArity = 1;
-samp.cljs$lang$applyTo = (function (arglist__30438){
-var opts__10443__auto__ = cljs.core.first(arglist__30438);
-var children__10444__auto__ = cljs.core.rest(arglist__30438);
-return samp__delegate(opts__10443__auto__,children__10444__auto__);
+samp.cljs$lang$applyTo = (function (arglist__30949){
+var opts__10509__auto__ = cljs.core.first(arglist__30949);
+var children__10510__auto__ = cljs.core.rest(arglist__30949);
+return samp__delegate(opts__10509__auto__,children__10510__auto__);
 });
 samp.cljs$core$IFn$_invoke$arity$variadic = samp__delegate;
 return samp;
@@ -2112,22 +2112,22 @@ return samp;
 * @param {...*} var_args
 */
 om.dom.script = (function() { 
-var script__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.script.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var script__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.script.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var script = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var script = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30439__i = 0, G__30439__a = new Array(arguments.length -  1);
-while (G__30439__i < G__30439__a.length) {G__30439__a[G__30439__i] = arguments[G__30439__i + 1]; ++G__30439__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30439__a,0);
+var G__30950__i = 0, G__30950__a = new Array(arguments.length -  1);
+while (G__30950__i < G__30950__a.length) {G__30950__a[G__30950__i] = arguments[G__30950__i + 1]; ++G__30950__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30950__a,0);
 } 
-return script__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return script__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 script.cljs$lang$maxFixedArity = 1;
-script.cljs$lang$applyTo = (function (arglist__30440){
-var opts__10443__auto__ = cljs.core.first(arglist__30440);
-var children__10444__auto__ = cljs.core.rest(arglist__30440);
-return script__delegate(opts__10443__auto__,children__10444__auto__);
+script.cljs$lang$applyTo = (function (arglist__30951){
+var opts__10509__auto__ = cljs.core.first(arglist__30951);
+var children__10510__auto__ = cljs.core.rest(arglist__30951);
+return script__delegate(opts__10509__auto__,children__10510__auto__);
 });
 script.cljs$core$IFn$_invoke$arity$variadic = script__delegate;
 return script;
@@ -2138,22 +2138,22 @@ return script;
 * @param {...*} var_args
 */
 om.dom.section = (function() { 
-var section__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.section.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var section__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.section.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var section = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var section = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30441__i = 0, G__30441__a = new Array(arguments.length -  1);
-while (G__30441__i < G__30441__a.length) {G__30441__a[G__30441__i] = arguments[G__30441__i + 1]; ++G__30441__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30441__a,0);
+var G__30952__i = 0, G__30952__a = new Array(arguments.length -  1);
+while (G__30952__i < G__30952__a.length) {G__30952__a[G__30952__i] = arguments[G__30952__i + 1]; ++G__30952__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30952__a,0);
 } 
-return section__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return section__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 section.cljs$lang$maxFixedArity = 1;
-section.cljs$lang$applyTo = (function (arglist__30442){
-var opts__10443__auto__ = cljs.core.first(arglist__30442);
-var children__10444__auto__ = cljs.core.rest(arglist__30442);
-return section__delegate(opts__10443__auto__,children__10444__auto__);
+section.cljs$lang$applyTo = (function (arglist__30953){
+var opts__10509__auto__ = cljs.core.first(arglist__30953);
+var children__10510__auto__ = cljs.core.rest(arglist__30953);
+return section__delegate(opts__10509__auto__,children__10510__auto__);
 });
 section.cljs$core$IFn$_invoke$arity$variadic = section__delegate;
 return section;
@@ -2164,22 +2164,22 @@ return section;
 * @param {...*} var_args
 */
 om.dom.select = (function() { 
-var select__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.select.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var select__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.select.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var select = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var select = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30443__i = 0, G__30443__a = new Array(arguments.length -  1);
-while (G__30443__i < G__30443__a.length) {G__30443__a[G__30443__i] = arguments[G__30443__i + 1]; ++G__30443__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30443__a,0);
+var G__30954__i = 0, G__30954__a = new Array(arguments.length -  1);
+while (G__30954__i < G__30954__a.length) {G__30954__a[G__30954__i] = arguments[G__30954__i + 1]; ++G__30954__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30954__a,0);
 } 
-return select__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return select__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 select.cljs$lang$maxFixedArity = 1;
-select.cljs$lang$applyTo = (function (arglist__30444){
-var opts__10443__auto__ = cljs.core.first(arglist__30444);
-var children__10444__auto__ = cljs.core.rest(arglist__30444);
-return select__delegate(opts__10443__auto__,children__10444__auto__);
+select.cljs$lang$applyTo = (function (arglist__30955){
+var opts__10509__auto__ = cljs.core.first(arglist__30955);
+var children__10510__auto__ = cljs.core.rest(arglist__30955);
+return select__delegate(opts__10509__auto__,children__10510__auto__);
 });
 select.cljs$core$IFn$_invoke$arity$variadic = select__delegate;
 return select;
@@ -2190,22 +2190,22 @@ return select;
 * @param {...*} var_args
 */
 om.dom.small = (function() { 
-var small__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.small.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var small__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.small.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var small = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var small = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30445__i = 0, G__30445__a = new Array(arguments.length -  1);
-while (G__30445__i < G__30445__a.length) {G__30445__a[G__30445__i] = arguments[G__30445__i + 1]; ++G__30445__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30445__a,0);
+var G__30956__i = 0, G__30956__a = new Array(arguments.length -  1);
+while (G__30956__i < G__30956__a.length) {G__30956__a[G__30956__i] = arguments[G__30956__i + 1]; ++G__30956__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30956__a,0);
 } 
-return small__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return small__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 small.cljs$lang$maxFixedArity = 1;
-small.cljs$lang$applyTo = (function (arglist__30446){
-var opts__10443__auto__ = cljs.core.first(arglist__30446);
-var children__10444__auto__ = cljs.core.rest(arglist__30446);
-return small__delegate(opts__10443__auto__,children__10444__auto__);
+small.cljs$lang$applyTo = (function (arglist__30957){
+var opts__10509__auto__ = cljs.core.first(arglist__30957);
+var children__10510__auto__ = cljs.core.rest(arglist__30957);
+return small__delegate(opts__10509__auto__,children__10510__auto__);
 });
 small.cljs$core$IFn$_invoke$arity$variadic = small__delegate;
 return small;
@@ -2216,22 +2216,22 @@ return small;
 * @param {...*} var_args
 */
 om.dom.source = (function() { 
-var source__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.source.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var source__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.source.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var source = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var source = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30447__i = 0, G__30447__a = new Array(arguments.length -  1);
-while (G__30447__i < G__30447__a.length) {G__30447__a[G__30447__i] = arguments[G__30447__i + 1]; ++G__30447__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30447__a,0);
+var G__30958__i = 0, G__30958__a = new Array(arguments.length -  1);
+while (G__30958__i < G__30958__a.length) {G__30958__a[G__30958__i] = arguments[G__30958__i + 1]; ++G__30958__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30958__a,0);
 } 
-return source__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return source__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 source.cljs$lang$maxFixedArity = 1;
-source.cljs$lang$applyTo = (function (arglist__30448){
-var opts__10443__auto__ = cljs.core.first(arglist__30448);
-var children__10444__auto__ = cljs.core.rest(arglist__30448);
-return source__delegate(opts__10443__auto__,children__10444__auto__);
+source.cljs$lang$applyTo = (function (arglist__30959){
+var opts__10509__auto__ = cljs.core.first(arglist__30959);
+var children__10510__auto__ = cljs.core.rest(arglist__30959);
+return source__delegate(opts__10509__auto__,children__10510__auto__);
 });
 source.cljs$core$IFn$_invoke$arity$variadic = source__delegate;
 return source;
@@ -2242,22 +2242,22 @@ return source;
 * @param {...*} var_args
 */
 om.dom.span = (function() { 
-var span__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.span.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var span__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.span.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var span = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var span = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30449__i = 0, G__30449__a = new Array(arguments.length -  1);
-while (G__30449__i < G__30449__a.length) {G__30449__a[G__30449__i] = arguments[G__30449__i + 1]; ++G__30449__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30449__a,0);
+var G__30960__i = 0, G__30960__a = new Array(arguments.length -  1);
+while (G__30960__i < G__30960__a.length) {G__30960__a[G__30960__i] = arguments[G__30960__i + 1]; ++G__30960__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30960__a,0);
 } 
-return span__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return span__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 span.cljs$lang$maxFixedArity = 1;
-span.cljs$lang$applyTo = (function (arglist__30450){
-var opts__10443__auto__ = cljs.core.first(arglist__30450);
-var children__10444__auto__ = cljs.core.rest(arglist__30450);
-return span__delegate(opts__10443__auto__,children__10444__auto__);
+span.cljs$lang$applyTo = (function (arglist__30961){
+var opts__10509__auto__ = cljs.core.first(arglist__30961);
+var children__10510__auto__ = cljs.core.rest(arglist__30961);
+return span__delegate(opts__10509__auto__,children__10510__auto__);
 });
 span.cljs$core$IFn$_invoke$arity$variadic = span__delegate;
 return span;
@@ -2268,22 +2268,22 @@ return span;
 * @param {...*} var_args
 */
 om.dom.strong = (function() { 
-var strong__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.strong.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var strong__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.strong.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var strong = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var strong = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30451__i = 0, G__30451__a = new Array(arguments.length -  1);
-while (G__30451__i < G__30451__a.length) {G__30451__a[G__30451__i] = arguments[G__30451__i + 1]; ++G__30451__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30451__a,0);
+var G__30962__i = 0, G__30962__a = new Array(arguments.length -  1);
+while (G__30962__i < G__30962__a.length) {G__30962__a[G__30962__i] = arguments[G__30962__i + 1]; ++G__30962__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30962__a,0);
 } 
-return strong__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return strong__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 strong.cljs$lang$maxFixedArity = 1;
-strong.cljs$lang$applyTo = (function (arglist__30452){
-var opts__10443__auto__ = cljs.core.first(arglist__30452);
-var children__10444__auto__ = cljs.core.rest(arglist__30452);
-return strong__delegate(opts__10443__auto__,children__10444__auto__);
+strong.cljs$lang$applyTo = (function (arglist__30963){
+var opts__10509__auto__ = cljs.core.first(arglist__30963);
+var children__10510__auto__ = cljs.core.rest(arglist__30963);
+return strong__delegate(opts__10509__auto__,children__10510__auto__);
 });
 strong.cljs$core$IFn$_invoke$arity$variadic = strong__delegate;
 return strong;
@@ -2294,22 +2294,22 @@ return strong;
 * @param {...*} var_args
 */
 om.dom.style = (function() { 
-var style__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.style.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var style__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.style.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var style = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var style = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30453__i = 0, G__30453__a = new Array(arguments.length -  1);
-while (G__30453__i < G__30453__a.length) {G__30453__a[G__30453__i] = arguments[G__30453__i + 1]; ++G__30453__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30453__a,0);
+var G__30964__i = 0, G__30964__a = new Array(arguments.length -  1);
+while (G__30964__i < G__30964__a.length) {G__30964__a[G__30964__i] = arguments[G__30964__i + 1]; ++G__30964__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30964__a,0);
 } 
-return style__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return style__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 style.cljs$lang$maxFixedArity = 1;
-style.cljs$lang$applyTo = (function (arglist__30454){
-var opts__10443__auto__ = cljs.core.first(arglist__30454);
-var children__10444__auto__ = cljs.core.rest(arglist__30454);
-return style__delegate(opts__10443__auto__,children__10444__auto__);
+style.cljs$lang$applyTo = (function (arglist__30965){
+var opts__10509__auto__ = cljs.core.first(arglist__30965);
+var children__10510__auto__ = cljs.core.rest(arglist__30965);
+return style__delegate(opts__10509__auto__,children__10510__auto__);
 });
 style.cljs$core$IFn$_invoke$arity$variadic = style__delegate;
 return style;
@@ -2320,22 +2320,22 @@ return style;
 * @param {...*} var_args
 */
 om.dom.sub = (function() { 
-var sub__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.sub.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var sub__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.sub.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var sub = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var sub = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30455__i = 0, G__30455__a = new Array(arguments.length -  1);
-while (G__30455__i < G__30455__a.length) {G__30455__a[G__30455__i] = arguments[G__30455__i + 1]; ++G__30455__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30455__a,0);
+var G__30966__i = 0, G__30966__a = new Array(arguments.length -  1);
+while (G__30966__i < G__30966__a.length) {G__30966__a[G__30966__i] = arguments[G__30966__i + 1]; ++G__30966__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30966__a,0);
 } 
-return sub__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return sub__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 sub.cljs$lang$maxFixedArity = 1;
-sub.cljs$lang$applyTo = (function (arglist__30456){
-var opts__10443__auto__ = cljs.core.first(arglist__30456);
-var children__10444__auto__ = cljs.core.rest(arglist__30456);
-return sub__delegate(opts__10443__auto__,children__10444__auto__);
+sub.cljs$lang$applyTo = (function (arglist__30967){
+var opts__10509__auto__ = cljs.core.first(arglist__30967);
+var children__10510__auto__ = cljs.core.rest(arglist__30967);
+return sub__delegate(opts__10509__auto__,children__10510__auto__);
 });
 sub.cljs$core$IFn$_invoke$arity$variadic = sub__delegate;
 return sub;
@@ -2346,22 +2346,22 @@ return sub;
 * @param {...*} var_args
 */
 om.dom.summary = (function() { 
-var summary__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.summary.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var summary__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.summary.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var summary = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var summary = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30457__i = 0, G__30457__a = new Array(arguments.length -  1);
-while (G__30457__i < G__30457__a.length) {G__30457__a[G__30457__i] = arguments[G__30457__i + 1]; ++G__30457__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30457__a,0);
+var G__30968__i = 0, G__30968__a = new Array(arguments.length -  1);
+while (G__30968__i < G__30968__a.length) {G__30968__a[G__30968__i] = arguments[G__30968__i + 1]; ++G__30968__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30968__a,0);
 } 
-return summary__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return summary__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 summary.cljs$lang$maxFixedArity = 1;
-summary.cljs$lang$applyTo = (function (arglist__30458){
-var opts__10443__auto__ = cljs.core.first(arglist__30458);
-var children__10444__auto__ = cljs.core.rest(arglist__30458);
-return summary__delegate(opts__10443__auto__,children__10444__auto__);
+summary.cljs$lang$applyTo = (function (arglist__30969){
+var opts__10509__auto__ = cljs.core.first(arglist__30969);
+var children__10510__auto__ = cljs.core.rest(arglist__30969);
+return summary__delegate(opts__10509__auto__,children__10510__auto__);
 });
 summary.cljs$core$IFn$_invoke$arity$variadic = summary__delegate;
 return summary;
@@ -2372,22 +2372,22 @@ return summary;
 * @param {...*} var_args
 */
 om.dom.sup = (function() { 
-var sup__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.sup.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var sup__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.sup.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var sup = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var sup = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30459__i = 0, G__30459__a = new Array(arguments.length -  1);
-while (G__30459__i < G__30459__a.length) {G__30459__a[G__30459__i] = arguments[G__30459__i + 1]; ++G__30459__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30459__a,0);
+var G__30970__i = 0, G__30970__a = new Array(arguments.length -  1);
+while (G__30970__i < G__30970__a.length) {G__30970__a[G__30970__i] = arguments[G__30970__i + 1]; ++G__30970__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30970__a,0);
 } 
-return sup__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return sup__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 sup.cljs$lang$maxFixedArity = 1;
-sup.cljs$lang$applyTo = (function (arglist__30460){
-var opts__10443__auto__ = cljs.core.first(arglist__30460);
-var children__10444__auto__ = cljs.core.rest(arglist__30460);
-return sup__delegate(opts__10443__auto__,children__10444__auto__);
+sup.cljs$lang$applyTo = (function (arglist__30971){
+var opts__10509__auto__ = cljs.core.first(arglist__30971);
+var children__10510__auto__ = cljs.core.rest(arglist__30971);
+return sup__delegate(opts__10509__auto__,children__10510__auto__);
 });
 sup.cljs$core$IFn$_invoke$arity$variadic = sup__delegate;
 return sup;
@@ -2398,22 +2398,22 @@ return sup;
 * @param {...*} var_args
 */
 om.dom.table = (function() { 
-var table__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.table.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var table__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.table.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var table = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var table = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30461__i = 0, G__30461__a = new Array(arguments.length -  1);
-while (G__30461__i < G__30461__a.length) {G__30461__a[G__30461__i] = arguments[G__30461__i + 1]; ++G__30461__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30461__a,0);
+var G__30972__i = 0, G__30972__a = new Array(arguments.length -  1);
+while (G__30972__i < G__30972__a.length) {G__30972__a[G__30972__i] = arguments[G__30972__i + 1]; ++G__30972__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30972__a,0);
 } 
-return table__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return table__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 table.cljs$lang$maxFixedArity = 1;
-table.cljs$lang$applyTo = (function (arglist__30462){
-var opts__10443__auto__ = cljs.core.first(arglist__30462);
-var children__10444__auto__ = cljs.core.rest(arglist__30462);
-return table__delegate(opts__10443__auto__,children__10444__auto__);
+table.cljs$lang$applyTo = (function (arglist__30973){
+var opts__10509__auto__ = cljs.core.first(arglist__30973);
+var children__10510__auto__ = cljs.core.rest(arglist__30973);
+return table__delegate(opts__10509__auto__,children__10510__auto__);
 });
 table.cljs$core$IFn$_invoke$arity$variadic = table__delegate;
 return table;
@@ -2424,22 +2424,22 @@ return table;
 * @param {...*} var_args
 */
 om.dom.tbody = (function() { 
-var tbody__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.tbody.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var tbody__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.tbody.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var tbody = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var tbody = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30463__i = 0, G__30463__a = new Array(arguments.length -  1);
-while (G__30463__i < G__30463__a.length) {G__30463__a[G__30463__i] = arguments[G__30463__i + 1]; ++G__30463__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30463__a,0);
+var G__30974__i = 0, G__30974__a = new Array(arguments.length -  1);
+while (G__30974__i < G__30974__a.length) {G__30974__a[G__30974__i] = arguments[G__30974__i + 1]; ++G__30974__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30974__a,0);
 } 
-return tbody__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return tbody__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 tbody.cljs$lang$maxFixedArity = 1;
-tbody.cljs$lang$applyTo = (function (arglist__30464){
-var opts__10443__auto__ = cljs.core.first(arglist__30464);
-var children__10444__auto__ = cljs.core.rest(arglist__30464);
-return tbody__delegate(opts__10443__auto__,children__10444__auto__);
+tbody.cljs$lang$applyTo = (function (arglist__30975){
+var opts__10509__auto__ = cljs.core.first(arglist__30975);
+var children__10510__auto__ = cljs.core.rest(arglist__30975);
+return tbody__delegate(opts__10509__auto__,children__10510__auto__);
 });
 tbody.cljs$core$IFn$_invoke$arity$variadic = tbody__delegate;
 return tbody;
@@ -2450,22 +2450,22 @@ return tbody;
 * @param {...*} var_args
 */
 om.dom.td = (function() { 
-var td__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.td.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var td__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.td.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var td = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var td = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30465__i = 0, G__30465__a = new Array(arguments.length -  1);
-while (G__30465__i < G__30465__a.length) {G__30465__a[G__30465__i] = arguments[G__30465__i + 1]; ++G__30465__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30465__a,0);
+var G__30976__i = 0, G__30976__a = new Array(arguments.length -  1);
+while (G__30976__i < G__30976__a.length) {G__30976__a[G__30976__i] = arguments[G__30976__i + 1]; ++G__30976__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30976__a,0);
 } 
-return td__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return td__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 td.cljs$lang$maxFixedArity = 1;
-td.cljs$lang$applyTo = (function (arglist__30466){
-var opts__10443__auto__ = cljs.core.first(arglist__30466);
-var children__10444__auto__ = cljs.core.rest(arglist__30466);
-return td__delegate(opts__10443__auto__,children__10444__auto__);
+td.cljs$lang$applyTo = (function (arglist__30977){
+var opts__10509__auto__ = cljs.core.first(arglist__30977);
+var children__10510__auto__ = cljs.core.rest(arglist__30977);
+return td__delegate(opts__10509__auto__,children__10510__auto__);
 });
 td.cljs$core$IFn$_invoke$arity$variadic = td__delegate;
 return td;
@@ -2476,22 +2476,22 @@ return td;
 * @param {...*} var_args
 */
 om.dom.tfoot = (function() { 
-var tfoot__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.tfoot.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var tfoot__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.tfoot.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var tfoot = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var tfoot = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30467__i = 0, G__30467__a = new Array(arguments.length -  1);
-while (G__30467__i < G__30467__a.length) {G__30467__a[G__30467__i] = arguments[G__30467__i + 1]; ++G__30467__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30467__a,0);
+var G__30978__i = 0, G__30978__a = new Array(arguments.length -  1);
+while (G__30978__i < G__30978__a.length) {G__30978__a[G__30978__i] = arguments[G__30978__i + 1]; ++G__30978__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30978__a,0);
 } 
-return tfoot__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return tfoot__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 tfoot.cljs$lang$maxFixedArity = 1;
-tfoot.cljs$lang$applyTo = (function (arglist__30468){
-var opts__10443__auto__ = cljs.core.first(arglist__30468);
-var children__10444__auto__ = cljs.core.rest(arglist__30468);
-return tfoot__delegate(opts__10443__auto__,children__10444__auto__);
+tfoot.cljs$lang$applyTo = (function (arglist__30979){
+var opts__10509__auto__ = cljs.core.first(arglist__30979);
+var children__10510__auto__ = cljs.core.rest(arglist__30979);
+return tfoot__delegate(opts__10509__auto__,children__10510__auto__);
 });
 tfoot.cljs$core$IFn$_invoke$arity$variadic = tfoot__delegate;
 return tfoot;
@@ -2502,22 +2502,22 @@ return tfoot;
 * @param {...*} var_args
 */
 om.dom.th = (function() { 
-var th__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.th.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var th__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.th.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var th = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var th = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30469__i = 0, G__30469__a = new Array(arguments.length -  1);
-while (G__30469__i < G__30469__a.length) {G__30469__a[G__30469__i] = arguments[G__30469__i + 1]; ++G__30469__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30469__a,0);
+var G__30980__i = 0, G__30980__a = new Array(arguments.length -  1);
+while (G__30980__i < G__30980__a.length) {G__30980__a[G__30980__i] = arguments[G__30980__i + 1]; ++G__30980__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30980__a,0);
 } 
-return th__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return th__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 th.cljs$lang$maxFixedArity = 1;
-th.cljs$lang$applyTo = (function (arglist__30470){
-var opts__10443__auto__ = cljs.core.first(arglist__30470);
-var children__10444__auto__ = cljs.core.rest(arglist__30470);
-return th__delegate(opts__10443__auto__,children__10444__auto__);
+th.cljs$lang$applyTo = (function (arglist__30981){
+var opts__10509__auto__ = cljs.core.first(arglist__30981);
+var children__10510__auto__ = cljs.core.rest(arglist__30981);
+return th__delegate(opts__10509__auto__,children__10510__auto__);
 });
 th.cljs$core$IFn$_invoke$arity$variadic = th__delegate;
 return th;
@@ -2528,22 +2528,22 @@ return th;
 * @param {...*} var_args
 */
 om.dom.thead = (function() { 
-var thead__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.thead.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var thead__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.thead.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var thead = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var thead = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30471__i = 0, G__30471__a = new Array(arguments.length -  1);
-while (G__30471__i < G__30471__a.length) {G__30471__a[G__30471__i] = arguments[G__30471__i + 1]; ++G__30471__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30471__a,0);
+var G__30982__i = 0, G__30982__a = new Array(arguments.length -  1);
+while (G__30982__i < G__30982__a.length) {G__30982__a[G__30982__i] = arguments[G__30982__i + 1]; ++G__30982__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30982__a,0);
 } 
-return thead__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return thead__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 thead.cljs$lang$maxFixedArity = 1;
-thead.cljs$lang$applyTo = (function (arglist__30472){
-var opts__10443__auto__ = cljs.core.first(arglist__30472);
-var children__10444__auto__ = cljs.core.rest(arglist__30472);
-return thead__delegate(opts__10443__auto__,children__10444__auto__);
+thead.cljs$lang$applyTo = (function (arglist__30983){
+var opts__10509__auto__ = cljs.core.first(arglist__30983);
+var children__10510__auto__ = cljs.core.rest(arglist__30983);
+return thead__delegate(opts__10509__auto__,children__10510__auto__);
 });
 thead.cljs$core$IFn$_invoke$arity$variadic = thead__delegate;
 return thead;
@@ -2554,22 +2554,22 @@ return thead;
 * @param {...*} var_args
 */
 om.dom.time = (function() { 
-var time__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.time.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var time__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.time.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var time = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var time = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30473__i = 0, G__30473__a = new Array(arguments.length -  1);
-while (G__30473__i < G__30473__a.length) {G__30473__a[G__30473__i] = arguments[G__30473__i + 1]; ++G__30473__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30473__a,0);
+var G__30984__i = 0, G__30984__a = new Array(arguments.length -  1);
+while (G__30984__i < G__30984__a.length) {G__30984__a[G__30984__i] = arguments[G__30984__i + 1]; ++G__30984__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30984__a,0);
 } 
-return time__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return time__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 time.cljs$lang$maxFixedArity = 1;
-time.cljs$lang$applyTo = (function (arglist__30474){
-var opts__10443__auto__ = cljs.core.first(arglist__30474);
-var children__10444__auto__ = cljs.core.rest(arglist__30474);
-return time__delegate(opts__10443__auto__,children__10444__auto__);
+time.cljs$lang$applyTo = (function (arglist__30985){
+var opts__10509__auto__ = cljs.core.first(arglist__30985);
+var children__10510__auto__ = cljs.core.rest(arglist__30985);
+return time__delegate(opts__10509__auto__,children__10510__auto__);
 });
 time.cljs$core$IFn$_invoke$arity$variadic = time__delegate;
 return time;
@@ -2580,22 +2580,22 @@ return time;
 * @param {...*} var_args
 */
 om.dom.title = (function() { 
-var title__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.title.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var title__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.title.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var title = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var title = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30475__i = 0, G__30475__a = new Array(arguments.length -  1);
-while (G__30475__i < G__30475__a.length) {G__30475__a[G__30475__i] = arguments[G__30475__i + 1]; ++G__30475__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30475__a,0);
+var G__30986__i = 0, G__30986__a = new Array(arguments.length -  1);
+while (G__30986__i < G__30986__a.length) {G__30986__a[G__30986__i] = arguments[G__30986__i + 1]; ++G__30986__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30986__a,0);
 } 
-return title__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return title__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 title.cljs$lang$maxFixedArity = 1;
-title.cljs$lang$applyTo = (function (arglist__30476){
-var opts__10443__auto__ = cljs.core.first(arglist__30476);
-var children__10444__auto__ = cljs.core.rest(arglist__30476);
-return title__delegate(opts__10443__auto__,children__10444__auto__);
+title.cljs$lang$applyTo = (function (arglist__30987){
+var opts__10509__auto__ = cljs.core.first(arglist__30987);
+var children__10510__auto__ = cljs.core.rest(arglist__30987);
+return title__delegate(opts__10509__auto__,children__10510__auto__);
 });
 title.cljs$core$IFn$_invoke$arity$variadic = title__delegate;
 return title;
@@ -2606,22 +2606,22 @@ return title;
 * @param {...*} var_args
 */
 om.dom.tr = (function() { 
-var tr__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.tr.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var tr__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.tr.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var tr = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var tr = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30477__i = 0, G__30477__a = new Array(arguments.length -  1);
-while (G__30477__i < G__30477__a.length) {G__30477__a[G__30477__i] = arguments[G__30477__i + 1]; ++G__30477__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30477__a,0);
+var G__30988__i = 0, G__30988__a = new Array(arguments.length -  1);
+while (G__30988__i < G__30988__a.length) {G__30988__a[G__30988__i] = arguments[G__30988__i + 1]; ++G__30988__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30988__a,0);
 } 
-return tr__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return tr__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 tr.cljs$lang$maxFixedArity = 1;
-tr.cljs$lang$applyTo = (function (arglist__30478){
-var opts__10443__auto__ = cljs.core.first(arglist__30478);
-var children__10444__auto__ = cljs.core.rest(arglist__30478);
-return tr__delegate(opts__10443__auto__,children__10444__auto__);
+tr.cljs$lang$applyTo = (function (arglist__30989){
+var opts__10509__auto__ = cljs.core.first(arglist__30989);
+var children__10510__auto__ = cljs.core.rest(arglist__30989);
+return tr__delegate(opts__10509__auto__,children__10510__auto__);
 });
 tr.cljs$core$IFn$_invoke$arity$variadic = tr__delegate;
 return tr;
@@ -2632,22 +2632,22 @@ return tr;
 * @param {...*} var_args
 */
 om.dom.track = (function() { 
-var track__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.track.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var track__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.track.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var track = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var track = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30479__i = 0, G__30479__a = new Array(arguments.length -  1);
-while (G__30479__i < G__30479__a.length) {G__30479__a[G__30479__i] = arguments[G__30479__i + 1]; ++G__30479__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30479__a,0);
+var G__30990__i = 0, G__30990__a = new Array(arguments.length -  1);
+while (G__30990__i < G__30990__a.length) {G__30990__a[G__30990__i] = arguments[G__30990__i + 1]; ++G__30990__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30990__a,0);
 } 
-return track__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return track__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 track.cljs$lang$maxFixedArity = 1;
-track.cljs$lang$applyTo = (function (arglist__30480){
-var opts__10443__auto__ = cljs.core.first(arglist__30480);
-var children__10444__auto__ = cljs.core.rest(arglist__30480);
-return track__delegate(opts__10443__auto__,children__10444__auto__);
+track.cljs$lang$applyTo = (function (arglist__30991){
+var opts__10509__auto__ = cljs.core.first(arglist__30991);
+var children__10510__auto__ = cljs.core.rest(arglist__30991);
+return track__delegate(opts__10509__auto__,children__10510__auto__);
 });
 track.cljs$core$IFn$_invoke$arity$variadic = track__delegate;
 return track;
@@ -2658,22 +2658,22 @@ return track;
 * @param {...*} var_args
 */
 om.dom.u = (function() { 
-var u__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.u.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var u__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.u.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var u = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var u = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30481__i = 0, G__30481__a = new Array(arguments.length -  1);
-while (G__30481__i < G__30481__a.length) {G__30481__a[G__30481__i] = arguments[G__30481__i + 1]; ++G__30481__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30481__a,0);
+var G__30992__i = 0, G__30992__a = new Array(arguments.length -  1);
+while (G__30992__i < G__30992__a.length) {G__30992__a[G__30992__i] = arguments[G__30992__i + 1]; ++G__30992__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30992__a,0);
 } 
-return u__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return u__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 u.cljs$lang$maxFixedArity = 1;
-u.cljs$lang$applyTo = (function (arglist__30482){
-var opts__10443__auto__ = cljs.core.first(arglist__30482);
-var children__10444__auto__ = cljs.core.rest(arglist__30482);
-return u__delegate(opts__10443__auto__,children__10444__auto__);
+u.cljs$lang$applyTo = (function (arglist__30993){
+var opts__10509__auto__ = cljs.core.first(arglist__30993);
+var children__10510__auto__ = cljs.core.rest(arglist__30993);
+return u__delegate(opts__10509__auto__,children__10510__auto__);
 });
 u.cljs$core$IFn$_invoke$arity$variadic = u__delegate;
 return u;
@@ -2684,22 +2684,22 @@ return u;
 * @param {...*} var_args
 */
 om.dom.ul = (function() { 
-var ul__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.ul.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var ul__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.ul.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var ul = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var ul = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30483__i = 0, G__30483__a = new Array(arguments.length -  1);
-while (G__30483__i < G__30483__a.length) {G__30483__a[G__30483__i] = arguments[G__30483__i + 1]; ++G__30483__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30483__a,0);
+var G__30994__i = 0, G__30994__a = new Array(arguments.length -  1);
+while (G__30994__i < G__30994__a.length) {G__30994__a[G__30994__i] = arguments[G__30994__i + 1]; ++G__30994__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30994__a,0);
 } 
-return ul__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return ul__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 ul.cljs$lang$maxFixedArity = 1;
-ul.cljs$lang$applyTo = (function (arglist__30484){
-var opts__10443__auto__ = cljs.core.first(arglist__30484);
-var children__10444__auto__ = cljs.core.rest(arglist__30484);
-return ul__delegate(opts__10443__auto__,children__10444__auto__);
+ul.cljs$lang$applyTo = (function (arglist__30995){
+var opts__10509__auto__ = cljs.core.first(arglist__30995);
+var children__10510__auto__ = cljs.core.rest(arglist__30995);
+return ul__delegate(opts__10509__auto__,children__10510__auto__);
 });
 ul.cljs$core$IFn$_invoke$arity$variadic = ul__delegate;
 return ul;
@@ -2710,22 +2710,22 @@ return ul;
 * @param {...*} var_args
 */
 om.dom.var$ = (function() { 
-var var$__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.var$.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var var$__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.var$.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var var$ = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var var$ = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30485__i = 0, G__30485__a = new Array(arguments.length -  1);
-while (G__30485__i < G__30485__a.length) {G__30485__a[G__30485__i] = arguments[G__30485__i + 1]; ++G__30485__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30485__a,0);
+var G__30996__i = 0, G__30996__a = new Array(arguments.length -  1);
+while (G__30996__i < G__30996__a.length) {G__30996__a[G__30996__i] = arguments[G__30996__i + 1]; ++G__30996__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30996__a,0);
 } 
-return var$__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return var$__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 var$.cljs$lang$maxFixedArity = 1;
-var$.cljs$lang$applyTo = (function (arglist__30486){
-var opts__10443__auto__ = cljs.core.first(arglist__30486);
-var children__10444__auto__ = cljs.core.rest(arglist__30486);
-return var$__delegate(opts__10443__auto__,children__10444__auto__);
+var$.cljs$lang$applyTo = (function (arglist__30997){
+var opts__10509__auto__ = cljs.core.first(arglist__30997);
+var children__10510__auto__ = cljs.core.rest(arglist__30997);
+return var$__delegate(opts__10509__auto__,children__10510__auto__);
 });
 var$.cljs$core$IFn$_invoke$arity$variadic = var$__delegate;
 return var$;
@@ -2736,22 +2736,22 @@ return var$;
 * @param {...*} var_args
 */
 om.dom.video = (function() { 
-var video__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.video.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var video__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.video.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var video = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var video = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30487__i = 0, G__30487__a = new Array(arguments.length -  1);
-while (G__30487__i < G__30487__a.length) {G__30487__a[G__30487__i] = arguments[G__30487__i + 1]; ++G__30487__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30487__a,0);
+var G__30998__i = 0, G__30998__a = new Array(arguments.length -  1);
+while (G__30998__i < G__30998__a.length) {G__30998__a[G__30998__i] = arguments[G__30998__i + 1]; ++G__30998__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__30998__a,0);
 } 
-return video__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return video__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 video.cljs$lang$maxFixedArity = 1;
-video.cljs$lang$applyTo = (function (arglist__30488){
-var opts__10443__auto__ = cljs.core.first(arglist__30488);
-var children__10444__auto__ = cljs.core.rest(arglist__30488);
-return video__delegate(opts__10443__auto__,children__10444__auto__);
+video.cljs$lang$applyTo = (function (arglist__30999){
+var opts__10509__auto__ = cljs.core.first(arglist__30999);
+var children__10510__auto__ = cljs.core.rest(arglist__30999);
+return video__delegate(opts__10509__auto__,children__10510__auto__);
 });
 video.cljs$core$IFn$_invoke$arity$variadic = video__delegate;
 return video;
@@ -2762,22 +2762,22 @@ return video;
 * @param {...*} var_args
 */
 om.dom.wbr = (function() { 
-var wbr__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.wbr.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var wbr__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.wbr.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var wbr = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var wbr = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30489__i = 0, G__30489__a = new Array(arguments.length -  1);
-while (G__30489__i < G__30489__a.length) {G__30489__a[G__30489__i] = arguments[G__30489__i + 1]; ++G__30489__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30489__a,0);
+var G__31000__i = 0, G__31000__a = new Array(arguments.length -  1);
+while (G__31000__i < G__31000__a.length) {G__31000__a[G__31000__i] = arguments[G__31000__i + 1]; ++G__31000__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__31000__a,0);
 } 
-return wbr__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return wbr__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 wbr.cljs$lang$maxFixedArity = 1;
-wbr.cljs$lang$applyTo = (function (arglist__30490){
-var opts__10443__auto__ = cljs.core.first(arglist__30490);
-var children__10444__auto__ = cljs.core.rest(arglist__30490);
-return wbr__delegate(opts__10443__auto__,children__10444__auto__);
+wbr.cljs$lang$applyTo = (function (arglist__31001){
+var opts__10509__auto__ = cljs.core.first(arglist__31001);
+var children__10510__auto__ = cljs.core.rest(arglist__31001);
+return wbr__delegate(opts__10509__auto__,children__10510__auto__);
 });
 wbr.cljs$core$IFn$_invoke$arity$variadic = wbr__delegate;
 return wbr;
@@ -2788,22 +2788,22 @@ return wbr;
 * @param {...*} var_args
 */
 om.dom.circle = (function() { 
-var circle__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.circle.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var circle__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.circle.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var circle = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var circle = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30491__i = 0, G__30491__a = new Array(arguments.length -  1);
-while (G__30491__i < G__30491__a.length) {G__30491__a[G__30491__i] = arguments[G__30491__i + 1]; ++G__30491__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30491__a,0);
+var G__31002__i = 0, G__31002__a = new Array(arguments.length -  1);
+while (G__31002__i < G__31002__a.length) {G__31002__a[G__31002__i] = arguments[G__31002__i + 1]; ++G__31002__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__31002__a,0);
 } 
-return circle__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return circle__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 circle.cljs$lang$maxFixedArity = 1;
-circle.cljs$lang$applyTo = (function (arglist__30492){
-var opts__10443__auto__ = cljs.core.first(arglist__30492);
-var children__10444__auto__ = cljs.core.rest(arglist__30492);
-return circle__delegate(opts__10443__auto__,children__10444__auto__);
+circle.cljs$lang$applyTo = (function (arglist__31003){
+var opts__10509__auto__ = cljs.core.first(arglist__31003);
+var children__10510__auto__ = cljs.core.rest(arglist__31003);
+return circle__delegate(opts__10509__auto__,children__10510__auto__);
 });
 circle.cljs$core$IFn$_invoke$arity$variadic = circle__delegate;
 return circle;
@@ -2814,22 +2814,22 @@ return circle;
 * @param {...*} var_args
 */
 om.dom.ellipse = (function() { 
-var ellipse__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.ellipse.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var ellipse__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.ellipse.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var ellipse = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var ellipse = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30493__i = 0, G__30493__a = new Array(arguments.length -  1);
-while (G__30493__i < G__30493__a.length) {G__30493__a[G__30493__i] = arguments[G__30493__i + 1]; ++G__30493__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30493__a,0);
+var G__31004__i = 0, G__31004__a = new Array(arguments.length -  1);
+while (G__31004__i < G__31004__a.length) {G__31004__a[G__31004__i] = arguments[G__31004__i + 1]; ++G__31004__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__31004__a,0);
 } 
-return ellipse__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return ellipse__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 ellipse.cljs$lang$maxFixedArity = 1;
-ellipse.cljs$lang$applyTo = (function (arglist__30494){
-var opts__10443__auto__ = cljs.core.first(arglist__30494);
-var children__10444__auto__ = cljs.core.rest(arglist__30494);
-return ellipse__delegate(opts__10443__auto__,children__10444__auto__);
+ellipse.cljs$lang$applyTo = (function (arglist__31005){
+var opts__10509__auto__ = cljs.core.first(arglist__31005);
+var children__10510__auto__ = cljs.core.rest(arglist__31005);
+return ellipse__delegate(opts__10509__auto__,children__10510__auto__);
 });
 ellipse.cljs$core$IFn$_invoke$arity$variadic = ellipse__delegate;
 return ellipse;
@@ -2840,22 +2840,22 @@ return ellipse;
 * @param {...*} var_args
 */
 om.dom.g = (function() { 
-var g__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.g.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var g__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.g.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var g = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var g = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30495__i = 0, G__30495__a = new Array(arguments.length -  1);
-while (G__30495__i < G__30495__a.length) {G__30495__a[G__30495__i] = arguments[G__30495__i + 1]; ++G__30495__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30495__a,0);
+var G__31006__i = 0, G__31006__a = new Array(arguments.length -  1);
+while (G__31006__i < G__31006__a.length) {G__31006__a[G__31006__i] = arguments[G__31006__i + 1]; ++G__31006__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__31006__a,0);
 } 
-return g__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return g__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 g.cljs$lang$maxFixedArity = 1;
-g.cljs$lang$applyTo = (function (arglist__30496){
-var opts__10443__auto__ = cljs.core.first(arglist__30496);
-var children__10444__auto__ = cljs.core.rest(arglist__30496);
-return g__delegate(opts__10443__auto__,children__10444__auto__);
+g.cljs$lang$applyTo = (function (arglist__31007){
+var opts__10509__auto__ = cljs.core.first(arglist__31007);
+var children__10510__auto__ = cljs.core.rest(arglist__31007);
+return g__delegate(opts__10509__auto__,children__10510__auto__);
 });
 g.cljs$core$IFn$_invoke$arity$variadic = g__delegate;
 return g;
@@ -2866,22 +2866,22 @@ return g;
 * @param {...*} var_args
 */
 om.dom.line = (function() { 
-var line__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.line.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var line__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.line.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var line = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var line = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30497__i = 0, G__30497__a = new Array(arguments.length -  1);
-while (G__30497__i < G__30497__a.length) {G__30497__a[G__30497__i] = arguments[G__30497__i + 1]; ++G__30497__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30497__a,0);
+var G__31008__i = 0, G__31008__a = new Array(arguments.length -  1);
+while (G__31008__i < G__31008__a.length) {G__31008__a[G__31008__i] = arguments[G__31008__i + 1]; ++G__31008__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__31008__a,0);
 } 
-return line__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return line__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 line.cljs$lang$maxFixedArity = 1;
-line.cljs$lang$applyTo = (function (arglist__30498){
-var opts__10443__auto__ = cljs.core.first(arglist__30498);
-var children__10444__auto__ = cljs.core.rest(arglist__30498);
-return line__delegate(opts__10443__auto__,children__10444__auto__);
+line.cljs$lang$applyTo = (function (arglist__31009){
+var opts__10509__auto__ = cljs.core.first(arglist__31009);
+var children__10510__auto__ = cljs.core.rest(arglist__31009);
+return line__delegate(opts__10509__auto__,children__10510__auto__);
 });
 line.cljs$core$IFn$_invoke$arity$variadic = line__delegate;
 return line;
@@ -2892,22 +2892,22 @@ return line;
 * @param {...*} var_args
 */
 om.dom.path = (function() { 
-var path__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.path.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var path__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.path.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var path = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var path = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30499__i = 0, G__30499__a = new Array(arguments.length -  1);
-while (G__30499__i < G__30499__a.length) {G__30499__a[G__30499__i] = arguments[G__30499__i + 1]; ++G__30499__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30499__a,0);
+var G__31010__i = 0, G__31010__a = new Array(arguments.length -  1);
+while (G__31010__i < G__31010__a.length) {G__31010__a[G__31010__i] = arguments[G__31010__i + 1]; ++G__31010__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__31010__a,0);
 } 
-return path__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return path__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 path.cljs$lang$maxFixedArity = 1;
-path.cljs$lang$applyTo = (function (arglist__30500){
-var opts__10443__auto__ = cljs.core.first(arglist__30500);
-var children__10444__auto__ = cljs.core.rest(arglist__30500);
-return path__delegate(opts__10443__auto__,children__10444__auto__);
+path.cljs$lang$applyTo = (function (arglist__31011){
+var opts__10509__auto__ = cljs.core.first(arglist__31011);
+var children__10510__auto__ = cljs.core.rest(arglist__31011);
+return path__delegate(opts__10509__auto__,children__10510__auto__);
 });
 path.cljs$core$IFn$_invoke$arity$variadic = path__delegate;
 return path;
@@ -2918,22 +2918,22 @@ return path;
 * @param {...*} var_args
 */
 om.dom.polyline = (function() { 
-var polyline__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.polyline.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var polyline__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.polyline.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var polyline = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var polyline = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30501__i = 0, G__30501__a = new Array(arguments.length -  1);
-while (G__30501__i < G__30501__a.length) {G__30501__a[G__30501__i] = arguments[G__30501__i + 1]; ++G__30501__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30501__a,0);
+var G__31012__i = 0, G__31012__a = new Array(arguments.length -  1);
+while (G__31012__i < G__31012__a.length) {G__31012__a[G__31012__i] = arguments[G__31012__i + 1]; ++G__31012__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__31012__a,0);
 } 
-return polyline__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return polyline__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 polyline.cljs$lang$maxFixedArity = 1;
-polyline.cljs$lang$applyTo = (function (arglist__30502){
-var opts__10443__auto__ = cljs.core.first(arglist__30502);
-var children__10444__auto__ = cljs.core.rest(arglist__30502);
-return polyline__delegate(opts__10443__auto__,children__10444__auto__);
+polyline.cljs$lang$applyTo = (function (arglist__31013){
+var opts__10509__auto__ = cljs.core.first(arglist__31013);
+var children__10510__auto__ = cljs.core.rest(arglist__31013);
+return polyline__delegate(opts__10509__auto__,children__10510__auto__);
 });
 polyline.cljs$core$IFn$_invoke$arity$variadic = polyline__delegate;
 return polyline;
@@ -2944,22 +2944,22 @@ return polyline;
 * @param {...*} var_args
 */
 om.dom.rect = (function() { 
-var rect__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.rect.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var rect__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.rect.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var rect = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var rect = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30503__i = 0, G__30503__a = new Array(arguments.length -  1);
-while (G__30503__i < G__30503__a.length) {G__30503__a[G__30503__i] = arguments[G__30503__i + 1]; ++G__30503__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30503__a,0);
+var G__31014__i = 0, G__31014__a = new Array(arguments.length -  1);
+while (G__31014__i < G__31014__a.length) {G__31014__a[G__31014__i] = arguments[G__31014__i + 1]; ++G__31014__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__31014__a,0);
 } 
-return rect__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return rect__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 rect.cljs$lang$maxFixedArity = 1;
-rect.cljs$lang$applyTo = (function (arglist__30504){
-var opts__10443__auto__ = cljs.core.first(arglist__30504);
-var children__10444__auto__ = cljs.core.rest(arglist__30504);
-return rect__delegate(opts__10443__auto__,children__10444__auto__);
+rect.cljs$lang$applyTo = (function (arglist__31015){
+var opts__10509__auto__ = cljs.core.first(arglist__31015);
+var children__10510__auto__ = cljs.core.rest(arglist__31015);
+return rect__delegate(opts__10509__auto__,children__10510__auto__);
 });
 rect.cljs$core$IFn$_invoke$arity$variadic = rect__delegate;
 return rect;
@@ -2970,22 +2970,22 @@ return rect;
 * @param {...*} var_args
 */
 om.dom.svg = (function() { 
-var svg__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.svg.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var svg__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.svg.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var svg = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var svg = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30505__i = 0, G__30505__a = new Array(arguments.length -  1);
-while (G__30505__i < G__30505__a.length) {G__30505__a[G__30505__i] = arguments[G__30505__i + 1]; ++G__30505__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30505__a,0);
+var G__31016__i = 0, G__31016__a = new Array(arguments.length -  1);
+while (G__31016__i < G__31016__a.length) {G__31016__a[G__31016__i] = arguments[G__31016__i + 1]; ++G__31016__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__31016__a,0);
 } 
-return svg__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return svg__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 svg.cljs$lang$maxFixedArity = 1;
-svg.cljs$lang$applyTo = (function (arglist__30506){
-var opts__10443__auto__ = cljs.core.first(arglist__30506);
-var children__10444__auto__ = cljs.core.rest(arglist__30506);
-return svg__delegate(opts__10443__auto__,children__10444__auto__);
+svg.cljs$lang$applyTo = (function (arglist__31017){
+var opts__10509__auto__ = cljs.core.first(arglist__31017);
+var children__10510__auto__ = cljs.core.rest(arglist__31017);
+return svg__delegate(opts__10509__auto__,children__10510__auto__);
 });
 svg.cljs$core$IFn$_invoke$arity$variadic = svg__delegate;
 return svg;
@@ -2996,22 +2996,22 @@ return svg;
 * @param {...*} var_args
 */
 om.dom.text = (function() { 
-var text__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.text.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var text__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.text.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var text = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var text = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30507__i = 0, G__30507__a = new Array(arguments.length -  1);
-while (G__30507__i < G__30507__a.length) {G__30507__a[G__30507__i] = arguments[G__30507__i + 1]; ++G__30507__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30507__a,0);
+var G__31018__i = 0, G__31018__a = new Array(arguments.length -  1);
+while (G__31018__i < G__31018__a.length) {G__31018__a[G__31018__i] = arguments[G__31018__i + 1]; ++G__31018__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__31018__a,0);
 } 
-return text__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return text__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 text.cljs$lang$maxFixedArity = 1;
-text.cljs$lang$applyTo = (function (arglist__30508){
-var opts__10443__auto__ = cljs.core.first(arglist__30508);
-var children__10444__auto__ = cljs.core.rest(arglist__30508);
-return text__delegate(opts__10443__auto__,children__10444__auto__);
+text.cljs$lang$applyTo = (function (arglist__31019){
+var opts__10509__auto__ = cljs.core.first(arglist__31019);
+var children__10510__auto__ = cljs.core.rest(arglist__31019);
+return text__delegate(opts__10509__auto__,children__10510__auto__);
 });
 text.cljs$core$IFn$_invoke$arity$variadic = text__delegate;
 return text;
@@ -3022,22 +3022,22 @@ return text;
 * @param {...*} var_args
 */
 om.dom.defs = (function() { 
-var defs__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.defs.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var defs__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.defs.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var defs = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var defs = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30509__i = 0, G__30509__a = new Array(arguments.length -  1);
-while (G__30509__i < G__30509__a.length) {G__30509__a[G__30509__i] = arguments[G__30509__i + 1]; ++G__30509__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30509__a,0);
+var G__31020__i = 0, G__31020__a = new Array(arguments.length -  1);
+while (G__31020__i < G__31020__a.length) {G__31020__a[G__31020__i] = arguments[G__31020__i + 1]; ++G__31020__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__31020__a,0);
 } 
-return defs__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return defs__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 defs.cljs$lang$maxFixedArity = 1;
-defs.cljs$lang$applyTo = (function (arglist__30510){
-var opts__10443__auto__ = cljs.core.first(arglist__30510);
-var children__10444__auto__ = cljs.core.rest(arglist__30510);
-return defs__delegate(opts__10443__auto__,children__10444__auto__);
+defs.cljs$lang$applyTo = (function (arglist__31021){
+var opts__10509__auto__ = cljs.core.first(arglist__31021);
+var children__10510__auto__ = cljs.core.rest(arglist__31021);
+return defs__delegate(opts__10509__auto__,children__10510__auto__);
 });
 defs.cljs$core$IFn$_invoke$arity$variadic = defs__delegate;
 return defs;
@@ -3048,22 +3048,22 @@ return defs;
 * @param {...*} var_args
 */
 om.dom.linearGradient = (function() { 
-var linearGradient__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.linearGradient.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var linearGradient__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.linearGradient.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var linearGradient = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var linearGradient = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30511__i = 0, G__30511__a = new Array(arguments.length -  1);
-while (G__30511__i < G__30511__a.length) {G__30511__a[G__30511__i] = arguments[G__30511__i + 1]; ++G__30511__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30511__a,0);
+var G__31022__i = 0, G__31022__a = new Array(arguments.length -  1);
+while (G__31022__i < G__31022__a.length) {G__31022__a[G__31022__i] = arguments[G__31022__i + 1]; ++G__31022__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__31022__a,0);
 } 
-return linearGradient__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return linearGradient__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 linearGradient.cljs$lang$maxFixedArity = 1;
-linearGradient.cljs$lang$applyTo = (function (arglist__30512){
-var opts__10443__auto__ = cljs.core.first(arglist__30512);
-var children__10444__auto__ = cljs.core.rest(arglist__30512);
-return linearGradient__delegate(opts__10443__auto__,children__10444__auto__);
+linearGradient.cljs$lang$applyTo = (function (arglist__31023){
+var opts__10509__auto__ = cljs.core.first(arglist__31023);
+var children__10510__auto__ = cljs.core.rest(arglist__31023);
+return linearGradient__delegate(opts__10509__auto__,children__10510__auto__);
 });
 linearGradient.cljs$core$IFn$_invoke$arity$variadic = linearGradient__delegate;
 return linearGradient;
@@ -3074,22 +3074,22 @@ return linearGradient;
 * @param {...*} var_args
 */
 om.dom.polygon = (function() { 
-var polygon__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.polygon.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var polygon__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.polygon.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var polygon = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var polygon = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30513__i = 0, G__30513__a = new Array(arguments.length -  1);
-while (G__30513__i < G__30513__a.length) {G__30513__a[G__30513__i] = arguments[G__30513__i + 1]; ++G__30513__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30513__a,0);
+var G__31024__i = 0, G__31024__a = new Array(arguments.length -  1);
+while (G__31024__i < G__31024__a.length) {G__31024__a[G__31024__i] = arguments[G__31024__i + 1]; ++G__31024__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__31024__a,0);
 } 
-return polygon__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return polygon__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 polygon.cljs$lang$maxFixedArity = 1;
-polygon.cljs$lang$applyTo = (function (arglist__30514){
-var opts__10443__auto__ = cljs.core.first(arglist__30514);
-var children__10444__auto__ = cljs.core.rest(arglist__30514);
-return polygon__delegate(opts__10443__auto__,children__10444__auto__);
+polygon.cljs$lang$applyTo = (function (arglist__31025){
+var opts__10509__auto__ = cljs.core.first(arglist__31025);
+var children__10510__auto__ = cljs.core.rest(arglist__31025);
+return polygon__delegate(opts__10509__auto__,children__10510__auto__);
 });
 polygon.cljs$core$IFn$_invoke$arity$variadic = polygon__delegate;
 return polygon;
@@ -3100,22 +3100,22 @@ return polygon;
 * @param {...*} var_args
 */
 om.dom.radialGradient = (function() { 
-var radialGradient__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.radialGradient.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var radialGradient__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.radialGradient.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var radialGradient = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var radialGradient = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30515__i = 0, G__30515__a = new Array(arguments.length -  1);
-while (G__30515__i < G__30515__a.length) {G__30515__a[G__30515__i] = arguments[G__30515__i + 1]; ++G__30515__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30515__a,0);
+var G__31026__i = 0, G__31026__a = new Array(arguments.length -  1);
+while (G__31026__i < G__31026__a.length) {G__31026__a[G__31026__i] = arguments[G__31026__i + 1]; ++G__31026__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__31026__a,0);
 } 
-return radialGradient__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return radialGradient__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 radialGradient.cljs$lang$maxFixedArity = 1;
-radialGradient.cljs$lang$applyTo = (function (arglist__30516){
-var opts__10443__auto__ = cljs.core.first(arglist__30516);
-var children__10444__auto__ = cljs.core.rest(arglist__30516);
-return radialGradient__delegate(opts__10443__auto__,children__10444__auto__);
+radialGradient.cljs$lang$applyTo = (function (arglist__31027){
+var opts__10509__auto__ = cljs.core.first(arglist__31027);
+var children__10510__auto__ = cljs.core.rest(arglist__31027);
+return radialGradient__delegate(opts__10509__auto__,children__10510__auto__);
 });
 radialGradient.cljs$core$IFn$_invoke$arity$variadic = radialGradient__delegate;
 return radialGradient;
@@ -3126,22 +3126,22 @@ return radialGradient;
 * @param {...*} var_args
 */
 om.dom.stop = (function() { 
-var stop__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.stop.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var stop__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.stop.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var stop = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var stop = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30517__i = 0, G__30517__a = new Array(arguments.length -  1);
-while (G__30517__i < G__30517__a.length) {G__30517__a[G__30517__i] = arguments[G__30517__i + 1]; ++G__30517__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30517__a,0);
+var G__31028__i = 0, G__31028__a = new Array(arguments.length -  1);
+while (G__31028__i < G__31028__a.length) {G__31028__a[G__31028__i] = arguments[G__31028__i + 1]; ++G__31028__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__31028__a,0);
 } 
-return stop__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return stop__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 stop.cljs$lang$maxFixedArity = 1;
-stop.cljs$lang$applyTo = (function (arglist__30518){
-var opts__10443__auto__ = cljs.core.first(arglist__30518);
-var children__10444__auto__ = cljs.core.rest(arglist__30518);
-return stop__delegate(opts__10443__auto__,children__10444__auto__);
+stop.cljs$lang$applyTo = (function (arglist__31029){
+var opts__10509__auto__ = cljs.core.first(arglist__31029);
+var children__10510__auto__ = cljs.core.rest(arglist__31029);
+return stop__delegate(opts__10509__auto__,children__10510__auto__);
 });
 stop.cljs$core$IFn$_invoke$arity$variadic = stop__delegate;
 return stop;
@@ -3152,38 +3152,38 @@ return stop;
 * @param {...*} var_args
 */
 om.dom.tspan = (function() { 
-var tspan__delegate = function (opts__10443__auto__,children__10444__auto__){
-return React.DOM.tspan.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10443__auto__,children__10444__auto__)));
+var tspan__delegate = function (opts__10509__auto__,children__10510__auto__){
+return React.DOM.tspan.apply(null,cljs.core.into_array.cljs$core$IFn$_invoke$arity$1(cljs.core.cons(opts__10509__auto__,children__10510__auto__)));
 };
-var tspan = function (opts__10443__auto__,var_args){
-var children__10444__auto__ = null;
+var tspan = function (opts__10509__auto__,var_args){
+var children__10510__auto__ = null;
 if (arguments.length > 1) {
-var G__30519__i = 0, G__30519__a = new Array(arguments.length -  1);
-while (G__30519__i < G__30519__a.length) {G__30519__a[G__30519__i] = arguments[G__30519__i + 1]; ++G__30519__i;}
-  children__10444__auto__ = new cljs.core.IndexedSeq(G__30519__a,0);
+var G__31030__i = 0, G__31030__a = new Array(arguments.length -  1);
+while (G__31030__i < G__31030__a.length) {G__31030__a[G__31030__i] = arguments[G__31030__i + 1]; ++G__31030__i;}
+  children__10510__auto__ = new cljs.core.IndexedSeq(G__31030__a,0);
 } 
-return tspan__delegate.call(this,opts__10443__auto__,children__10444__auto__);};
+return tspan__delegate.call(this,opts__10509__auto__,children__10510__auto__);};
 tspan.cljs$lang$maxFixedArity = 1;
-tspan.cljs$lang$applyTo = (function (arglist__30520){
-var opts__10443__auto__ = cljs.core.first(arglist__30520);
-var children__10444__auto__ = cljs.core.rest(arglist__30520);
-return tspan__delegate(opts__10443__auto__,children__10444__auto__);
+tspan.cljs$lang$applyTo = (function (arglist__31031){
+var opts__10509__auto__ = cljs.core.first(arglist__31031);
+var children__10510__auto__ = cljs.core.rest(arglist__31031);
+return tspan__delegate(opts__10509__auto__,children__10510__auto__);
 });
 tspan.cljs$core$IFn$_invoke$arity$variadic = tspan__delegate;
 return tspan;
 })()
 ;
 om.dom.wrap_form_element = (function wrap_form_element(ctor,display_name){
-var G__30528 = (function (){var G__30529 = {"render": (function (){
+var G__31039 = (function (){var G__31040 = {"render": (function (){
 var this$ = this;
 var props = {};
-var G__30531_30535 = props;
-var G__30532_30536 = this$.props;
-var G__30533_30537 = {"children": (this$.props["children"]), "onChange": (this$["onChange"]), "value": (this$.state["value"])};
-goog.object.extend(G__30531_30535,G__30532_30536,G__30533_30537);
+var G__31042_31046 = props;
+var G__31043_31047 = this$.props;
+var G__31044_31048 = {"children": (this$.props["children"]), "onChange": (this$["onChange"]), "value": (this$.state["value"])};
+goog.object.extend(G__31042_31046,G__31043_31047,G__31044_31048);
 
-var G__30534 = props;
-return (ctor.cljs$core$IFn$_invoke$arity$1 ? ctor.cljs$core$IFn$_invoke$arity$1(G__30534) : ctor.call(null,G__30534));
+var G__31045 = props;
+return (ctor.cljs$core$IFn$_invoke$arity$1 ? ctor.cljs$core$IFn$_invoke$arity$1(G__31045) : ctor.call(null,G__31045));
 }), "componentWillReceiveProps": (function (new_props){
 var this$ = this;
 return this$.setState({"value": (new_props["value"])});
@@ -3193,8 +3193,8 @@ var handler = (this$.props["onChange"]);
 if((handler == null)){
 return null;
 } else {
-var G__30530_30538 = e;
-(handler.cljs$core$IFn$_invoke$arity$1 ? handler.cljs$core$IFn$_invoke$arity$1(G__30530_30538) : handler.call(null,G__30530_30538));
+var G__31041_31049 = e;
+(handler.cljs$core$IFn$_invoke$arity$1 ? handler.cljs$core$IFn$_invoke$arity$1(G__31041_31049) : handler.call(null,G__31041_31049));
 
 return this$.setState({"value": e.target.value});
 }
@@ -3204,9 +3204,9 @@ return {"value": (this$.props["value"])};
 }), "getDisplayName": (function (){
 return display_name;
 })};
-return React.createClass(G__30529);
+return React.createClass(G__31040);
 })();
-return React.createFactory(G__30528);
+return React.createFactory(G__31039);
 });
 om.dom.input = om.dom.wrap_form_element(React.DOM.input,"input");
 om.dom.textarea = om.dom.wrap_form_element(React.DOM.textarea,"textarea");
@@ -3215,14 +3215,14 @@ om.dom.option = om.dom.wrap_form_element(React.DOM.option,"option");
 * Equivalent to React.render
 */
 om.dom.render = (function render(component,el){
-var G__30541 = component;
-var G__30542 = el;
-return React.render(G__30541,G__30542);
+var G__31052 = component;
+var G__31053 = el;
+return React.render(G__31052,G__31053);
 });
 /**
 * Equivalent to React.renderToString
 */
 om.dom.render_to_str = (function render_to_str(c){
-var G__30544 = c;
-return React.renderToString(G__30544);
+var G__31055 = c;
+return React.renderToString(G__31055);
 });
