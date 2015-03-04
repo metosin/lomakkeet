@@ -1,23 +1,23 @@
 (ns lomakkeet.datepicker
-  (:require [om.core :as om :include-macros true]
+  (:require [om.core :as om]
             [om-tools.core :refer-macros [defcomponent]]
             [cljs.core.async :refer [put!]]
             [sablono.core :refer-macros [html]]
             [lomakkeet.fields :as f]
             [goog.string :as gs]
-            org.pikaday))
+            cljsjs.pikaday.with-moment))
 
 (defn jsdate->local-date [v]
   (if v
     (doto (goog.date.Date.)
-      (.setYear (.getFullYear v))
+      (.setFullYear (.getFullYear v))
       (.setMonth (.getMonth v))
       (.setDate (.getDate v)))))
 
 (defn local-date->jsdate [v]
   (if v
     (doto (js/Date.)
-      (.setYear (.getFullYear v))
+      (.setFullYear (.getFullYear v))
       (.setMonth (.getMonth v))
       (.setDate (.getDate v))
       (.setHours 0)
@@ -41,8 +41,6 @@
    owner
    {:keys [ch ks datepicker-i18n]
     :as opts}]
-  (init-state [_]
-    {:val nil})
   (did-mount [_]
     (let [input (om/get-node owner "input")
           el (js/Pikaday. (-> {:field input
@@ -64,24 +62,20 @@
         (set-limit-date :min-date owner))
       (if (not= (:max-date props) (:max-date prev))
         (set-limit-date :max-date owner))))
-  (render-state [_ {:keys [val]}]
+  (render-state [_ s]
     (html
       [:input.form-control
-       {:ref "input"
-        :type "text"
-        :value (or val (date->str value) "")
-        :on-change #(om/set-state! owner :val (.. % -target -value))
-        :on-key-press (fn [e]
-                        (let [k (.-key e)]
-                          (when (= "Enter" k)
-                            (put! ch {:type :change
-                                      :ks ks
-                                      :value (om/get-state owner :val)}))))
-        :auto-complete false}])))
+       (merge
+         (:attrs s)
+         {:ref   "input"
+          :type  "text"
+          :value (or (date->str value) "")})])))
 
 (defn date [form label ks & [opts]]
   (f/build (merge form opts
                   {:label label :ks ks}
                   (if (:empty-btn? opts)
                     {:input f/emptyable-input :real-input date*}
-                    {:input date*}))))
+                    {:input date*})
+                  ; FIXME:
+                  {:state (merge (:state form) (:state opts))})))

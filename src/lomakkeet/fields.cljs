@@ -7,15 +7,8 @@
             [schema.core :as s :include-macros true]
             [schema.coerce :as sc]
             [schema.utils :as su]
+            [schema-tools.core :as st]
             [om.core :as om]))
-
-;; FIXME:
-(defn- get-in-schema
-  [schema ks & [not-found]]
-  (reduce (fn [acc k]
-            (or (get acc k) (get acc (s/optional-key k) (get acc (s/required-key k))) not-found))
-          schema
-          ks))
 
 (defn- chan? [v]
   (instance? cljs.core.async.impl.channels.ManyToManyChannel v))
@@ -85,7 +78,7 @@
     (om/build form-group
               {:value  (get-in @value ks)
                :error  (if errors (get-in @errors ks))
-               :schema (if schema (get-in-schema @schema ks))}
+               :schema (if schema (st/get-in @schema ks))}
               {:opts (dissoc opts :state)
                :state (:state opts)})))
 
@@ -113,13 +106,14 @@
     :or {el input-input
          transform-value identity}
     :as opts}]
-  (render [_]
+  (render-state [_ state]
     (html
-      (el (transform-value value)
-          (fn [e]
-            (put! ch {:type :change
-                      :ks ks
-                      :value (.. e -target -value)}))))))
+      ((if (:disabled (:attrs state)) input-static el)
+       (transform-value value)
+       (fn [e]
+         (put! ch {:type :change
+                   :ks ks
+                   :value (.. e -target -value)}))))))
 
 (defn input
   [form label ks & [opts]]
@@ -161,16 +155,18 @@
    owner
    {:keys [ch ks options]
     :as opts}]
-  (render [_]
+  (render-state [_ s]
     (html
       [:select.form-control
-       {:value (if (keyword? value)
-                 (name value)
-                 value)
-        :on-change (fn [e]
-                     (put! ch {:type :change
-                               :ks ks
-                               :value (.. e -target -value)}))}
+       (merge
+         (:attrs s)
+         {:value (if (keyword? value)
+                   (name value)
+                   value)
+          :on-change (fn [e]
+                       (put! ch {:type :change
+                                 :ks ks
+                                 :value (.. e -target -value)}))})
        (cond
          (map? options)
          (for [[k v] options]
@@ -228,7 +224,7 @@
   [value-cursor schema ks value]
   (if value
     (om/update! value-cursor ks value)
-    (let [schema (get-in-schema schema (butlast ks))]
+    (let [schema (st/get-in schema (butlast ks))]
       (if (contains? schema (s/optional-key (last ks)))
         (om/transact! value-cursor #(dissoc-in % ks))
         (om/update! value-cursor ks value)))))
@@ -248,13 +244,15 @@
          :coercion-matcher sc/json-coercion-matcher}
         (merge form)))
   (will-mount [_]
-    ; Going around JSC error by retrieving schema from form-state
-    ; For some destructuring schema at defcomponent + letting it would generate
-    ; invalid JS
-    (let [schema (if (:schema form-state) @(:schema form-state))
-          {:keys [ch coercion-matcher]} (om/get-state owner)]
+    (let [{:keys [ch coercion-matcher]} (om/get-state owner)]
       (go-loop []
+        ; Note 1: Going around JSC error by retrieving schema from form-state
+        ; For some destructuring schema at defcomponent + letting it would generate
+        ; invalid JS
+        ; Note 2: Deref schema for each loop, as schema can change
         (let [evt (<! ch)
+              ; Deref AFTER event
+              schema (if (:schema form-state) @(:schema form-state))
               prev-value @value]
           (case (:type evt)
             :action (if-let [action-fn (get actions (:action evt))]
@@ -268,7 +266,7 @@
 
             :change (let [{:keys [ks]} evt]
                       (->> evt :value
-                           (coerce coercion-matcher (get-in-schema schema ks))
+                           (coerce coercion-matcher (st/get-in schema ks))
                            (change-value value schema ks)))
             (prn (str "Unknown event-type: " (:type evt))))
 
@@ -276,12 +274,12 @@
             (after-change {:form-state form-state
                            :value @value
                            :value-cursor value
-                           :prev-value prev-value})))
+                           :prev-value prev-value}))
 
-        ; Update form-state because :errors can be nil and (:errors form-state) could return not-a-cursor
-        (om/update! form-state :errors (merge
-                                         (if form-validation-fn (form-validation-fn @value))
-                                         (if schema (s/check schema @value))))
+          ; Update form-state because :errors can be nil and (:errors form-state) could return not-a-cursor
+          (om/update! form-state :errors (merge
+                                           (if form-validation-fn (form-validation-fn @value))
+                                           (if schema (s/check schema @value)))))
         (recur))))
   (render-state [_ form]
     (html (render-fn {:form-state form-state
@@ -295,3 +293,9 @@
 
 (defn errors? [form-state]
   (seq (:errors form-state)))
+
+(defn value [form ks]
+  (get-in form (into [:form-state :value] ks)))
+
+(defn disabled [form]
+  (assoc-in form [:state :attrs :disabled] true))
