@@ -4,7 +4,7 @@
             cljs.core.async.impl.channels
             [om-tools.core :refer-macros [defcomponent]]
             [sablono.core :refer-macros [html]]
-            [schema.core :as s :include-macros true]
+            [schema.core :as s]
             [schema.coerce :as sc]
             [schema.utils :as su]
             [om.core :as om]))

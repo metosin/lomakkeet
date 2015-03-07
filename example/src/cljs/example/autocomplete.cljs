@@ -1,7 +1,7 @@
 (ns example.autocomplete
   (:require [lomakkeet.autocomplete :as ac]
             [lomakkeet.fields :as f]
-            [om.core :as om :include-macros true]))
+            [om.core :as om]))
 
 (def countries
   [{:code "AF" :name "Afghanistan"}

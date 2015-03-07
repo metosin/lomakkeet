@@ -3,10 +3,10 @@
             [lomakkeet.common-test :as c]
             [lomakkeet.fields :as f]
             [sablono.core :refer-macros [html]]
-            [schema.core :as s :include-macros true]
+            [schema.core :as s]
             [plumbing.core :refer-macros [defnk]]
-            [om.core :as om :include-macros true]
-            [om-tools.dom :as dom :include-macros true]
+            [om.core :as om]
+            [om-tools.dom :as dom]
             [om-tools.core :refer-macros [defcomponent]]))
 
 (extend-type js/NodeList

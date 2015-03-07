@@ -1,9 +1,9 @@
 (ns example.main
   (:require-macros [cljs.core.async.macros :refer [go]])
-  (:require [om.core :as om :include-macros true]
+  (:require [om.core :as om]
             [om-tools.core :refer-macros [defcomponent]]
             [cljs.core.async :refer [put!]]
-            [schema.core :as s :include-macros true]
+            [schema.core :as s]
             [plumbing.core :refer-macros [defnk]]
             [sablono.core :refer-macros [html]]
             [cljs-time.core :as t]

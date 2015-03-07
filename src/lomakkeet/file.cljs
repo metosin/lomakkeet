@@ -1,5 +1,5 @@
 (ns lomakkeet.file
-  (:require [om.core :as om :include-macros true]
+  (:require [om.core :as om]
             [om-tools.core :refer-macros [defcomponent]]
             [cljs.core.async :refer [put!]]
             [sablono.core :refer-macros [html]]

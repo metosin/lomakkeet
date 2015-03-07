@@ -1,6 +1,6 @@
 (ns lomakkeet.autocomplete
   (:require-macros [cljs.core.async.macros :refer [go alt!]])
-  (:require [om.core :as om :include-macros true]
+  (:require [om.core :as om]
             [om-tools.core :refer-macros [defcomponent]]
             [cljs.core.async :refer [put!]]
             [sablono.core :refer-macros [html]]
