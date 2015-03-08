@@ -174,15 +174,18 @@
     (save-form fs new-value)))
 
 (defn update-value
+  "Coerce just the changed value, validate the whole form."
   [fs ks v]
-  (let [schema (st/get-in (::schema fs) ks)
-        v (coerce sc/json-coercion-matcher schema v)]
-    (if v
-      (update-form fs assoc-in ks v)
-      (let [parent-schema (st/get-in (::schema fs) (butlast ks))]
-        (if (contains? parent-schema (s/optional-key (last ks)))
-          (update-form fs dissoc-in ks)
-          (update-form fs assoc-in ks v))))))
+  (let [schema (::schema fs)
+        leaf-schema (st/get-in (::schema fs) ks)
+        v (coerce sc/json-coercion-matcher leaf-schema v)
+        fs (if v
+             (assoc-in fs (concat [::value] ks) v)
+             (let [parent-schema (st/get-in (::schema fs) (butlast ks))]
+               (if (contains? parent-schema (s/optional-key (last ks)))
+                 (dissoc-in fs (concat [::value] ks))
+                 (assoc-in fs (concat [::value] ks) v))))]
+    (assoc fs ::errors (if schema (s/check schema (::value fs))))))
 
 (defn dirty? [fs]
   (not= (::value fs) (::initial-value fs)))

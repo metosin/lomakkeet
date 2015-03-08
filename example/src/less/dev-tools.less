@@ -1,0 +1,84 @@
+.om-dev-tools {
+  font-family: @font-family-sans-serif;
+
+  .pull-right { .pull-right; }
+  .nav { .nav };
+  .nav-tabs { .nav-tabs; }
+
+  // Style
+  z-index: 2000;
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  bottom: 0;
+  height: 30vh;
+  overflow-y: scroll;
+
+  span.type {
+    .label;
+    background: #ccc;
+    font-size: @font-size-small;
+    margin-left: 15px;
+  }
+
+  ul.nav {
+    a { cursor: pointer; }
+  }
+
+  button.close {
+    .btn;
+    .btn-primary;
+  }
+}
+
+.om-dev-tools-state-tree {
+  pre {
+    display: inline;
+    background: none;
+    border: 0;
+    padding: 0;
+  }
+
+  li {
+    padding-left: 1em;
+    text-indent: -1em;
+  }
+
+  li.coll {
+    list-style: none;
+    & > strong {
+      cursor: pointer;
+    }
+
+    &:before {
+      position: absolute;
+    }
+
+    &.open {
+      &:before {
+        content: "-";
+      }
+    }
+    &.closed {
+      &:before {
+        content: "+";
+      }
+    }
+  }
+}
+
+.om-dev-tools-btn {
+  .btn;
+  .btn-default;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 2000;
+}
+
+body.om-dev-tools-open {
+  .app-wrapper {
+    padding-bottom: 31vh;
+  }
+}
+

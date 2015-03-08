@@ -2,13 +2,15 @@
   (:require [reagent.core :as reagent :refer [atom]]
             [reagent.ratom :refer-macros [reaction]]
             [re-frame.core :refer [dispatch dispatch-sync register-handler register-sub subscribe path]]
+            re-frame.db
             [schema.core :as s]
             [potpuri.core :as util]
             [lomakkeet.core :as f]
             [example.forms :as forms]
             [example.autocomplete :as eac]
             [example.domain :as d]
-            [example.util :refer [map-v]]))
+            [example.util :refer [map-v]]
+            [example.dev-tools :as dev]))
 
 (enable-console-print!)
 
@@ -42,10 +44,10 @@
         [:div.tasks
          [:h2
           "Basic fields"
-          #_[:div.btn-toolbar.pull-right
-             [forms/form-status form]
-             [forms/cancel-btn form]
-             [forms/save-btn form]]]
+          [:div.btn-toolbar.pull-right
+           [forms/form-status form]
+           [forms/cancel-btn form]
+           [forms/save-btn form]]]
 
          [:form.column-content
           [:div.row
@@ -82,11 +84,22 @@
             [:p.form-control-static "TODO"]]]]
          ]))))
 
+(defonce tree-state (atom {:example-page {:lomakkeet.core/value {}
+                                          :lomakkeet.core/initial-value {}
+                                          :lomakkeet.core/errors {}}}))
+
+(defn dev-view [app-state]
+  (fn []
+    [:div.om-dev-tools-state-tree
+     (dev/tree tree-state @tree-state @app-state [])]))
+
 (defn app-view []
   [:div
    [:h1 "Example form "
     [:a {:href "https://github.com/metosin/lomakkeet/blob/master/example/src/cljs/example/main.cljs"} "(Code)"]]
-   [thing-view]])
+   [thing-view]
+   [:h1 "Re-frame db"]
+   [dev-view re-frame.db/app-db]])
 
 (register-handler :init-db
   (fn [_ _]
