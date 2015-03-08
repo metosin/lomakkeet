@@ -1,158 +1,102 @@
 (ns example.main
-  (:require-macros [cljs.core.async.macros :refer [go]])
-  (:require [om.core :as om]
-            [om-tools.core :refer-macros [defcomponent]]
-            [cljs.core.async :refer [put!]]
+  (:require [reagent.core :as reagent :refer [atom]]
+            [reagent.ratom :refer-macros [reaction]]
+            [re-frame.core :refer [dispatch dispatch-sync register-handler register-sub subscribe path]]
             [schema.core :as s]
-            [plumbing.core :refer-macros [defnk]]
-            [sablono.core :refer-macros [html]]
-            [cljs-time.core :as t]
             [potpuri.core :as util]
-            [lomakkeet.fields :as f]
-            [lomakkeet.datepicker :as df]
-            [lomakkeet.file :as ff]
+            [lomakkeet.core :as f]
             [example.forms :as forms]
             [example.autocomplete :as eac]
-            [om-dev-tools.core :as dev]
-            [om-dev-tools.state-tree :as dev-state]))
+            [example.domain :as d]
+            [example.util :refer [map-v]]))
 
-(def LocalDate goog.date.Date)
-
-(defn DateRange [start end]
-  (s/pred (fn [x]
-            (and (or (not start) (.equals x start) (t/after?  x start))
-                 (or (not end)   (.equals x end)   (t/before? x end))))
-          'invalid-date))
-
-(def email-pattern (js/RegExp. "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$" "i"))
-
-(s/defschema Thingie
-  {:name (s/both s/Str (s/pred seq 'required))
-   :email (s/both s/Str (s/pred #(re-find email-pattern %) 'email))
-   :dates {:start LocalDate
-           :end   (s/maybe LocalDate)}
-   :desc s/Str
-   :file (s/maybe (s/both js/File (s/pred (fn [f] (if f (< (.-size f) 1000000))) 'large-file)))
-   :country s/Str
-   :gender s/Keyword})
-
-(defn ThingieDates [{{:keys [start end]} :dates}]
-  (-> Thingie
-      (update-in [:dates :start] #(s/both % (DateRange (t/today) end)))
-      (assoc-in  [:dates :end]    (s/maybe (s/both LocalDate (DateRange start nil))))))
-
-; Description of the state tree
-(def empty-thing
-  {:name "Luke Skywalker"
-   :email "luke@rebel.gov"
-   :dates {:start (t/today)
-           :end   nil}
-   :desc ""
-   :file nil
-   :country "FI"
-   :gender :other})
+(enable-console-print!)
 
 (def initial-state
-  {:example-page (f/->form-state empty-thing Thingie)})
-
-(defonce state (atom initial-state))
-(defonce dev-state (atom (-> (dev/empty-state)
-                             (assoc :open? false :current :instrumentation)
-                             (assoc-in [:state-tree-state :example-page :value :dates] {})
-                             (assoc-in [:state-tree-state :example-page :initial-value :dates] {}))))
+  {:example-page (f/->fs d/empty-thing d/Thingie)})
 
 ;; VIEWS
 
-(defnk render-thingie-form
-  [form-state form ch
-   [:value [:dates start end]]]
-  (html
-    [:div.tasks
-     [:h2
-      "Basic fields"
-      [:div.btn-toolbar.pull-right
-       (forms/form-status form-state)
-       (forms/cancel-btn form-state ch)
-       (forms/save-btn form-state ch)]]
+(register-sub :thingie-form
+  (fn [db _]
+    (reaction (:example-page @db))))
 
-     [:form.column-content
-      [:div.row
-       (f/input form "Name"   [:name])
-       (f/input form "Email"  [:email])]
+; FIXME: How to select determine which form sent the event?
+; Or how to have specific handler for each form
 
-      [:div.row
-       (f/textarea  form "Textarea" [:desc])
-       (f/select    form "Select"   [:gender]
-                 {:male   "Male"
-                  :female "Female"
-                  :other  "Other"})]
+(def form-ware [(path :example-page) map-v])
 
-      [:div.row
-       [:div.col-sm-6 [:h2 "Datepicker (using " [:a {:href "https://github.com/dbushell/Pikaday"} "Pikaday"] ")"]]
-       [:div.col-sm-6 [:h2 "Filepicker"]]]
+(register-handler :update-value
+  form-ware
+  (fn [db {:keys [ks value]}]
+    ; Even if this is pretty much all that is needed, it probably
+    ; useful that each form can add specific logic in their own handler.
+    (f/update-value db ks value)))
 
-      [:div.row
-       (df/date form "Start date" [:dates :start]
-                {:size 3
-                 :state {:min-date (t/today) :max-date end}
-                 :help-text "Today or later. Before end date."})
-       (df/date form "End date"   [:dates :end]
-                {:size 3
-                 :empty-btn? true
-                 :state {:min-date start}
-                 :help-text "Optional. After start date."})
-       (ff/file form "File"        [:file]
-                {:help-text "Under 1MB"})]
+(defn thing-view []
+  ; FIXME: Any form change causes re-render
+  ; Not sure if this is inevitable
+  (let [form (subscribe [:thingie-form])]
+    (fn []
+      (let [{{:keys [start end]} :dates} @form]
+        [:div.tasks
+         [:h2
+          "Basic fields"
+          #_[:div.btn-toolbar.pull-right
+             [forms/form-status form]
+             [forms/cancel-btn form]
+             [forms/save-btn form]]]
 
-      [:div.row
-       [:div.col-sm-12 [:h2 "Autocomplete"]]
-       (eac/country-select form "Country" [:country])
-       [:div.form-group.col-sm-6
-        [:label "Autocomplete (tree):"]
-        [:p.form-control-static "TODO"]]]]]))
+         [:form.column-content
+          [:div.row
+           [f/input form "Name"   [:name]]
+           [f/input form "Email"  [:email]]]
 
-; FIXME: Fnk would fit event handlers well
-(defn save-thing [state evt]
-  ; In reality this could look something like:
-  #_
-  (let [id (-> state :value :id)
-        req (http/post (str "/api/thingie/" id) {:params (:value state)})
-        resp (<! req)]
-    (if (ok? resp)
-      (f/save-form state (:body resp))
-      (assoc state :errors (:body resp))))
-  (-> state
-      (f/save-form (:value state))))
+          [:div.row
+           [f/textarea  form "Textarea" [:desc]]
+           [f/select    form "Select"   [:gender] d/genders]]
 
-(defcomponent thing-view
-  [page-state
-   owner]
-  (render [_]
-    (html
-      (om/build
-        f/form page-state
-        {:opts {:form {:humanize-error forms/humanize-error}
-                :form-validation-fn (fn [v] (s/check (ThingieDates v) v))
-                :actions {:save save-thing}
-                :render-fn render-thingie-form}}))))
+          [:div.row
+           [:div.col-sm-6 [:h2 "Datepicker (using " [:a {:href "https://github.com/dbushell/Pikaday"} "Pikaday"] ")"]]
+           [:div.col-sm-6 [:h2 "Filepicker"]]]
 
-(defcomponent app-view
-  [app-state owner]
-  (render [_]
-    (html
-      [:div
-       [:h1 "Example form "
-        [:a {:href "https://github.com/metosin/lomakkeet/blob/master/example/src/cljs/example/main.cljs"} "(Code)"]]
-       (om/build thing-view (:example-page app-state))
-       [:h2 "Om state tree"]
-       [:div.om-dev-tools-state-tree
-        (let [dev-state (om/observe owner (om/ref-cursor (:state-tree-state (om/root-cursor dev-state))))]
-          (om/build dev-state/state-view {:state-tree-state dev-state
-                                          :app-state app-state}))]])))
+          [:div.row
+           [f/date form "Start date" [:dates :start]
+              {:size 3
+               ; :state {:min-date (t/today) :max-date end}
+               ; :help-text "Today or later. Before end date."
+               }]
+           #_[f/date form "End date" [:dates :end]
+              {:size 3
+               ; :empty-btn? true
+               ; :state {:min-date start}
+               ; :help-text "Optional. After start date."
+               }]
+           [f/file form "File" [:file] {:help-text "Under 1MB"}]]
+
+          [:div.row
+           [:div.col-sm-12 [:h2 "Autocomplete"]]
+           #_[eac/country-select form "Country" [:country]]
+           [:div.form-group.col-sm-6
+            [:label "Autocomplete (tree):"]
+            [:p.form-control-static "TODO"]]]]
+         ]))))
+
+(defn app-view []
+  [:div
+   [:h1 "Example form "
+    [:a {:href "https://github.com/metosin/lomakkeet/blob/master/example/src/cljs/example/main.cljs"} "(Code)"]]
+   [thing-view]])
+
+(register-handler :init-db
+  (fn [_ _]
+    initial-state))
+
+; Init only for the first load
+; Symbol is not used
+(defonce foobar (dispatch-sync [:init-db]))
 
 (defn restart! []
-  (dev/root app-view state {:target (.getElementById js/document "app")
-                            :dev-target (.getElementById js/document "dev")
-                            :dev-state dev-state}))
+  (reagent/render [app-view] (js/document.getElementById "app")))
 
 (restart!)

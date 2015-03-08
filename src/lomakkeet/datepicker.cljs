@@ -1,11 +1,9 @@
 (ns lomakkeet.datepicker
-  (:require [om.core :as om]
-            [om-tools.core :refer-macros [defcomponent]]
-            [cljs.core.async :refer [put!]]
-            [sablono.core :refer-macros [html]]
-            [lomakkeet.fields :as f]
+  (:require [reagent.core :as reagent]
+            [reagent.ratom :refer-macros [reaction]]
+            [re-frame.core :refer [dispatch]]
             [goog.string :as gs]
-            org.pikaday))
+            cljsjs.pikaday.with-moment))
 
 (defn jsdate->local-date [v]
   (if v
@@ -28,64 +26,23 @@
   (if v
     (gs/format "%d.%d.%d" (.getDate v) (inc (.getMonth v)) (.getFullYear v))))
 
-(defn- set-limit-date [k owner]
-  (let [el (om/get-state owner :el)
-        fn-name  (get {:min-date "setMinDate"
-                       :max-date "setMaxDate"} k)
-        v (om/get-state owner k)]
-    (if v
-      (.call (aget el fn-name) el v))))
-
-(defcomponent date*
-  [{:keys [value]}
-   owner
-   {:keys [ch ks datepicker-i18n]
-    :as opts}]
-  (init-state [_]
-    {:val nil})
-  (did-mount [_]
-    (let [input (om/get-node owner "input")
-          el (js/Pikaday. (-> {:field input
-                               ; NOTE: This requires MomentJS
-                               :format "D.M.YYYY"
-                               :firstDay 1
-                               :onSelect (fn [v]
-                                           (put! ch {:type :change
-                                                     :ks ks
-                                                     :value (jsdate->local-date v)}))}
-                              (cond-> datepicker-i18n (assoc :i18n datepicker-i18n))
-                              clj->js))]
-      (om/set-state! owner :el el)
-      (set-limit-date :min-date owner)
-      (set-limit-date :max-date owner)))
-  (did-update [_ prev _]
-    (let [props (om/get-state owner)]
-      (if (not= (:min-date props) (:min-date prev))
-        (set-limit-date :min-date owner))
-      (if (not= (:max-date props) (:max-date prev))
-        (set-limit-date :max-date owner))))
-  (render-state [_ {:keys [val]}]
-    (html
-      [:input.form-control
-       {:ref "input"
-        :type "text"
-        :value (or val (date->str value) "")
-        :on-change #(om/set-state! owner :val (.. % -target -value))
-        :on-key-press (fn [e]
-                        (let [k (.-key e)]
-                          (when (= "Enter" k)
-                            ; FIXME: Really parse val
-                            ; FIXME: unset :val
-                            ; FIXME: .setDate, .gotoDate?
-                            ; setDate + onSelect event? -> no put! here
-                            (put! ch {:type :change
-                                      :ks ks
-                                      :value (om/get-state owner :val)}))))
-        :auto-complete false}])))
-
-(defn date [form label ks & [opts]]
-  (f/build (merge form opts
-                  {:label label :ks ks}
-                  (if (:empty-btn? opts)
-                    {:input f/emptyable-input :real-input date*}
-                    {:input date*}))))
+(defn date* [form {:keys [ks datepicker-i18n]}]
+  (let [el (atom nil)
+        value (reaction (get-in (:lomakkeet.core/value @form) ks))]
+    (with-meta
+      (fn []
+        [:input.form-control
+         {:type "text"
+          :value (or (date->str @value) "")
+          ; To silence reagent warnings
+          :on-change identity}])
+      {:component-did-mount
+       (fn [this]
+         (js/console.log "foo")
+         (swap! el (js/Pikaday. (-> {:field (reagent/dom-node this)
+                                     ; NOTE: This requires MomentJS
+                                     :format "D.M.YYYY"
+                                     :firstDay 1
+                                     :onSelect #(dispatch [:update-value {:ks ks :value (jsdate->local-date %)}])}
+                                    (cond-> datepicker-i18n (assoc :i18n datepicker-i18n))
+                                    clj->js))))})))

@@ -1,10 +1,5 @@
 (ns lomakkeet.autocomplete
-  (:require-macros [cljs.core.async.macros :refer [go alt!]])
-  (:require [om.core :as om]
-            [om-tools.core :refer-macros [defcomponent]]
-            [cljs.core.async :refer [put!]]
-            [sablono.core :refer-macros [html]]
-            [lomakkeet.fields :as f]
+  (:require [lomakkeet.core :as f]
             goog.events))
 
 ;;
@@ -12,24 +7,24 @@
 ;;
 
 ; FIXME: om-tools mixin?
-(defn closable-will-mount [owner & [close-cb]]
-  (let [click-handler (fn [e]
-                        (om/set-state! owner :open? false)
-                        (if close-cb (close-cb)))
-        key-handler (fn [e]
-                      (case (.-keyCode e)
-                        27 (do ; Esc
-                               (om/set-state! owner :open? false)
-                               (if close-cb (close-cb)))
-                        nil))]
-    (om/set-state! owner :click-handler click-handler)
-    (om/set-state! owner :key-handler key-handler)
-    (goog.events.listen js/window goog.events.EventType.CLICK click-handler)
-    (goog.events.listen js/window goog.events.EventType.KEYUP key-handler)))
+; (defn closable-will-mount [owner & [close-cb]]
+;   (let [click-handler (fn [e]
+;                         (om/set-state! owner :open? false)
+;                         (if close-cb (close-cb)))
+;         key-handler (fn [e]
+;                       (case (.-keyCode e)
+;                         27 (do ; Esc
+;                                (om/set-state! owner :open? false)
+;                                (if close-cb (close-cb)))
+;                         nil))]
+;     (om/set-state! owner :click-handler click-handler)
+;     (om/set-state! owner :key-handler key-handler)
+;     (goog.events.listen js/window goog.events.EventType.CLICK click-handler)
+;     (goog.events.listen js/window goog.events.EventType.KEYUP key-handler)))
 
-(defn closable-will-unmount [owner]
-  (goog.events.listen js/window goog.events.EventType.CLICK (om/get-state owner :click-handler))
-  (goog.events.listen js/window goog.events.EventType.KEYUP (om/get-state owner :key-handler)))
+; (defn closable-will-unmount [owner]
+;   (goog.events.listen js/window goog.events.EventType.CLICK (om/get-state owner :click-handler))
+;   (goog.events.listen js/window goog.events.EventType.KEYUP (om/get-state owner :key-handler)))
 
 ;;
 ;; Utils
@@ -99,6 +94,7 @@
          (highlight-match [:span text] query)]))))
 
 ; Uses selectize styles
+#_
 (defcomponent autocomplete*
   [{:keys [value]}
    owner
