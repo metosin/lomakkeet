@@ -5,6 +5,7 @@
             re-frame.db
             [schema.core :as s]
             [potpuri.core :as util]
+            [cljs-time.core :as t]
             [lomakkeet.core :as f]
             [example.forms :as forms]
             [example.autocomplete :as eac]
@@ -15,7 +16,8 @@
 (enable-console-print!)
 
 (def initial-state
-  {:example-page (f/->fs d/empty-thing d/Thingie)})
+  {:example-page (-> d/empty-thing
+                     (f/->fs d/Thingie))})
 
 ;; VIEWS
 
@@ -34,6 +36,16 @@
     ; Even if this is pretty much all that is needed, it probably
     ; useful that each form can add specific logic in their own handler.
     (f/update-value db ks value)))
+
+(register-handler :cancel-form
+  form-ware
+  (fn [db]
+    (f/reset db)))
+
+(register-handler :save-form
+  form-ware
+  (fn [db]
+    (f/commit db)))
 
 (defn thing-view []
   ; FIXME: Any form change causes re-render
@@ -64,16 +76,14 @@
 
           [:div.row
            [f/date form "Start date" [:dates :start]
-              {:size 3
-               ; :state {:min-date (t/today) :max-date end}
-               ; :help-text "Today or later. Before end date."
-               }]
-           #_[f/date form "End date" [:dates :end]
-              {:size 3
-               ; :empty-btn? true
-               ; :state {:min-date start}
-               ; :help-text "Optional. After start date."
-               }]
+            {:size 3
+             :min-date (t/today) :max-date end
+             :help-text "Today or later. Before end date."}]
+           [f/date form "End date" [:dates :end]
+            {:size 3
+             :empty-btn? true
+             :min-date start
+             :help-text "Optional. After start date."}]
            [f/file form "File" [:file] {:help-text "Under 1MB"}]]
 
           [:div.row
@@ -81,8 +91,7 @@
            #_[eac/country-select form "Country" [:country]]
            [:div.form-group.col-sm-6
             [:label "Autocomplete (tree):"]
-            [:p.form-control-static "TODO"]]]]
-         ]))))
+            [:p.form-control-static "TODO"]]]]]))))
 
 (defonce tree-state (atom {:example-page {:lomakkeet.core/value {}
                                           :lomakkeet.core/initial-value {}

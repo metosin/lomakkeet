@@ -6,5 +6,5 @@
    event is a map and calls the handler using the map."
   [handler]
   (fn [db v]
-    {:pre [(map? (second v))]}
+    {:pre [(or (nil? (second v)) (map? (second v)))]}
     (handler db (second v))))

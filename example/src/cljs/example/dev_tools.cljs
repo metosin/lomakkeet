@@ -29,7 +29,10 @@
            :let [ks (conj ks k)]]
        [:li
         {:key (key->string k)
-         :class [(if (coll? v) "coll" "single") (if (get-in tree-state ks) "open" "closed")]}
+         :class (str
+                  (if (coll? v) "coll" "single")
+                  " "
+                  (if (get-in tree-state ks) "open" "closed"))}
         [:strong
          {:on-click #(swap! tree-atom toggle ks)}
          (if (keyword? k)

@@ -25,7 +25,7 @@
     (fn []
       [:button.btn.btn-primary
        {:type "button"
-        :disabled @dirty?
+        :disabled (not @dirty?)
         :on-click #(dispatch [:cancel-form])}
        "Cancel"])))
 
@@ -35,5 +35,5 @@
       [:button.btn.btn-primary
        {:type "button"
         :disabled @errors?
-        :on-click #(dispatch [:save])}
+        :on-click #(dispatch [:save-form])}
        "Save"])))

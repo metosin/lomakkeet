@@ -146,6 +146,8 @@
    ::initial-value s/Any
    ::errors s/Any
    ::schema s/Any
+   ::metadata s/Any
+   ::disabled s/Bool
    s/Keyword s/Any})
 
 (defn ->fs
@@ -154,9 +156,11 @@
    {::value value
     ::initial-value value
     ::errors (if schema (s/check schema value))
-    ::schema schema}))
+    ::schema schema
+    ::metadata nil
+    ::disabled false}))
 
-(defn cancel-form [fs]
+(defn reset [fs]
   (assoc fs ::value (::initial-value fs)))
 
 (defn save-form
@@ -167,6 +171,10 @@
            ::initial-value value
            ::errors (if schema (s/check schema value)))))
 
+(defn commit
+  [fs]
+  (save-form fs (::value fs)))
+
 (defn update-form
   [fs f & args]
   (let [value (::value fs)
@@ -174,7 +182,10 @@
     (save-form fs new-value)))
 
 (defn update-value
-  "Coerce just the changed value, validate the whole form."
+  "Coerce just the changed value, validate the whole form.
+
+   If a value of optional-key property is set to nil, the property
+   is dissociated."
   [fs ks v]
   (let [schema (::schema fs)
         leaf-schema (st/get-in (::schema fs) ks)
