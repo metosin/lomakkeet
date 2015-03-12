@@ -88,7 +88,7 @@
 
           [:div.row
            [:div.col-sm-12 [:h2 "Autocomplete"]]
-           #_[eac/country-select form "Country" [:country]]
+           [eac/country-select form "Country" [:country]]
            [:div.form-group.col-sm-6
             [:label "Autocomplete (tree):"]
             [:p.form-control-static "TODO"]]]]]))))

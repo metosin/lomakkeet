@@ -1,5 +1,5 @@
 (ns lomakkeet.datepicker
-  (:require [reagent.core :as reagent]
+  (:require [reagent.core :as reagent :refer [atom]]
             [reagent.ratom :refer-macros [reaction]]
             [re-frame.core :refer [dispatch]]
             [goog.string :as gs]
