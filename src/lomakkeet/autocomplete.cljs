@@ -2,13 +2,14 @@
   (:require-macros lomakkeet.autocomplete
                    [cljs.core.async.macros :refer [go]])
   (:require [clojure.string :as string]
-            [cljs.core.async :refer [put! chan]]
+            [cljs.core.async :refer [put! chan close!]]
             [reagent.core :as reagent :refer [atom]]
             [reagent.ratom :refer-macros [reaction]]
             [re-frame.core :refer [dispatch]]
             goog.events
             [lomakkeet.core :as f]
-            [lomakkeet.util :refer [debounce]]))
+            [lomakkeet.util :refer [debounce]]
+            [lomakkeet.impl.mixins :as mixins]))
 
 (defn normalize [s]
   ; FIXME:
@@ -97,44 +98,48 @@
               loading-el [:div "Loading..."]}
          :as opts}]
   (let [open? (atom false)
+        closable (mixins/create-closable open?)
         search (atom nil)
         items (atom nil)
         value (reaction (get-in (:lomakkeet.core/value @form) ks))
 
-        ; FIXME: Close?
         search-chan (chan)
-        delayed-search (debounce search-chan 200)
+        delayed-search (debounce search-chan 100)
         query (atom nil)
 
         results (reaction (filter-results term-match? @items @query))]
     (swap! items load-items)
-    (go
-      (loop []
-        (let [x (<! delayed-search)]
-          (when x
-            (reset! query (->query x))
-            (recur)))))
-    (fn []
-      [:div.selectize-control.single
-       [:input.selectize-input
-        {:on-focus  (partial focus open? search)
-         :on-blur   (partial blur open? search)
-         :on-click  (partial click open?)
-         :on-change (fn [e]
-                      (let [v (.. e -target -value)]
-                        (reset! search v)
-                        (put! search-chan v)))
-         :value (cond
-                  @search @search
-                  (seq @value) (value->text @value)
-                  :else "")
-         :class (if @open? "input-active dropdown-active")
-         :auto-complete false}]
-       (when @open?
-         [:div.selectize-dropdown.single
-          [:div.selectize-dropdown-content
-           [renderer results query
-            (fn [id]
-              (dispatch [:update-value {:ks ks :value id}])
-              (reset! open? false))
-            opts]]])])))
+    (go (loop [] (let [x (<! delayed-search)]
+                   (when x
+                     (reset! query (->query x))
+                     (recur)))))
+    (reagent/create-class
+      {:did-unmount
+       (fn [_]
+         (close! search-chan)
+         (closable))
+       :reagent-render
+       (fn []
+         [:div.selectize-control.single
+          [:input.selectize-input
+           {:on-focus  (partial focus open? search)
+            :on-blur   (partial blur open? search)
+            :on-click  (partial click open?)
+            :on-change (fn [e]
+                         (let [v (.. e -target -value)]
+                           (reset! search v)
+                           (put! search-chan v)))
+            :value (cond
+                     @search @search
+                     (seq @value) (value->text @value)
+                     :else "")
+            :class (if @open? "input-active dropdown-active")
+            :auto-complete false}]
+          (when @open?
+            [:div.selectize-dropdown.single
+             [:div.selectize-dropdown-content
+              [renderer results query
+               (fn [id]
+                 (dispatch [:update-value {:ks ks :value id}])
+                 (reset! open? false))
+               opts]]])])})))
