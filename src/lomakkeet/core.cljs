@@ -1,7 +1,7 @@
 (ns lomakkeet.core
   (:require [reagent.ratom :refer-macros [reaction]]
             [re-frame.core :refer [dispatch subscribe]]
-            [schema.core :as s]
+            [schema.core :as s :include-macros true]
             [schema.coerce :as sc]
             [schema.utils :as su]
             [schema-tools.core :as st]

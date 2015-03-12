@@ -1,5 +1,5 @@
 (ns example.domain
-  (:require [schema.core :as s]
+  (:require [schema.core :as s :include-macros true]
             [cljs-time.core :as t]))
 
 (def LocalDate goog.date.Date)

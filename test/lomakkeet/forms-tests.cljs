@@ -3,7 +3,7 @@
             [lomakkeet.common-test :as c]
             [lomakkeet.fields :as f]
             [sablono.core :refer-macros [html]]
-            [schema.core :as s]
+            [schema.core :as s :include-macros true]
             [plumbing.core :refer-macros [defnk]]
             [om.core :as om]
             [om-tools.dom :as dom]

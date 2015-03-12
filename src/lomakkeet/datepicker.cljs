@@ -29,20 +29,20 @@
 (defn date* [form {:keys [ks datepicker-i18n]}]
   (let [el (atom nil)
         value (reaction (get-in (:lomakkeet.core/value @form) ks))]
-    (with-meta
-      (fn []
-        [:input.form-control
-         {:type "text"
-          :value (or (date->str @value) "")
-          ; To silence reagent warnings
-          :on-change identity}])
+    (reagent/create-class
       {:component-did-mount
        (fn [this]
-         (js/console.log "foo")
-         (swap! el (js/Pikaday. (-> {:field (reagent/dom-node this)
-                                     ; NOTE: This requires MomentJS
-                                     :format "D.M.YYYY"
-                                     :firstDay 1
-                                     :onSelect #(dispatch [:update-value {:ks ks :value (jsdate->local-date %)}])}
-                                    (cond-> datepicker-i18n (assoc :i18n datepicker-i18n))
-                                    clj->js))))})))
+         (reset! el (js/Pikaday. (-> {:field (reagent/dom-node this)
+                                      ; NOTE: This requires MomentJS
+                                      :format "D.M.YYYY"
+                                      :firstDay 1
+                                      :onSelect #(dispatch [:update-value {:ks ks :value (jsdate->local-date %)}])}
+                                     (cond-> datepicker-i18n (assoc :i18n datepicker-i18n))
+                                     clj->js))))
+       :reagent-render
+       (fn []
+         [:input.form-control
+          {:type "text"
+           :value (or (date->str @value) "")
+           ; To silence reagent warnings
+           :on-change identity}])})))

@@ -3,7 +3,7 @@
             [reagent.ratom :refer-macros [reaction]]
             [re-frame.core :refer [dispatch dispatch-sync register-handler register-sub subscribe path]]
             re-frame.db
-            [schema.core :as s]
+            [schema.core :as s :include-macros true]
             [potpuri.core :as util]
             [cljs-time.core :as t]
             [lomakkeet.core :as f]
