@@ -4,11 +4,11 @@
   (:require [clojure.string :as string]
             [cljs.core.async :refer [put! chan close!]]
             [reagent.core :as reagent :refer [atom]]
-            [reagent.ratom :refer-macros [reaction]]
+            [reagent.ratom :refer-macros [run! reaction]]
             [re-frame.core :refer [dispatch]]
             goog.events
             [lomakkeet.core :as f]
-            [lomakkeet.util :refer [debounce]]
+            [lomakkeet.util :as util]
             [lomakkeet.impl.mixins :as mixins]))
 
 (defn normalize [s]
@@ -53,22 +53,13 @@
     (.split #" ")
     (->> (remove empty?))))
 
-(defn filter-results [term-match? items query]
-  (if query
-    (filter #(query-match? term-match? % query) items)
-    items))
-
-(defn renderer
-  [coll query cb {:keys [item->key item->text]}]
-  {:pre [(ifn? item->key) (ifn? item->text)]}
-  [:div
-   (doall
-     (for [item @coll]
-       [:div
-        {:key (item->key item)
-         :on-click #(cb (item->key item))
-         :data-selectable true}
-        (highlight-string (item->text item) @query)]))])
+(defn filter-results [term-match? n items query]
+  (reset! n -1)
+  (->> (if query
+         (filter #(query-match? term-match? % query) items)
+         items)
+       (map (fn [v]
+              (assoc v :i (swap! n inc))))))
 
 (defn blur [open? search e]
   (when (.-relatedTarget e)
@@ -91,9 +82,33 @@
   (reset! search (.. e -target -value))
   true)
 
-; Uses selectize styles
+(defn find-by-selection [data x]
+  (some (fn [{:keys [i] :as v}]
+          (if (= i x) v))
+        data))
+
+(defn render-item
+  [item query selected cb {:keys [item->key item->text]}]
+  (fn []
+    [:div
+     {:on-click #(cb (item->key item))
+      :class (if (= (:i item) @selected) "active")
+      :data-selectable true
+      :ref (str "item" - (:i item))}
+     (highlight-string (item->text item) @query)]))
+
+(defn renderer
+  [coll query selected cb {:keys [item->key] :as opts}]
+  (let []
+    (fn []
+      [:div.selectize-dropdown-content
+       ; FIXME: keep-visible!
+       (for [item @coll]
+         ^{:key (item->key item)}
+         [render-item item query selected cb opts])])))
+
 (defn autocomplete*
-  [form {:keys [ks value->text loading-el load-items term-match?]
+  [form {:keys [ks value->text item->key loading-el load-items term-match?]
          :or {value->text identity
               loading-el [:div "Loading..."]}
          :as opts}]
@@ -104,15 +119,24 @@
         value (reaction (get-in (:lomakkeet.core/value @form) ks))
 
         search-chan (chan)
-        delayed-search (debounce search-chan 100)
+        delayed-search (util/debounce search-chan 100)
         query (atom nil)
+        selected (atom 0)
 
-        results (reaction (filter-results term-match? @items @query))]
+        n (atom -1)
+        results (reaction (filter-results term-match? n @items @query))
+
+        change-selection
+        (fn [f e]
+          (swap! selected (comp (partial util/limit 0 @n) f))
+          (.preventDefault e)
+          (.stopPropagation e))]
     (swap! items load-items)
     (go (loop [] (let [x (<! delayed-search)]
                    (when x
                      (reset! query (->query x))
                      (recur)))))
+    (run! (if-let [s @search] (put! search-chan s)))
     (reagent/create-class
       {:did-unmount
        (fn [_]
@@ -125,10 +149,17 @@
            {:on-focus  (partial focus open? search)
             :on-blur   (partial blur open? search)
             :on-click  (partial click open?)
-            :on-change (fn [e]
-                         (let [v (.. e -target -value)]
-                           (reset! search v)
-                           (put! search-chan v)))
+            :on-change (partial change search)
+            :on-key-down (fn [e]
+                           (reset! open? true)
+                           (case (.-key e)
+                             "Enter" (when-let [v (find-by-selection @results @selected)]
+                                       (dispatch [:update-value {:ks ks :value (item->key v)}])
+                                       (reset! open? false)
+                                       (reset! search nil))
+                             "ArrowUp" (change-selection dec e)
+                             "ArrowDown" (change-selection inc e)
+                             nil))
             :value (cond
                      @search @search
                      (seq @value) (value->text @value)
@@ -137,9 +168,8 @@
             :auto-complete false}]
           (when @open?
             [:div.selectize-dropdown.single
-             [:div.selectize-dropdown-content
-              [renderer results query
-               (fn [id]
-                 (dispatch [:update-value {:ks ks :value id}])
-                 (reset! open? false))
-               opts]]])])})))
+             [renderer results query selected
+              (fn [id]
+                (dispatch [:update-value {:ks ks :value id}])
+                (reset! open? false))
+              opts]])])})))

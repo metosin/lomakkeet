@@ -14,8 +14,8 @@
   (let [click-handler (fn [e]
                         (reset! open? false))
         key-handler (fn [e]
-                      (case (.-keyCode e)
-                        27 (do (reset! open? false))
+                      (case (.-key e)
+                        "Esc" (do (reset! open? false))
                         nil))]
     (events/listen js/window goog.events.EventType.CLICK click-handler)
     (events/listen js/window goog.events.EventType.KEYUP key-handler)
