@@ -20,5 +20,5 @@
     (events/listen js/window goog.events.EventType.CLICK click-handler)
     (events/listen js/window goog.events.EventType.KEYUP key-handler)
     (fn []
-      (events/listen js/window goog.events.EventType.CLICK click-handler)
-      (events/listen js/window goog.events.EventType.KEYUP key-handler))))
+      (events/unlisten js/window goog.events.EventType.CLICK click-handler)
+      (events/unlisten js/window goog.events.EventType.KEYUP key-handler))))
