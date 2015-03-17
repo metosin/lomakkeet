@@ -82,30 +82,49 @@
   (reset! search (.. e -target -value))
   true)
 
+(defn key-down [open? search results selected n find-by-selection cb e]
+  (letfn [(change-selection  [f e]
+            (swap! selected (comp (partial util/limit 0 @n) f))
+            (.preventDefault e)
+            (.stopPropagation e))]
+    (reset! open? true)
+
+    (case (.-key e)
+      "Enter" (when-let [v (find-by-selection @results @selected)]
+                (cb v)
+                (reset! open? false)
+                (reset! search nil))
+      "ArrowUp" (change-selection dec e)
+      "ArrowDown" (change-selection inc e)
+      nil)))
+
 (defn find-by-selection [data x]
   (some (fn [{:keys [i] :as v}]
           (if (= i x) v))
         data))
 
 (defn render-item
-  [item query selected cb {:keys [item->key item->text]}]
-  (fn []
-    [:div
-     {:on-click #(cb (item->key item))
-      :class (if (= (:i item) @selected) "active")
-      :data-selectable true
-      :ref (str "item" - (:i item))}
-     (highlight-string (item->text item) @query)]))
+  [parent item query selected cb {:keys [item->key item->text]}]
+  (reagent/create-class
+    {:reagent-render
+     (fn []
+       [:div
+        {:on-click #(cb item)
+         :class (if (= (:i item) @selected) "active")
+         :data-selectable true}
+        (highlight-string (item->text item) @query)])}))
 
 (defn renderer
   [coll query selected cb {:keys [item->key] :as opts}]
   (let []
-    (fn []
-      [:div.selectize-dropdown-content
-       ; FIXME: keep-visible!
-       (for [item @coll]
-         ^{:key (item->key item)}
-         [render-item item query selected cb opts])])))
+    (reagent/create-class
+      {:render
+       (fn [this]
+         [:div.selectize-dropdown-content
+          ; FIXME: keep-visible!
+          (for [item @coll]
+            ^{:key (item->key item)}
+            [render-item item query selected cb opts])])})))
 
 (defn autocomplete*
   [form {:keys [ks value->text item->key loading-el load-items term-match?]
@@ -126,11 +145,10 @@
         n (atom -1)
         results (reaction (filter-results term-match? n @items @query))
 
-        change-selection
-        (fn [f e]
-          (swap! selected (comp (partial util/limit 0 @n) f))
-          (.preventDefault e)
-          (.stopPropagation e))]
+        cb
+        (fn [v]
+          (dispatch [:update-value {:ks ks :value (item->key v)}])
+          (reset! open? false))]
     (swap! items load-items)
     (go (loop [] (let [x (<! delayed-search)]
                    (when x
@@ -150,26 +168,15 @@
             :on-blur   (partial blur open? search)
             :on-click  (partial click open?)
             :on-change (partial change search)
-            :on-key-down (fn [e]
-                           (reset! open? true)
-                           (case (.-key e)
-                             "Enter" (when-let [v (find-by-selection @results @selected)]
-                                       (dispatch [:update-value {:ks ks :value (item->key v)}])
-                                       (reset! open? false)
-                                       (reset! search nil))
-                             "ArrowUp" (change-selection dec e)
-                             "ArrowDown" (change-selection inc e)
-                             nil))
-            :value (cond
-                     @search @search
-                     (seq @value) (value->text @value)
-                     :else "")
+            ; Needs a horrible amount of parameters, perhaps using wrap could help?
+            ; write selected -> check limits etc.
+            :on-key-down (partial key-down open? search results selected n find-by-selection cb)
+            :value (or (if @open?
+                         @search
+                         (value->text @value))
+                       "")
             :class (if @open? "input-active dropdown-active")
             :auto-complete false}]
           (when @open?
             [:div.selectize-dropdown.single
-             [renderer results query selected
-              (fn [id]
-                (dispatch [:update-value {:ks ks :value id}])
-                (reset! open? false))
-              opts]])])})))
+             [renderer results query selected cb opts]])])})))

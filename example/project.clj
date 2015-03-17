@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :source-paths ["src/clj"]
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [org.clojure/clojurescript "0.0-3058"]
+                 [org.clojure/clojurescript "0.0-3123"]
                  [metosin/lomakkeet "0.2.0-SNAPSHOT"]
                  [metosin/potpuri "0.2.1"]
 
