@@ -59,7 +59,8 @@
          (filter #(query-match? term-match? % query) items)
          items)
        (map (fn [v]
-              (assoc v :i (swap! n inc))))))
+              (assoc v :i (swap! n inc))))
+       vec))
 
 (defn blur [open? search e]
   (when (.-relatedTarget e)
@@ -103,50 +104,31 @@
           (if (= i x) v))
         data))
 
-(def cljsRefs "cljsRefs")
-
-(defn get-ref [this ref-name]
-  (get (aget this cljsRefs) ref-name))
-
-(defn add-ref [parent this ref-name]
-  (aset parent cljsRefs (assoc (aget parent cljsRefs) ref-name (reagent/dom-node this))))
-
-(defn remove-ref [parent ref-name]
-  (aset parent cljsRefs (dissoc (aget parent cljsRefs) ref-name)))
-
-(defn render-item
-  [parent item query selected cb {:keys [item->key item->text]}]
-  (reagent/create-class
-    {:component-did-mount
-     (fn [this]
-       (add-ref parent this (str "item-" (:i item))))
-     :component-did-unmount
-     (fn [this]
-       (remove-ref parent (str "item-" (:i item))))
-     :reagent-render
-     (fn []
-       [:div
-        {:on-click #(cb item)
-         :class (if (= (:i item) @selected) "active")
-         :data-selectable true}
-        (highlight-string (item->text item) @query)])}))
+(defn get-by-class [el class-name]
+  (aget (.getElementsByClassName el class-name) 0))
 
 (defn renderer
-  [coll query selected cb {:keys [item->key] :as opts}]
+  [coll query selected cb {:keys [item->key item->text] :as opts}]
   (let []
     (reagent/create-class
       {:component-did-mount
        (fn [this]
-         (run! (if-let [child (get-ref this (str "item-" @selected))]
-                 (util/keep-visible! (reagent/dom-node this) child))))
+         (run! (do
+                 (if-let [child (get-by-class (reagent/dom-node this) (str "item-" @selected))]
+                   (util/keep-visible! (reagent/dom-node this) child)))))
 
-       :render
-       (fn [this]
+       :reagent-render
+       (fn []
          [:div.selectize-dropdown-content
           ; FIXME: keep-visible!
-          (for [item @coll]
-            ^{:key (item->key item)}
-            [render-item this item query selected cb opts])])})))
+          (doall
+            (for [item @coll]
+              [:div
+               {:key (item->key item)
+                :on-click #(cb item)
+                :class (str (str "item-" (:i item)) " " (if (= (:i item) @selected) "active"))
+                :data-selectable true}
+               (highlight-string (item->text item) @query)]))])})))
 
 (defn autocomplete*
   [form {:keys [ks value->text item->key loading-el load-items term-match?]
