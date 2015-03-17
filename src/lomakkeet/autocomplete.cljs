@@ -103,10 +103,27 @@
           (if (= i x) v))
         data))
 
+(def cljsRefs "cljsRefs")
+
+(defn get-ref [this ref-name]
+  (get (aget this cljsRefs) ref-name))
+
+(defn add-ref [parent this ref-name]
+  (aset parent cljsRefs (assoc (aget parent cljsRefs) ref-name (reagent/dom-node this))))
+
+(defn remove-ref [parent ref-name]
+  (aset parent cljsRefs (dissoc (aget parent cljsRefs) ref-name)))
+
 (defn render-item
   [parent item query selected cb {:keys [item->key item->text]}]
   (reagent/create-class
-    {:reagent-render
+    {:component-did-mount
+     (fn [this]
+       (add-ref parent this (str "item-" (:i item))))
+     :component-did-unmount
+     (fn [this]
+       (remove-ref parent (str "item-" (:i item))))
+     :reagent-render
      (fn []
        [:div
         {:on-click #(cb item)
@@ -118,13 +135,18 @@
   [coll query selected cb {:keys [item->key] :as opts}]
   (let []
     (reagent/create-class
-      {:render
+      {:component-did-mount
+       (fn [this]
+         (run! (if-let [child (get-ref this (str "item-" @selected))]
+                 (util/keep-visible! (reagent/dom-node this) child))))
+
+       :render
        (fn [this]
          [:div.selectize-dropdown-content
           ; FIXME: keep-visible!
           (for [item @coll]
             ^{:key (item->key item)}
-            [render-item item query selected cb opts])])})))
+            [render-item this item query selected cb opts])])})))
 
 (defn autocomplete*
   [form {:keys [ks value->text item->key loading-el load-items term-match?]
@@ -156,7 +178,7 @@
                      (recur)))))
     (run! (if-let [s @search] (put! search-chan s)))
     (reagent/create-class
-      {:did-unmount
+      {:component-did-unmount
        (fn [_]
          (close! search-chan)
          (closable))
