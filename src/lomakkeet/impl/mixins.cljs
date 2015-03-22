@@ -2,7 +2,8 @@
   (:require-macros [cljs.core.async.macros :refer [go alt!]])
   (:require [cljs.core.async :refer [close! <! put! tap untap chan]]
             [lomakkeet.util :as u]
-            [goog.events :as events]))
+            [goog.events :as events])
+  (:import [goog.events EventType]))
 
 ;;
 ;; Mixin: Close the component if user clicks outside the element
@@ -17,8 +18,8 @@
                       (case (.-key e)
                         "Esc" (do (reset! open? false))
                         nil))]
-    (events/listen js/window goog.events.EventType.CLICK click-handler)
-    (events/listen js/window goog.events.EventType.KEYUP key-handler)
+    (events/listen js/window EventType.CLICK click-handler)
+    (events/listen js/window EventType.KEYUP key-handler)
     (fn []
-      (events/unlisten js/window goog.events.EventType.CLICK click-handler)
-      (events/unlisten js/window goog.events.EventType.KEYUP key-handler))))
+      (events/unlisten js/window EventType.CLICK click-handler)
+      (events/unlisten js/window EventType.KEYUP key-handler))))

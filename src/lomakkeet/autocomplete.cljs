@@ -13,7 +13,7 @@
 
 (defn normalize [s]
   ; FIXME:
-  (some-> s string/lower-case #_remove-accents))
+  (some-> s string/lower-case))
 
 (defn highlight-string [s query]
   ; FIXME: If normalized strings length is different, this will break!

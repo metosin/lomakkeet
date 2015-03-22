@@ -9,4 +9,3 @@
 (comment
   (println (macroexpand-1 '(create-matcher [:id :nimi])))
   (println (clojure.walk/macroexpand-all '(create-matcher [:id :nimi]))))
-

@@ -5,10 +5,9 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :source-paths ["src"]
   :dependencies [[org.clojure/clojure "1.6.0" :scope "provided"]
-                 [org.clojure/clojurescript "0.0-2850" :scope "provided"]
+                 [org.clojure/clojurescript "0.0-3126" :scope "provided"]
                  [org.clojure/core.async "0.1.346.0-17112a-alpha"]
                  [prismatic/schema "0.4.0"]
-                 [prismatic/plumbing "0.4.1"]
                  [reagent "0.5.0-alpha3"]
                  [re-frame "0.2.0"]
                  [metosin/schema-tools "0.2.0"]

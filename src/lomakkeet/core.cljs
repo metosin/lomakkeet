@@ -183,7 +183,6 @@
 
 (defn update-value
   "Coerce just the changed value, validate the whole form.
-
    If a value of optional-key property is set to nil, the property
    is dissociated."
   [fs ks v]

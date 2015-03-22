@@ -1,4 +1,4 @@
-(ns example.main
+(ns ^:always-reload example.main
   (:require [reagent.core :as reagent :refer [atom]]
             [reagent.ratom :refer-macros [reaction]]
             [re-frame.core :refer [dispatch dispatch-sync register-handler register-sub subscribe path]]

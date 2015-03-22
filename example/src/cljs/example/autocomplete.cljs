@@ -253,6 +253,9 @@
 (defn country-code->name [code]
   (:name (first (filter (comp (partial = code) :code) countries))))
 
+(def term-match? (ac/create-matcher [:code :name]))
+(def query-match? (partial ac/query-match? term-match?))
+
 (defn country-select [form label ks & [opts]]
   (f/default-form-group form ac/autocomplete*
     (assoc opts :label label :ks ks
