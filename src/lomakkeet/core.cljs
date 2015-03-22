@@ -5,109 +5,37 @@
             [schema.coerce :as sc]
             [schema.utils :as su]
             [schema-tools.core :as st]
+            [lomakkeet.impl :as impl]
             [lomakkeet.util :refer [dissoc-in]]
-            [lomakkeet.file :as f]
-            [lomakkeet.datepicker :as d]))
+            [lomakkeet.file :as file]
+            [lomakkeet.datepicker :as date]))
 
-;; FORM GROUP ("bootstrap")
+;; BUILD
 
-(defn default-form-group
-  [form real-el
-   {:keys [ks input label label-separator size help-text]
-    :or {size 6 label-separator ":"}
-    :as opts}]
-  (let [error (reaction (get-in (::errors @form) ks))]
-    (fn []
-      [:div.form-group
-       {:class (cond-> ""
-                 @error (str " has-error")
-                 size (str " col-md-" size))}
-       [:label label label-separator]
-       [real-el form opts]
-       (if help-text
-         [:span.help-block help-text])
-       (if @error
-         [:span.help-block (str @error)])])))
+(defn input [form label ks & [opts]]
+  (impl/default-form-group form impl/input* (assoc opts :label label :ks ks)))
 
-;; BASIC INPUTS
+(defn textarea [form label ks & [opts]]
+  (impl/default-form-group form impl/input* (assoc opts :el impl/input-textarea :label label :ks ks)))
 
-(defn input-input [value cb]
-  [:input.form-control
-   {:type "text"
-    :value (or value "")
-    :on-change cb}])
-
-(defn input-textarea [value cb]
-  [:textarea.form-control
-   {:value (or value "")
-    :on-change cb}])
-
-(defn input-static [value cb]
-  [:p.form-control-static
-   value])
-
-(defn input*
-  [form {:keys [ks transform-value el]
-         :or {transform-value identity
-              el input-input}}]
-  (let [value (reaction (get-in (::value @form) ks))]
-    (fn []
-      (el (transform-value @value) #(dispatch [:update-value {:ks ks :value (.. % -target -value)}])))))
-
-(defn input
-  [form label ks & [opts]]
-  (default-form-group form input* (assoc opts :label label :ks ks)))
-
-(defn textarea
-  [form label ks & [opts]]
-  (default-form-group form input* (assoc opts :el input-textarea :label label :ks ks)))
-
-(defn static
-  [form label ks & [opts]]
-  (default-form-group form input* (assoc opts :el input-static :label label :ks ks)))
-
-;; CHECKBOX
-
-(defn checkbox*
-  [form {:keys [ks]}]
-  (let [value (reaction (get-in (::value @form) ks))]
-    (fn []
-      [:input
-       {:type "checkbox"
-        :checked (boolean @value)
-        :on-change #(dispatch [:update-value {:ks ks :value (.. % -target -checked)}])}])))
+(defn static [form label ks & [opts]]
+  (impl/default-form-group form impl/input* (assoc opts :el impl/input-static :label label :ks ks)))
 
 (defn checkbox
   [form label ks & [opts]]
-  (default-form-group form checkbox* (assoc opts :label label :ks ks)))
-
-;; SELECT
-
-(defn select*
-  [form {:keys [ks options]}]
-  (let [value (reaction (get-in (::value @form) ks))]
-    (fn []
-      [:select.form-control
-       {:value @value
-        :on-change #(dispatch [:update-value {:ks ks :value (.. % -target -value)}])}
-       (cond
-         (map? options)
-         (for [[k v] options]
-           [:option {:value k :key v} v]))])))
+  (impl/default-form-group form impl/checkbox* (assoc opts :label label :ks ks)))
 
 (defn select
   [form label ks options & [opts]]
-  (default-form-group form select* (assoc opts :label label :ks ks :options options)))
-
-;; Datepicker
+  (impl/default-form-group form impl/select* (assoc opts :label label :ks ks :options options)))
 
 (defn date
   [form label ks & [opts]]
-  (default-form-group form d/date* (assoc opts :label label :ks ks)))
+  (impl/default-form-group form date/date* (assoc opts :label label :ks ks)))
 
 (defn file
   [form label ks & [opts]]
-  (default-form-group form f/file* (assoc opts :label label :ks ks)))
+  (impl/default-form-group form file/file* (assoc opts :label label :ks ks)))
 
 ;; FORM
 
@@ -151,7 +79,7 @@
 
 (defn commit
   [fs]
-  (save-form fs (::value fs)))
+  (assoc fs ::initial-value (::value fs)))
 
 (defn update-form
   [fs f & args]

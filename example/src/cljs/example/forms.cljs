@@ -3,14 +3,6 @@
             [reagent.ratom :refer-macros [reaction]]
             [lomakkeet.core :as f]))
 
-(defn humanize-error [x]
-  (if (instance? schema.utils.ValidationError x)
-    (let [[b] @(.-expectation-delay x)]
-      (if (symbol? b)
-        (str b)
-        "virhe"))
-    "virhe"))
-
 (defn form-status [fs]
   (let [errors? (reaction (f/errors? @fs))
         dirty?  (reaction (f/dirty? @fs))]

@@ -68,22 +68,22 @@
   (when (.-relatedTarget e)
     (reset! open? false)
     (reset! search nil))
-  true)
+  nil)
 
 (defn click [open? e]
   (reset! open? true)
   (.stopPropagation e)
-  true)
+  nil)
 
 (defn focus [open? input _]
   (if-not @open?
     (reset! input ""))
   (reset! open? true)
-  true)
+  nil)
 
 (defn change [search e]
   (reset! search (.. e -target -value))
-  true)
+  nil)
 
 (defn key-down [open? search results selected n find-by-selection cb e]
   (letfn [(change-selection  [f e]

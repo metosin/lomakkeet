@@ -1,5 +1,6 @@
 (ns example.autocomplete
   (:require [lomakkeet.autocomplete :as ac]
+            [lomakkeet.impl :as fimpl]
             [lomakkeet.core :as f]))
 
 (def countries
@@ -257,7 +258,7 @@
 (def query-match? (partial ac/query-match? term-match?))
 
 (defn country-select [form label ks & [opts]]
-  (f/default-form-group form ac/autocomplete*
+  (fimpl/default-form-group form ac/autocomplete*
     (assoc opts :label label :ks ks
            :value->text country-code->name
            :load-items (fn [_] countries)

@@ -10,7 +10,7 @@
                  [prismatic/schema "0.4.0"]
                  [reagent "0.5.0-alpha3"]
                  [re-frame "0.2.0"]
-                 [metosin/schema-tools "0.2.0"]
+                 [metosin/schema-tools "0.3.0"]
                  [com.andrewmcveigh/cljs-time "0.3.2"]
                  [cljsjs/pikaday "1.2.0-3"]]
   :plugins [[lein-pprint "1.1.2"]]
