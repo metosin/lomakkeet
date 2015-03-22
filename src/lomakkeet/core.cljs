@@ -21,20 +21,16 @@
 (defn static [form label ks & [opts]]
   (impl/default-form-group form impl/input* (assoc opts :el impl/input-static :label label :ks ks)))
 
-(defn checkbox
-  [form label ks & [opts]]
+(defn checkbox [form label ks & [opts]]
   (impl/default-form-group form impl/checkbox* (assoc opts :label label :ks ks)))
 
-(defn select
-  [form label ks options & [opts]]
+(defn select [form label ks options & [opts]]
   (impl/default-form-group form impl/select* (assoc opts :label label :ks ks :options options)))
 
-(defn date
-  [form label ks & [opts]]
+(defn date [form label ks & [opts]]
   (impl/default-form-group form date/date* (assoc opts :label label :ks ks)))
 
-(defn file
-  [form label ks & [opts]]
+(defn file [form label ks & [opts]]
   (impl/default-form-group form file/file* (assoc opts :label label :ks ks)))
 
 ;; FORM
@@ -70,12 +66,11 @@
   (assoc fs ::value (::initial-value fs)))
 
 (defn save-form
-  [fs value]
-  (let [schema (::schema fs)]
-    (assoc fs
-           ::value value
-           ::initial-value value
-           ::errors (if schema (s/check schema value)))))
+  [{schema ::schema :as fs} value]
+  (assoc fs
+         ::value value
+         ::initial-value value
+         ::errors (if schema (s/check schema value))))
 
 (defn commit
   [fs]
