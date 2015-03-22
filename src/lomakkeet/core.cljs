@@ -6,30 +6,8 @@
             [schema.utils :as su]
             [schema-tools.core :as st]
             [lomakkeet.util :refer [dissoc-in]]
-            [lomakkeet.datepicker :as d]
-            [lomakkeet.file :as f]))
-
-;; EMPTYABLE INPUT
-
-; (defn- empty-cb [{:keys [ch ks]}]
-;   (fn [e]
-;     (put! ch {:type :change
-;               :value nil
-;               :ks ks})))
-
-; (defcomponent emptyable-input
-;   [state
-;    owner
-;    {:keys [real-input] :as opts}]
-;   (render-state [_ s]
-;     (html
-;       [:div.input-group
-;        (om/build real-input state {:opts opts :state s})
-;        [:span.input-group-btn
-;         [:button.btn.btn-default
-;          {:type "button"
-;           :on-click (empty-cb opts)}
-;          "×"]]])))
+            [lomakkeet.file :as f]
+            [lomakkeet.datepicker :as d]))
 
 ;; FORM GROUP ("bootstrap")
 

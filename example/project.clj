@@ -12,6 +12,7 @@
 
                  [org.webjars/bootstrap "3.3.2"]
                  [org.webjars/selectize.js "0.11.2"]
+
                  [figwheel "0.2.4-SNAPSHOT"]]
   :plugins [[lein-pprint "1.1.2"]]
 

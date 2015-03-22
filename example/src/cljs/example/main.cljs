@@ -4,8 +4,8 @@
             [re-frame.core :refer [dispatch dispatch-sync register-handler register-sub subscribe path]]
             re-frame.db
             [schema.core :as s :include-macros true]
-            [potpuri.core :as util]
             [cljs-time.core :as t]
+            [potpuri.core :as util]
             [lomakkeet.core :as f]
             [example.forms :as forms]
             [example.autocomplete :as eac]
@@ -16,8 +16,7 @@
 (enable-console-print!)
 
 (def initial-state
-  {:example-page (-> d/empty-thing
-                     (f/->fs d/Thingie))})
+  {:example-page (f/->fs d/empty-thing d/Thingie)})
 
 ;; VIEWS
 

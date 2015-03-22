@@ -1,15 +1,17 @@
 (ns lomakkeet.autocomplete
-  (:require-macros lomakkeet.autocomplete
-                   [cljs.core.async.macros :refer [go]])
+  (:require-macros [cljs.core.async.macros :refer [go]]
+                   lomakkeet.autocomplete)
   (:require [clojure.string :as string]
             [cljs.core.async :refer [put! chan close!]]
             [reagent.core :as reagent :refer [atom]]
             [reagent.ratom :refer-macros [run! reaction]]
             [re-frame.core :refer [dispatch]]
-            goog.events
-            [lomakkeet.core :as f]
             [lomakkeet.util :as util]
             [lomakkeet.impl.mixins :as mixins]))
+
+;;
+;; Utils
+;;
 
 (defn normalize [s]
   ; FIXME:
