@@ -1,10 +1,9 @@
 (ns lomakkeet.file
-  (:require [om.core :as om :include-macros true]
-            [om-tools.core :refer-macros [defcomponent]]
-            [cljs.core.async :refer [put!]]
-            [sablono.core :refer-macros [html]]
-            [goog.string :as gs]
-            [lomakkeet.fields :as f]))
+  (:require [goog.string :as gs]
+            [goog.dom :as dom]
+            [reagent.core :as reagent]
+            [reagent.ratom :refer-macros [reaction]]
+            [re-frame.core :refer [dispatch]]))
 
 (defn humanize-filesize
   [bytes & [fmt]]
@@ -13,37 +12,30 @@
         size (/ bytes (js/Math.pow 1000 unit))]
     (gs/format (or fmt "%0.1f %s") size (get units unit))))
 
-; FIXME: Button label... classes...
-(defcomponent file*
-  [{:keys [value]}
-   owner
-   {:keys [ch ks file-select-label]
-    :or {file-select-label "Select file"}
-    :as opts}]
-  (render [_]
-    (html
+(defn file* [form {:keys [ks file-select-label]
+                   :or {file-select-label "Select file"}}]
+  (let [this (reagent/current-component)
+        value (reaction (get-in (:lomakkeet.core/value @form) ks))]
+    (fn []
       [:div
        [:input
         {:style {:display "none"}
          :type "file"
-         :ref "file-input"
          :on-change (fn [e]
                       (if-let [file (.item e.target.files 0)]
-                        (put! ch {:type :change
-                                  :ks ks
-                                  :value file})))}]
+                        (dispatch [:update-value {:ks ks :value file}])))}]
        [:button.btn.btn-primary
         {:type "button"
-         :on-click #(.click (om/get-node owner "file-input"))}
+         :on-click #(-> (reagent/dom-node this)
+                        (.getElementsByTagName "input")
+                        (.item 0)
+                        (.click))}
         file-select-label]
        ; FIXME: emptyable-input?
        [:button.btn.btn-default
         {:type "button"
-         :on-click #(put! ch {:type :change :ks ks :value nil})}
+         :on-click #(dispatch [:update-value {:ks ks :value nil}])}
         "×"]
-       (if value
+       (if @value
          [:span.selected-file
-          " " (.-name value) ", " (humanize-filesize (.-size value))])])))
-
-(defn file [form label ks & [opts]]
-  (f/build (merge form opts {:input file* :label label :ks ks})))
+          " " (.-name @value) ", " (humanize-filesize (.-size @value))])])))

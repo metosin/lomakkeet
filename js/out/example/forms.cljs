@@ -1,5 +1,7 @@
 (ns example.forms
-  (:require [cljs.core.async :refer [put!]]))
+  (:require [re-frame.core :refer [dispatch]]
+            [reagent.ratom :refer-macros [reaction]]
+            [lomakkeet.core :as f]))
 
 (defn humanize-error [x]
   (if (instance? schema.utils.ValidationError x)
@@ -9,21 +11,29 @@
         "virhe"))
     "virhe"))
 
-(defn form-status [{:keys [errors value initial-value]}]
-  (cond
-    (and (not empty?) errors)  "Form has error(s)"
-    (not= value initial-value) "Form has unsaved edits"))
+(defn form-status [fs]
+  (let [errors? (reaction (f/errors? @fs))
+        dirty?  (reaction (f/dirty? @fs))]
+    (fn []
+      [:span
+       (cond
+         @errors? "Form has error(s)"
+         @dirty?  "Form has unsaved edits")])))
 
-(defn cancel-btn [form-state ch]
-  [:button.btn.btn-primary
-   {:type "button"
-    :disabled (= (:value form-state) (:initial-value form-state))
-    :on-click #(put! ch {:type :cancel})}
-   "Cancel"])
+(defn cancel-btn [fs]
+  (let [dirty? (reaction (f/dirty? @fs))]
+    (fn []
+      [:button.btn.btn-primary
+       {:type "button"
+        :disabled (not @dirty?)
+        :on-click #(dispatch [:cancel-form])}
+       "Cancel"])))
 
-(defn save-btn [form-state ch]
-  [:button.btn.btn-primary
-   {:type "button"
-    :disabled (seq (:errors form-state))
-    :on-click #(put! ch {:type :action, :action :save})}
-   "Save"])
+(defn save-btn [fs]
+  (let [errors? (reaction (f/errors? @fs))]
+    (fn []
+      [:button.btn.btn-primary
+       {:type "button"
+        :disabled @errors?
+        :on-click #(dispatch [:save-form])}
+       "Save"])))

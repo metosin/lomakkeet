@@ -1,7 +1,4 @@
-(ns example.autocomplete
-  (:require [lomakkeet.autocomplete :as ac]
-            [lomakkeet.fields :as f]
-            [om.core :as om :include-macros true]))
+(ns example.autocomplete)
 
 (def countries
   [{:code "AF" :name "Afghanistan"}
@@ -250,17 +247,3 @@
    {:code "YE" :name "Yemen"}
    {:code "ZM" :name "Zambia"}
    {:code "ZW" :name "Zimbabwe"}])
-
-(def ^:private country-list-render
-  ; Could be functions
-  (ac/create-list-renderer {:item->key :code
-                            :item->text :name
-                            :term-match? (ac/create-matcher [:code :name])}))
-
-(defn country-code->name [code]
-  (:name (first (filter (comp (partial = code) :code) countries))))
-
-(defn country-select [form label ks & [opts]]
-  (f/build (merge form opts {:input ac/autocomplete* :renderer country-list-render :value->text country-code->name :label label :ks ks
-                             :load-items (fn [owner]
-                                           (om/set-state! owner :items countries))})))

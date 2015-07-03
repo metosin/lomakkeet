@@ -69,23 +69,19 @@
    (fn-schema (s/fn [^String x]))
    ==> (=> Any java.lang.String)
 
-   **DEPRECATED SYNTAX BELOW, TO BE REMOVED**
-   You can directly type hint a symbol as a class, primitive, protocol, or simple
-   schema.  For complex schemas, due to Clojure's rules about ^, you must enclose
-   the schema in a {:s schema} map like so:
+   You can directly type hint a symbol as a class, primitive, or simple
+   schema.
 
-   (fn-schema (s/fn [^{:s [String]} x]))
-   (=> Any [java.lang.String])
-
-   (We highly prefer the :- syntax to this abomination, however.)  See the docstrings
-   of defrecord, fn, and defn for more details about how to use these macros."
+   See the docstrings of defrecord, fn, and defn for more details about how
+   to use these macros."
   ;; don't exclude fn because of bug in extend-protocol, and def because it's not a var.
   (:refer-clojure :exclude [Keyword Symbol defrecord defn letfn defmethod])
   (:require
    [clojure.string :as str]
                                    
    [schema.utils :as utils])
-         (:require-macros [schema.macros :as macros]))
+         (:require-macros [schema.macros :as macros]
+                          schema.core))
 
                                       
 
@@ -200,7 +196,7 @@
      
    
                                                  
-                                                                            
+                                                            
                               
                             
                         
@@ -342,11 +338,17 @@
 ;; The cljs version is macros/protocol by necessity, since cljs `satisfies?` is a macro.
                   
                                          
+
                                                                            
                                                                          
-                       
+                      
+
+                                                                
+ 
      
-                        
+                             
+                                    
+                       
 
 
 ;;; regex (validates matching Strings)
@@ -537,39 +539,40 @@
   (conditional pred if-schema (constantly true) else-schema))
 
 
-;;; Recursive schemas (Clojure only)
+;;; Recursive schemas
 ;; Supports recursively defined schemas by using the level of indirection offered by by
-;; Clojure (but not ClojureScript) vars.
+;; Clojure and ClojureScript vars.
 
-     
-   
-                                 
-                                     
-                                            
+(clojure.core/defn var-name [v]
+  (let [{:keys [ns name]} (meta v)]
+    (symbol (str                           ns "/" name))))
 
-                                               
-          
-                  
-                               
-                                     
-                                                    
-                                                                                 
-                                       
-                   
-                             
-                                       
-                                                     
+(clojure.core/defrecord Recursive [derefable]
+  Schema
+  (walker [this]
+          (let [a (atom nil)]
+            (reset! a (start-walker
+                       (let [old subschema-walker]
+                         (clojure.core/fn [s] (if (= s this) #(@a %) (old s))))
+                       @derefable))))
+  (explain [this]
+           (list 'recursive
+                 (if                               (instance? Var derefable)
+                     (list 'var (var-name derefable))
+                          
                                     
                                                          
-                                                                     
-
-                              
-                                                                                       
-                                                 
-            
-                                                    
                                                                  
-                         
+                           
+                     '...))))
+
+(clojure.core/defn recursive
+  "Support for (mutually) recursive schemas by passing a var that points to a schema,
+   e.g (recursive #'ExampleRecursiveSchema)."
+  [schema]
+  (when-not                                                     (satisfies? IDeref schema)
+            (macros/error! (utils/format* "Not an IDeref: %s" schema)))
+  (Recursive. schema))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Map Schemas
@@ -814,7 +817,7 @@
           multi-walker (when multi (subschema-walker multi))
           err-conj (utils/result-builder (clojure.core/fn [m] (vec (repeat (count m) nil))))]
       (clojure.core/fn [x]
-        (or (when-not (or (nil? x) (sequential? x))
+        (or (when-not (or (nil? x) (sequential? x)                                   )
               (macros/validation-error this x (list 'sequential? (utils/value-name x))))
             (loop [single-walkers single-walkers x x out []]
               (if-let [[^One first-single single-walker] (first single-walkers)]
@@ -946,13 +949,13 @@
                                                                                        
                                                 
                                       
-                                                    
+                                                                                      
 
             
-                                                                                        
+                                                                                     
                                                                   
                                
-                                            
+                                           
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -966,21 +969,27 @@
   "Returns the name of a schema attached via schema-with-name (or defschema)."
   (-> schema meta :name))
 
+(clojure.core/defn schema-ns [schema]
+  "Returns the namespace of a schema attached via defschema."
+  (-> schema meta :ns))
+
                    
                                                                                           
                                                        
               
                                  
                         
-                                                 
+                           
+                  
+                                         
+                                        
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Schematized defrecord and (de,let)fn macros
 
                    
-                                                                                  
-                                                         
+                                 
 
                                                                                   
                                                                                 
@@ -1014,8 +1023,16 @@
                                                                               
                 
                                                                                        
-          
-                             
+                                 
+                                                                                         
+
+     
+                    
+                                                                                  
+                                                
+                                                                                       
+                                 
+                                                                                      
 
                                     
        
@@ -1038,7 +1055,10 @@
                                                                   
                                                
           
-                                      
+                       
+                
+                                  
+                                                             
 
                                
                                                                       
@@ -1046,7 +1066,10 @@
                                                                   
                                                
           
-                                         
+                       
+                                   
+                                                          
+                  
 
 (clojure.core/defn schematize-fn
   "Attach the schema to fn f at runtime, extractable by fn-schema."
@@ -1078,7 +1101,15 @@
                                                              
                        
              
-                                                             
+                                             
+                         
+                                               
+                                                                                   
+                                                                                                 
+                         
+                     
+                                                                               
+                        
 
               
                                                                              
@@ -1131,7 +1162,24 @@
                                                                          
                         
                
-                             
+                                                                            
+                                                       
+                                                                                                                         
+                         
+                                              
+                                                                                       
+                     
+                                                                
+                                                        
+                                                               
+                                                                                    
+                                              
+                                                 
+                                                    
+                                            
+                                
+                   
+                                                                                   
 
                    
                                                                                   
@@ -1146,15 +1194,25 @@
                                                                          
                                       
 
-                                                                               
-   
+                                                                                
                                   
-                                                       
+                  
+                          
+                                                   
+                  
+                                                         
+                                                        
+                
+                    
+                                                             
 
                
                                                           
                   
-                                  
+            
+                                            
+                                                      
+                      
 
              
                                                                      
@@ -1169,14 +1227,18 @@
 
                                     
               
-                           
+                                                                                     
+                                                                   
+                                                                                      
+                                                          
+                                   
+                                                                                                 
+                                                             
+                 
+                                           
+                                            
 
      
-   
-                                            
-                                                                        
-                                                                
-                                     
-                                    
+                                 
 
 ;;;;;;;;;;;; This file autogenerated from src/cljx/schema/core.cljx
