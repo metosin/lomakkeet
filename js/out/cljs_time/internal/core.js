@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-3269 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 0.0-3308 {:static-fns true, :optimize-constants true}
 goog.provide('cljs_time.internal.core');
 goog.require('cljs.core');
 goog.require('clojure.string');
@@ -10,11 +10,11 @@ return cljs_time.internal.core._EQ_.cljs$core$IFn$_invoke$arity$variadic(argseq_
 });
 
 cljs_time.internal.core._EQ_.cljs$core$IFn$_invoke$arity$variadic = (function (args){
-if(cljs.core.every_QMARK_((function (p1__18664_SHARP_){
-return (p1__18664_SHARP_ instanceof goog.date.Date);
+if(cljs.core.every_QMARK_((function (p1__18670_SHARP_){
+return (p1__18670_SHARP_ instanceof goog.date.Date);
 }),args)){
-return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__18665_SHARP_){
-return p1__18665_SHARP_.getTime();
+return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__18671_SHARP_){
+return p1__18671_SHARP_.getTime();
 }),args));
 } else {
 return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,args);
@@ -24,8 +24,8 @@ return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._EQ_,args);
 
 cljs_time.internal.core._EQ_.cljs$lang$maxFixedArity = (0);
 
-cljs_time.internal.core._EQ_.cljs$lang$applyTo = (function (seq18666){
-return cljs_time.internal.core._EQ_.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq18666));
+cljs_time.internal.core._EQ_.cljs$lang$applyTo = (function (seq18672){
+return cljs_time.internal.core._EQ_.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq18672));
 });
 cljs_time.internal.core.leap_year_QMARK_ = (function cljs_time$internal$core$leap_year_QMARK_(y){
 if((cljs.core.mod(y,(400)) === (0))){
@@ -45,34 +45,34 @@ return false;
 });
 cljs_time.internal.core.days_in_month = new cljs.core.PersistentVector(null, 12, 5, cljs.core.PersistentVector.EMPTY_NODE, [(31),(28),(31),(30),(31),(30),(31),(31),(30),(31),(30),(31)], null);
 cljs_time.internal.core.year_corrected_dim = (function cljs_time$internal$core$year_corrected_dim(year,month){
-var G__18669 = (function (){var G__18670 = (cljs.core.truth_(cljs_time.internal.core._EQ_.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([month,(1)], 0)))?(11):(month - (1)));
-return (cljs_time.internal.core.days_in_month.cljs$core$IFn$_invoke$arity$1 ? cljs_time.internal.core.days_in_month.cljs$core$IFn$_invoke$arity$1(G__18670) : cljs_time.internal.core.days_in_month.call(null,G__18670));
+var G__18675 = (function (){var G__18676 = (cljs.core.truth_(cljs_time.internal.core._EQ_.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([month,(1)], 0)))?(11):(month - (1)));
+return (cljs_time.internal.core.days_in_month.cljs$core$IFn$_invoke$arity$1 ? cljs_time.internal.core.days_in_month.cljs$core$IFn$_invoke$arity$1(G__18676) : cljs_time.internal.core.days_in_month.call(null,G__18676));
 })();
-var G__18669__$1 = (cljs.core.truth_((function (){var and__4326__auto__ = cljs_time.internal.core.leap_year_QMARK_(year);
+var G__18675__$1 = (cljs.core.truth_((function (){var and__4326__auto__ = cljs_time.internal.core.leap_year_QMARK_(year);
 if(cljs.core.truth_(and__4326__auto__)){
 return cljs_time.internal.core._EQ_.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([month,(2)], 0));
 } else {
 return and__4326__auto__;
 }
-})())?(G__18669 + (1)):G__18669);
-return G__18669__$1;
+})())?(G__18675 + (1)):G__18675);
+return G__18675__$1;
 });
-cljs_time.internal.core.valid_date_QMARK_ = (function cljs_time$internal$core$valid_date_QMARK_(p__18671){
-var map__18673 = p__18671;
-var map__18673__$1 = ((cljs.core.seq_QMARK_(map__18673))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__18673):map__18673);
-var d = map__18673__$1;
-var years = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__18673__$1,cljs.core.constant$keyword$years);
-var months = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__18673__$1,cljs.core.constant$keyword$months);
-var days = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__18673__$1,cljs.core.constant$keyword$days);
-var hours = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__18673__$1,cljs.core.constant$keyword$hours);
-var minutes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__18673__$1,cljs.core.constant$keyword$minutes);
-var seconds = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__18673__$1,cljs.core.constant$keyword$seconds);
-var millis = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__18673__$1,cljs.core.constant$keyword$millis);
+cljs_time.internal.core.valid_date_QMARK_ = (function cljs_time$internal$core$valid_date_QMARK_(p__18677){
+var map__18679 = p__18677;
+var map__18679__$1 = ((cljs.core.seq_QMARK_(map__18679))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__18679):map__18679);
+var d = map__18679__$1;
+var years = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__18679__$1,cljs.core.constant$keyword$years);
+var months = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__18679__$1,cljs.core.constant$keyword$months);
+var days = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__18679__$1,cljs.core.constant$keyword$days);
+var hours = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__18679__$1,cljs.core.constant$keyword$hours);
+var minutes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__18679__$1,cljs.core.constant$keyword$minutes);
+var seconds = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__18679__$1,cljs.core.constant$keyword$seconds);
+var millis = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__18679__$1,cljs.core.constant$keyword$millis);
 var months__$1 = (months + (1));
-var _GT__LT_ = ((function (months__$1,map__18673,map__18673__$1,d,years,months,days,hours,minutes,seconds,millis){
+var _GT__LT_ = ((function (months__$1,map__18679,map__18679__$1,d,years,months,days,hours,minutes,seconds,millis){
 return (function cljs_time$internal$core$valid_date_QMARK__$__GT__LT_(a,b,x){
 return ((x >= a)) && ((x <= b));
-});})(months__$1,map__18673,map__18673__$1,d,years,months,days,hours,minutes,seconds,millis))
+});})(months__$1,map__18679,map__18679__$1,d,years,months,days,hours,minutes,seconds,millis))
 ;
 if(cljs.core.truth_((function (){var and__4326__auto__ = years;
 if(cljs.core.truth_(and__4326__auto__)){
@@ -112,9 +112,9 @@ throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2("Date is not valid",new cl
 }
 });
 cljs_time.internal.core.index_of = (function cljs_time$internal$core$index_of(coll,x){
-return cljs.core.first(cljs.core.keep_indexed.cljs$core$IFn$_invoke$arity$2((function (p1__18675_SHARP_,p2__18674_SHARP_){
-if(cljs.core.truth_(cljs_time.internal.core._EQ_.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([p2__18674_SHARP_,x], 0)))){
-return p1__18675_SHARP_;
+return cljs.core.first(cljs.core.keep_indexed.cljs$core$IFn$_invoke$arity$2((function (p1__18681_SHARP_,p2__18680_SHARP_){
+if(cljs.core.truth_(cljs_time.internal.core._EQ_.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([p2__18680_SHARP_,x], 0)))){
+return p1__18681_SHARP_;
 } else {
 return null;
 }
@@ -141,17 +141,17 @@ return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(goog.string.format,fmt,args
 
 cljs_time.internal.core.format.cljs$lang$maxFixedArity = (1);
 
-cljs_time.internal.core.format.cljs$lang$applyTo = (function (seq18676){
-var G__18677 = cljs.core.first(seq18676);
-var seq18676__$1 = cljs.core.next(seq18676);
-return cljs_time.internal.core.format.cljs$core$IFn$_invoke$arity$variadic(G__18677,seq18676__$1);
+cljs_time.internal.core.format.cljs$lang$applyTo = (function (seq18682){
+var G__18683 = cljs.core.first(seq18682);
+var seq18682__$1 = cljs.core.next(seq18682);
+return cljs_time.internal.core.format.cljs$core$IFn$_invoke$arity$variadic(G__18683,seq18682__$1);
 });
 /**
  * Remove the need to pull in gstring/format code in advanced compilation
  */
 cljs_time.internal.core.zero_pad = (function cljs_time$internal$core$zero_pad(){
-var G__18679 = arguments.length;
-switch (G__18679) {
+var G__18685 = arguments.length;
+switch (G__18685) {
 case 1:
 return cljs_time.internal.core.zero_pad.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 

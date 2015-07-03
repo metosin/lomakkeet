@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-3269 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 0.0-3308 {:static-fns true, :optimize-constants true}
 goog.provide('lomakkeet.core');
 goog.require('cljs.core');
 goog.require('schema.core');
@@ -12,8 +12,8 @@ lomakkeet.core._STAR_coercion_matcher_STAR_ = schema.coerce.string_coercion_matc
  */
 lomakkeet.core.FormState = cljs.core.vary_meta.cljs$core$IFn$_invoke$arity$4(schema.core.schema_with_name(new cljs.core.PersistentArrayMap.fromArray([cljs.core.constant$keyword$value,schema.core.Any,cljs.core.constant$keyword$initial_DASH_value,schema.core.Any,cljs.core.constant$keyword$errors,schema.core.Any,cljs.core.constant$keyword$not_DASH_pristine,schema.core.Any,cljs.core.constant$keyword$schema,schema.core.Any,schema.core.Keyword,schema.core.Any], true, false),new cljs.core.Symbol(null,"FormState","FormState",834878066,null)),cljs.core.assoc,cljs.core.constant$keyword$ns,new cljs.core.Symbol(null,"lomakkeet.core","lomakkeet.core",-436480680,null));
 lomakkeet.core.__GT_fs = (function lomakkeet$core$__GT_fs(){
-var G__17492 = arguments.length;
-switch (G__17492) {
+var G__17498 = arguments.length;
+switch (G__17498) {
 case 1:
 return lomakkeet.core.__GT_fs.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -50,9 +50,9 @@ lomakkeet.core.commit = (function lomakkeet$core$commit(fs){
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(fs,cljs.core.constant$keyword$initial_DASH_value,cljs.core.constant$keyword$value.cljs$core$IFn$_invoke$arity$1(fs));
 });
 lomakkeet.core.validate = (function lomakkeet$core$validate(fs){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(fs,cljs.core.constant$keyword$errors,(function (){var temp__4421__auto__ = cljs.core.constant$keyword$schema.cljs$core$IFn$_invoke$arity$1(fs);
-if(cljs.core.truth_(temp__4421__auto__)){
-var schema__$1 = temp__4421__auto__;
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(fs,cljs.core.constant$keyword$errors,(function (){var temp__4423__auto__ = cljs.core.constant$keyword$schema.cljs$core$IFn$_invoke$arity$1(fs);
+if(cljs.core.truth_(temp__4423__auto__)){
+var schema__$1 = temp__4423__auto__;
 return schema.core.check(schema__$1,cljs.core.constant$keyword$value.cljs$core$IFn$_invoke$arity$1(fs));
 } else {
 return null;
@@ -84,12 +84,12 @@ return lomakkeet.core.save(fs,new_value);
 
 lomakkeet.core.update.cljs$lang$maxFixedArity = (2);
 
-lomakkeet.core.update.cljs$lang$applyTo = (function (seq17494){
-var G__17495 = cljs.core.first(seq17494);
-var seq17494__$1 = cljs.core.next(seq17494);
-var G__17496 = cljs.core.first(seq17494__$1);
-var seq17494__$2 = cljs.core.next(seq17494__$1);
-return lomakkeet.core.update.cljs$core$IFn$_invoke$arity$variadic(G__17495,G__17496,seq17494__$2);
+lomakkeet.core.update.cljs$lang$applyTo = (function (seq17500){
+var G__17501 = cljs.core.first(seq17500);
+var seq17500__$1 = cljs.core.next(seq17500);
+var G__17502 = cljs.core.first(seq17500__$1);
+var seq17500__$2 = cljs.core.next(seq17500__$1);
+return lomakkeet.core.update.cljs$core$IFn$_invoke$arity$variadic(G__17501,G__17502,seq17500__$2);
 });
 /**
  * Return either coerced or the original value if the coercion failed.
@@ -108,8 +108,8 @@ return value;
 });
 lomakkeet.core.extra_validation = (function lomakkeet$core$extra_validation(fs,validation_fn){
 if(cljs.core.truth_(validation_fn)){
-return cljs.core.update_in.cljs$core$IFn$_invoke$arity$4(fs,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$errors], null),cljs.core.merge,(function (){var G__17498 = cljs.core.constant$keyword$value.cljs$core$IFn$_invoke$arity$1(fs);
-return (validation_fn.cljs$core$IFn$_invoke$arity$1 ? validation_fn.cljs$core$IFn$_invoke$arity$1(G__17498) : validation_fn.call(null,G__17498));
+return cljs.core.update_in.cljs$core$IFn$_invoke$arity$4(fs,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$errors], null),cljs.core.merge,(function (){var G__17504 = cljs.core.constant$keyword$value.cljs$core$IFn$_invoke$arity$1(fs);
+return (validation_fn.cljs$core$IFn$_invoke$arity$1 ? validation_fn.cljs$core$IFn$_invoke$arity$1(G__17504) : validation_fn.call(null,G__17504));
 })());
 } else {
 return fs;
@@ -126,9 +126,9 @@ var argseq__5378__auto__ = ((((3) < arguments.length))?(new cljs.core.IndexedSeq
 return lomakkeet.core.change_value.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),argseq__5378__auto__);
 });
 
-lomakkeet.core.change_value.cljs$core$IFn$_invoke$arity$variadic = (function (fs,ks,value,p__17503){
-var vec__17504 = p__17503;
-var validation_fn = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__17504,(0),null);
+lomakkeet.core.change_value.cljs$core$IFn$_invoke$arity$variadic = (function (fs,ks,value,p__17509){
+var vec__17510 = p__17509;
+var validation_fn = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__17510,(0),null);
 var schema__$1 = cljs.core.constant$keyword$schema.cljs$core$IFn$_invoke$arity$1(fs);
 var value__$1 = lomakkeet.core.coerce(schema_tools.core.get_in.cljs$core$IFn$_invoke$arity$2(schema__$1,ks),value);
 return lomakkeet.core.extra_validation(lomakkeet.core.validate(((((cljs.core.seq_QMARK_(value__$1)) && (cljs.core.seq(value__$1))) || (!((value__$1 == null))))?cljs.core.update_in.cljs$core$IFn$_invoke$arity$5(fs,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$value], null),cljs.core.assoc_in,ks,value__$1):(function (){var parent_schema = schema_tools.core.get_in.cljs$core$IFn$_invoke$arity$2(schema__$1,cljs.core.butlast(ks));
@@ -142,14 +142,14 @@ return cljs.core.update_in.cljs$core$IFn$_invoke$arity$5(fs,new cljs.core.Persis
 
 lomakkeet.core.change_value.cljs$lang$maxFixedArity = (3);
 
-lomakkeet.core.change_value.cljs$lang$applyTo = (function (seq17499){
-var G__17500 = cljs.core.first(seq17499);
-var seq17499__$1 = cljs.core.next(seq17499);
-var G__17501 = cljs.core.first(seq17499__$1);
-var seq17499__$2 = cljs.core.next(seq17499__$1);
-var G__17502 = cljs.core.first(seq17499__$2);
-var seq17499__$3 = cljs.core.next(seq17499__$2);
-return lomakkeet.core.change_value.cljs$core$IFn$_invoke$arity$variadic(G__17500,G__17501,G__17502,seq17499__$3);
+lomakkeet.core.change_value.cljs$lang$applyTo = (function (seq17505){
+var G__17506 = cljs.core.first(seq17505);
+var seq17505__$1 = cljs.core.next(seq17505);
+var G__17507 = cljs.core.first(seq17505__$1);
+var seq17505__$2 = cljs.core.next(seq17505__$1);
+var G__17508 = cljs.core.first(seq17505__$2);
+var seq17505__$3 = cljs.core.next(seq17505__$2);
+return lomakkeet.core.change_value.cljs$core$IFn$_invoke$arity$variadic(G__17506,G__17507,G__17508,seq17505__$3);
 });
 /**
  * Check if form-state is dirty, meaning that the value and the initial value are not identitcal.

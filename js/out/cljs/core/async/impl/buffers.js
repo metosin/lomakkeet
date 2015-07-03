@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-3269 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 0.0-3308 {:static-fns true, :optimize-constants true}
 goog.provide('cljs.core.async.impl.buffers');
 goog.require('cljs.core');
 goog.require('cljs.core.async.impl.protocols');
@@ -8,8 +8,8 @@ while(true){
 if((cnt < len)){
 (dest[(dest_start + cnt)] = (src[(src_start + cnt)]));
 
-var G__18275 = (cnt + (1));
-cnt = G__18275;
+var G__18281 = (cnt + (1));
+cnt = G__18281;
 continue;
 } else {
 return null;
@@ -112,16 +112,16 @@ var n__5223__auto__ = self__.length;
 var x = (0);
 while(true){
 if((x < n__5223__auto__)){
-var v_18277 = this$.pop();
-if(cljs.core.truth_((function (){var G__18276 = v_18277;
-return (keep_QMARK_.cljs$core$IFn$_invoke$arity$1 ? keep_QMARK_.cljs$core$IFn$_invoke$arity$1(G__18276) : keep_QMARK_.call(null,G__18276));
+var v_18283 = this$.pop();
+if(cljs.core.truth_((function (){var G__18282 = v_18283;
+return (keep_QMARK_.cljs$core$IFn$_invoke$arity$1 ? keep_QMARK_.cljs$core$IFn$_invoke$arity$1(G__18282) : keep_QMARK_.call(null,G__18282));
 })())){
-this$.unshift(v_18277);
+this$.unshift(v_18283);
 } else {
 }
 
-var G__18278 = (x + (1));
-x = G__18278;
+var G__18284 = (x + (1));
+x = G__18284;
 continue;
 } else {
 return null;

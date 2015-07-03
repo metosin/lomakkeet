@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-3269 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 0.0-3308 {:static-fns true, :optimize-constants true}
 goog.provide('example.reagent');
 goog.require('cljs.core');
 goog.require('cljs_time.core');
@@ -14,9 +14,9 @@ goog.require('lomakkeet.reagent');
 cljs.core.enable_console_print_BANG_();
 if(typeof example.reagent.app_state !== 'undefined'){
 } else {
-example.reagent.app_state = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$example_DASH_page,(function (){var G__17177 = example.domain.empty_thing;
-var G__17178 = example.domain.Thingie;
-return (lomakkeet.reagent.__GT_fs.cljs$core$IFn$_invoke$arity$2 ? lomakkeet.reagent.__GT_fs.cljs$core$IFn$_invoke$arity$2(G__17177,G__17178) : lomakkeet.reagent.__GT_fs.call(null,G__17177,G__17178));
+example.reagent.app_state = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$example_DASH_page,(function (){var G__17183 = example.domain.empty_thing;
+var G__17184 = example.domain.Thingie;
+return (lomakkeet.reagent.__GT_fs.cljs$core$IFn$_invoke$arity$2 ? lomakkeet.reagent.__GT_fs.cljs$core$IFn$_invoke$arity$2(G__17183,G__17184) : lomakkeet.reagent.__GT_fs.call(null,G__17183,G__17184));
 })()], null));
 }
 example.reagent.thing_view = (function example$reagent$thing_view(){
@@ -24,22 +24,22 @@ var form_data = reagent.core.cursor(example.reagent.app_state,new cljs.core.Pers
 var form = lomakkeet.reagent.create_form.cljs$core$IFn$_invoke$arity$variadic(form_data,cljs.core.array_seq([cljs.core.constant$keyword$opts,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$size,(6)], null)], 0));
 var form_value = reagent.ratom.make_reaction(((function (form_data,form){
 return (function (){
-return cljs.core.constant$keyword$value.cljs$core$IFn$_invoke$arity$1((function (){var G__17182 = form_data;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__17182) : cljs.core.deref.call(null,G__17182));
+return cljs.core.constant$keyword$value.cljs$core$IFn$_invoke$arity$1((function (){var G__17188 = form_data;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__17188) : cljs.core.deref.call(null,G__17188));
 })());
 });})(form_data,form))
 );
 var start = reagent.ratom.make_reaction(((function (form_data,form,form_value){
 return (function (){
-return cljs.core.get_in.cljs$core$IFn$_invoke$arity$2((function (){var G__17183 = form_value;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__17183) : cljs.core.deref.call(null,G__17183));
+return cljs.core.get_in.cljs$core$IFn$_invoke$arity$2((function (){var G__17189 = form_value;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__17189) : cljs.core.deref.call(null,G__17189));
 })(),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$dates,cljs.core.constant$keyword$start], null));
 });})(form_data,form,form_value))
 );
 var end = reagent.ratom.make_reaction(((function (form_data,form,form_value,start){
 return (function (){
-return cljs.core.get_in.cljs$core$IFn$_invoke$arity$2((function (){var G__17184 = form_value;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__17184) : cljs.core.deref.call(null,G__17184));
+return cljs.core.get_in.cljs$core$IFn$_invoke$arity$2((function (){var G__17190 = form_value;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__17190) : cljs.core.deref.call(null,G__17190));
 })(),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$dates,cljs.core.constant$keyword$end], null));
 });})(form_data,form,form_value,start))
 );
@@ -55,10 +55,10 @@ example.reagent.tree_state = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(new
 }
 example.reagent.dev_view = (function example$reagent$dev_view(app_state){
 return (function (){
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$div$om_DASH_dev_DASH_tools_DASH_state_DASH_tree,example.reagent.dev_tools.tree(example.reagent.tree_state,(function (){var G__17187 = example.reagent.tree_state;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__17187) : cljs.core.deref.call(null,G__17187));
-})(),(function (){var G__17188 = app_state;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__17188) : cljs.core.deref.call(null,G__17188));
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$div$om_DASH_dev_DASH_tools_DASH_state_DASH_tree,example.reagent.dev_tools.tree(example.reagent.tree_state,(function (){var G__17193 = example.reagent.tree_state;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__17193) : cljs.core.deref.call(null,G__17193));
+})(),(function (){var G__17194 = app_state;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__17194) : cljs.core.deref.call(null,G__17194));
 })(),cljs.core.PersistentVector.EMPTY)], null);
 });
 });
@@ -66,11 +66,11 @@ example.reagent.app_view = (function example$reagent$app_view(){
 return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$div,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$h1,"Example Reagent form ",new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$a,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$href,"https://github.com/metosin/lomakkeet/blob/master/example/src/cljs/example/main.cljs"], null),"(Code)"], null)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [example.reagent.thing_view], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$h1,"Reagent state"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [example.reagent.dev_view,example.reagent.app_state], null)], null);
 });
 example.reagent.restart_BANG_ = (function example$reagent$restart_BANG_(){
-var temp__4421__auto__ = (function (){var G__17190 = "reagent";
-return document.getElementById(G__17190);
+var temp__4423__auto__ = (function (){var G__17196 = "reagent";
+return document.getElementById(G__17196);
 })();
-if(cljs.core.truth_(temp__4421__auto__)){
-var root = temp__4421__auto__;
+if(cljs.core.truth_(temp__4423__auto__)){
+var root = temp__4423__auto__;
 return reagent.core.render.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [example.reagent.app_view], null),root);
 } else {
 return null;

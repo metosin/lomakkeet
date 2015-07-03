@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-3269 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 0.0-3308 {:static-fns true, :optimize-constants true}
 goog.provide('schema_tools.core');
 goog.require('cljs.core');
 goog.require('schema.core');
@@ -19,8 +19,8 @@ return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(cljs.core.merge,schema_tool
 
 schema_tools.core.any_keyword_keys.cljs$lang$maxFixedArity = (0);
 
-schema_tools.core.any_keyword_keys.cljs$lang$applyTo = (function (seq19011){
-return schema_tools.core.any_keyword_keys.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq19011));
+schema_tools.core.any_keyword_keys.cljs$lang$applyTo = (function (seq19017){
+return schema_tools.core.any_keyword_keys.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq19017));
 });
 schema_tools.core.explicit_key = (function schema_tools$core$explicit_key(k){
 if(cljs.core.truth_(schema.core.specific_key_QMARK_(k))){
@@ -65,20 +65,20 @@ var argseq__5378__auto__ = ((((2) < arguments.length))?(new cljs.core.IndexedSeq
 return schema_tools.core.get_in_schema.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__5378__auto__);
 });
 
-schema_tools.core.get_in_schema.cljs$core$IFn$_invoke$arity$variadic = (function (m,k,p__19015){
-var vec__19016 = p__19015;
-var default$ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19016,(0),null);
+schema_tools.core.get_in_schema.cljs$core$IFn$_invoke$arity$variadic = (function (m,k,p__19021){
+var vec__19022 = p__19021;
+var default$ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19022,(0),null);
 return cljs.core.get.cljs$core$IFn$_invoke$arity$3(m,schema_tools.core.key_in_schema(m,k),default$);
 });
 
 schema_tools.core.get_in_schema.cljs$lang$maxFixedArity = (2);
 
-schema_tools.core.get_in_schema.cljs$lang$applyTo = (function (seq19012){
-var G__19013 = cljs.core.first(seq19012);
-var seq19012__$1 = cljs.core.next(seq19012);
-var G__19014 = cljs.core.first(seq19012__$1);
-var seq19012__$2 = cljs.core.next(seq19012__$1);
-return schema_tools.core.get_in_schema.cljs$core$IFn$_invoke$arity$variadic(G__19013,G__19014,seq19012__$2);
+schema_tools.core.get_in_schema.cljs$lang$applyTo = (function (seq19018){
+var G__19019 = cljs.core.first(seq19018);
+var seq19018__$1 = cljs.core.next(seq19018);
+var G__19020 = cljs.core.first(seq19018__$1);
+var seq19018__$2 = cljs.core.next(seq19018__$1);
+return schema_tools.core.get_in_schema.cljs$core$IFn$_invoke$arity$variadic(G__19019,G__19020,seq19018__$2);
 });
 schema_tools.core.maybe_anonymous = (function schema_tools$core$maybe_anonymous(original,current){
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(original,current)){
@@ -103,10 +103,10 @@ return schema_tools.core.assoc.cljs$core$IFn$_invoke$arity$variadic((arguments[(
 });
 
 schema_tools.core.assoc.cljs$core$IFn$_invoke$arity$variadic = (function (schema__$1,kvs){
-return schema_tools.core.maybe_anonymous(schema__$1,cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (schema__$2,p__19019){
-var vec__19020 = p__19019;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19020,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19020,(1),null);
+return schema_tools.core.maybe_anonymous(schema__$1,cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (schema__$2,p__19025){
+var vec__19026 = p__19025;
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19026,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19026,(1),null);
 var rk = schema_tools.core.key_in_schema(schema__$2,k);
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(schema__$2,rk),k,v);
 }),schema__$1,cljs.core.partition.cljs$core$IFn$_invoke$arity$4((2),(2),null,kvs)));
@@ -114,10 +114,10 @@ return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(cljs.core.dissoc.cljs$core$
 
 schema_tools.core.assoc.cljs$lang$maxFixedArity = (1);
 
-schema_tools.core.assoc.cljs$lang$applyTo = (function (seq19017){
-var G__19018 = cljs.core.first(seq19017);
-var seq19017__$1 = cljs.core.next(seq19017);
-return schema_tools.core.assoc.cljs$core$IFn$_invoke$arity$variadic(G__19018,seq19017__$1);
+schema_tools.core.assoc.cljs$lang$applyTo = (function (seq19023){
+var G__19024 = cljs.core.first(seq19023);
+var seq19023__$1 = cljs.core.next(seq19023);
+return schema_tools.core.assoc.cljs$core$IFn$_invoke$arity$variadic(G__19024,seq19023__$1);
 });
 /**
  * Dissoc[iate]s keys from Schema.
@@ -135,10 +135,10 @@ return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(schema__$2,schema_tools.co
 
 schema_tools.core.dissoc.cljs$lang$maxFixedArity = (1);
 
-schema_tools.core.dissoc.cljs$lang$applyTo = (function (seq19021){
-var G__19022 = cljs.core.first(seq19021);
-var seq19021__$1 = cljs.core.next(seq19021);
-return schema_tools.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__19022,seq19021__$1);
+schema_tools.core.dissoc.cljs$lang$applyTo = (function (seq19027){
+var G__19028 = cljs.core.first(seq19027);
+var seq19027__$1 = cljs.core.next(seq19027);
+return schema_tools.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__19028,seq19027__$1);
 });
 /**
  * Like clojure.core/select-keys but handles boths optional-keys and required-keys.
@@ -154,8 +154,8 @@ return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap
  * is not present, or the not-found value if supplied.
  */
 schema_tools.core.get_in = (function schema_tools$core$get_in(){
-var G__19024 = arguments.length;
-switch (G__19024) {
+var G__19030 = arguments.length;
+switch (G__19030) {
 case 2:
 return schema_tools.core.get_in.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -185,12 +185,12 @@ var m__$2 = schema_tools.core.get_in_schema.cljs$core$IFn$_invoke$arity$variadic
 if((sentinel === m__$2)){
 return not_found;
 } else {
-var G__19026 = sentinel;
-var G__19027 = m__$2;
-var G__19028 = cljs.core.next(ks__$1);
-sentinel = G__19026;
-m__$1 = G__19027;
-ks__$1 = G__19028;
+var G__19032 = sentinel;
+var G__19033 = m__$2;
+var G__19034 = cljs.core.next(ks__$1);
+sentinel = G__19032;
+m__$1 = G__19033;
+ks__$1 = G__19034;
 continue;
 }
 } else {
@@ -206,10 +206,10 @@ schema_tools.core.get_in.cljs$lang$maxFixedArity = 3;
  * sequence of keys and v is the new value and returns a new nested Schema.
  * If any levels do not exist, hash-maps will be created.
  */
-schema_tools.core.assoc_in = (function schema_tools$core$assoc_in(schema__$1,p__19029,v){
-var vec__19034 = p__19029;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19034,(0),null);
-var ks = cljs.core.nthnext(vec__19034,(1));
+schema_tools.core.assoc_in = (function schema_tools$core$assoc_in(schema__$1,p__19035,v){
+var vec__19040 = p__19035;
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19040,(0),null);
+var ks = cljs.core.nthnext(vec__19040,(1));
 return schema_tools.core.maybe_anonymous(schema__$1,(function (){var kis = schema_tools.core.key_in_schema(schema__$1,k);
 if(cljs.core.truth_(ks)){
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(schema__$1,kis,schema_tools$core$assoc_in(schema_tools.core.get_in_schema(schema__$1,k),ks,v));
@@ -230,10 +230,10 @@ var argseq__5378__auto__ = ((((3) < arguments.length))?(new cljs.core.IndexedSeq
 return schema_tools.core.update_in.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),argseq__5378__auto__);
 });
 
-schema_tools.core.update_in.cljs$core$IFn$_invoke$arity$variadic = (function (schema__$1,p__19039,f,args){
-var vec__19040 = p__19039;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19040,(0),null);
-var ks = cljs.core.nthnext(vec__19040,(1));
+schema_tools.core.update_in.cljs$core$IFn$_invoke$arity$variadic = (function (schema__$1,p__19045,f,args){
+var vec__19046 = p__19045;
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19046,(0),null);
+var ks = cljs.core.nthnext(vec__19046,(1));
 return schema_tools.core.maybe_anonymous(schema__$1,(function (){var kis = schema_tools.core.key_in_schema(schema__$1,k);
 if(cljs.core.truth_(ks)){
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(schema__$1,kis,cljs.core.apply.cljs$core$IFn$_invoke$arity$5(schema_tools.core.update_in,schema_tools.core.get_in_schema(schema__$1,k),ks,f,args));
@@ -245,29 +245,29 @@ return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(schema__$1,kis,cljs.core.ap
 
 schema_tools.core.update_in.cljs$lang$maxFixedArity = (3);
 
-schema_tools.core.update_in.cljs$lang$applyTo = (function (seq19035){
-var G__19036 = cljs.core.first(seq19035);
-var seq19035__$1 = cljs.core.next(seq19035);
-var G__19037 = cljs.core.first(seq19035__$1);
-var seq19035__$2 = cljs.core.next(seq19035__$1);
-var G__19038 = cljs.core.first(seq19035__$2);
-var seq19035__$3 = cljs.core.next(seq19035__$2);
-return schema_tools.core.update_in.cljs$core$IFn$_invoke$arity$variadic(G__19036,G__19037,G__19038,seq19035__$3);
+schema_tools.core.update_in.cljs$lang$applyTo = (function (seq19041){
+var G__19042 = cljs.core.first(seq19041);
+var seq19041__$1 = cljs.core.next(seq19041);
+var G__19043 = cljs.core.first(seq19041__$1);
+var seq19041__$2 = cljs.core.next(seq19041__$1);
+var G__19044 = cljs.core.first(seq19041__$2);
+var seq19041__$3 = cljs.core.next(seq19041__$2);
+return schema_tools.core.update_in.cljs$core$IFn$_invoke$arity$variadic(G__19042,G__19043,G__19044,seq19041__$3);
 });
 /**
  * Dissociates an entry from a nested associative Schema returning a new
  * nested structure. keys is a sequence of keys. Any empty maps that result
  * will not be present in the new Schema.
  */
-schema_tools.core.dissoc_in = (function schema_tools$core$dissoc_in(schema__$1,p__19041){
-var vec__19045 = p__19041;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19045,(0),null);
-var ks = cljs.core.nthnext(vec__19045,(1));
+schema_tools.core.dissoc_in = (function schema_tools$core$dissoc_in(schema__$1,p__19047){
+var vec__19051 = p__19047;
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19051,(0),null);
+var ks = cljs.core.nthnext(vec__19051,(1));
 var k__$1 = schema_tools.core.key_in_schema(schema__$1,k);
 if(cljs.core.truth_(ks)){
-var temp__4421__auto__ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(schema__$1,k__$1);
-if(cljs.core.truth_(temp__4421__auto__)){
-var nextmap = temp__4421__auto__;
+var temp__4423__auto__ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(schema__$1,k__$1);
+if(cljs.core.truth_(temp__4423__auto__)){
+var nextmap = temp__4423__auto__;
 var newmap = schema_tools$core$dissoc_in(nextmap,ks);
 if(cljs.core.seq(newmap)){
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(schema__$1,k__$1,newmap);
@@ -295,14 +295,14 @@ return cljs.core.apply.cljs$core$IFn$_invoke$arity$5(schema_tools.core.update_in
 
 schema_tools.core.update.cljs$lang$maxFixedArity = (3);
 
-schema_tools.core.update.cljs$lang$applyTo = (function (seq19046){
-var G__19047 = cljs.core.first(seq19046);
-var seq19046__$1 = cljs.core.next(seq19046);
-var G__19048 = cljs.core.first(seq19046__$1);
-var seq19046__$2 = cljs.core.next(seq19046__$1);
-var G__19049 = cljs.core.first(seq19046__$2);
-var seq19046__$3 = cljs.core.next(seq19046__$2);
-return schema_tools.core.update.cljs$core$IFn$_invoke$arity$variadic(G__19047,G__19048,G__19049,seq19046__$3);
+schema_tools.core.update.cljs$lang$applyTo = (function (seq19052){
+var G__19053 = cljs.core.first(seq19052);
+var seq19052__$1 = cljs.core.next(seq19052);
+var G__19054 = cljs.core.first(seq19052__$1);
+var seq19052__$2 = cljs.core.next(seq19052__$1);
+var G__19055 = cljs.core.first(seq19052__$2);
+var seq19052__$3 = cljs.core.next(seq19052__$2);
+return schema_tools.core.update.cljs$core$IFn$_invoke$arity$variadic(G__19053,G__19054,G__19055,seq19052__$3);
 });
 /**
  * Returns a Schema that consists of the rest of the Schemas conj-ed onto
@@ -316,18 +316,18 @@ return schema_tools.core.merge.cljs$core$IFn$_invoke$arity$variadic(argseq__5378
 });
 
 schema_tools.core.merge.cljs$core$IFn$_invoke$arity$variadic = (function (schemas){
-if(cljs.core.every_QMARK_((function (p1__19050_SHARP_){
-return (cljs.core.map_QMARK_(p1__19050_SHARP_)) || ((p1__19050_SHARP_ == null));
+if(cljs.core.every_QMARK_((function (p1__19056_SHARP_){
+return (cljs.core.map_QMARK_(p1__19056_SHARP_)) || ((p1__19056_SHARP_ == null));
 }),schemas)){
 } else {
-throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol(null,"every?","every?",2083724064,null),cljs.core.list(new cljs.core.Symbol(null,"fn*","fn*",-752876845,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"p1__19050#","p1__19050#",1924961314,null)], null),cljs.core.list(new cljs.core.Symbol(null,"or","or",1876275696,null),cljs.core.list(new cljs.core.Symbol(null,"map?","map?",-1780568534,null),new cljs.core.Symbol(null,"p1__19050#","p1__19050#",1924961314,null)),cljs.core.list(new cljs.core.Symbol(null,"nil?","nil?",1612038930,null),new cljs.core.Symbol(null,"p1__19050#","p1__19050#",1924961314,null)))),new cljs.core.Symbol(null,"schemas","schemas",-2079365190,null))], 0)))].join('')));
+throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol(null,"every?","every?",2083724064,null),cljs.core.list(new cljs.core.Symbol(null,"fn*","fn*",-752876845,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"p1__19056#","p1__19056#",1024151286,null)], null),cljs.core.list(new cljs.core.Symbol(null,"or","or",1876275696,null),cljs.core.list(new cljs.core.Symbol(null,"map?","map?",-1780568534,null),new cljs.core.Symbol(null,"p1__19056#","p1__19056#",1024151286,null)),cljs.core.list(new cljs.core.Symbol(null,"nil?","nil?",1612038930,null),new cljs.core.Symbol(null,"p1__19056#","p1__19056#",1024151286,null)))),new cljs.core.Symbol(null,"schemas","schemas",-2079365190,null))], 0)))].join('')));
 }
 
 return schema_tools.core.maybe_anonymous(cljs.core.first(schemas),(cljs.core.truth_(cljs.core.some(cljs.core.identity,schemas))?cljs.core.reduce.cljs$core$IFn$_invoke$arity$2((function (acc,m){
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (acc__$1,p__19052){
-var vec__19053 = p__19052;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19053,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19053,(1),null);
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (acc__$1,p__19058){
+var vec__19059 = p__19058;
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19059,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19059,(1),null);
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(schema_tools.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(acc__$1,cljs.core.array_seq([k], 0)),k,v);
 }),acc,m);
 }),schemas):null));
@@ -335,8 +335,8 @@ return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(schema_tools.core.dissoc.cl
 
 schema_tools.core.merge.cljs$lang$maxFixedArity = (0);
 
-schema_tools.core.merge.cljs$lang$applyTo = (function (seq19051){
-return schema_tools.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq19051));
+schema_tools.core.merge.cljs$lang$applyTo = (function (seq19057){
+return schema_tools.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq19057));
 });
 /**
  * Removes all keys that are disallowed in the Schema.
@@ -355,8 +355,8 @@ return schema_tools.util.map_keys(((function (ks_QMARK_){
 return (function (k){
 if(cljs.core.truth_((function (){var and__4326__auto__ = ks;
 if(cljs.core.truth_(and__4326__auto__)){
-return cljs.core.not((function (){var G__19057 = schema_tools.core.explicit_key(k);
-return (ks_QMARK_.cljs$core$IFn$_invoke$arity$1 ? ks_QMARK_.cljs$core$IFn$_invoke$arity$1(G__19057) : ks_QMARK_.call(null,G__19057));
+return cljs.core.not((function (){var G__19063 = schema_tools.core.explicit_key(k);
+return (ks_QMARK_.cljs$core$IFn$_invoke$arity$1 ? ks_QMARK_.cljs$core$IFn$_invoke$arity$1(G__19063) : ks_QMARK_.call(null,G__19063));
 })());
 } else {
 return and__4326__auto__;
@@ -365,11 +365,11 @@ return and__4326__auto__;
 return k;
 } else {
 if(cljs.core.truth_(schema.core.specific_key_QMARK_(k))){
-var G__19058 = schema.core.explicit_schema_key(k);
-return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__19058) : f.call(null,G__19058));
+var G__19064 = schema.core.explicit_schema_key(k);
+return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__19064) : f.call(null,G__19064));
 } else {
-var G__19059 = k;
-return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__19059) : f.call(null,G__19059));
+var G__19065 = k;
+return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__19065) : f.call(null,G__19065));
 
 }
 }
@@ -381,8 +381,8 @@ return (f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(G__190
  * Makes given map keys optional. Defaults to all keys.
  */
 schema_tools.core.optional_keys = (function schema_tools$core$optional_keys(){
-var G__19061 = arguments.length;
-switch (G__19061) {
+var G__19067 = arguments.length;
+switch (G__19067) {
 case 1:
 return schema_tools.core.optional_keys.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -410,8 +410,8 @@ schema_tools.core.optional_keys.cljs$lang$maxFixedArity = 2;
  * Makes given map keys required. Defaults to all keys.
  */
 schema_tools.core.required_keys = (function schema_tools$core$required_keys(){
-var G__19065 = arguments.length;
-switch (G__19065) {
+var G__19071 = arguments.length;
+switch (G__19071) {
 case 1:
 return schema_tools.core.required_keys.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -431,11 +431,11 @@ return schema_tools.core.required_keys.cljs$core$IFn$_invoke$arity$2(m,null);
 });
 
 schema_tools.core.required_keys.cljs$core$IFn$_invoke$arity$2 = (function (m,ks){
-return schema_tools.core.transform_keys(m,(function (p1__19063_SHARP_){
-if((p1__19063_SHARP_ instanceof cljs.core.Keyword)){
-return p1__19063_SHARP_;
+return schema_tools.core.transform_keys(m,(function (p1__19069_SHARP_){
+if((p1__19069_SHARP_ instanceof cljs.core.Keyword)){
+return p1__19069_SHARP_;
 } else {
-return schema.core.required_key(p1__19063_SHARP_);
+return schema.core.required_key(p1__19069_SHARP_);
 }
 }),ks);
 });
