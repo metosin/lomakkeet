@@ -1,6 +1,7 @@
 (ns lomakkeet.reagent
   (:refer-clojure :exclude [update])
-  (:require [reagent.ratom :as ratom]
+  (:require [reagent.ratom :as ratom :refer-macros [reaction]]
+            [schema-tools.core :as st]
             [lomakkeet.core :as core]
             [lomakkeet.util :refer [dissoc-in]]
             [lomakkeet.reagent.impl :as impl]
@@ -8,38 +9,73 @@
             [lomakkeet.reagent.filepicker :as file]
             [lomakkeet.reagent.autocomplete :as autocomplete]))
 
-(defn create-form [data & opts]
-  (apply hash-map :data data opts))
+(defn create-form
+  ([data] (create-form data nil))
+  ([data opts]
+   (assoc opts
+          :data data
+          :form-value  (reaction (:value  @data))
+          :form-errors (reaction (:errors @data))
+          :form-schema (reaction (:schema @data))
+          :form-not-pristine (reaction (:not-pristine @data)))))
+
+(defn field [{:keys [form ks] :as opts}]
+  (if (and form ks)
+    (let [{:keys [data form-value form-errors form-schema form-not-pristine]} form]
+      (assoc (merge (:opts form) opts)
+             :value  (reaction (get-in @form-value ks))
+             :error  (reaction (get-in @form-errors ks))
+             :pristine (reaction (not (get-in @form-not-pristine ks)))
+             :schema (reaction (st/get-in @form-schema ks))
+             :cb     (fn [value]
+                       (swap! data core/change-value ks value (select-keys form [:validation-fn :coercion-matcher])))
+             :blur   (fn []
+                       (swap! data update-in [:not-pristine] assoc-in ks {}))))
+    opts))
 
 ;; BUILD
 
 (defn form-group-com [form]
   (or (:form-group form) impl/default-form-group))
 
-(defn input [form label ks & [opts]]
-  [(form-group-com form) form impl/input* (assoc (merge (:opts form) opts) :label label :ks ks)])
+(def form-group impl/default-form-group)
 
-(defn textarea [form label ks & [opts]]
-  [(form-group-com form) form impl/input* (assoc (merge (:opts form) opts) :el impl/input-textarea :label label :ks ks)])
+(def input impl/input*)
 
-(defn static [form label ks & [opts]]
-  [(form-group-com form) form impl/input* (assoc (merge (:opts form) opts) :el impl/input-static :label label :ks ks)])
+(defn password
+  ([form opts]
+   [(form-group-com form) form impl/input* (assoc (merge (:opts form) opts) :el impl/input-password)]))
 
-(defn checkbox [form label ks & [opts]]
-  [(form-group-com form) form impl/checkbox* (assoc (merge (:opts form) opts) :label label :ks ks)])
+(defn textarea
+  ([form opts]
+   [(form-group-com form) form impl/input* (assoc (merge (:opts form) opts) :el impl/input-textarea)]))
 
-(defn select [form label ks options & [opts]]
-  [(form-group-com form) form impl/select* (assoc (merge (:opts form) opts) :label label :ks ks :options options)])
+(defn static
+  ([form opts]
+   [(form-group-com form) form impl/input* (assoc (merge (:opts form) opts) :el impl/input-static)]))
 
-(defn date [form label ks & [opts]]
-  [(form-group-com form) form date/date* (merge (:opts form) opts {:label label :ks ks})])
+(defn checkbox
+  ([form opts]
+   [(form-group-com form) form impl/checkbox* (merge (:opts form) opts)]))
 
-(defn file [form label ks & [opts]]
-  [(form-group-com form) form file/file* (assoc (merge (:opts form) opts) :label label :ks ks)])
+(defn select
+  ([form opts]
+   [(form-group-com form) form impl/select* (merge (:opts form) opts)]))
 
-(defn complete [form label ks & [opts]]
-  [(form-group-com form) form autocomplete/autocomplete* (assoc (merge (:opts form) opts) :label label :ks ks)])
+(defn date
+  ([form opts]
+   [(form-group-com form) form date/date* (merge (:opts form) opts)]))
 
+(defn file
+  ([form opts]
+   [(form-group-com form) form file/file* (merge (:opts form) opts)]))
+
+(defn complete
+  ([form opts]
+   [(form-group-com form) form autocomplete/autocomplete* (merge (:opts form) opts)]))
+
+(def validation-error->str core/validation-error->str)
+(def default-explain-error core/default-explain-error)
 (def ->fs core/->fs)
 (def reset core/reset)
 (def commit core/commit)
