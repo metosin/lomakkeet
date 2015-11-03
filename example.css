@@ -255,8 +255,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('META-INF/resources/webjars/bootstrap/3.3.4/fonts/glyphicons-halflings-regular.eot');
+  src: url('META-INF/resources/webjars/bootstrap/3.3.4/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('META-INF/resources/webjars/bootstrap/3.3.4/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('META-INF/resources/webjars/bootstrap/3.3.4/fonts/glyphicons-halflings-regular.woff') format('woff'), url('META-INF/resources/webjars/bootstrap/3.3.4/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('META-INF/resources/webjars/bootstrap/3.3.4/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -7259,11 +7259,5 @@ fieldset[disabled] .month-calendar .selected .btn-date.active {
 .needs-attention .selectize-control.single .selectize-input {
   border-color: #cfb88f;
   box-shadow: 0 0 3px #8a6d3b;
-}
-.om-dev-tools-state-tree pre {
-  border: 0;
-  padding: 0;
-  background: none;
-  display: inline;
 }
 /*# sourceMappingURL=example.main.css.map */
