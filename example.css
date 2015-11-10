@@ -7113,6 +7113,9 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 }
 .month-calendar .table td {
   padding: 1px;
+  width: 14.285714285714286%;
+}
+.month-calendar .table.with-week-numbers td {
   width: 12.5%;
 }
 .month-calendar ul {
