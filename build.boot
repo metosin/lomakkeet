@@ -10,7 +10,7 @@
                   [weasel                  "0.7.0"     :scope "test"]
                   [org.clojure/tools.nrepl "0.2.12"    :scope "test"]
                   [adzerk/boot-reload     "0.4.7"      :scope "test"]
-                  [deraen/boot-less       "0.5.1"      :scope "test"]
+                  [deraen/boot-less       "0.5.0"      :scope "test"]
                   [pandeiro/boot-http     "0.7.3"      :scope "test"]
 
                   [prismatic/schema "1.1.1"]
