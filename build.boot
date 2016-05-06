@@ -15,8 +15,7 @@
 
                   [prismatic/schema "1.1.1"]
                   [metosin/schema-tools "0.9.0"]
-                  [com.andrewmcveigh/cljs-time "0.4.0"]
-                  [cljsjs/pikaday "1.4.0-1"]
+                  [metosin/komponentit "0.1.0-SNAPSHOT"]
                   ;; Reagent before devcards to use proper React version
                   [reagent "0.6.0-alpha2"]
                   ;; Devcards has "closer" dependency to cljsjs/react package which

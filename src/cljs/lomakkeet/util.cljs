@@ -13,22 +13,3 @@
           (dissoc m k)))
       m)
     (dissoc m k)))
-
-(defn keep-visible!
-  "Given parent element with scrollbar, keep the children visible."
-  [parent el]
-  (let [par-offset (.-scrollTop parent)
-        par-height (.-clientHeight parent)
-        child-offset (.-offsetTop el)
-        child-height (.-clientHeight el)]
-    ; Scroll down
-    (if (> (+ child-offset child-height) (+ par-offset par-height))
-      (set! (.-scrollTop parent) (- (+ child-offset child-height) par-height))
-      ; Scroll up
-      (if (< child-offset par-offset)
-        (set! (.-scrollTop parent) child-offset)))))
-
-(defn limit
-  "Limit x: a < x b"
-  [a b x]
-  (max a (min b x)))

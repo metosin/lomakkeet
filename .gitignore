@@ -8,3 +8,4 @@ figwheel_server.log
 /.idea
 /lomakkeet.iml
 /project.clj
+.cljs_rhino_repl
