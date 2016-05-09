@@ -22,13 +22,14 @@
        [:div.row
         [l/complete form "Postalcode" [:postalcode] {:item->value #(select-keys % [:code :name])
                                                      :item->text #(str (:code %) " - " (:name %))
+                                                     :item->key :code
                                                      :value->text (fn [_ v] (if v (str (:code v) " - " (:name v))))
                                                      :search-fields [:code :name]
                                                      :items [{:code "33720" :name "Tampere"}
                                                              {:code "33100" :name "Tampere"}]}]
         [l/select form "Language" [:language]
-         [["fi" "Finnish"]
-          ["en" "English"]]
+         [{:value "fi" :text "Finnish"}
+          {:value "en" :text "English"}]
          {:empty-option? true}]]])))
 
 (dc/defcard-rg simple-form

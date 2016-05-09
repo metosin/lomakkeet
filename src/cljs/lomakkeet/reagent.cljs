@@ -3,6 +3,8 @@
   (:require [reagent.core :as r]
             [reagent.ratom :as ratom :refer-macros [reaction]]
             [lomakkeet.core :as l]
+            [komponentit.input :as input]
+            [komponentit.form-group :refer [form-group]]
             [komponentit.timepicker :refer [timepicker]]
             [komponentit.datepicker :as datepicker]
             [komponentit.filepicker :refer [filepicker]]
@@ -20,7 +22,7 @@
 
 (defn blur [form ks]
   ; https://github.com/reagent-project/reagent/issues/135
-  (swap! (:data form) l/update :not-pristine assoc-in ks {}))
+  (swap! (:data form) cljs.core/update :not-pristine assoc-in ks {}))
 
 (defn get-or-deref [x]
   (if (satisfies? IDeref x) @x x))
@@ -37,98 +39,28 @@
         error (reaction (get-in @form-errors ks))
         pristine (reaction (not (get-in (:not-pristine @(:data form)) ks)))]
     (fn [form content opts]
-      [:div.form-group
-       {:class (str (if (and (not @pristine) @error) "has-error ")
-                    (if (and @pristine @error) "needs-attention ")
-                    (if size (str " col-md-" size " ")))}
-       [:label label]
+      [form-group
+       (assoc opts
+              :class (if size (str " col-md-" size " "))
+              :label label
+              :pristine @pristine
+              :error (if @error (explain-error @error)))
        [content form opts]
        (if help-text
-         [:span.help-block help-text])
-       (if (and (not @pristine) @error)
-         [:span.help-block (explain-error @error)])])))
-
-;; BASIC INPUTS
-
-(defn input-input [attrs value cb blur]
-  [:input.form-control
-   (merge attrs
-          {:type "text"
-           :value (or (str value) "")
-           :on-change cb
-           :on-blur blur})])
-
-(defn input-password [attrs value cb blur]
-  [:input.form-control
-   (merge attrs
-          {:type "password"
-           :value (or (str value) "")
-           :on-change cb
-           :on-blur blur})])
-
-(defn input-textarea [attrs value cb blur]
-  [:textarea.form-control
-   (merge attrs
-          {:value (or value "")
-           :on-change cb
-           :on-blur blur})])
-
-(defn input-static [attrs value _ _]
-  [:p.form-control-static
-   value])
+         [:span.help-block help-text])])))
 
 (defn input*
-  [form {:keys [ks transform-value el attrs]
-         :or {transform-value identity
-              el input-input}}]
+  [form {:keys [ks el]
+         :or {el input/text}
+         :as opts}]
   (let [form-value (reaction (:value @(:data form)))
         value (reaction (get-in @form-value ks))]
     (fn []
-      (el
-        (merge (get-or-deref (:attrs form)) attrs)
-        (transform-value @value)
-        #(cb form ks (.. % -target -value))
-        #(blur form ks)))))
-
-;; CHECKBOX
-
-(defn checkbox*
-  [form {:keys [ks]}]
-  (let [form-value (reaction (:value @(:data form)))
-        value (reaction (get-in @form-value ks))]
-    (fn []
-      [:input
-       {:type "checkbox"
-        :checked (boolean @value)
-        :on-change #(cb form ks (.. % -target -checked))
-        :on-blur #(blur form ks)}])))
-
-;; SELECT
-
-(def +empty-value+ "lomakkeet.reagent/empty-value")
-
-(defn select*
-  [form {:keys [ks options attrs empty-option?]}]
-  (let [form-value (reaction (:value @(:data form)))
-        value (reaction (get-in @form-value ks))]
-    (fn [form {:keys [ks options attrs]}]
-      [:select.form-control
-       (merge
-         (merge (get-or-deref (:attrs form)) attrs)
-         {:value (or @value
-                     (if empty-option? +empty-value+))
-          :on-change (fn [e]
-                       (let [v (.. e -target -value)
-                             v (if (= +empty-value+ v) nil v)]
-                         (cb form ks v)))
-          :on-blur #(blur form ks)})
-       (if empty-option?
-         [:option {:value +empty-value+} "---"])
-       (for [option options
-             :let [[k v] (if (map? option)
-                           [(:key option) (:value option)]
-                           option)]]
-           [:option {:value k :key v} v])])))
+      [el
+       (assoc (merge (get-or-deref (:attrs form)) opts)
+              :value @value
+              :on-change #(cb form ks %)
+              :on-blur #(blur form ks))])))
 
 ;; Custom inputs
 
@@ -148,23 +80,24 @@
         form-value (reaction (:value @(:data form)))
         value (reaction (get-in @form-value ks))]
     (fn [_ {:keys [ks datepicker-i18n min-date max-date date-time? disabled]}]
-      [datepicker/date {:value           @value
-                        :on-blur         #(blur form ks)
-                        :on-clear        (fn [e]
-                                           ;; Set date to nil
-                                           (cb form ks nil))
-                        :on-select       (fn [date]
-                                           (cb form ks date))
-                        :datepicker-i18n datepicker-i18n
-                        :min-date        min-date
-                        :max-date        max-date
-                        :date-time?      date-time?
-                        :disabled        (get-or-deref disabled)
-                        :clearable?      clearable?}])))
+      [datepicker/date
+       {:value           @value
+        :on-blur         #(blur form ks)
+        :on-clear        (fn [e]
+                           ;; Set date to nil
+                           (cb form ks nil))
+        :on-select       (fn [date]
+                           (cb form ks date))
+        :datepicker-i18n datepicker-i18n
+        :min-date        min-date
+        :max-date        max-date
+        :date-time?      date-time?
+        :disabled        (get-or-deref disabled)
+        :clearable?      clearable?}])))
 
 (defn autocomplete*
   [form {:keys [ks item->value item->key multiple? cb remove-cb disabled?]
-         :or {item->key key}}]
+         :or {item->key :key}}]
   (let [value (reaction (get-in (:value @(:data form)) ks))
         item->value (or item->value item->key)
 
@@ -185,16 +118,13 @@
         (fn [x _]
           (if remove-cb (remove-cb x))
           (if multiple?
-            (cb form ks (into (empty @value) (remove #(= % x) @value)))))
-
-        on-blur
-        (fn [e]
-          (blur form ks))
-
-        attrs (:attrs form)
-        disabled (reaction (or disabled? (:disabled attrs)))]
+            (cb form ks (into (empty @value) (remove #(= % x) @value)))))]
     (fn [form opts]
-      [autocomplete (assoc opts :value @value, :cb cb', :remove-cb remove-cb, :on-blur on-blur :disabled? @disabled)])))
+      [autocomplete (assoc opts
+                           :value @value
+                           :cb cb'
+                           :remove-cb remove-cb
+                           :on-blur #(blur form ks))])))
 
 (defn file* [form {:keys [ks file-select-label clearable?]}]
   (let [this       (r/current-component)
@@ -233,27 +163,32 @@
 (defn password
   ([form label ks] (password form label ks nil))
   ([form label ks opts]
-   [(form-group-com form) form input* (assoc (merge (:opts form) opts) :el input-password :label label :ks ks)]))
+   [(form-group-com form) form input* (assoc (merge (:opts form) opts) :el input/password :label label :ks ks)]))
 
 (defn textarea
   ([form label ks] (textarea form label ks nil))
   ([form label ks opts]
-   [(form-group-com form) form input* (assoc (merge (:opts form) opts) :el input-textarea :label label :ks ks)]))
+   [(form-group-com form) form input* (assoc (merge (:opts form) opts) :el input/text :label label :ks ks)]))
 
 (defn static
   ([form label ks] (static form label ks nil))
   ([form label ks opts]
-   [(form-group-com form) form input* (assoc (merge (:opts form) opts) :el input-static :label label :ks ks)]))
+   [(form-group-com form) form input* (assoc (merge (:opts form) opts) :el input/text :label label :ks ks)]))
+
+(defn number
+  ([form label ks] (static form label ks nil))
+  ([form label ks opts]
+   [(form-group-com form) form input* (assoc (merge (:opts form) opts) :el input/number :label label :ks ks)]))
 
 (defn checkbox
   ([form label ks] (checkbox form label ks nil))
   ([form label ks opts]
-   [(form-group-com form) form checkbox* (assoc (merge (:opts form) opts) :label label :ks ks)]))
+   [(form-group-com form) form input* (assoc (merge (:opts form) opts) :el input/checkbox :label label :ks ks)]))
 
 (defn select
   ([form label ks options] (select form label ks options nil))
   ([form label ks options opts]
-   [(form-group-com form) form select* (assoc (merge (:opts form) opts) :label label :ks ks :options options)]))
+   [(form-group-com form) form input* (assoc (merge (:opts form) opts) :el input/select :label label :ks ks :options options)]))
 
 (defn date
   ([form label ks] (date form label ks nil))
