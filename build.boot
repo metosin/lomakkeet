@@ -15,7 +15,7 @@
 
                   [prismatic/schema "1.1.1"]
                   [metosin/schema-tools "0.9.0"]
-                  [metosin/komponentit "0.1.0-SNAPSHOT"]
+                  [metosin/komponentit "0.1.0"]
                   ;; Reagent before devcards to use proper React version
                   [reagent "0.6.0-alpha2"]
                   ;; Devcards has "closer" dependency to cljsjs/react package which
@@ -33,7 +33,7 @@
   '[deraen.boot-less      :refer [less]]
   '[pandeiro.boot-http    :refer [serve]])
 
-(def +version+ "0.3.0-SNAPSHOT")
+(def +version+ "0.3.0")
 
 (task-options!
   pom {:project 'metosin/lomakkeet
