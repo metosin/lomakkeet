@@ -173,7 +173,7 @@
 (defn static
   ([form label ks] (static form label ks nil))
   ([form label ks opts]
-   [(form-group-com form) form input* (assoc (merge (:opts form) opts) :el input/text :label label :ks ks)]))
+   [(form-group-com form) form input* (assoc (merge (:opts form) opts) :el input/static :label label :ks ks)]))
 
 (defn number
   ([form label ks] (static form label ks nil))
