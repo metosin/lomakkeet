@@ -96,14 +96,16 @@
         :clearable?      clearable?}])))
 
 (defn autocomplete*
-  [form {:keys [ks item->value item->key multiple? cb remove-cb disabled?]
-         :or {item->key :key}}]
+  [form {:keys [ks item->value item->key multiple? remove-cb disabled?]
+         :or {item->key :key}
+         :as opts}]
   (let [value (reaction (get-in (:value @(:data form)) ks))
         item->value (or item->value item->key)
 
         cb'
         (fn [v]
-          (if cb (cb v))
+          (if-let [cb2 (:cb opts)]
+            (cb2 v))
           ;; FIXME: hack
           (let [item->value (if (map? item->value)
                               item->value
