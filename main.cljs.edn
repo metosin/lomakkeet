@@ -1,0 +1,1 @@
+{:require [example.main adzerk.boot-reload adzerk.boot-cljs-repl], :compiler-options {:asset-path "main.out", :devcards true}}
