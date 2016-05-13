@@ -1,6 +1,7 @@
 (set-env!
   :source-paths #{"example-src/cljs" "example-src/less" "example-src/html"}
-  :resource-paths #{"src/cljs" "src/less"}
+  :resource-paths #{"src/cljs"}
+  :checkouts '[[metosin/komponentit "0.1.0"]]
   :dependencies '[[org.clojure/clojure    "1.8.0"      :scope "provided"]
                   [org.clojure/clojurescript "1.8.51"  :scope "provided"]
                   [boot/core              "2.5.5"      :scope "test"]
