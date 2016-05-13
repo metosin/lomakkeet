@@ -116,11 +116,13 @@
                             (item->value v)))))
           nil)
 
+        ;; HACK: if remove-cb is set, default functionality for emptying the input on backspace is not used
         remove-cb
-        (fn [x _]
-          (if remove-cb (remove-cb x))
-          (if multiple?
-            (cb form ks (into (empty @value) (remove #(= % x) @value)))))]
+        (if (or  remove-cb multiple?)
+          (fn [x _]
+            (if remove-cb (remove-cb x))
+            (if multiple?
+              (cb form ks (into (empty @value) (remove #(= % x) @value))))))]
     (fn [form opts]
       [autocomplete (assoc opts
                            :value @value
