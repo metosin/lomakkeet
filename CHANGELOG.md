@@ -1,3 +1,7 @@
+## 0.3.1 (15.5.2016)
+
+- Update Komponentit
+
 ## 0.3.0 (12.5.2016)
 
 - Components have been separated into [separate library](https://github.com/metosin/komponentit)

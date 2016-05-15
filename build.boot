@@ -1,7 +1,7 @@
 (set-env!
   :source-paths #{"example-src/cljs" "example-src/less" "example-src/html"}
   :resource-paths #{"src/cljs"}
-  :checkouts '[[metosin/komponentit "0.1.0"]]
+  :checkouts '[[metosin/komponentit "0.1.1"]]
   :dependencies '[[org.clojure/clojure    "1.8.0"      :scope "provided"]
                   [org.clojure/clojurescript "1.8.51"  :scope "provided"]
                   [boot/core              "2.5.5"      :scope "test"]
@@ -16,7 +16,7 @@
 
                   [prismatic/schema "1.1.1"]
                   [metosin/schema-tools "0.9.0"]
-                  [metosin/komponentit "0.1.0"]
+                  [metosin/komponentit "0.1.1"]
                   ;; Reagent before devcards to use proper React version
                   [reagent "0.6.0-alpha2"]
                   ;; Devcards has "closer" dependency to cljsjs/react package which
