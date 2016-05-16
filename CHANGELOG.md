@@ -1,3 +1,7 @@
+## 0.3.2 (16.5.2016)
+
+- Fix textarea
+
 ## 0.3.1 (15.5.2016)
 
 - Update Komponentit
