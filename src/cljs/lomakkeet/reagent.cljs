@@ -9,7 +9,7 @@
             [komponentit.datepicker :as datepicker]
             [komponentit.filepicker :refer [filepicker]]
             [komponentit.currency-input :refer [currency-input]]
-            [komponentit.autocomplete :refer [autocomplete]]))
+            [komponentit.autocomplete :as autocomplete]))
 
 (defn create-form
   ([data] (create-form data nil))
@@ -98,7 +98,7 @@
         :clearable?      clearable?}])))
 
 (defn autocomplete*
-  [form {:keys [ks item->value item->key multiple? remove-cb disabled?]
+  [form {:keys [ks item->value item->key remove-cb disabled?]
          :or {item->key :key}
          :as opts}]
   (let [value (reaction (get-in (:value @(:data form)) ks))
@@ -113,24 +113,55 @@
                               item->value
                               {ks item->value})]
             (doseq [[ks item->value] item->value]
-              (cb form ks (if multiple?
-                            (conj @value (item->value v))
-                            (item->value v)))))
+              (cb form ks (item->value v))))
           nil)
 
         ;; HACK: if remove-cb is set, default functionality for emptying the input on backspace is not used
         remove-cb
-        (if (or  remove-cb multiple?)
+        (if remove-cb
           (fn [x _]
-            (if remove-cb (remove-cb x))
-            (if multiple?
-              (cb form ks (into (empty @value) (remove #(= % x) @value))))))]
+            (remove-cb x)))]
     (fn [form opts]
-      [autocomplete (assoc opts
-                           :value @value
-                           :cb cb'
-                           :remove-cb remove-cb
-                           :on-blur #(blur form ks))])))
+      [autocomplete/autocomplete
+       (assoc opts
+              :value @value
+              :cb cb'
+              :remove-cb remove-cb
+              :on-blur #(blur form ks))])))
+
+(defn multiple-autocomplete*
+  [form {:keys [ks item->value item->key remove-cb disabled?]
+         :or {item->key :key}
+         :as opts}]
+  (let [value (reaction (get-in (:value @(:data form)) ks))
+        item->value (or item->value item->key)
+
+        cb'
+        (fn [v]
+          (if-let [cb2 (:cb opts)]
+            (cb2 v))
+          ;; FIXME: hack
+          (let [item->value (if (map? item->value)
+                              item->value
+                              {ks item->value})]
+            (doseq [[ks item->value] item->value]
+              (cb form ks (conj @value (item->value v)))))
+          nil)
+
+        ;; HACK: if remove-cb is set, default functionality for emptying the input on backspace is not used
+        remove-cb
+        (fn [x _]
+          (if remove-cb (remove-cb x))
+          (cb form ks (into (empty @value) (remove #(= % x) @value))))]
+    (fn [form opts]
+      [autocomplete/multiple-autocomplete
+       (assoc opts
+              :value @value
+              :cb cb'
+              :remove-cb remove-cb
+              :on-blur #(blur form ks))])))
+
+
 
 (defn file* [form {:keys [ks file-select-label clearable?]}]
   (let [this       (r/current-component)
@@ -215,6 +246,11 @@
   ([form label ks] (complete form label ks nil))
   ([form label ks opts]
    [(form-group-com form) form autocomplete* (assoc (merge (:opts form) opts) :label label :ks ks)]))
+
+(defn multiple-complete
+  ([form label ks] (multiple-complete form label ks nil))
+  ([form label ks opts]
+   [(form-group-com form) form multiple-autocomplete* (assoc (merge (:opts form) opts) :label label :ks ks)]))
 
 (defn currency
   ([form label ks] (currency form label ks nil))
