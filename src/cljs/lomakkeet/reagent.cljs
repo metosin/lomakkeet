@@ -45,7 +45,7 @@
               :label label
               :pristine @pristine
               :error (if @error (explain-error @error)))
-       [content form opts]
+       [content form (dissoc opts :explain-error :help-text :label :size)]
        (if help-text
          [:span.help-block help-text])])))
 
@@ -57,10 +57,12 @@
         value (reaction (get-in @form-value ks))]
     (fn []
       [el
-       (assoc (merge (get-or-deref (:attrs form)) opts)
-              :value @value
-              :on-change #(cb form ks %)
-              :on-blur #(blur form ks))])))
+       (-> opts
+           (->> (merge (get-or-deref (:attrs form))))
+           (dissoc :ks :el)
+           (assoc :value @value
+                  :on-change #(cb form ks %)
+                  :on-blur #(blur form ks)))])))
 
 ;; Custom inputs
 
