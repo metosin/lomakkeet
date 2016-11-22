@@ -77,7 +77,7 @@
                                 (cb form ks date))
                    :clearable? clearable?}])))
 
-(defn date* [form {:keys [ks datepicker-i18n min-date max-date date-time? clearable? disabled]}]
+(defn date* [form {:keys [ks i18n min-date max-date date-time? clearable? disabled]}]
   (let [this (r/current-component)
         form-value (reaction (:value @(:data form)))
         value (reaction (get-in @form-value ks))]
@@ -85,12 +85,9 @@
       [datepicker/date
        {:value           @value
         :on-blur         #(blur form ks)
-        :on-clear        (fn [e]
-                           ;; Set date to nil
-                           (cb form ks nil))
-        :on-select       (fn [date]
+        :on-change       (fn [date]
                            (cb form ks date))
-        :datepicker-i18n datepicker-i18n
+        :i18n            i18n
         :min-date        min-date
         :max-date        max-date
         :date-time?      date-time?
