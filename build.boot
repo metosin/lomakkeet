@@ -4,29 +4,29 @@
   ;; Also brings in examples because komponentit dev build includes those...
   ; :checkouts '[[metosin/komponentit "0.2.0-SNAPSHOT"]]
   :dependencies '[[org.clojure/clojure    "1.8.0"      :scope "provided"]
-                  [org.clojure/clojurescript "1.9.293" :scope "provided"]
-                  [boot/core              "2.6.0"      :scope "test"]
-                  [adzerk/boot-cljs       "1.7.228-2"  :scope "test"]
+                  [org.clojure/clojurescript "1.9.854" :scope "provided"]
+                  [adzerk/boot-cljs       "2.1.1"  :scope "test"]
                   [adzerk/boot-cljs-repl  "0.3.3"      :scope "test"]
-                  [com.cemerick/piggieback "0.2.1"     :scope "test"]
+                  [com.cemerick/piggieback "0.2.2"     :scope "test"]
                   [weasel                  "0.7.0"     :scope "test"]
-                  [org.clojure/tools.nrepl "0.2.12"    :scope "test"]
-                  [adzerk/boot-reload     "0.4.13"     :scope "test"]
-                  [deraen/boot-less       "0.6.0"      :scope "test"]
-                  [metosin/boot-alt-http  "0.1.0"      :scope "test"]
+                  [org.clojure/tools.nrepl "0.2.13"    :scope "test"]
+                  [adzerk/boot-reload     "0.5.1"     :scope "test"]
+                  [deraen/boot-less       "0.6.2"      :scope "test"]
+                  [org.slf4j/slf4j-nop    "1.7.25"     :scope "test"]
+                  [metosin/boot-alt-http  "0.1.2"      :scope "test"]
 
-                  [prismatic/schema "1.1.3"]
+                  [prismatic/schema "1.1.6"]
                   [metosin/schema-tools "0.9.0"]
-                  [metosin/komponentit "0.2.0-SNAPSHOT"]
+                  [metosin/komponentit "0.3.0"]
                   ;; Reagent before devcards to use proper React version
-                  [reagent "0.6.0"]
+                  [reagent "0.8.0-alpha1"]
                   ;; Devcards has "closer" dependency to cljsjs/react package which
                   ;; overwrites Reagent version
-                  [cljsjs/react "15.3.2-1" :scope "test"]
-                  [devcards "0.2.2" :scope "test"]
+                  [cljsjs/react "15.6.1-1" :scope "test"]
+                  [devcards "0.2.3" :scope "test"]
 
                   ; LESS
-                  [org.webjars/bootstrap "3.3.4"]])
+                  [org.webjars/bootstrap "3.3.7-1"]])
 
 (require
   '[adzerk.boot-cljs      :refer [cljs]]
@@ -59,7 +59,7 @@
     (less)
     (reload :on-jsload 'example.main/restart!)
     (cljs-repl)
-    (cljs)
+    (cljs :optimizations :none)
     (serve :prefixes #{""})
     (build)))
 

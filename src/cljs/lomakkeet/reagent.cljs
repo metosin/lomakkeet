@@ -4,11 +4,9 @@
             [reagent.ratom :as ratom :refer-macros [reaction]]
             [lomakkeet.core :as l]
             [komponentit.input :as input]
-            [komponentit.form-group :refer [form-group]]
             [komponentit.timepicker :refer [timepicker]]
             [komponentit.datepicker :as datepicker]
             [komponentit.filepicker :refer [filepicker]]
-            [komponentit.currency-input :refer [currency-input]]
             [komponentit.autocomplete :as autocomplete]))
 
 (defn create-form
@@ -28,6 +26,20 @@
   (if (satisfies? IDeref x) @x x))
 
 ;; FORM GROUP ("bootstrap")
+
+(defn form-group
+  [{:keys [label error pristine class]
+    :or {pristine true}
+    :as opts}
+   & content]
+  (-> [:div.form-group
+       {:class (str (if error "has-error ")
+                    (if (and pristine error) "needs-attention ")
+                    class)}
+       [:label label]]
+      (into content)
+      (conj (if (and (not pristine) error)
+              [:span.help-block error]))))
 
 (defn default-form-group
   [form content {:keys [ks size label help-text explain-error]
@@ -172,18 +184,6 @@
                    :clearable? clearable?
                    :file-select-label file-select-label}])))
 
-(defn currency-input* [form {:keys [ks currency-symbol delimiter]}]
-  (let [form-value (reaction (:value @(:data form)))
-        value      (reaction (get-in @form-value ks))]
-    (fn [form {:keys [ks currency-symbol delimiter]}]
-      [currency-input
-       {:value @value
-        :on-blur #(blur form ks)
-        :on-change (fn [value]
-                     (cb form ks value))
-        :currency-symbol currency-symbol
-        :delimiter delimiter}])))
-
 ;; BUILD
 
 (defn form-group-com [form]
@@ -248,11 +248,6 @@
   ([form label ks] (multiple-complete form label ks nil))
   ([form label ks opts]
    [(form-group-com form) form multiple-autocomplete* (assoc (merge (:opts form) opts) :label label :ks ks)]))
-
-(defn currency
-  ([form label ks] (currency form label ks nil))
-  ([form label ks opts]
-   [(form-group-com form) form currency-input* (assoc (merge (:opts form) opts) :label label :ks ks)]))
 
 (def validation-error->str l/validation-error->str)
 (def default-explain-error l/default-explain-error)
