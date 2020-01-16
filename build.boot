@@ -35,7 +35,7 @@
   '[deraen.boot-less      :refer [less]]
   '[metosin.boot-alt-http :refer [serve]])
 
-(def +version+ "0.4.0-SNAPSHOT")
+(def +version+ "0.3.3")
 
 (task-options!
   pom {:project 'metosin/lomakkeet
