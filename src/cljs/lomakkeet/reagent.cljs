@@ -85,7 +85,7 @@
     (fn [_]
       [timepicker {:value @value
                    :on-blur #(blur form ks)
-                   :on-select (fn [date]
+                   :on-change (fn [date]
                                 (cb form ks date))
                    :clearable? clearable?}])))
 
@@ -134,7 +134,7 @@
       [autocomplete/autocomplete
        (assoc opts
               :value @value
-              :cb cb'
+              :on-change cb'
               :remove-cb remove-cb
               :on-blur #(blur form ks))])))
 
@@ -166,7 +166,7 @@
       [autocomplete/multiple-autocomplete
        (assoc opts
               :value @value
-              :cb cb'
+              :on-change cb'
               :remove-cb remove-cb
               :on-blur #(blur form ks))])))
 
